@@ -112,4 +112,4 @@ ReadWriteDirectories=/etc/unbound
 WantedBy=multi-user.target
 ```
 
-Et tout cela nous donne un score d'exposition de 1.9/10 ! 🎉 Vous pourrez retrouver une liste de services systemd les plus communs "renforcés" [sur le gitea d'I Learned](https://git.ilearned.eu.org/I_Learned/systemd-hardened), si vous voyez qu'il manque certains services n'hésitez pas à les ajouter en faisant une pull request ou en créant un ticket.
+Et tout cela nous donne un score d'exposition de 1.9/10 ! 🎉 Vous pourrez retrouver une liste de services systemd les plus communs "renforcés" [sur le gitea d'I Learned](https://git.ilearned.eu/i-learned/blog/Systemd-hardened), si vous voyez qu'il manque certains services n'hésitez pas à les ajouter en faisant une pull request ou en créant un ticket.
