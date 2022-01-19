@@ -28,11 +28,11 @@ Cette première version de TCP est vraiment expérimentale, elle n'a pas été d
 
 Vient ensuite en 1977 la deuxième version de TCP (et donc par extension du protocole internet), cette version, publiée dans l'[IEN 5](https://www.rfc-editor.org/in-notes/ien/ien5.pdf), apporte certaines améliorations dont notamment le passage à un "Network Identifier", ce qui était auparavant appelé réseau de destination/origine, codé sur 8 bits.
 
-![Liste des différents network](/static/img/versions-ip/network_list.png)
+![Liste des différents network](/static/img/versions-ip/network_list.webp)
 
 Autre différence, les "host identifier", anciennement appelés `adresses TCP`, sont maintenant codés sur 24 bits, soit un total de 16 777 216 adresses. On peut aussi voir le début de la séparation entre TCP et IP dans ce schéma d'époque avec les parties "TCP Header" et "Internet Header".
 
-![Header TCP où l'on voit deux parties, une appelée "TCP Header" et l'autre "IP Header"](/static/img/versions-ip/header.png)
+![Header TCP où l'on voit deux parties, une appelée "TCP Header" et l'autre "IP Header"](/static/img/versions-ip/header.webp)
 
 Séparation qui sera [actée](https://datatracker.ietf.org/doc/html/rfc760) dans la version 3 de TCP, publiée en 1978, ce qui représente une avancée majeure dans l'évolution du protocole internet.
 

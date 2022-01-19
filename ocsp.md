@@ -10,7 +10,7 @@ Un client qui utilise OCSP (tous les navigateurs web récents) va interroger à 
 
 Une requête OCSP ressemble à ça :
 
-![Requête du client OCSP](/static/img/ocsp/ocsp_request.png)
+![Requête du client OCSP](/static/img/ocsp/ocsp_request.webp)
 
 - requestorName correspond au nom du client, ce champ est optionnel
 
@@ -23,7 +23,7 @@ Le client indique ensuite des informations qui permettent d'identifier le certif
 
 Le serveur répond ensuite avec une réponse au format suivant :
 
-![Réponse du server OCSP](/static/img/ocsp/ocsp_response.png)
+![Réponse du server OCSP](/static/img/ocsp/ocsp_response.webp)
 
 - responderID correspond à l'identifiant du serveur qui nous a répondu
 - producedAt correspond à l'heure à laquelle la vérification a été faite

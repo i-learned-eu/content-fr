@@ -17,7 +17,7 @@ Je vous laisse regarder [cette vidéo de Micode](https://www.youtube.com/watch?v
 
 Sur les MacBook de 2008, on retrouve une configuration bien particulière pour la gestion de la caméra et de sa LED (qui "témoigne" de son activité).
 
-![Macbook camera schematic](static/img/macbook_cam_hack/schematic.png)
+![Macbook camera schematic](static/img/macbook_cam_hack/schematic.webp)
 
 On retrouve **4** éléments bien distinctifs :
  1. Un "Support de stockage" [EEPROM](https://fr.wikipedia.org/wiki/Electrically-erasable_programmable_read-only_memory)

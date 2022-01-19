@@ -100,6 +100,6 @@ Le fonctionnement est assez trivial, pour recevoir les messages, les différente
 
 Si Alice veut envoyer un message à Bob, elle poste simplement son message dans son outbox avec le destinataire, l'instance d'Alice s'occupera d'aller trouver l'inbox de Bob et d'acheminer le message vers cette inbox.
 
-![Schéma détaillant les informations ci-dessus.](/static/img/fediverse/routing.png)
+![Schéma détaillant les informations ci-dessus.](/static/img/fediverse/routing.webp)
 
 Comme on a pu le voir, ActivityPub est un protocole plutôt simple dans son fonctionnement et qui permet d'interconnecter de nombreux services. Il s'appuie sur HTTPS, ce qui lui permet de bénéficier des dernières avancées de ce protocole comme la récente [version 3 de HTTP](https://ilearned.eu/http3.html).

@@ -17,11 +17,11 @@ En mode actif le client écoute sur un port précis, contacte le serveur FTP en 
 
 Le souci avec ce mode de fonctionnement est qu’il ne fonctionne pas avec du NAT ou un pare-feu restrictif sur les connexions entrantes.
 
-![Les données envoyées par le serveur sont bloquées par le Firewall en mode passif](/static/img/ftp/passif.png)
+![Les données envoyées par le serveur sont bloquées par le Firewall en mode passif](/static/img/ftp/passif.webp)
 
 Un autre mode pour palier à ces soucis existe, le mode passif. Pour ce mode-là le client envoie la commande `PASV`, le serveur envoie alors en retour une IP et un numéro de port que le client utiliseras pour répondre.
 ss
-![Les données ne sont pas bloquées par le firewall en mode actif](/static/img/ftp/actif.png)
+![Les données ne sont pas bloquées par le firewall en mode actif](/static/img/ftp/actif.webp)
 
 FTP demande par défaut une authentification, une parade utilisée pour permettre un accès au fichier par n’importe qui est le FTP anonyme. Le principe est d’utiliser l’utilisateur `anonymous` sans mot de passe pour accéder aux ressources.
 

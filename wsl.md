@@ -15,7 +15,7 @@ Un autre problème se pose, comment faire cohabiter deux systèmes de fichiers s
 
 Côté performance, c’est assez proche d’une distribution Linux native, l’utilisation est donc très confortable. On peut résumer ce fonctionnement au travers d’un schéma :
 
-![WSL Components.png](/static/img/wsl/WSL_Components.png)
+![WSL Components.webp](/static/img/wsl/WSL_Components.webp)
 
 Ainsi, on peut voir que WSL1 apporte de grandes nouveautés, mais pose un certain nombre de problème vis à vis de son objectif premier : fournir un environnement de développement confortable pour les développeurs Linux sur Windows.
 
@@ -25,7 +25,7 @@ C’est en revoyant presque intégralement la structure du noyau de WSL que Micr
 
 Ce changement pourrait nous inquiéter à priori concernant les performances puisque nous émulons maintenant complètement un système linux, pourtant Microsoft assure que les performances en écriture et en lecture [ont été multipliés par 20](https://docs.microsoft.com/fr-fr/windows/wsl/compare-versions). Cependant d’autres problèmes se posent, notamment quant à l’utilisation de logiciel graphique, qui n’est pour l’instant pas encore complètement et entièrement permise. En effet, pour pouvoir profiter de Firefox par exemple (depuis votre WSL), il faut installer tout un tas de dépendance comprenant un serveur XORG… et cela fonctionne. Pourtant, certains programmes utilisent les cartes graphiques non pas pour de l’affichage, mais des calculs auquel cas il n’y a aucune solution. Au vu de cette restructuration, on peut légitimement se demander ce qui diffère entre WSL2 et une machine virtuelle classique. Dans le premier cas, il s’agît d’une virtualisation hyperviseur de type 1, le second cas de type 2 ([un hyperviseur](https://fr.wikipedia.org/wiki/Hyperviseur) étant : "une plateforme de virtualisation qui permet à plusieurs systèmes d’exploitation de travailler sur une même machine physique").
 
-![WSL%20600860b78c8340a9ad0af71995076696/image2.png](/static/img/wsl/image2.png)
+![WSL%20600860b78c8340a9ad0af71995076696/image2.webp](/static/img/wsl/image2.webp)
 
 La différence est donc majeure, WSL2 s’exécute directement sur le matériel de votre machine là où une machine virtuelle standard à besoin d’un autre hôte pour son exécution. Cela permet une chose, des performances accrues et donc une utilisation plus confortable. De plus, puisque WSL2 se base sur un hyperviseur de type 1, plus votre machine est puissante, plus votre machine WSL2 sera puissante dans l’instant, contrairement à une VM classique où il faut spécifier les quantités de matériel à utiliser.
 

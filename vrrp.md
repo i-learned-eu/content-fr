@@ -18,7 +18,7 @@ Le numéro de protocole utilisé pour VRRP est le 112, et le paquet est présent
 
  
 
-![En-tête d'un paquet VRRP](/static/img/vrrp/vrrp_header.png)
+![En-tête d'un paquet VRRP](/static/img/vrrp/vrrp_header.webp)
 
 Les parties importantes sont :
 

@@ -15,15 +15,15 @@ Le démarrage en BIOS s'appuie sur une table des partitions en MBR (Master Boot 
 
 Sous Linux (nous verrons le fonctionnement de Windows un peu plus loin), le bootloader le plus courant est GRUB. Il insère dans le MBR de quoi charger son code complet qui est contenu dans `/boot`, la plupart des bootloaders sous Linux fonctionnent sur le même principe.
 
-![Un système non chiffré](/static/img/secure_boot/Boot_mbr.png)
+![Un système non chiffré](/static/img/secure_boot/Boot_mbr.webp)
 
 Pour éviter une modification du système on pourrait chiffrer la partition root (aussi appelé Userland) et faire un `/boot` à part (le bootloader ne peut pas être chiffré). Un problème se pose alors, l'initramfs et le kernel sont toujours en clair.
 
-![Un système chiffré avec seulement le userland de chiffré](/static/img/secure_boot/Boot_mbr(1).png)
+![Un système chiffré avec seulement le userland de chiffré](/static/img/secure_boot/Boot_mbr(1).webp)
 
 GRUB (et c'est à ma connaissance le seul) permet de déchiffrer le partition boot, pour garder l'initramfs et le kernel chiffré. Mais GRUB en lui même est toujours modifiable, même chose pour le code exécuté directement dans le MBR.
 
-![Un système chiffré avec le userland et le kernel de chiffré](/static/img/secure_boot/Boot_mbr(2).png)
+![Un système chiffré avec le userland et le kernel de chiffré](/static/img/secure_boot/Boot_mbr(2).webp)
 
 En plus de ne pas être totalement sécurisé, avec cette méthode la phrase de passe doit être tapée deux fois : une fois pour lire l'initramfs et une autre fois pour déchiffrer la partition root. (GRUB ne la retient pas.)
 
@@ -75,7 +75,7 @@ Regardons de plus près chaque variable :
 - DBX : C'est la liste des clés qui ne sont plus de confiance.
 - MOKList : C'est utilisé par un outil du nom de Shim, cet outil est là pour charger un autre bootloader qui ne serait pas signé avec les clés présentes dans DB. Shim va vérifier le bootloader via les clés dans la MOKList qui est géré par l'utilisateur, et non via l'UEFI directement.
 
-![La chaine de confiance de Secure Boot](/static/img/secure_boot/Cl_secure_boot(1).png)
+![La chaine de confiance de Secure Boot](/static/img/secure_boot/Cl_secure_boot(1).webp)
 
 Ces variables sont bien sûr modifiables sur la plupart des PC, ce qui permet de gérer sa propre PKI (public key infrastructure).
 

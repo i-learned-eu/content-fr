@@ -110,7 +110,7 @@ toto.txt -> inode: 69420
 toto_symlink.txt -> toto.txt
 ```
 
-![Il existe donc deux types de lien, le lien physique renvoie directement vers l'inode correspondant tandis que le lien symbolique renvoie vers le fichier d'origine.](/static/img/backup/links.png)
+![Il existe donc deux types de lien, le lien physique renvoie directement vers l'inode correspondant tandis que le lien symbolique renvoie vers le fichier d'origine.](/static/img/backup/links.webp)
 
 Il est possible de créer de tel lien (physique et symbolique) avec la commande `ln (1)`.
 

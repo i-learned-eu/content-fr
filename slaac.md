@@ -10,7 +10,7 @@ Comme son nom l'indique, SLAAC est sans état ce qui veut dire qu'il n'y a pas f
 
 SLAAC se base sur des "router-advert" (RA), le routeur envoie périodiquement des annonces à une adresse multicast spécifique, `FF02::1`, cette adresse correspond à tous les hôtes du réseau, c'est l'équivalent de 255.255.255.255 en IPv4. Le paquet envoyé par le routeur se base sur ICMPv6, et a la forme : 
 
-![Router Advertisement structure du paquet](/static/img/slaac/ra.png)
+![Router Advertisement structure du paquet](/static/img/slaac/ra.webp)
 
 Les parties importantes du paquet sont :
 
@@ -22,7 +22,7 @@ Le soucis de cet envoi périodique est que si un appareil vient de se brancher i
 
 Cette requête se porte sous cette forme :
 
-![En-tête demande de RA au(x) routeur(s)](/static/img/slaac/134.png)
+![En-tête demande de RA au(x) routeur(s)](/static/img/slaac/134.webp)
 
 Comme on peut le voir, le type de paquet ICMP est différent par rapport à un paquet pour les RA.
 

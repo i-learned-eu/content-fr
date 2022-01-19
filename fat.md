@@ -69,7 +69,7 @@ Chaque "nombres", correspond à une information concernant le cluster :
 On pourrait imaginer la table d'allocation suivante :
 > C*x* = Cluster n°*x*
 
-![Deux fichier, un sur plusieurs clusters et un second sur un seul](/static/img/fat/fat.png)
+![Deux fichier, un sur plusieurs clusters et un second sur un seul](/static/img/fat/fat.webp)
 
 > Un fichier qui utilse les clusters 2, 3 et 5 et un autre fichier le cluster 6.
 
