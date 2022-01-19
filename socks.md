@@ -201,7 +201,7 @@ Le serveur socks c'est le serveur "intermédiaire" qui sera entre le client et l
 
 Il fonctionne comme suit:
 
-![schema](static/img/socks/socks.png)
+![schema](static/img/socks/socks.webp)
 
 Exemple (TCP):
 

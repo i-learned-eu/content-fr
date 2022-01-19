@@ -7,13 +7,13 @@ Slug: ntp
 
 Depuis la démocratisation d'internet et de l'informatique en général, une question s'est posée, comment faire en sorte que les horloges de tous les ordinateurs soient coordonnées ? En septembre 1985 une première version du protocole NTP (Network Time Protocol) est publiée dans la [RFC 958](https://datatracker.ietf.org/doc/html/rfc958), ce protocole se base sur [UDP](https://blog.eban.bzh/today-i-learned/udp.html) pour sa légèreté. NTP fonctionne sur une typologie de réseau dite *mesh*, elle est découpée en strates afin de délivrer un temps équivalent partout et d'assurer une redondance. 
 
-![L'architecture de NTP](/static/img/ntp/schema_archi.png)
+![L'architecture de NTP](/static/img/ntp/schema_archi.webp)
 
 Les serveurs de strate 1 sont les horloges principales, le temps qu'elles donne peut provenir de différentes sources comme le [GPS](https://en.wikipedia.org/wiki/Global_Positioning_System) ou une [horloge atomique](https://fr.wikipedia.org/wiki/Horloge_atomique). Les serveurs des strates plus basse s'échangent entre eux leur temps afin de vérifier qu'il correspond bien. Quand nous, utilisateurs, accédons à un serveur NTP, on accède bien souvent à un serveur de strate 2 ou 3.
 
 Voici à quoi ressemble une requête NTP : 
 
-![Les headers d'une requête NTP](/static/img/ntp/schema_headers.png)
+![Les headers d'une requête NTP](/static/img/ntp/schema_headers.webp)
 
 Ça fait pas mal de parties 😄. Nous ne commenterons ici que les plus importantes.
 
@@ -33,7 +33,7 @@ Reference Timestamp est le temps de la dernière mise à jour via NTP.
 
 Les trois autres timestamps sont décris ci-dessous 
 
-![Schéma représentant les différents timestamp](/static/img/ntp/schema_timestamps.png)
+![Schéma représentant les différents timestamp](/static/img/ntp/schema_timestamps.webp)
 
 Le `destination timestamp` n'est logiquement pas inclut dans les headers, il est dans ce schéma à titre informatif.
 

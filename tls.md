@@ -7,7 +7,7 @@ Title: Comment fonctionne le protocole TLS
 
 TLS est un protocole que nous utilisons quotidiennement, il est notamment utilisé dans `HTTPS` pour sécuriser la connexion. TLS est le successeur de SSL, nous verrons prochainement pourquoi SSL a été abandonné au profit de TLS. Dans cet article, nous étudierons TLS1.3 qui est la dernière version du protocole sortie en 2018. TLS se base à la fois sur le chiffrement asymétrique et le chiffrement symétrique. Un échange de clé (appelé handshake ou poignée de main) a lieu au début de la connexion, une clé secrète est échangée de façon asymétrique, cette clé est ensuite utilisée pour chiffrer les données (du chiffrement symétrique donc). Voyons donc plus en détail comment se passe un handshake avec TLS1.3. 
 
-![Schémas d'un handshake TLS1.3](/static/img/tls/handshake.png)
+![Schémas d'un handshake TLS1.3](/static/img/tls/handshake.webp)
 
 Le client envoie donc dans un premier temps un `**Client Hello**` qui contient entre autre :
 
@@ -22,7 +22,7 @@ Le serveur répond ensuite avec un `**Server Hello**` qui contient entre autre :
 - Dans `Key Share` le serveur indique sa clé publique
 - `Finished` indique enfin la fin du handshake pour le client.
 
-Le client envoie enfin pour terminer un `Change Cipher Spec` et `Finished`. Vous trouverez [ici 📎](/static/misc/tls/tls_1_3.pcapng) un pcap d'un requête avec TLS 1.3.
+Le client envoie enfin pour terminer un `Change Cipher Spec` et `Finished`. Vous trouverez [ici 📎](/static/misc/tls/tls_1_3.pcawebp) un pcap d'un requête avec TLS 1.3.
 
 En parcourant vous verrez que la version de TLS affichée est TLS 1.2, *it's not a bug, it's a feature* c'est en fait pour éviter que certaines middlebox <s>de merde 😡</s>, utilisées notamment en entreprise pour espionner le trafic, bloquent le trafic pour des version de TLS au dessus de TLS 1.2.
 

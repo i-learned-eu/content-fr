@@ -29,11 +29,11 @@ Avec UPnP, chaque appareil sur le réseau (appelé périphérique) contient une 
 		<UDN>uuid:b9c125d5-XXXX-XXXX-XXXX-XXXXXXXXXXXX</UDN>
 		<iconList>
 			<icon>
-				<mimetype>image/png</mimetype>
+				<mimetype>image/webp</mimetype>
 				<width>98</width>
 				<height>55</height>
 				<depth>32</depth>
-				<url>/setup/icon.png</url>
+				<url>/setup/icon.webp</url>
 			</icon>
 		</iconList>
 		<serviceList>
@@ -53,11 +53,11 @@ On voit ici que le périphérique indique son nom, constructeur etc, mais aussi 
 
 Afin de permettre aux périphériques d'*annoncer* leurs différents services etc, le protocole SSDP est utilisé, ce protocole permet à un élément qu'on appelle le point de contrôle (control point en anglais) de maintenir une liste des différents périphériques UPnP pour que chaque nouvel appareil qui se connecte sur le réseau puisse obtenir l'ensemble des périphériques du réseau sans interroger tous les appareils.
 
-![Le client demande au serveur la liste des services](/static/img/upnp/requestList.png)
+![Le client demande au serveur la liste des services](/static/img/upnp/requestList.webp)
 
 Enfin, tout appareil du réseau compatible peut interagir avec les autres appareils à l'aide du langage SOAP (qui utilise du XML) en passant par le point de contrôle à chaque fois.
 
-![Le client envoie au service une action au travers du serveur](/static/img/upnp/action.png)
+![Le client envoie au service une action au travers du serveur](/static/img/upnp/action.webp)
 
 Malgré sa praticité et sa relative simplicité, est décrié pour son manque de performance et de sécurité pour diverses raisons :
 

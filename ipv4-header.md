@@ -9,7 +9,7 @@ Dans cet article, nous allons voir à quoi ressemble l’en-tête (header) de l�
 
 Je vous invite d'abord à aller voir [cet](https://mikadmin.fr/blog/structure-de-ladresse-ipv4/) article concernant le format d’une adresse IPv4. Même si ceci ne sera pas très utile pour cet article, c’est toujours bien de savoir de quoi on parle.
 
-![Schema du header IPv4](/static/img/ipv4-header/Header_IP_schema.png)
+![Schema du header IPv4](/static/img/ipv4-header/Header_IP_schema.webp)
 
 Voyons donc plus en détail les différents champs de ce header.
 

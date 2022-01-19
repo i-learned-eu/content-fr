@@ -25,15 +25,15 @@ Un objet est dit "sécurisable" s’il a la capacité de posséder un descripteu
 
 Lorsqu’un utilisateur Windows se connecte à son compte local (ou Active Directory) plusieurs informations seront alors stockés dans la mémoire. De manière assez évidente, il contiendra le condensat du mot de passe (sauf configurations très improbable ou un système relativement vieux et dans ces cas précis, ce sera le mot de passe en claire), son `SID`, le `SID` de son groupe, des privilèges d’accès (nous y reviendrons plus tard) et bien d’autres informations. On regroupe tout cela dans ce que l’on appelle un `token` d’accès. Ce dernier est alors gardé dans un processus un peu particulier appelé `LSASS.exe` pour "Local Security Autority SubSystem Service". Ce dernier est donc vital et très sensible.
 
-![Une fois le mot de passe spécifié, un token est créé](/static/img/secu_windows/Auth LSASS.png)
+![Une fois le mot de passe spécifié, un token est créé](/static/img/secu_windows/Auth LSASS.webp)
 
 Lorsqu'on interagit avec le système d’une quelconque manière, une copie de notre `token` d’accès est alors utilisée. Dans le cas d’un fichier, les informations que le `token` d’accès contient vont donc être comparées avec les informations contenues dans la `DACL` (qui est une liste contenant les accès, plus d’information  sur ce sujet un peu après) garantissant ou non un accès d’une certaine valeur. Il peut être destiné à de l’écriture, de la lecture ou bien même pour de l’exécution.
 
-![Certaines informations du token sont comparées avec la DACL](/static/img/secu_windows/Principe d'accès.png)
+![Certaines informations du token sont comparées avec la DACL](/static/img/secu_windows/Principe d'accès.webp)
 
 Un cas plus intéressant est celui du démarrage d’un programme. En effet, ce dernier est lancé en tant qu’un utilisateur en particulier, il ne doit donc pas contourner ce fameux système d’accès. C’est pourquoi les processus sont considérés comme des `SecurableObject`, et dans cette situation, une copie de notre `token` d’accès est également donné et quand le programme interagira avec le système, il le fera bien selon les droits et l’identité de l’utilisateur connecté.
 
-![Lorsque l'on créer un processus, on lui fournit notre token pour qu'il puisse l'utiliser](/static/img/secu_windows/Principe d'accès à un programme.png)
+![Lorsque l'on créer un processus, on lui fournit notre token pour qu'il puisse l'utiliser](/static/img/secu_windows/Principe d'accès à un programme.webp)
 
 *La fonction [`CreateProcessA()`](https://docs.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessa) est une fonction de l'`API` Windows `kernel32.dll` qui permet de créer un nouveau processus.*
 
@@ -81,7 +81,7 @@ $SecurityEntity = psenum $ENUM SecurityEntity UInt32 @{
 ```
 Et oui, 35 privilèges  ça fait beaucoup. Mais à quoi servent-ils ? Ils permettent d’effectuer certaines tâches systèmes. Il ne faut donc pas les confondre avec les `ACE` ("Access Control Entry", qui représente un droit attribuer dans une `DACL`), car ces dernières définissent l’accès à un `SecurableObject`. Par exemple, le droit `SeBackupPrivilege` est donné à tout membre du groupe `Backup Operators` et permet de lire le contenu d’un fichier peu importe ses `ACLs` (sauf si une interdiction explicite à votre encontre est présente).
 
-![Si un privilège est présent comme SeBackupPrivilege, l'étape de comparaison avec la DACL n'est pas effectuée](/static/img/secu_windows/Principe d'accès à un programme-1.png)
+![Si un privilège est présent comme SeBackupPrivilege, l'étape de comparaison avec la DACL n'est pas effectuée](/static/img/secu_windows/Principe d'accès à un programme-1.webp)
 
 Le droit `SeRestorePrivilege` permet identiquement d’écrire un fichier. Le droit `SeDebugPrivilege` (réservé aux Administrateurs), permet d’accéder et de manipuler la mémoire d’un autre programme, un programme que nous n’avons pas lancé. C’est typiquement ce droit que demande Mimikatz pour accéder aux fameux condensats de mots de passe gardé par `LSASS.exe`.
 
@@ -131,7 +131,7 @@ PS D:\tools\PowerShellScript\PSReflect-Functions>
 
 Sauf qu’après une partie de "CS:GO" en compagnie d’une équipe russe le "ragequit" serait quelque peu ennuyant. C’est pour cela qu’il est possible d’activer ou de désactiver des privilèges. Attention, ces derniers doivent être contenu dans notre `token` d’accès initiale, sinon cela serait beaucoup trop facile. Lorsque nous utilisons un programme tel "shutdown.exe" il va utiliser certaines fonctions de la `WinAPI` ([`AdjustTokenPrivileges`](https://docs.microsoft.com/en-us/windows/win32/api/securitybaseapi/nf-securitybaseapi-adjusttokenprivileges) de `advapi32.dll` pour les curieux) pour changer ses privilèges, et de ce fait pouvoir dire adieu à notre partie gagnée d’avance.
 
-![Pour activer un privilège tel SeShutdownPrivilege, un programme comme shutdown.exe utilise AdjustTokenPrivileges](/static/img/secu_windows/Principe d'accès à un programme-2.png)
+![Pour activer un privilège tel SeShutdownPrivilege, un programme comme shutdown.exe utilise AdjustTokenPrivileges](/static/img/secu_windows/Principe d'accès à un programme-2.webp)
 
 ## Les listes d’accès
 
@@ -180,6 +180,6 @@ Si vous souhaitez plus de précisions, je vous invite à lire [mon article sur l
 
 Lorsqu’un utilisateur se connecte à sa session, des informations seront gardées en mémoire dans un `token` d’accès. Lorsqu’il souhaite démarrer un programme, une copie de son `token` est donné. Si ce dernier interagit avec le système, il devra utiliser ses privilèges pour réaliser certaines opérations. S’il n’est pas tout le temps nécessaire de les utiliser, lorsque l’on souhaite accéder à un objet (fichier, processus …) notre `token` d’accès sert de carte d’identité qui sera comparer avec le contenu de la `DACL` du descripteur de sécurité de l’objet auquel le programme/utilisateur souhaite accéder. En fonction des différentes entrés dans la liste d’accès, il se verra refuser ou autoriser un certain accès.
 
-![Description](https://ilearned.eu.org/static/img/secu_windows/schemasitemicrosoft.png)
+![Description](https://ilearned.eu.org/static/img/secu_windows/schemasitemicrosoft.webp)
 
 J’espère que vous comprenez mieux à présent la manière dont l’os de Microsoft gère les permissions. Si cet article vous a plu, je vous invite à consulter mes articles sur les privilèges d’accès ainsi que sur l’abus des `ACLs` en Active Directory (et oui même si utile aux défenseurs, ils sont aussi utile aux attaquants).

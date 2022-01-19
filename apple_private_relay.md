@@ -47,7 +47,7 @@ Les trois parties ne peuvent donc pas créer un profil numérique basé sur votr
 - Le second relai est géré par un partenaire de confiance choisi par Apple (ces partenaires incluent Cloudflare, Akamai et d'autres).
 
 ### Récapitulatif de l'échange et schéma
-![schema_private_relay](/static/img/private_relay/private-relay.png)
+![schema_private_relay](/static/img/private_relay/private-relay.webp)
 
 **ATTENTION**
 Le protocole est TRÈS peu documenté (pour le moment), à part le concept présenté dans les grandes lignes par Apple lors de leur [WWDC](https://developer.apple.com/videos/play/wwdc2021/10096/), le reste reste très flou donc pour une fois, nous allons devoir nous baser sur des spéculations.

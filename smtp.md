@@ -19,11 +19,11 @@ Les agents de dépôt (MSA) et de transfert (MTA) sont, notamment dans les petit
 
 Afin de trouver à quel échangeur de mail s'adresser, le MTA (agent de transfert) exploite le [DNS](https://ilearned.eu/les-bases-du-dns.html) et cherche un enregistrement MX dans la zone du nom de domaine de destination.
 
-![Boot mbr.png](/static/img/smtp/Boot_mbr.png)
+![Boot mbr.webp](/static/img/smtp/Boot_mbr.webp)
 
 Plus concrètement, un exemple simple d'envoi de mail a lieu comme suit :
 
-![SMTP_exchange.png](/static/img/smtp/SMTP_exchange.png)
+![SMTP_exchange.webp](/static/img/smtp/SMTP_exchange.webp)
 
 1. Dans un premier temps, le client envoie un message de "présentation", EHLO, dans lequel il indique son hostname. Vous avez peut-être déjà vu HELO au lieu de EHLO, HELO est en fait une commande dépréciée par la RFC 5321 depuis 2008 ! L'usage de EHLO est donc préféré.
 2. Puis, le client envoie l'adresse depuis laquelle il souhaite envoyer le mail.
