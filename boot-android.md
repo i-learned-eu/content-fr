@@ -15,7 +15,7 @@ Lorsque le bouton "Power" est appuyé, Un code présent dans la rom est éxecut�
 
 Le noyau s'occupe de monter les différentes partitions et systèmes de fichiers spéciaux comme `/dev` pour ensuite, démarrer le système d'initialisation (init). L'init c'est le premier programme qui est lancé, il s'occupe de lancer un certain nombre de logiciels. Systemd, par exemple, est un init. Un des logiciels intéressants qui est lancé se nomme "native daemons"
 
-![Boot d'android](/static/img/boot-android/boot_android.png)
+![Boot d'android](/static/img/boot-android/boot_android.webp)
 Native daemon lance plusieurs processus dont un qui est Zygote. 
 
 Zygote est lancé dans une VM Android RunTime (ART), ART c'est la machine virtuelle android pour lancer du code Java, Zygote s'occupe de lancer un processus nommé System Server, il lance aussi d'autres processus par exemple il précharge les classes Java. ART n'est pas la seule application lancée par native daemon, native daemon permet de lancer directement en "userland" des processus. 
@@ -36,7 +36,7 @@ Pour commencer, pour le processus de boot il est vérifié via une technologie n
 
 Verrouillé signifie qu'il y a une vérification au démarrage des signatures cryptographique des éléments présents dans /boot, les clés peuvent être celle de base du constructeur, ou bien avec une chaine différente (l'utilisateur qui a remplacé le système par exemple). D'ailleurs c'est justement cette partie là que certains constructeurs bloque et qui empêche de modifier la ROM (c'est le cas par exemple d'huawei, xiaomi, et bien d'autre).
 
-![Procédure vérification](/static/img/boot-android/verified_boot.png)
+![Procédure vérification](/static/img/boot-android/verified_boot.webp)
 
 Le bootloader et le kernel sont tout deux signés par une clé privée et vérifié par l'ordiphone sur base d'une clé publique stockée dans une partie matérielle accessible uniquement en lecture (en réalité c'est modifiable, mais souvent il faut effectuer une action depuis le système, pour éviter qu'un attaquant modifie facilement). Verified boot permet aussi d'empêcher le "downgrade" du système vers une version précédente en notant la version actuelle dans une partie elle aussi en lecture seule, cette protection empêche notamment de profiter d'une faille présente dans une vielle version de pouvoir être exploitée.
 
@@ -46,7 +46,7 @@ Device mapper permet de faire des périphériques de stockage virtuel qui peuven
 
 Pour vérifier que la partition n'ai pas été modifiée, il y a une vérification du bloc lu en temps réel, la vérification se base sur une arborescence de condensats. 
 
-![Dm-verity hash table](/static/img/boot-android/dm-verity-hash-table.png)
+![Dm-verity hash table](/static/img/boot-android/dm-verity-hash-table.webp)
 (source : [https://source.android.com/security/verifiedboot/dm-verity](https://source.android.com/security/verifiedboot/dm-verity))
 
 Pour vérifier que personne n'aie modifié la table de hashs, elle est signé par une pair de clé. Cette clé est mise dans la partition boot et est elle signée par la clé utilisée pour verified boot.

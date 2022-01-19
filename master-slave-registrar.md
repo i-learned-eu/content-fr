@@ -25,4 +25,4 @@ Le serveur dit `slave` (esclave) est celui qui reçoit la zone depuis un serveur
 
 Ce concept de master/slave permet de redonder une zone bien plus facilement que si on le faisait manuellement.
 
-![Schéma sur le fonctionnement master/slave](/static/img/master-slave-registrar/schema-master-slave.png)
+![Schéma sur le fonctionnement master/slave](/static/img/master-slave-registrar/schema-master-slave.webp)

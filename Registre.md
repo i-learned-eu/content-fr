@@ -9,9 +9,9 @@ Les registres Windows sont un composant vital du système d'exploitation. En eff
 
 # Les registres, c'est quoi
 Apparus en 1990 avec Windows 3.1 (et oui, c'est ancien), les bases de registres (en anglais "registry hives"), sont des bases de données hiérarchisées comportant l'ensemble des paramètres de Windows (bien que Microsoft préfère l'appellation registre Windows). Ainsi, ils fournissent un accès très rapide à un ensemble de fonctionnalités. À ce titre, nous retrouvons des informations sur les différents services présents sur le système, les applications installées, les utilisateurs du système, ou bien des paramètres de sécurité comme le mode de langage restreint de PowerShell. Par conséquent, il est possible de modifier le comportement de ces paramètres, en éditant les valeurs associées. Pour accéder aux registres de Windows, trois possibilités. La première, l'utilitaire regedit.exe, natif à l'OS, il propose une interface intuitive qui présente les chemins comme des arbres.
-![Regedit.exe](static/img/Registre/regedit.png)
+![Regedit.exe](static/img/Registre/regedit.webp)
 La seconde possibilité est d'accéder aux registres au moyen des APIs mises à disposition par Microsoft avec C/C++/C#. La dernière est l'accès avec une ligne de commande, principalement PowerShell (même si certains outils sont disponibles pour le CMD). En outre, pour naviguer au travers des différents espaces de stockage d'informations, PowerShell se base sur ce que l'on appelle des `PSDrive`. Ils sont une généralisation de ce qu'une invite de commande appelle disque, et peuvent contenir tous types d'informations. Ainsi, les disques physiques comme le `C:\`, les partages SMBs, des répertoires particuliers (par exemple `C:\Users\Lancelot`, le point bonus ici est que le `PSDrive` est cloisonné, on ne pourra pas aller en `C:\Users` dans ce cas), et les registres sont des éléments susceptibles d'être des `PSDrive`. La cmdlet `Get-PSDrive` vous informe des actuels `PSDrive` montés. Dans l'exemple ci-dessous, on utilise PowerShell pour se rendre dans la ruche `HKCU`.
-![Exploration des registres avec PowerShell](static/img/Registre/PowerShellReg.png)
+![Exploration des registres avec PowerShell](static/img/Registre/PowerShellReg.webp)
 Pour savoir ce que sont `HKCU` et` HKLM`, sont devons nous intéresser à la structure des registres.
 # Architecture
 Comme mentionné dans la partie précédente, les registres sont souvent présentés sous forme d'arborescence. A ce titre, on les identifie sous forme de chemin démarrant à une classe. Il en existe deux principaux:
@@ -44,7 +44,7 @@ Bien sûr, pour des usages plus précis, il existe d'autres types que vous pouve
 
 D'un point de vue sécurité, il faut comprendre que les registres sont considérés, comme la quasi totalité des objets Windows, en tant que "Securable Object". Il en découle que des ACLs peuvent être placées pour restreindre les accès. Ainsi, il existe des privilèges qui permettent de modifier le comportement de sa session vis à vis des registres. Ces privilèges sont `SeRestorePrivilege` et `SeBackupPrivilege` qui permettent de lire et modifier sans permission des clés de registres ([pour plus d'informations](https://ilearned.eu.org/secu_windows.html)). Lorsqu'un utilisateur ne possède pas le droit de voir une classe ou une clé, elle apparaît vide de contenu dans `regedit.exe`, sinon c'est plutôt un beau message d'accès interdit !
 
-![ACL de HKLM](static/img/Registre/ACLs.png)
+![ACL de HKLM](static/img/Registre/ACLs.webp)
 
 # Fonctionnement
 
@@ -57,9 +57,9 @@ Les registres peuvent naturellement être modifiés,  en fonction du niveau de p
 ```
 
 Lorsqu'ils sont exécutés, ils modifient les clés renseignées. Attention cependant, ils sont très répandu mais peuvent parfois contenir des malwares, alors prudence avant de les utiliser, surtout s'ils proviennent de sources inconnues. Pour accéder en ligne de commande aux registres, vous pouvez utiliser l'utilitaire `Reg.exe` depuis l'invite de commande ou PowerShell. La syntaxe est assez simple, mais elle nécessite que vous possédiez le chemin complet de la clé. Voici un exemple assez modeste qui montre les variables d'environnement par défaut de tous les utilisateurs.
-![Lecture d'une clé de registre avec Reg.exe](static/img/Registre/regquery.png)
+![Lecture d'une clé de registre avec Reg.exe](static/img/Registre/regquery.webp)
 Il est également possible d'utiliser les Cmdlets natives à PowerShell, celles prédestinées à cette usage étant `Get-Item/Get-ItemProperty`:
-![Lecture d'une clé de registre avec PowerShell](static/img/Registre/GetItem.png)
+![Lecture d'une clé de registre avec PowerShell](static/img/Registre/GetItem.webp)
 Aussi, vous pouvez vous placer dans le `PSDrive` du registre, et vous pourrez naviguer dans celui-ci exactement comme si vous étiez dans un dossier !
 
 Pour créer une clé, on peut utiliser `Reg.exe` de la manière suivante:
@@ -67,9 +67,9 @@ Pour créer une clé, on peut utiliser `Reg.exe` de la manière suivante:
 Reg.exe ADD [Clé] /V [nom de la valeur] /d [données associées] /t [type]
 ```
 Par exemple ajoutons la valeur Hello de type `REG_SZ` contenant "toto" à la clé `HCKU\Test`:
-![Ajout d'une clé avec Reg.exe](static/img/Registre/regAdd.png)
+![Ajout d'une clé avec Reg.exe](static/img/Registre/regAdd.webp)
 Nous pouvons faire de même avec PowerShell. En premier lieu, nous créons la clé avec `New-Item`, puis on ajoute la valeur avec `New-ItemProperty`:
-![Ajout d'une clé avec PowerShell](static/img/Registre/RegAddPS.png)
+![Ajout d'une clé avec PowerShell](static/img/Registre/RegAddPS.webp)
 Pour modifier une clé. Avec `Reg.exe` on fait comme si nous voulions créer une nouvelle clé, et on ajoute le flag `/f` pour forcer la réécriture de la clé. Avec PowerShell, rien de plus simple, on utilise la Cmdlet `Set-ItemProperty`:
 ```
 Set-ItemProperty -Path "HKCU:\Test" -Name "Hello" -Value "hey"
@@ -81,7 +81,7 @@ Pour supprimer une clé avec Reg.exe, rien de plus simple:
  Reg.exe DELETE [Chemin de la clé] 
  ```
  Avec PowerShell on utilise `Remove-Item` !
-![Suppression d'une clé avec PowerShell](static/img/Registre/Delete.png)
+![Suppression d'une clé avec PowerShell](static/img/Registre/Delete.webp)
 Évidemment, les exemples ici sont volontairement simplistes, et un usage bien plus avancé de ces outils est possible.
 # Conclusion
 

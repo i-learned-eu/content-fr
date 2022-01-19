@@ -11,7 +11,7 @@ SSH est un protocole très répandu sur internet, il est utilisé par des millio
 
 Le système de certificats de SSH est relativement similaire à celui de TLS (x509), une première paire de clés publiques/privées est générée, elle servira d'**autorité de certification**, le clé privée de cette autorité de certification doit bien évidemment rester ultra confidentielle. On va ensuite générer une autre paire de clé sur chaque client. On pourra ensuite, avec la clé privée de notre autorité de certification, signer la publique des clients afin de générer un certificat. Ainsi, n'importe quel certificat signé par notre autorité de certification peut être considérée comme "de confiance".
 
-![Principe d'une autorité de certification](/static/img/ca-ssh/CA_principe(1).png)
+![Principe d'une autorité de certification](/static/img/ca-ssh/CA_principe(1).webp)
 
 # Signer les clés hôte
 

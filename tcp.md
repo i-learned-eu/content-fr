@@ -12,17 +12,17 @@ La communication s'effectue en trois parties : l'établissement de la connexion,
 
 Ne vous en faites pas, nous allons voir plus précisément à quoi correspondent les numéros d'acquittement et de séquence ;).
 
-![Comprendre%20le%20protocole%20TCP%20c2ad32e581ef4daebd3dee3d401ad213/Frame_25.png](/static/img/tcp/Frame_25.png)
+![Comprendre%20le%20protocole%20TCP%20c2ad32e581ef4daebd3dee3d401ad213/Frame_25.webp](/static/img/tcp/Frame_25.webp)
 
 Une fois cette initialisation faite, la communication peut commencer, regardons donc de plus près le contenu d'un paquet TCP, accrochez vous il y a pas mal de contenu 😄. Cette partie s'appuie en grand partie sur [l'article wikipedia de TCP](https://fr.wikipedia.org/wiki/Transmission_Control_Protocol#D%C3%A9veloppement_de_TCP). Nous ne détaillerons pas l'utilité de chacune de ces informations, seulement des plus importantes à nos yeux.
 
-![Comprendre%20le%20protocole%20TCP%20c2ad32e581ef4daebd3dee3d401ad213/Frame_26.png](/static/img/tcp/Frame_26.png)
+![Comprendre%20le%20protocole%20TCP%20c2ad32e581ef4daebd3dee3d401ad213/Frame_26.webp](/static/img/tcp/Frame_26.webp)
 
 Les numéros d'acquittement et de séquence sont deux valeurs aléatoires que l'on incrémente avec le nombre de données reçues afin de vérifier que tout les paquets sont bien arrivées dans l'ordre. Les numéros d'acquittement et de séquence initiaux sont générés aléatoirement durant la séquence d'initialisation de la connexion que nous avons vu plus tôt, le three way handshaking.
 
 Le partie "Somme de contrôle" est en fait un condensat des données transmises qui est calculé par le serveur et vérifié par le client afin de garantir l'intégrité des paquets. Si les hash correspondent on considère alors que le paquet a été transmit sans erreur. 
 
-![Comprendre%20le%20protocole%20TCP%20c2ad32e581ef4daebd3dee3d401ad213/Frame_27.png](/static/img/tcp/Frame_27.png)
+![Comprendre%20le%20protocole%20TCP%20c2ad32e581ef4daebd3dee3d401ad213/Frame_27.webp](/static/img/tcp/Frame_27.webp)
 
 Le flag `PSH` (push) indique l'envoie de données.
 
@@ -36,11 +36,11 @@ Nous avons vu les parties les plus importantes d'un trame TCP, étudions mainten
 
 Pour fermer une session TCP, c'est relativement simple, le premier appareil envoie un paquet `FIN` au second avec son numéro de séquence, afin de vérifier que tous les paquets ont été reçu avant de fermer la communication. Le serveur répond alors avec un `ACK` pour confirmer la réception du message. Le même échange a ensuite lieu dans l'autre sens, le serveur envoie un paquet `FIN` et le client répond avec un `ACK`.
 
-![Comprendre%20le%20protocole%20TCP%20c2ad32e581ef4daebd3dee3d401ad213/Frame_28.png](/static/img/tcp/Frame_28.png)
+![Comprendre%20le%20protocole%20TCP%20c2ad32e581ef4daebd3dee3d401ad213/Frame_28.webp](/static/img/tcp/Frame_28.webp)
 
 Pfiou, ça fait beaucoup d'un coup 😅. Mettons maintenant tout ça en pratique, si vous êtes arrivé jusqu'ici, vous avez fait le plus dur, bravo 🎉.
 
-![Comprendre%20le%20protocole%20TCP%20c2ad32e581ef4daebd3dee3d401ad213/Frame_29(5).png](/static/img/tcp/Frame_29(5).png)
+![Comprendre%20le%20protocole%20TCP%20c2ad32e581ef4daebd3dee3d401ad213/Frame_29(5).webp](/static/img/tcp/Frame_29(5).webp)
 
 Vous remarquerez surement la présence des mentions de `Win`; `TSval` et `TSecr`, regardons à quoi elles correspondent
 
@@ -48,7 +48,7 @@ Vous remarquerez surement la présence des mentions de `Win`; `TSval` et `TSecr`
 
 `TSval` et `TSecr` sont simplement des [timestamps](https://fr.wikipedia.org/wiki/Horodatage), `TSval` correspond au moment de l'envoi du paquet et `TSecr` au moment de la réception, chacun des deux participants de la conversation peut soustraire ces deux valeurs pour déterminer le `Round Trip Time (RTT)`, le temps que prend un paquet à être échangé.
 
-Si vous souhaitez à votre tour inspecter ce simple échange tcp, le fichier est disponible [ici](/static/misc/tcp/record.pcapng), je vous recommande l'outil [Wireshark](https://www.wireshark.org/) si vous voulez inspecter des paquets de ce type.
+Si vous souhaitez à votre tour inspecter ce simple échange tcp, le fichier est disponible [ici](/static/misc/tcp/record.pcawebp), je vous recommande l'outil [Wireshark](https://www.wireshark.org/) si vous voulez inspecter des paquets de ce type.
 
 Vous l'aurez surement remarqué, le protocole TCP a été conçu dans l'optique de minimiser au maximum la perte de donnée, grâce à des fonctionnalité comme les accusés de réception (`ACK`) ou la somme de contrôle. Mais ces fonctionnalités posent un problème, les paquets s'en retrouvent alourdis, la partie somme de contrôle (checksum) pèse à elle seule 16 bits par exemple, autre exemple, pour chaque paquet d'envoie de données (`PSH`), un paquet `ACK` supplémentaire est nécessaire, à chaque fois ! Cette lourdeur pose notamment problème dans le cadre d'applications en temps réel, d'autres protocoles comme UDP que nous étudierons bientôt ont été créés pour remédier à ce problème.
 

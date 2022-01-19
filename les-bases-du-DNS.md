@@ -24,7 +24,7 @@ Le DNS (Domain Name System) est un protocole permettant de "traduire" un [nom de
 
     Contient tout les enregistrement DNS d'une zone.
 
-![Frame 1](/static/img/les-bases-des-dns/schema4.png)
+![Frame 1](/static/img/les-bases-des-dns/schema4.webp)
 
 Vous l'imaginez bien, les informations ne sont pas stockées tel-quel sur les serveurs DNS, ils sont stocké sous forme d'enregistrement DNS, en voici un exemple commenté tout droit tiré de mon propre serveur DNS autoritaire.
 
@@ -34,7 +34,7 @@ eban.bzh.	1800 IN A 89.234.156.60
 
 `eban.bzh.` correspond au domaine que nous avons demandé, vous vous demanderez sûrement, mais pourquoi y a-t-il un . à la fin ? *Comment ça vous ne vous êtes pas posé la question ? 😛* En fait, la résolution des DNS fonctionne sous forme de couches, voici un petit schéma qui explique tout ça
 
-![Frame 2](/static/img/les-bases-des-dns/schema2.png)
+![Frame 2](/static/img/les-bases-des-dns/schema2.webp)
 
 Les serveurs DNS "root" correspondent à la première couche, ils contiennent les records DNS pour tous les `TLD` *Un TLD ? Quèsaco ?* Un TLD (Top level domain name) c'est en fait tout les `.` quelque chose que vous rencontrez au quotidien, `bzh` , `fr`, `com`, `be` en sont quelques exemples. Les serveurs DNS root contiennent donc les record correspondants aux TLD. 
 
@@ -42,11 +42,11 @@ Les TLD, `bzh.` dans notre exemple, contient quant à lui les informations sur l
 
 `eban.bzh.` pour finir contient tout les records pour `eban.bzh.` et tout ses sous-domaines (`git.eban.bzh.`, `blog.eban.bzh.`...) cette "couche" est appelée `FQDN` (Fully Qualified Domain Name). Pour rendre tout ça plus simple voici (à nouveau :p) un petit schéma.
 
-![Frame 3](/static/img/les-bases-des-dns/schema3.png)
+![Frame 3](/static/img/les-bases-des-dns/schema3.webp)
 
 Et voilà le schéma corrigé d'une requête DNS.
 
-![Frame 4](/static/img/les-bases-des-dns/schema1.png)
+![Frame 4](/static/img/les-bases-des-dns/schema1.webp)
 
 Ces petites explications faites, continuons avec notre record `eban.bzh.	1800 IN A 89.234.156.60`.
 

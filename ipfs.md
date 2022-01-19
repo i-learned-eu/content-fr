@@ -11,12 +11,12 @@ Ce protocole fonctionne en paire à paire (P2P) afin de garantir une plus grande
 
 # Un changement de paradigme
 
-Aujourd'hui sur le web, quand on fait la requête HTTP `GET https://ilearned.eu/static/img/favicon.png` on va demander au serveur à l'adresse ilearned.eu le fichier contenu dans le chemin `/static/img/favicon.png`. Le serveur pourrait alors nous renvoyer le favicon que nous cherchons, ou n'importe quoi d'autre, comme une photo de chaton.
+Aujourd'hui sur le web, quand on fait la requête HTTP `GET https://ilearned.eu/static/img/favicon.webp` on va demander au serveur à l'adresse ilearned.eu le fichier contenu dans le chemin `/static/img/favicon.webp`. Le serveur pourrait alors nous renvoyer le favicon que nous cherchons, ou n'importe quoi d'autre, comme une photo de chaton.
 
 > Avec HTTP, on demande le contenu à un emplacement, pas un fichier spécifique directement.
 > 
 
-Avec IPFS c'est tout à fait différent, plutôt que d'aller demander le fichier contenu à l'emplacement `/static/img/favicon.png`, on va demander le hash du fichier que nous souhaitons consulter. 
+Avec IPFS c'est tout à fait différent, plutôt que d'aller demander le fichier contenu à l'emplacement `/static/img/favicon.webp`, on va demander le hash du fichier que nous souhaitons consulter. 
 
 Si je souhaite consulter le favicon d'I Learned, je vais demander le hash (appelé CID) `QmfJpxjQezydRAswGezKs9qqqM1fFAjEZRgA4VdwwCNUsw`. Je suis alors sûr de recevoir l'image que j'ai demandé, et pas une photo de chaton qui aurait un CID (hash) différent (ici, `QmYKfEPmNbuN9mYYmPENvpNpQ6yQQ3d1EfynYNA6qPGjTA`).
 
@@ -24,7 +24,7 @@ Si je souhaite consulter le favicon d'I Learned, je vais demander le hash (appel
 
 Savoir représenter des fichiers, c'est bien beau, mais encore faut-il pouvoir y accéder 😅. Avec IPFS, chaque nœud du réseau ont une paire de clé qui leur permet d'échanger des informations de façon chiffrée, mais aussi d'être identifié. Tous les nœuds du réseau stockent une DHT (Distributed Hash Table, table de condensats distribuée) cette table met en relation les différents nœuds du réseau et les données qu'ils partagent, mais aussi leur multiadresse. Une multiadresse, c'est une chaine de caractère qui permet de renseigner directement comment contacter un nœud, par exemple `/ip4/89.234.156.60/udp/1234` indique de contacter l'adresse IPv4 89.234.156.60 en utilisant le protocole UDP sur le port 1234.
 
-![Le client demande d'abord à la DHT, puis va se connecter aux pairs](/static/img/ipfs/IPFS(1).png)
+![Le client demande d'abord à la DHT, puis va se connecter aux pairs](/static/img/ipfs/IPFS(1).webp)
 
 # IPNS
 

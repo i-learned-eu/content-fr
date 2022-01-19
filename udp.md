@@ -12,12 +12,12 @@ UDP est l'acronyme de User Datagram Protocol (traduit par protocole de datagramm
 
 Comme je l'ai dis plus haut UDP ne vérifie pas la bonne réception d'un paquet (contrairement à TCP avec son système d'ACK), la machine envoie donc le paquet sans forcément attendre un retour. Ce protocole est bien plus simple que TCP dans sa conception. Un paquet UDP se compose tel que décrit sur ce schéma :
 
-![Schéma d'une trame UDP](/static/img/udp/schema_trame.png)
+![Schéma d'une trame UDP](/static/img/udp/schema_trame.webp)
 
 Comme on peut le voir, il y a un minimum d'information comparé à TCP, le port source qui permet si besoin de répondre, le port de destination, la longueur totale du segment UDP (données comprises), une somme de contrôle (hash) et les données en elle même, chaque entrée de l'en-tête fait 16 bits ce qui au total fait 64 bits pour la partie header contre 192 avec TCP ! La partie données a une longueur variable.
 
 Comme à notre habitude, regardons une capture réseau :
-![Capture d'une requête DNS](/static/img/dns/dns_capture.png)
+![Capture d'une requête DNS](/static/img/dns/dns_capture.webp)
 On remarque directement la simplicité, 2 requêtes seulement pour un aller retour, chaque paquet est aussi assez léger, moins de 100 octets à chaque fois, pour ce qui est des nombres "0.000000" et 0.000093" il s'agit du temps où ont été capturés chaque paquet. Si vous voulez regarder plus en profondeur la capture réseau, je vous laisse le fichier disponible [ici](/static/misc/dns.pcap).
 
 C'est tout pour cet article sur UDP, j'espère que vous l'aurez apprécié. On se retrouve demain pour parler de **NTP** :).
