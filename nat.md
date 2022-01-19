@@ -17,11 +17,11 @@ Pour fonctionner il faudra un réseau avec des adresses non routable sur interne
 
 Quand un appareil local va vouloir établir une connexion avec l'extérieur le routeur va s'occuper de remplacer l'IP source du paquet par la sienne et le port par un port aléatoire que le routeur va retenir. Quand la destination va vouloir répondre, le routeur va regarder le port où le paquet arrive et rediriger le paquet vers l'IP locale qui l'a initialisé.
 
-![Schema PAT](/static/img/nat/pat.png)
+![Schema PAT](/static/img/nat/pat.webp)
 
 Un problème de cette méthode est vite visible, si on veut héberger un service public sur une des machines du réseau, les gens sur internet ne pourront pas le joindre vu qu'il ne possède qu'un IP privée. Une solution existe à ça, une redirection permanente de port. Le principe de ce mécanisme est de dire au routeur que si un paquet arrive sur l'IP public, sur un port précis il faut toujours rediriger vers une IP locale définie.
 
-![Port Forward schema](/static/img/nat/port_forward.png)
+![Port Forward schema](/static/img/nat/port_forward.webp)
 
 Un problème majeur de ce type de NAT est que le routeur oublie au bout d'un certains temps qu'une connexion a été établie, un certain nombre d'applications cassent à cause de ce mécanisme. Une solution parfois mise en œuvre pour ne pas se faire oublier est d'envoyer régulièrement du trafic.
 
@@ -47,4 +47,4 @@ Par exemple Alice veut accéder au serveur web de Bob, mais Alice n'a pas d'IPv4
 
 Cette méthode pose cependant un certain nombre de problèmes. La communication avec une IP directement (sans nom de domaine) n'est par exemple pas possible (mais des méthodes comme 464XLAT existent). Comme pour toutes les autres méthodes ci-dessus, certains protocoles ne sont pas compatibles avec NAT64. DNSSEC ne fonctionne pas non plus.
 
-![NAT64/DNS64 schema](/static/img/nat/nat64.png)
+![NAT64/DNS64 schema](/static/img/nat/nat64.webp)

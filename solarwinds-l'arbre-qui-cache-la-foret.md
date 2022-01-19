@@ -33,21 +33,21 @@ Le 13 décembre 2020, coup de tonnerre, FireEye indique dans [ce communiqué](ht
 
 Ce travail d'analyse est en grande partie basé sur les travaux de [Colin Hardy.](https://www.youtube.com/channel/UCND1KVdVt8A580SjdaS4cZg)
 
-Ce malware a été conçu pour être le plus discret possible, lors de la première exécution, le code malveillant commence par attendre 12 à 14 jours avant de s'exécuter. ![Screenshot de la fonction](https://i.postimg.cc/Y2ZNCqJc/Group-1-1.png)
+Ce malware a été conçu pour être le plus discret possible, lors de la première exécution, le code malveillant commence par attendre 12 à 14 jours avant de s'exécuter. ![Screenshot de la fonction](https://i.postimg.cc/Y2ZNCqJc/Group-1-1.webp)
 
 Puis, il vérifie si le hostname de la machine contient *"solarwinds"* ou *"test"*, ou s'il correspond à une liste de noms d'hôte qui contient, par exemple, swdev.dmz, swdev.local, on peut donc imaginer que l'attaquant a eu accès au réseau local de SolarWinds et a pu collecter ces noms d'hôte... Tout cela dans le but d'éviter que le malware ne se déclenche sur un émulateur d'un AV et qu'il soit détecté. 
 
-![Deuxième screenshot](https://i.postimg.cc/d0V8cwKf/Group-2-6.png)
+![Deuxième screenshot](https://i.postimg.cc/d0V8cwKf/Group-2-6.webp)
 
 Le malware va ensuite vérifier si, dans la liste des processus actifs sur la machine, un ou plusieurs correspond à une liste qui contient les noms de processus d'antivirus (f-secure gatekeeper, carbonblack), de Command and Control (csagent, csfalconcontainer) - probablement afin de ne pas infecter une machine qui le serait déjà - de logiciels de virtualisation (vboxservice) et même d'analyse réseau (wireshark, tcpdump). Tout cela dans la but de rester le plus discret possible.
 
 Puis, un userID est créé, il est généré à partir du hostname de la machine, du MachineGuid et de l'adresse MAC
 
-[![Group-3.png](https://i.postimg.cc/htfSk55r/Group-3.png)](https://postimg.cc/SnbF8Dq2)
+[![Group-3.webp](https://i.postimg.cc/htfSk55r/Group-3.webp)](https://postimg.cc/SnbF8Dq2)
 
 Le code malveillant fait ensuite appel au domaine *avsvmcloud.com*, il génère une URL avec la fonction suivante
 
-![Group-5.png](https://i.postimg.cc/NFngF8yT/Group-5.png)
+![Group-5.webp](https://i.postimg.cc/NFngF8yT/Group-5.webp)
 
 Cette URL est composée du domaine *eu-west-1.appsync-api.avsvmcloud.com* (la *eu-west-1* peut aussi être *us-west-2*, *us-east-1* ou *us-east-2*, le choix est fait aléatoirement) et d'un sous domaine qui est généré par la fonction DecryptShort à partir du UserID généré plus tôt et du hostname de la machine. C'est à partir de ce sous-domaine que la machine communique avec le C2.
 

@@ -13,11 +13,11 @@ Une blockchain, car il en existe plusieurs, est une chaine de blocs liés ensemb
 
 Afin de les lier entre eux, chaque bloc de la chaine contient le hash du bloc précédent, ce qui permet de s'assurer que la chaine n'est pas falsifiée. 
 
-![Une chaine de blocs avec à l'intérieur de chacun le hash du précédent](/static/img/blockchain/blockchain.png)
+![Une chaine de blocs avec à l'intérieur de chacun le hash du précédent](/static/img/blockchain/blockchain.webp)
 
 Si un attaquant cherchait à ajouter un bloc a posteriori, il serait tout de suite détecté. La chaine de blocs a aussi pour avantage d'être vérifiable par n'importe qui ayant à sa disposition un ordinateur capable d'exécuter des fonctions de hashage.
 
-![Une chaine de blocs avec à l'intérieur de chacun le hash du précédent, sauf le troisième qui est un intrus](/static/img/blockchain/blockchain_hacked.png)
+![Une chaine de blocs avec à l'intérieur de chacun le hash du précédent, sauf le troisième qui est un intrus](/static/img/blockchain/blockchain_hacked.webp)
 
 # Comment ça fonctionne concrètement ?
 
@@ -25,7 +25,7 @@ Vous l'imaginez bien, la vision présentée ci-dessus est grandement simplifiée
 
 Afin de complexifier la création d'un bloc, la méthode du Proof of Work (PoW) requiert d'ajouter un champ à notre bloc que l'on remplira de données aléatoirement jusqu'à ce que le hash du paquet commence par un nombre donné de 0 (et donc soit d'une certaine taille). Pour le bitcoin par exemple à date d'écriture de cet article, pour qu'un paquet soit valide, il faut que son hash commence par 19 zéros. Cette valeur est déterminée en fonction des 2016 derniers blocs minés (et change donc très fréquemment) afin d'assurer qu'il n'y ai toujours en moyenne qu'un bloc validé toutes les dix minutes. Cette méthode se base donc sur la complexité calculatoire des fonctions de hashage. Un bloc a la structure suivante
 
-![ID Du bloc - Hash du bloc précédent - Données - Proof of Work - Hash de ce bloc](/static/img/blockchain/block_structure.png)
+![ID Du bloc - Hash du bloc précédent - Données - Proof of Work - Hash de ce bloc](/static/img/blockchain/block_structure.webp)
 
 Le problème de cette méthode, c'est qu'elle est très énergivore, elle implique d'avoir des fermes entières de "minage" (qui ne sont donc en réalité que des machines qui calculent des hash) qui consomment beaucoup d'électricité afin de garantir la sécurité de la blockchain. Entre le mineurs, la conccurence est rude et au final, seul le travail d'un mineur sera récompensé, toutes les autres fermes ont donc travaillé, et consommé beaucoup d'électricité pour... rien. À l'heure d'une prise de conscience généralisée autour de l'urgence climatique, cette méthode semble donc inadaptée.
 

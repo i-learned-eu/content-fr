@@ -117,7 +117,7 @@ Où l'opérateur $<<<$ désigne un décalage ("rotation vers la gauche").
 
 Ainsi, on peut résumer le procédé grâce à une suite $(\text{MD4}_i)_{0\leq i \leq k}$ et fonction de compression $h: \{0,1\}^{n+m} \rightarrow \{0,1\}^n$, qui démarre d'un IV: $\text{MD4}_0 = \text{IV},\text{MD4}_{i+1} = h(\text{MD4}_i,M_i)$. Bon… au passage, MD4 est vraiment déprécié donc Microsoft pourrait s'améliorer (oui, pas que sur cela d'ailleurs).
 
-![Les valeurs sont passées plusieurs fois dans la fonction md4](/static/img/hashage/md4.png)
+![Les valeurs sont passées plusieurs fois dans la fonction md4](/static/img/hashage/md4.webp)
 
 ## Conclusion
 

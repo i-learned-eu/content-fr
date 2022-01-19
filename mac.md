@@ -24,7 +24,7 @@ total 0
 
 `ls` divise en 3 parties les permissions, celle de l'utilisateur, du groupe et de tout le monde :
 
-![Détails des droits affichés par LS](/static/img/mac/ls(2).png)
+![Détails des droits affichés par LS](/static/img/mac/ls(2).webp)
 
 Le soucis de se baser uniquement sur les permissions des fichiers est le manque de contrôle, le schéma de sécurité des MAC permet de renforcer le tout en regardant beaucoup plus de facteur. Le concept est de regarder toutes le actions faites sur la machine, et de regarder l'action et l'autoriser ou non en fonction des règles d'accès. L'avantage de ce modèle par rapport à la sécurité historique de Linux (et UNIX par la même occasion) est d'être bien plus précis, par exemple autoriser à une application seulement certains ports et fichiers (fichier qui pourrait selon le système de fichier lui être autorisé).
 

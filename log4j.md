@@ -9,7 +9,7 @@ Le 9 décembre 2021, la publication d'une vulnérabilité 0 day baptisée Log4S
 
 [Log4j2](https://github.com/apache/logging-log4j2) est une bibliothèque Java permettant de générer... des logs, c'est comme le Port-Salut, c'est écrit dessus 😉. Cette bibliothèque est extrêmement utilisé par de nombreuses entreprises, comme, pour ne citer qu'elles, Apple, Steam, Twitter, Amazon, Tesla ou encore Microsoft. Le problème est qu'une vulnérabilité a été découverte sur ce logiciel. Cette vulnérabilité était passée jusqu'alors inaperçue, le 9 décembre un utilisateur de Github, `wcc526`, interroge l'auteur d'une pull request corrigeant cette faille à propos de celle ci. S'ensuit la publication d'une CVE et d'un Proof Of Concept.
 
-![Message de wcc526 "Is it a security vulnerability"](/static/img/log4j/github.png)
+![Message de wcc526 "Is it a security vulnerability"](/static/img/log4j/github.webp)
 
 ## 💥 Exploitation 
 
@@ -23,7 +23,7 @@ Au vu de ces éléments, il est trivial d'obtenir une RCE sur le serveur distant
 
 Cette vulnérabilité est très inquiétante au vu de la facilité avec laquelle elle peut être exploitée. À la découverte de cette dernière, de nombreux bots ont scanné l'ensemble d'Internet à la recherche de serveur vulnérables. Le serveur qui héberge le site web que vous visitez en ce moment a été visité par certains d'entre eux.
 
-![De nombreux bots essayent d'envoyer des payload malveillants](/static/img/log4j/vm01.png)
+![De nombreux bots essayent d'envoyer des payload malveillants](/static/img/log4j/vm01.webp)
 
 ## 🧑‍🚒 Limiter les dégâts
 
