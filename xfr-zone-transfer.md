@@ -8,7 +8,7 @@ Slug: xfr-zone-transfer
 
 Aujourd'hui, on parle des procotoles AXFR et IXFR ainsi que de la vulnérabilité que peut représenter un transfert de zone non autorisé !
 
-AXFR est un protocole qui sert à faire des transferts de zone du `master` vers le `slave`, le `slave` vérifie périodiquement si le serial (=numéro de version, voir [ici](https://blog.eban.bzh/today-i-learned/les-bases-du-dns.html) si vous ne vous rappelez plus de ce que c'est) de son SOA est inférieur à celui du `master`, si c'est le cas, il fait une demande de transfert de zone, qui peut être fait grâce au protocole AXFR. Concrètement le `master` envoie simplement une copie de sa zone DNS vers le `slave`. 
+AXFR est un protocole qui sert à faire des transferts de zone du `master` vers le `slave`, le `slave` vérifie périodiquement si le serial (=numéro de version, voir [ici](https://ilearned.eu/les-bases-du-dns.html) si vous ne vous rappelez plus de ce que c'est) de son SOA est inférieur à celui du `master`, si c'est le cas, il fait une demande de transfert de zone, qui peut être fait grâce au protocole AXFR. Concrètement le `master` envoie simplement une copie de sa zone DNS vers le `slave`. 
 
 Il existe aussi un autre protocole pour le même usage appelé IXFR, avec IXFR, si le `slave` remarque que son serial est inférieur à celui du `master`, il envoie le serial de la version de la zone qu'il détient au `master`, le `master` envoie ensuite le nouveau serial et deux listes, une pour les records à supprimer et une autre pour les records à ajouter/modifier. IXFR a pour avantage principal de nécessiter moins de bande passante qu'AXFR.
 

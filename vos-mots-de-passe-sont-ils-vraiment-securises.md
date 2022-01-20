@@ -11,8 +11,8 @@ Aujourd'hui, nous utilisons des mots de passe partout, pour déverrouiller son t
 
 Il est très important d'avoir des mots de passe différents sur chaque compte, imaginez un de vos comptes est piraté et votre mot de passe est récupéré, il suffirait donc au pirate de réutiliser ce même mot de passe sur tous vos comptes pour y avoir accès… Etant donné qu'il est impossible de retenir des dizaines de mots de passe différents, les gestionnaires de mots de passe ont été inventés, ils permettent de n'avoir qu'à retenir qu'un mot de passe, celui de votre gestionnaire ! Il existe de nombreux services de gestionnaires de mots de passe, je vous conseille :
 
-  - [https://apps.nextcloud.com/apps/passwords](Nexcloud Passwords) (Si vous avez un cloud Nextcloud, Nexcloud Passwords est le meilleur gestionnaire de mots de passe)
-  - [https://bitwarden.com/](Bitwarden) (Très bon gestionnaire de mot de passe entièrement open source)
+  - [Nextcloud Passwords](https://apps.nextcloud.com/apps/passwords) (Si vous avez un cloud Nextcloud, Nexcloud Passwords est le meilleur gestionnaire de mots de passe)
+  - [Bitwarden](https://bitwarden.com/) (Très bon gestionnaire de mot de passe entièrement open source)
 
 Il ne vous reste plus qu'à installer un de ces services sur tout vos appareils.
 
