@@ -5,7 +5,7 @@ Slug: versions-ip
 Summary: On connait tous IPv4 et IPv6 qui sont deux protocoles largement répandus, dans cet article nous allons explorer les versions méconnues du protocole Internet.
 Title: Les version oubliées du protocole IP 🔎
 
-On connait tous IPv4 et [IPv6](https://blog.eban.bzh/today-i-learned/ipv6.html) qui sont deux protocoles largement répandus (bien qu'un des deux ne le soit pas assez ^^), mais on pourrait légitimement se demander s'il existe d'autres version du Protocole Internet, nous ferrons donc dans cet article un petit tour d'horizon des différentes itérations du protocole IP et de leurs spécificités.
+On connait tous IPv4 et [IPv6](https://ilearned.eu/ipv6.html) qui sont deux protocoles largement répandus (bien qu'un des deux ne le soit pas assez ^^), mais on pourrait légitimement se demander s'il existe d'autres version du Protocole Internet, nous ferrons donc dans cet article un petit tour d'horizon des différentes itérations du protocole IP et de leurs spécificités.
 
 # IPv1 2 et 3 − La genèse du protocole Internet
 
