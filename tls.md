@@ -22,7 +22,7 @@ Le serveur répond ensuite avec un `**Server Hello**` qui contient entre autre :
 - Dans `Key Share` le serveur indique sa clé publique
 - `Finished` indique enfin la fin du handshake pour le client.
 
-Le client envoie enfin pour terminer un `Change Cipher Spec` et `Finished`. Vous trouverez [ici 📎](/static/misc/tls/tls_1_3.pcawebp) un pcap d'un requête avec TLS 1.3.
+Le client envoie enfin pour terminer un `Change Cipher Spec` et `Finished`. Vous trouverez [ici 📎](/static/misc/tls_1_3.pcawebp) un pcap d'un requête avec TLS 1.3.
 
 En parcourant vous verrez que la version de TLS affichée est TLS 1.2, *it's not a bug, it's a feature* c'est en fait pour éviter que certaines middlebox <s>de merde 😡</s>, utilisées notamment en entreprise pour espionner le trafic, bloquent le trafic pour des version de TLS au dessus de TLS 1.2.
 

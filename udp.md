@@ -6,7 +6,7 @@ Summary: Nous avions récemment vu TCP, ce protocole essaye d'avoir la meilleur 
 Slug: udp
 Category: Today I Learned
 
-Nous avions récemment vu le fonctionnement de [TCP](https://blog.eban.bzh/today-i-learned/tcp.html), ce protocole essaye d'avoir la meilleur fiabilité possible pour la transmission, mais un certain nombre d'échanges sont requis pour vérifier l’intégrité du flux ce qui rajoute de la latence qui dans certains cas, est problématique. UDP est un protocole qui tente de résoudre ce problème.
+Nous avions récemment vu le fonctionnement de [TCP](https://ilearned.eu/tcp.html), ce protocole essaye d'avoir la meilleur fiabilité possible pour la transmission, mais un certain nombre d'échanges sont requis pour vérifier l’intégrité du flux ce qui rajoute de la latence qui dans certains cas, est problématique. UDP est un protocole qui tente de résoudre ce problème.
 
 UDP est l'acronyme de User Datagram Protocol (traduit par protocole de datagramme utilisateur), ce protocole se base sur IP et fait partie de la couche transport du [modèle OSI](https://fr.wikipedia.org/wiki/Mod%C3%A8le_OSI). Contrairement à TCP il ne fait pas de "poignée de main" (ou handshake en anglais) et ne nécessite pas d'accusé de réception (ACK), cette manière de fonctionner le rend plus tolérant à un réseau défectueux et lui permet un latence plus faible. Il n'est utile que dans des cas où une perte de paquet ne pose pas un soucis important. UDP est utilisé dans certains protocole très utilisé comme NTP, DNS, ou plus généralement les applications qui ont besoins de temps réel comme les jeux vidéo ou certains services de streaming.
 

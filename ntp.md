@@ -5,7 +5,7 @@ Author: Eban
 Summary: Depuis la démocratisation d'internet et de l'informatique en général, une question s'est posée, comment faire en sorte que les horloges de tous les ordinateurs soient coordonnées ? Aujourd'hui, regardons de plus près le protocole NTP qui répond à cette problématique.
 Slug: ntp
 
-Depuis la démocratisation d'internet et de l'informatique en général, une question s'est posée, comment faire en sorte que les horloges de tous les ordinateurs soient coordonnées ? En septembre 1985 une première version du protocole NTP (Network Time Protocol) est publiée dans la [RFC 958](https://datatracker.ietf.org/doc/html/rfc958), ce protocole se base sur [UDP](https://blog.eban.bzh/today-i-learned/udp.html) pour sa légèreté. NTP fonctionne sur une typologie de réseau dite *mesh*, elle est découpée en strates afin de délivrer un temps équivalent partout et d'assurer une redondance. 
+Depuis la démocratisation d'internet et de l'informatique en général, une question s'est posée, comment faire en sorte que les horloges de tous les ordinateurs soient coordonnées ? En septembre 1985 une première version du protocole NTP (Network Time Protocol) est publiée dans la [RFC 958](https://datatracker.ietf.org/doc/html/rfc958), ce protocole se base sur [UDP](https://ilearned.eu/udp.html) pour sa légèreté. NTP fonctionne sur une typologie de réseau dite *mesh*, elle est découpée en strates afin de délivrer un temps équivalent partout et d'assurer une redondance. 
 
 ![L'architecture de NTP](/static/img/ntp/schema_archi.webp)
 
