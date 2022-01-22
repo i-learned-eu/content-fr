@@ -31,7 +31,7 @@ Un autre processus se répand de plus en plus, le CG-NAT (Carrier-grade NAT), il
 
 Le routeur du client lui, fait du NAT classique, mais avec une IP privée en tant qu'IP public.
 
-Cette méthode pose encore plus de problème que le simple NAT. Par exemple, il rend compliqué l'hébergement de service chez soi. L'opérateur peut permettre la redirection de port via divers mécanismes, cependantc'es comme l'IP est partagée entre plusieurs il faut qu'aucun des autres clients n'utilise le port que l'on veut.
+Cette méthode pose encore plus de problème que le simple NAT. Par exemple, il rend compliqué l'hébergement de service chez soi. L'opérateur peut permettre la redirection de port via divers mécanismes, cependant c'est comme l'IP est partagée entre plusieurs il faut qu'aucun des autres clients n'utilise le port que l'on veut.
 
 Un autre souci de taille est que pas mal de protocoles ne fonctionnent plus, ou mal, avec ce mécanisme.
 
