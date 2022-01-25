@@ -120,6 +120,11 @@
           "name": "Comment fonctionne le Fediverse ? Introduction à ActivityPub",
           "type": "url",
           "url": "fediverse.html"
+        },
+        {
+          "name": "Comprendre les différentes licences",
+          "type": "url",
+          "url": "comprendre-licences.html"
         }
       ],
       "name": "Pensées du libre",
