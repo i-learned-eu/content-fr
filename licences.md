@@ -1,5 +1,5 @@
 Author: Rick
-Date: 2022/01/23
+Date: 2022/01/25
 Keywords: droit
 Slug: comprendre-licences
 Summary: La licence est une sorte de contrat qui permet d'expliquer les différentes utilisations que peuvent faire les utilisateurs du logiciel et du code source. Il en existe plusieurs types (libre, open source et propriétaire) avec certaines subtilités parfois (copyleft). 
