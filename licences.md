@@ -18,7 +18,7 @@ Le libre est avant tout un mouvement politique et social (merci [Wikipedia](http
  3. Redistribuer des copies du programme
  4. Redistribuer des versions modifiées
 
-Si un logiciel respecte ces quatre libertés, il est donc libre. C'est le cas de LibreOffice, VLC, Linux, ou encore ce site ! [La FSF](https://fsf.org) est l'organisme qui "gère" le libre et le promeut dans le monde. Elle se bat aussi en  justice et aide les projets lorsque leurs licences libres ont été enfreintes. Elle va aussi approuver les nouvelles licences pour qu'elles puissent être utilisés dans des projets libres.
+Si un logiciel respecte ces quatre libertés, il est donc libre. C'est le cas de LibreOffice, VLC, Linux, ou encore ce site ! [La FSF](https://fsf.org) est le principal organisme qui promeut le libre dans le monde. Elle se bat aussi en justice et aide les projets lorsque leurs licences libres ont été enfreintes. Elle fourni aussi un guide détaillant les nouvelles licences pour qu'elles puissent être utilisés dans des projets libres, en expliquant les libertés enfreintes ou non ainsi que les différentes compatibilités possibles. En France, il existe les associations [April](https://www.april.org/) et [Framasoft](https://framasoft.org/) (pour ne citer que les plus grosses) qui se chargent de promouvoir le libre.
 
 Il existe nombreuses licences, voici une courte liste non exhaustive : GPL3, AGPL3, LGPL3, MIT, BSD, Apache 2.0, CC-BY... Chaque licence ayant certaines subtilités propres qu'on ne prendra pas le temps de traiter ici. Peut-être pour un prochain article ? ;)
 
@@ -55,7 +55,9 @@ Si on peut résumer cet article :
  * Propriétaire = peut être bien moralement, mais surtout code fermé
  * Copyleft = type de licence "contaminante"
 
-Il convient ensuite de choisir la bonne licence selon vos projets et vos convictions. À noter que des licences seront plus applicables à des logiciels et d'autres à des dessins, des vidéos ou encore du texte (comme des articles, de la documentation, un livre...). Je ne suis cependant pas rentré dans ces détails, car la philosophie derrière reste à peu près la même.
+Il convient ensuite de choisir la bonne licence selon vos projets et vos convictions. 
+
+Comme je l'ai indiqué plus haut, les licences (libres ou non) peuvent s'appliquer à des logiciels, des dessins, des vidéos ou encore du texte (comme des articles, de la documentation, un livre...). Cependant, certaines sont plus adaptées pour du code et d'autres pour du texte, de la musique, etc. Je ne suis pas rentré dans ces détails, car la philosophie derrière reste à peu près la même.
 
 Voici quelques liens qui pourront vous êtres utiles :
 
