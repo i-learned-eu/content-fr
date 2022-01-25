@@ -57,7 +57,7 @@ Si on peut résumer cet article :
 
 Il convient ensuite de choisir la bonne licence selon vos projets et vos convictions. 
 
-Comme je l'ai indiqué plus haut, les licences (libres ou non) peuvent s'appliquer à des logiciels, des dessins, des vidéos ou encore du texte (comme des articles, de la documentation, un livre...). Cependant, certaines sont plus adaptées pour du code et d'autres pour du texte, de la musique, etc. Je ne suis pas rentré dans ces détails, car la philosophie derrière reste à peu près la même.
+Comme je l'ai indiqué plus haut, les licences (libres ou non) peuvent s'appliquer à des logiciels, des dessins, des vidéos ou encore du texte (comme des articles, de la documentation, un livre...). Cependant, certaines sont plus adaptées pour du code et d'autres pour du texte, de la musique, etc. Je ne suis pas rentré dans ces détails, car la philosophie derrière reste à peu près la même peu importe le support.
 
 Voici quelques liens qui pourront vous êtres utiles :
 
