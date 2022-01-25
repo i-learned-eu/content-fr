@@ -26,7 +26,7 @@ Ce genre de licence peut s'appliquer aussi bien à du code qu'à des livres, des
 
 # L'open source
 
-L'open source a été créé à la fin des années 90 (1998). [L'OSI](https://opensource.org/) (pour Open Source Initiative) est l'organisme qui va approuver les licences comme Open Source. Une licence Open Source doit respecter 11 règles. Elles se rapprochent du libre à une exception près. La règle 4 permet d'avoir des licences qui restreignent la redistribution du code source modifié et enfreint donc la 4e liberté.
+L'open source a été créé à la fin des années 90 (1998). [L'OSI](https://opensource.org/) (pour Open Source Initiative) est l'organisme qui va approuver les licences comme Open Source. Une licence Open Source doit respecter [11 règles](https://opensource.org/osd). Elles se rapprochent du libre à une exception près. La règle 4 permet d'avoir des licences qui restreignent la redistribution du code source modifié et enfreint donc la 4e liberté.
 
 > The license may restrict source-code from being distributed in modified form only if the license allows the distribution of "patch files" with the source code for the purpose of modifying the program at build time. [...]
 
@@ -37,7 +37,7 @@ Si le libre met en avant l'utilisateur et sa liberté, l'open source met en avan
 Les logiciels propriétaires sont tout simplement ceux qui ne rentrent dans aucune des deux précédentes catégories. Certaines licences sont tout à fait compréhensible moralement mais qui ne sont pas libre au sens propre du terme. La licence de ce blog (CC-BY-NC-SA) interdit la redistribution payante des articles. Moralement compréhensible mais pas libre pour autant, enfreignant ainsi la 3e liberté.
 Certaines licences vont aussi interdire certains usages de leur logiciel (ne pas utiliser à but militaire, par de grosses entreprises...), en cassant donc la première liberté. Et les exemples sont encore nombreux !
 
-Cependant, la plupart du temps, un logiciel propriétaire va tout simplement être redistribué son **binaire** et non son code source. Ou va imposer de fortes contraintes sur son utilisation. C'est le cas de Windows par exemple.
+Cependant, la plupart du temps, un logiciel propriétaire va tout simplement redistribuer son **binaire** et non son code source. Ou va imposer de fortes contraintes sur son utilisation tout en faisant signer un contrat utilisateur, les fameuses cases "J'ai lu et j'accepte" surplombées par un long texte juridique. C'est le cas de Windows par exemple.
 
 # Le copyleft
 
@@ -49,11 +49,17 @@ Par exemple, le code source pour Linux est en GPLv2. Si on modifie ce code, on d
 
 Si on peut résumer cet article:
 
+ * Licence = contrat au sens juridique expliquant ce qu'on peut faire avec le programme et son code
  * Libre = 4 libertés
  * Open Source = 11 règles
  * Propriétaire = peut être bien moralement mais surtout code fermé
  * Copyleft = type de licence "contaminante"
 
-Il convient ensuite de choisir la bonne licence selon vos projets et vos convictions.
+Il convient ensuite de choisir la bonne licence selon vos projets et vos convictions. À noter que des licences seront plus appliquables à des logiciels et d'autres à des dessins, des vidéos ou encore du texte (comme des articles, de la documentation, un livre...). Je ne suis cependant pas rentré dans ces détails car la philosophie derrière reste à peu près la même.
 
-J'espère que j'ai été assez clair dans cet article en expliquant succintement les différents types de licences. N'hésitez pas à me faire des retours (rick [at] gnous [dot] eu) pour que je puisse améliorer l'article / en faire un nouveau !
+Voici quelques liens qui pourront vous êtres utiles:
+ * [Liste non exhaustive des licences libres ou non d'après la FSF](https://www.gnu.org/licenses/license-list.html#SoftwareLicenses)
+ * [Outil pour choisir une licence pour votre code facilement](https://ufal.github.io/public-license-selector/)
+ * [Outil pour choisir facilement une licence pour vos oeuvres de l'esprit n'étant pas du logiciel](https://creativecommons.org/choose/)
+
+J'espère que j'ai été assez clair dans cet article en expliquant succintement les différents types de licences. N'hésitez pas à me faire des retours (rick [at] gnous [dot] eu, ou en commentaires) pour que je puisse améliorer l'article / en faire un nouveau !
