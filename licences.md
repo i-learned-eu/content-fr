@@ -7,7 +7,7 @@ Title: Comprendre les différentes licences
 
 La licence est une sorte de contrat qui permet d'expliquer les différentes utilisations que peuvent faire les utilisateurs du logiciel et du code source. Il en existe plusieurs types (libre, open source et propriétaire) avec certaines subtilités parfois (copyleft). 
 
-Je vais essayer ici d'expliquer clairement les différentes concepts autour de ces licences ainsi que leurs différences. Et ce de la manière la plus claire possible, ce qui n'est pas chose aisée. Et j'essaierai de rester objectif.
+Je vais essayer ici d'expliquer clairement les différents concepts autour de ces licences ainsi que leurs différences. Et ce de la manière la plus claire possible, ce qui n'est pas chose aisée. Et j'essaierai de rester objectif.
 
 # Le libre
 
@@ -16,11 +16,11 @@ Le libre est avant tout un mouvement politique et social (merci [Wikipedia](http
  1. Exécuter le programme
  2. Étudier et modifier le programme (donc son code source)
  3. Redistribuer des copies du programme
- 4. Redistribuer des versions modifiés
+ 4. Redistribuer des versions modifiées
 
-Si un logiciel respecte ces 4 libertés, il est donc libre. C'est le cas de LibreOffice, VLC, Linux, ou encore ce site ! [La FSF](https://fsf.org) est l'organisme qui "gère" le libre et le promeut dans le monde. Elle se bat aussi en  justice et aide les projets lorsque leurs licences libres ont été enfreintes. Elle va aussi approuver les nouvelles licences pour qu'elles puissent êter utiliser dans des projets libres.
+Si un logiciel respecte ces quatre libertés, il est donc libre. C'est le cas de LibreOffice, VLC, Linux, ou encore ce site ! [La FSF](https://fsf.org) est l'organisme qui "gère" le libre et le promeut dans le monde. Elle se bat aussi en  justice et aide les projets lorsque leurs licences libres ont été enfreintes. Elle va aussi approuver les nouvelles licences pour qu'elles puissent être utilisés dans des projets libres.
 
-Il existe nombreuses licences, voici une courte liste non exhausitve : GPL3, AGPL3, LGPL3, MIT, BDS, Apache 2.0, CC-BY... Chaque licence ayant certaines subtilités propres qu'on ne prendra pas le temps de traiter ici. Peut-être pour un prochain article ? ;)
+Il existe nombreuses licences, voici une courte liste non exhaustive : GPL3, AGPL3, LGPL3, MIT, BSD, Apache 2.0, CC-BY... Chaque licence ayant certaines subtilités propres qu'on ne prendra pas le temps de traiter ici. Peut-être pour un prochain article ? ;)
 
 Ce genre de licence peut s'appliquer aussi bien à du code qu'à des livres, des articles, de la documentation, des images, des vidéos...
 
@@ -34,32 +34,33 @@ Si le libre met en avant l'utilisateur et sa liberté, l'open source met en avan
 
 # Le propriétaire
 
-Les logiciels propriétaires sont tout simplement ceux qui ne rentrent dans aucune des deux précédentes catégories. Certaines licences sont tout à fait compréhensible moralement mais qui ne sont pas libre au sens propre du terme. La licence de ce blog (CC-BY-NC-SA) interdit la redistribution payante des articles. Moralement compréhensible mais pas libre pour autant, enfreignant ainsi la 3e liberté.
+Les logiciels propriétaires sont tout simplement ceux qui ne rentrent dans aucune des deux précédentes catégories. Certaines licences sont tout à fait compréhensible moralement, mais qui ne sont pas libre au sens propre du terme. La licence de ce blog (CC-BY-NC-SA) interdit la redistribution payante des articles. Moralement compréhensible, mais pas libre pour autant, enfreignant ainsi la 3e liberté.
 Certaines licences vont aussi interdire certains usages de leur logiciel (ne pas utiliser à but militaire, par de grosses entreprises...), en cassant donc la première liberté. Et les exemples sont encore nombreux !
 
-Cependant, la plupart du temps, un logiciel propriétaire va tout simplement redistribuer son **binaire** et non son code source. Ou va imposer de fortes contraintes sur son utilisation tout en faisant signer un contrat utilisateur, les fameuses cases "J'ai lu et j'accepte" surplombées par un long texte juridique. C'est le cas de Windows par exemple.
+Cependant, la plupart du temps, un logiciel propriétaire va tout juste redistribuer son **binaire** et non son code source. Ou va imposer de fortes contraintes sur son utilisation tout en faisant signer un contrat utilisateur, les fameuses cases "J'ai lu et j'accepte" surplombées par un long texte juridique. C'est le cas de Windows par exemple.
 
 # Le copyleft
 
-Le copyleft est quelque chose qui vient en plus de la licence. C'est pour ça qu'on appelle certaines licences "avec copyleft" et d'autres "sans copyleft". Le copyleft va forcer la réutilisation de la meme licence sur des versions modifiées du code.
+Le copyleft est quelque chose qui vient en plus de la licence. C'est pour ça qu'on nomme certaines licences "avec copyleft" et d'autres "sans copyleft". Le copyleft va forcer la réutilisation de la même licence sur des versions modifiées du code.
 
 Par exemple, le code source pour Linux est en GPLv2. Si on modifie ce code, on doit appliquer la GPLv2 à cette nouvelle version. Le code source de Minix est sous licence BSD, qui n'a pas de copyleft. On peut donc reprendre ce code, le modifier et le rendre propriétaire.
 
 # Conclusion
 
-Si on peut résumer cet article:
+Si on peut résumer cet article :
 
  * Licence = contrat au sens juridique expliquant ce qu'on peut faire avec le programme et son code
  * Libre = 4 libertés
  * Open Source = 11 règles
- * Propriétaire = peut être bien moralement mais surtout code fermé
+ * Propriétaire = peut être bien moralement, mais surtout code fermé
  * Copyleft = type de licence "contaminante"
 
-Il convient ensuite de choisir la bonne licence selon vos projets et vos convictions. À noter que des licences seront plus appliquables à des logiciels et d'autres à des dessins, des vidéos ou encore du texte (comme des articles, de la documentation, un livre...). Je ne suis cependant pas rentré dans ces détails car la philosophie derrière reste à peu près la même.
+Il convient ensuite de choisir la bonne licence selon vos projets et vos convictions. À noter que des licences seront plus applicables à des logiciels et d'autres à des dessins, des vidéos ou encore du texte (comme des articles, de la documentation, un livre...). Je ne suis cependant pas rentré dans ces détails, car la philosophie derrière reste à peu près la même.
 
-Voici quelques liens qui pourront vous êtres utiles:
+Voici quelques liens qui pourront vous êtres utiles :
+
  * [Liste non exhaustive des licences libres ou non d'après la FSF](https://www.gnu.org/licenses/license-list.html#SoftwareLicenses)
  * [Outil pour choisir une licence pour votre code facilement](https://ufal.github.io/public-license-selector/)
- * [Outil pour choisir facilement une licence pour vos oeuvres de l'esprit n'étant pas du logiciel](https://creativecommons.org/choose/)
+ * [Outil pour choisir facilement une licence pour vos œuvres de l'esprit n'étant pas du logiciel](https://creativecommons.org/choose/)
 
-J'espère que j'ai été assez clair dans cet article en expliquant succintement les différents types de licences. N'hésitez pas à me faire des retours (rick [at] gnous [dot] eu, ou en commentaires) pour que je puisse améliorer l'article / en faire un nouveau !
+J'espère que j'ai été assez clair dans cet article en expliquant succinctement les différents types de licences. N'hésitez pas à me faire des retours (rick [at] gnous [dot] eu, ou en commentaires) pour que je puisse améliorer l'article / en faire un nouveau !
