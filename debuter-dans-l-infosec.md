@@ -45,7 +45,7 @@ Voici une liste non exhaustive de ressources qui pourraient vous aider :
 - [https://sideway.re/](https://sideway.re/) (Blog de @SideWay'CSS )
 - [https://inshallhack.org/](https://inshallhack.org/) (Blog de l'équipe française de CTF [Inshall'hack] (https://ctftime.org/team/44256))
 - [https://www.google.fr/](https://www.google.fr/) (RTFM, la base avant toute question.)
-- [http://exploit.education/](http://exploit.education/) (Un bon site pour débuter en pwn)
+- [https://exploit.education/](https://exploit.education/) (Un bon site pour débuter en pwn)
 - [Rainbow](https://discord.gg/heAw9mZ) (Serveur discord parlant d'infosec mais aussi de programmation.)
 - [inf0sec](https://discord.gg/YEy6aZ4) (Serveur discord de [@inf0sec1] (https://twitter.com/inf0sec1) parlant de cybersécurité)
 - [ret2school](https://discord.gg/gFws9jH) (Serveur discord de [@nasm_re](https://twitter.com/nasm_re) et de l'équipe de CTF, [ret2school](https://twitter.com/ret2school_fr))

@@ -10,15 +10,15 @@ Le premier article d'I Learned est sortit le 24 Avril 2021, d'un projet d'initia
 
 ## DNS
 
-I Learned s'appuie sur trois serveur dns autoritaires `ns1.eban.eu.org`, `ns.ramle.be`, `ns2.bb0.nl` ainsi que [`ns1.immae.eu`](http://ns1.immae.eu/) pour garantir la redondance côté DNS.
+I Learned s'appuie sur trois serveur dns autoritaires `ns1.eban.eu.org`, `ns.ramle.be`, `ns2.bb0.nl` ainsi que [`ns1.immae.eu`](https://ns1.immae.eu/) pour garantir la redondance côté DNS.
 
 ## Web
 
-Le site est hébergé sur une VM chez [tetaneutral](http://tetaneutral.net). 
+Le site est hébergé sur une VM chez [tetaneutral](https://tetaneutral.net). 
 
 ## Automatisation
 
-Tout le code source d'I Learned est disponible sur notre [git](https://git.ilearned.eu.org), et l'automatisation est gérée avec Drone CI. 
+Tout le code source d'I Learned est disponible sur notre [git](https://gitlab.ilearned.eu.org), et l'automatisation est gérée avec Gitlab CI. 
 
 Drone CI nous permet entre autre de vérifier que les métadonnées des articles sont bien remplies, mais aussi de build automatiquement le site à chaque nouveau push dans la branche master `master` avec pelican.
 

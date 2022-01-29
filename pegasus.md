@@ -35,7 +35,7 @@ Cette CVE est une vulnérabilité de type `Use-After-Free`, de référencer un e
 
 Afin de rester le plus discret possible, l'adresse du C2 ([Command & Control](https://whatis.techtarget.com/fr/definition/Commande-et-controle), le serveur central chargé d'envoyer des commandes au téléphone et de recevoir les informations) est dissimulée dans un SMS apparemment anodin d'authentification d'un compte Google.
 
-![Your Google Verification code is:5678429 http://gmail.com/?z=G&i=1:aalaan.tv:443,1:manoraonlinu.nut:443&s=Λ�=&�](/static/img/pegasus/SMS_C2.webp)
+![Your Google Verification code is:5678429 https://gmail.com/?z=G&i=1:aalaan.tv:443,1:manoraonlinu.nut:443&s=Λ�=&�](/static/img/pegasus/SMS_C2.webp)
 
 On peut voir que dans le paramètre `i`, l'adresse du C2 est caché. D'après les analyses de Lookout, le dernier chiffre du code de vérification correspondrait au "numéro d'instruction", ici `9`. Ainsi, même en l'absence d'accès à internet il est possible pour NSO Group d’interagir avec un téléphone infecté.
 
