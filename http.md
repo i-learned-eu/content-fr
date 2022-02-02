@@ -1,3 +1,4 @@
+lang: fr
 title: Le fonctionnement d'HTTP
 summary: De nos jours le web est très utilisé, un protocol est derrière ce succès : HTTP
 slug: http

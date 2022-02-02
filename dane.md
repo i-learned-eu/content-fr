@@ -1,3 +1,4 @@
+lang: fr
 title: DANE et TLSA - Empêcher les certificats TLS frauduleux
 Keywords: dane, tlsa, ca, fake ca
 Date: 2021-05-01

@@ -1,3 +1,4 @@
+lang: fr
 Author: Eban
 Date: 2021/12/11
 Title: Log4j, une vulnérabilité d'une ampleur inédite

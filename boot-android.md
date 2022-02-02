@@ -1,3 +1,4 @@
+lang: fr
 Author: Ramle 
 Date: 2021/10/17
 Keywords: Android, sécurité, Verified boot, secure boot

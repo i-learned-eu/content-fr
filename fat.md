@@ -1,3 +1,4 @@
+lang: fr
 title: FAT, comment fonctionne un système de fichier
 Keywords: FAT, FAT32, FAT16, FS, Windows, Linux
 Date: 2021-12-05

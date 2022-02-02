@@ -1,3 +1,4 @@
+lang: fr
 Author: Ramle 
 Date: 2021/05/20
 Keywords: 802.1x, networking, RADIUS, réseau, sécurité, udp

@@ -1,3 +1,4 @@
+lang: fr
 Author: Eban
 Date: 2021/12/20
 Keywords: Décentralisation

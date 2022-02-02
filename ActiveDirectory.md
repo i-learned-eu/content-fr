@@ -1,3 +1,4 @@
+lang: fr
 Author: Lancelot 
 Date: 2021/12/15
 Keywords: Windows, réseau

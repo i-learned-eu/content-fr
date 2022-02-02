@@ -1,3 +1,4 @@
+lang: fr
 Title: Les différents type de sauvegarde (Backup).
 Keywords: Backup, sauvegarde, rsync, lien symbolique, lien physique
 Date: 2021-12-19

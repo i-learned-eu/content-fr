@@ -1,3 +1,4 @@
+lang: fr
 Date: 2021/09/18
 Keywords: ip, ipv4, linux, réseau
 Slug: ipv4-header

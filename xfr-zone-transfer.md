@@ -1,3 +1,4 @@
+lang: fr
 Title: Communication entre Master et Slave - Vulnérabilité transfert de zone
 Keywords: DNS, Domain Name System, NS, xfr, zone transfer, transfert de zone
 Summary: Aujourd'hui, on parle des procotoles AXFR et IXFR ainsi que de la vulnérabilité que peut représenter un transfert de zone non autorisé !

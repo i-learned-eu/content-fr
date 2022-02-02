@@ -1,3 +1,4 @@
+lang: fr
 Title: Comment sont allouées les adresses IPs
 Keywords: IP, AS, ASN, AFNIC, IANA, ARIN, LACNIC, RIPE NCC, APNIC
 Date: 2021-04-28

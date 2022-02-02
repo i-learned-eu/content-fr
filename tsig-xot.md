@@ -1,3 +1,4 @@
+lang: fr
 Title: Sécuriser la connexion entre Master et Slave
 Keywords: DNS, Domain Name System, NS, xfr, zone transfer, tsig, xot
 Summary: Dans cet article, on parle des différents moyens de sécuriser les échanges entre Master et Slave

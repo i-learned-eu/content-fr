@@ -1,3 +1,4 @@
+lang: fr
 Author: Eban 
 Date: 2021/07/05
 Keywords: ip, ipv1, ipv2, ipv3, ipv4, ipv5, ipv6, ipv7, ipv8, ipv9, networking, réseau

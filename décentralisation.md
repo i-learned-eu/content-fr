@@ -1,3 +1,4 @@
+lang: fr
 title: Décentraliser, une priorité
 Keywords: self host, oss, décentralisation
 Date: 2021-05-10

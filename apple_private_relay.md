@@ -1,3 +1,4 @@
+lang: fr
 Title: Comment fonctionne le relai privé d'Apple ?
 Keywords: apple, sécurité, vpn, proxy
 Summary: Dans cet article, nous allons parler du *relai privé* que propose Apple pour les personnes abonnées à iCloud+, cette fonctionnalité est arrivée avec IOS 15 et est souvent, à tort, confondue avec un VPN.

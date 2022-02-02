@@ -1,3 +1,4 @@
+lang: fr
 Title: SolarWinds, l'arbre qui cache la forêt 👾
 Keywords: [solarwinds, hacking, fireeye, APT]
 Summary: Le 8 décembre 2020, Kevin Mandia, PDG de la société FireEye poste un communiqué nommé FireEye Shares Details of Recent Cyber Attack, Actions to Protect Community dans lequel il informe que la société a été victime d'une cyberattaque de la part d'un "acteur hautement sophistiqué" et que ce dernier avait accédé à leur réseau interne et volé un grand nombre d'outils de Red Team de l'entreprise...

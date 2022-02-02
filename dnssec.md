@@ -1,3 +1,4 @@
+lang: fr
 Title: Fonctionnement de DNSSEC
 Keywords: DNSSEC, DNS, sécurité, DS, NSEC, RSSIG, KSK, ZSK
 Date: 2021-04-29

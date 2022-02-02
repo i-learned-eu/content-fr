@@ -1,3 +1,4 @@
+lang: fr
 Title: Usage des VLAN
 Keywords: VLAN, network, réseau
 Date: 2021-05-02

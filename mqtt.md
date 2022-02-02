@@ -1,3 +1,4 @@
+lang: fr
 Author: Eban 
 Date: 2021/07/09
 Keywords: automatisation, domotique

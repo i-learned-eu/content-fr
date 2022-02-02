@@ -1,3 +1,4 @@
+lang: fr
 title: Comment fonctionne le tracking par ETag
 Keywords: etag, tracking, rgpd, cookie, no cookie
 Date: 2021-05-09

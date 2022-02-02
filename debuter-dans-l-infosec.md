@@ -1,3 +1,4 @@
+lang: fr
 Title: Debuter dans l'infosec 👨‍💻
 Keywords: [Debuter, infosec, hacking, pentesting, commencer, comment, eban]
 Summary: Dans ce nouvel article, nous allons traiter de la fameuse question ''La sécurité informatique, ca m'intéresse, mais par où commencer ?'' Par où commencer, la question est vaste mais voici un petit résumé des prérequis nécessaires pour commencer dans l'Infosec.

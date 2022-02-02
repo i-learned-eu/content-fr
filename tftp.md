@@ -1,3 +1,4 @@
+lang: fr
 Title: TFTP, présentation et aperçu d'un protocole simple de transfert de fichier.
 Keywords: UDP, FTP, Application, Transfert de fichier, File Transfer Protocol
 Date: 2021-12-09

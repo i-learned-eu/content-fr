@@ -1,3 +1,4 @@
+lang: fr
 Author: Ramle 
 Date: 2021/08/07
 Keywords: ipv6, réseau, slaac, RA

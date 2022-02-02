@@ -1,3 +1,4 @@
+lang: fr
 Title: WannaCry, le virus le plus dévastateur jamais créé 👾
 Keywords: [wannacry, virus, malware, hacking, eban, ransomware]
 Summary: En mai 2017, un virus informatique du nom de WannaCry fait son apparition, il a infecté quelques 300 000 ordinateurs dans plus de 150 pays ! Trois ans plus tard, revenons ensemble sur le ransomware le plus dévastateur jamais créé.

@@ -1,3 +1,4 @@
+lang: fr
 Title: Les bases du DNS
 Keywords: DNS, Domain Name System, NS, knot, bind, apprendre, bases DNS, DNS simple
 Summary: Pour ce premier post dans la catégorie Today I Learned, on repart des bases, aujourd'hui on parle de DNS 😄.

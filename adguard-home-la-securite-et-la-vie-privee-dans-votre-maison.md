@@ -1,3 +1,4 @@
+lang: fr
 Title: AdGuard Home, La sécurité et la vie privée dans votre maison 🛡️
 Keywords: [AdGuard, privacy, adblock, network wide adblock, eban]
 Summary: Dans ce nouvel article, nous allons traiter du logiciel open-source AdGuard Home qui est un bloqueur de publicités et de trackers qui intègre des fonctions supplémentaires telles que le DOH qui permet de chiffrer les requêtes DNS de votre réseau Wi-Fi !

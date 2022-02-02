@@ -1,3 +1,4 @@
+lang: fr
 title: IPv6, il est grand temps de migrer
 Keywords: ipv6, ipv4, ip, migration, he, cogent
 Date: 2021-05-07

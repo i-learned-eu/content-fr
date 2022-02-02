@@ -1,3 +1,4 @@
+lang: fr
 Author: Ramle 
 Date: 2021/12/21
 Slug: wayland

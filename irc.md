@@ -1,3 +1,4 @@
+lang: fr
 Title: Le protocole IRC
 Keywords: irc, chat
 Date: 2021-05-05

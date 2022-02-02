@@ -1,3 +1,4 @@
+lang: fr
 Title: NTP, comment ça marche ?
 Keywords: ntp, time
 Date: 2021-05-13

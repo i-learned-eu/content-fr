@@ -1,3 +1,4 @@
+lang: fr
 Author: Lancelot
 Date: 2021/08/14
 Keywords: linux, vm, windows, wsl

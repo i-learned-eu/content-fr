@@ -1,3 +1,4 @@
+lang: fr
 Author: Lancelot
 Date: 2021/07/01
 Keywords: Windows, sécurité

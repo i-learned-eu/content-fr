@@ -1,3 +1,4 @@
+lang: fr
 title: Sécuriser NTP, à quoi bon ?
 Keywords: ntp, time, nts, autokey
 Date: 2021-05-15

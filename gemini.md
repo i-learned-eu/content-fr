@@ -1,3 +1,4 @@
+lang: fr
 Title: Gemini, une alternative viable à HTTP ?
 Keywords: gemini, privacy, http
 Date: 2021-05-06

@@ -1,3 +1,4 @@
+lang: fr
 Author: Lancelot
 Date: 2021/12/22
 Keywords: windows, kerberos

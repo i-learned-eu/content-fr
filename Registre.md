@@ -1,3 +1,4 @@
+lang: fr
 Author: Lancelot
 Date: 2021/11/03
 Keywords: windows, registre
