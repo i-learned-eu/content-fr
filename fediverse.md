@@ -57,7 +57,7 @@ Et ici un objet encore plus classique appelé "Note", il est accepté par un gra
   "@context": [
     "https://www.w3.org/ns/activitystreams",
     {
-      "toot": "http://joinmastodon.org/ns#",
+      "toot": "https://joinmastodon.org/ns#",
     }
   ],
 
