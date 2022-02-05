@@ -79,7 +79,7 @@ Maintenant avec toutes ces infos, on peut déterminer la taille totale du paquet
 
 Aussi appelé `ID`, ce champ correspond à l’identification du paquet.
 Quand on fragmente un paquet, on met par exemple le champ `ID` à `1` et tous les fragments du même paquet devront avoir le même `ID`, donc `1` pour cet exemple.
-Pour plus d'informations je vous invite à lire cette [RFC](http://www.frameip.com/rfc-815-ip-datagram-reassembly-algorithms/).
+Pour plus d'informations je vous invite à lire cette [RFC](https://www.frameip.com/rfc-815-ip-datagram-reassembly-algorithms/).
 
 ### **Flags** `(3 bits)`
 

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:dc="https://purl.org/dc/elements/1.1/"
+   xmlns:cc="https://creativecommons.org/ns#"
+   xmlns:rdf="https://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="https://www.w3.org/2000/svg"
+   xmlns="https://www.w3.org/2000/svg"
+   xmlns:sodipodi="https://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="https://www.inkscape.org/namespaces/inkscape"
    viewBox="0 83 2711.3 1193.7"
    version="1.0"
    height="415"
@@ -41,19 +41,19 @@
        rdf:about="">
       <dc:format>image/svg+xml</dc:format>
       <dc:type
-         rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+         rdf:resource="https://purl.org/dc/dcmitype/StillImage" />
       <cc:license
-         rdf:resource="http://web.resource.org/cc/PublicDomain" />
+         rdf:resource="https://web.resource.org/cc/PublicDomain" />
       <dc:title>Compact Blank World Map</dc:title>
     </cc:Work>
     <cc:License
-       rdf:about="http://web.resource.org/cc/PublicDomain">
+       rdf:about="https://web.resource.org/cc/PublicDomain">
       <cc:permits
-         rdf:resource="http://web.resource.org/cc/Reproduction" />
+         rdf:resource="https://web.resource.org/cc/Reproduction" />
       <cc:permits
-         rdf:resource="http://web.resource.org/cc/Distribution" />
+         rdf:resource="https://web.resource.org/cc/Distribution" />
       <cc:permits
-         rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+         rdf:resource="https://web.resource.org/cc/DerivativeWorks" />
     </cc:License>
   </rdf:RDF>
 </metadata>

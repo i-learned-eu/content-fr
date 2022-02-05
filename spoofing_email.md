@@ -84,7 +84,7 @@ Comme on peut le voir, en allant interroger les différents noms de domaines inc
 amazonses.com.		900	IN	TXT	"v=spf1 ip4:199.255.192.0/22 ip4:199.127.232.0/22 ip4:54.240.0.0/18 ip4:69.169.224.0/20 ip4:23.249.208.0/20 ip4:23.251.224.0/19 ip4:76.223.176.0/20 ip4:54.240.64.0/19 ip4:54.240.96.0/19 ip4:52.82.172.0/22 -all"
 ```
     
-Et voilà, nous avons remonté l'ensemble des adresses IPs autorisées pour le domaine [eff.org](http://eff.org) 😅.
+Et voilà, nous avons remonté l'ensemble des adresses IPs autorisées pour le domaine [eff.org](https://eff.org) 😅.
     
 - `-all` indique que si l'adresse IP ne correspond pas, le mail doit être rejeté. D'autres signes avant le `all` auraient pu indiquer d'autres actions
     - `+` : laisser passer le mail
@@ -94,7 +94,7 @@ Et voilà, nous avons remonté l'ensemble des adresses IPs autorisées pour le d
 
 # DMARC
 
-L'utilisation de SPF et de DKIM n'a cessé de croitre ces dernières années, et afin d'homogénéiser l'utilisation de ces deux protocoles, et la réponse en cas de non-satisfaction de ceux-ci, un nouveau standard a été créé. DMARC (Domain-based Message Authentication, Reporting and Conformance) est un enregistrement DNS TXT dans _dmarc.NDD qui spécifie ces différents comportements. Reprenons notre exemple avec [eff.org](http://eff.org) : 
+L'utilisation de SPF et de DKIM n'a cessé de croitre ces dernières années, et afin d'homogénéiser l'utilisation de ces deux protocoles, et la réponse en cas de non-satisfaction de ceux-ci, un nouveau standard a été créé. DMARC (Domain-based Message Authentication, Reporting and Conformance) est un enregistrement DNS TXT dans _dmarc.NDD qui spécifie ces différents comportements. Reprenons notre exemple avec [eff.org](https://eff.org) : 
 
 ```bash
 _dmarc.eff.org.		7200	IN	TXT	"v=DMARC1; p=none; rua=mailto:dmarc_rua@eff.org; ruf=mailto:dmarc_ruf@eff.org;"
