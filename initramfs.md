@@ -39,6 +39,17 @@ Il faut donc le décompresser, avec l'outil `zstd` ou, comme moi, utiliser `zstd
 
 `zstdcat initramfs-linux.img | cpio -i`
 
+Si la commande `file` vous retourne: `is ASCII cpio archive (SVR4 with no CRC)`, c'est que votre initramfs a un microcode ajouté (rien de méchant).
+Effectuez ces commandes:
+
+`cpio -t < initramfs.img >/dev/null`
+Cette commande va vous retourner la taille du microcode, pour pouvoir ensuite le passer avec la commande `dd`. 
+
+`dd if=initramfs.img of=initramfs_no_microcode.img bs=512 skip=<OFFSET>` *(remplacer `<OFFSET>` par la taille du block retourné par la commande précédente)*.
+
+Puis effectuez:
+`zcat initramfs_no_microcode.img | cpio -i`
+
 Si vous listez le contenu de votre dossier vous verrez quelque chose de familier, une hiérarchie à la Unix  avec les répertoires de base :
 
 ```
@@ -101,3 +112,4 @@ L'initramfs est un "mini" système de fichier compressé contenant toute une hi�
 bibliographie:
  - [wiki.gentoo.org](https://wiki.gentoo.org/wiki/Initramfs/Guide/fr)
  - [fr.linuxfromscratch.org](https://www.fr.linuxfromscratch.org/view/blfs-svn/postlfs/initramfs.html)
+ - [wiki.debian.org](https://wiki.debian.org/initramfs)
