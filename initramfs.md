@@ -39,7 +39,7 @@ Il faut donc le décompresser, avec l'outil `zstd` ou, comme moi, utiliser `zstd
 
 `zstdcat initramfs-linux.img | cpio -i`
 
-Si la commande `file` vous retourne: `is ASCII cpio archive (SVR4 with no CRC)`, c'est que votre initramfs a un microcode ajouté (rien de méchant).
+Si la commande `file` vous retourne: `is ASCII cpio archive (SVR4 with no CRC)`, c'est que votre initramfs a un [microcode](https://en.wikipedia.org/wiki/Microcode) ajouté (rien de méchant).
 Effectuez ces commandes:
 
 `cpio -t < initramfs.img >/dev/null`
@@ -113,3 +113,4 @@ bibliographie:
  - [wiki.gentoo.org](https://wiki.gentoo.org/wiki/Initramfs/Guide/fr)
  - [fr.linuxfromscratch.org](https://www.fr.linuxfromscratch.org/view/blfs-svn/postlfs/initramfs.html)
  - [wiki.debian.org](https://wiki.debian.org/initramfs)
+ - [wiki.archlinux.org](https://wiki.archlinux.org/title/Microcode)
