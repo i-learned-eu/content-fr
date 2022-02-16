@@ -5,12 +5,12 @@
         {
           "children": [
             {
-              "name": "Debuter dans l'infosec 👨‍💻",
+              "name": "Debuter dans l'infosec",
               "type": "url",
               "url": "debuter-dans-linfosec.html"
             },
             {
-              "name": "Vos mots de passe sont ils vraiment sécurisés 🔐",
+              "name": "Vos mots de passe sont ils vraiment sécurisés",
               "type": "url",
               "url": "vos-mots-de-passe-sont-ils-vraiment-securises.html"
             },
@@ -51,12 +51,12 @@
               "url": "pegasus.html"
             },
             {
-              "name": "SolarWinds, l'arbre qui cache la forêt 👾",
+              "name": "SolarWinds, l'arbre qui cache la forêt",
               "type": "url",
               "url": "solarwinds-larbre-qui-cache-la-foret.html"
             },
             {
-              "name": "WannaCry, le virus le plus dévastateur jamais créé 👾",
+              "name": "WannaCry, le virus le plus dévastateur jamais créé",
               "type": "url",
               "url": "wannacry-le-virus-le-plus-devastateur-jamais-cree.html"
             },
@@ -170,6 +170,11 @@
               "name": "Comment fonctionne Wayland ?",
               "type": "url",
               "url": "wayland.html"
+            },
+            {
+              "name": "À quoi sert initramfs ?",
+              "type": "url",
+              "url": "initramfs.html"
             }
           ],
           "name": "Linux",
@@ -327,7 +332,7 @@
               "url": "ipv6.html"
             },
             {
-              "name": "Les version oubliées du protocole IP 🔎",
+              "name": "Les version oubliées du protocole IP",
               "type": "url",
               "url": "versions-ip.html"
             },
