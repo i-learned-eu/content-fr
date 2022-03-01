@@ -19,7 +19,7 @@ Cette dernière est ensuite compressée avec [gzip](https://fr.wikipedia.org/wik
 > vmlinuz ? 🤨
 
 Oui, c'est le nom du binaire du noyau Linux, vmlinuz est compressé en [Bzip](http://www.bzip.org/) (pour ma part).
-En réalité, vimlinuz cache un vmlinux qui est lui le binaire du noyau, (le **z** à la place du **x** de Linu**x** c'est tout simplement pour préciser qu'il est compressé (**z**ip)
+En réalité, vmlinuz cache un vmlinux qui est lui le binaire du noyau, (le **z** à la place du **x** de Linu**x** c'est tout simplement pour préciser qu'il est compressé (**z**ip)
 Je vous laisse lire [cet article](https://www.lojiciels.com/quest-ce-que-vmlinuz-sous-linux/#Qursquoest-ce_que_vmlinuz_et_Initramfs) qui explique un peu ce que je vous explique ici, mais le plus intéressant étant "l'histoire" du nom "vmlinuz".
 
 # À quoi ressemble le contenu d'un initramfs
