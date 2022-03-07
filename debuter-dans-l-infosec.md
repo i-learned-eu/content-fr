@@ -26,23 +26,31 @@ Le Reverse Engineering est le fait d'étudier le fonctionnement d'un programme p
 Pour débuter dans ce domaine, il est indispensable de connaitre le [language C](https://zestedesavoir.com/tutoriels/755/le-langage-c-1/) ainsi que de [l'assembleur](https://www.youtube.com/watch?v=yxzUi8MdOAA&list=PLcT0DaY68xGzzmj47WSbb8XaIwWFjVlKz) (de préférence x86_64).
 Vous pourrez alors vous entraîner sur des crackme, si vous voulez de l'aide ou seulement discuter de ces sujets, je vous invite à rejoindre l'un des serveurs discord listés ci-dessous.
 
-#### Les CTFs
+#### Les Boxs
 
-Les CTFs consistent en un machine faite pour être *piratée*, le but est de devenir administrateur (ou *root*) de la machine en utilisant plusieurs failles informatiques. Pour vous entrainer à cela, je vous invite à aller sur [HackTheBox](https://hackthebox.eu) ainsi que sur [Vulnhub](https://vulnhub.com).
-Comme dans le domaine du reverse engineering, si vous avez besoin d'aide pour le CTF n'hésitez pas à rejoindre un serveur discord, parfois les plateformes proposent le leur pour les haxors.
+Les Boxs consistent en un machine faite pour être *piratée*, le but est de devenir administrateur (ou *root*) de la machine en utilisant plusieurs failles informatiques. Pour vous entrainer à cela, je vous invite à aller sur [HackTheBox](https://hackthebox.eu) ainsi que sur [Vulnhub](https://vulnhub.com).
+
+#### Les CTF
+
+Les CTF (Capture The Flag) sont des compétitions où l'on se penche seul ou en équipe sur une multitude d'épreuves appartenant à des catégories diverses (Reverse Engineering, Pwn, Crypto(graphy), OSINT (OpenSource Information Gatering)) consistent en un machine faite pour être *piratée*, le but est de devenir administrateur (ou *root*) de la machine en utilisant plusieurs failles informatiques. Pour vous entrainer à cela, je vous invite à aller sur [HackTheBox](https://hackthebox.eu) ainsi que sur [Vulnhub](https://vulnhub.com).
 
 ## Bonus : Ressources
 Voici une liste non exhaustive de ressources qui pourraient vous aider :
 
 - [https://github.com/wapiflapi/exrs](https://github.com/wapiflapi/exrs) (Exercices de RE)
-- [https://root-me.org/](https://root-me.org/) (Challenges toutes catégories)
+- [https://challenges.re/](https://challenges.re/) (Exercices de RE allant avec le livre "Reverse Engineering for Beginners" de Dennis Yurichev (c.f [https://beginners.re](https://beginners.re) )
+- [https://crackmes.one/](https://crackmes.one/) (Collection communautaire de crackmes par [sar](https://twitter.com/sar5430) 🇫🇷)
+- [https://root-me.org/](https://root-me.org/) (Challenges toutes catégories - FR)
 - [https://www.newbiecontest.org/](https://www.newbiecontest.org/) (Challenges toutes catégories)
-- [https://www.hackthebox.eu/](https://www.hackthebox.eu/) (Challenges, plus orienté test d'intrusion)
+- [https://www.theblackside.fr/](https://www.theblackside.fr/) (Challenges toutes catégories - FR)
+- [brainshell.fr/](brainshell.fr/) (Challenges toutes catégories & CTF - FR)
+- [https://www.hackthebox.eu/](https://www.hackthebox.eu/) (Propose des challenges, des machines, des attack/defence (seul ou en équipe) et des "Pro Labs" (Formation interactive au piratage dans des environnements d'entreprise réalistes) )
 - [https://www.vulnhub.com/](https://www.vulnhub.com/) (VM vulnérables)
+- [https://tryhackme.com/](https://tryhackme.com/) (enseigne la cybersécurité par le biais de laboratoires concrets et ludiques et propose des réseaux virtuels vulnérables)
 - [https://www.dailysecurity.fr/](https://www.dailysecurity.fr/) (Blog de Geluchat)
 - [https://beta.hackndo.com/](https://beta.hackndo.com/) (Blog de pixis)
 - [https://www.hacktion.be/](https://www.hacktion.be/) (Blog de Que20)
-- [https://inf0sec.fr/](https://inf0sec.fr/) (Blog de Unknow101 orienté test d'intrusion windows)
+- [https://inf0sec.fr/](https://inf0sec.fr/) (Blog de Unknow101, orienté test d'intrusion windows)
 - [https://sideway.re/](https://sideway.re/) (Blog de @SideWay'CSS )
 - [https://inshallhack.org/](https://inshallhack.org/) (Blog de l'équipe française de CTF [Inshall'hack] (https://ctftime.org/team/44256))
 - [https://www.google.fr/](https://www.google.fr/) (RTFM, la base avant toute question.)
