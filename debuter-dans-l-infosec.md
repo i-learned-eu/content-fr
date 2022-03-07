@@ -37,29 +37,29 @@ Les CTF (Capture The Flag) sont des compétitions où l'on se penche seul ou en 
 ## Bonus : Ressources
 Voici une liste non exhaustive de ressources qui pourraient vous aider :
 
-- [https://github.com/wapiflapi/exrs](https://github.com/wapiflapi/exrs) (Exercices de RE)
-- [https://challenges.re/](https://challenges.re/) (Exercices de RE allant avec le livre "Reverse Engineering for Beginners" de Dennis Yurichev (c.f [https://beginners.re](https://beginners.re) )
-- [https://crackmes.one/](https://crackmes.one/) (Collection communautaire de crackmes par [sar](https://twitter.com/sar5430) 🇫🇷)
-- [https://root-me.org/](https://root-me.org/) (Challenges toutes catégories - FR)
-- [https://www.newbiecontest.org/](https://www.newbiecontest.org/) (Challenges toutes catégories)
-- [https://www.theblackside.fr/](https://www.theblackside.fr/) (Challenges toutes catégories - FR)
-- [brainshell.fr/](brainshell.fr/) (Challenges toutes catégories & CTF - FR)
-- [https://www.hackthebox.eu/](https://www.hackthebox.eu/) (Propose des challenges, des machines, des attack/defence (seul ou en équipe) et des "Pro Labs" (Formation interactive au piratage dans des environnements d'entreprise réalistes) )
-- [https://www.vulnhub.com/](https://www.vulnhub.com/) (VM vulnérables)
-- [https://tryhackme.com/](https://tryhackme.com/) (enseigne la cybersécurité par le biais de laboratoires concrets et ludiques et propose des réseaux virtuels vulnérables)
-- [https://www.dailysecurity.fr/](https://www.dailysecurity.fr/) (Blog de Geluchat)
-- [https://beta.hackndo.com/](https://beta.hackndo.com/) (Blog de pixis)
-- [https://www.hacktion.be/](https://www.hacktion.be/) (Blog de Que20)
-- [https://inf0sec.fr/](https://inf0sec.fr/) (Blog de Unknow101, orienté test d'intrusion windows)
-- [https://sideway.re/](https://sideway.re/) (Blog de @SideWay'CSS )
-- [https://inshallhack.org/](https://inshallhack.org/) (Blog de l'équipe française de CTF [Inshall'hack] (https://ctftime.org/team/44256))
-- [https://www.google.fr/](https://www.google.fr/) (RTFM, la base avant toute question.)
-- [https://exploit.education/](https://exploit.education/) (Un bon site pour débuter en pwn)
+- [exrs](https://github.com/wapiflapi/exrs) (Exercices de RE)
+- [challenges.re](https://challenges.re/) (Exercices de RE allant avec le livre "Reverse Engineering for Beginners" de Dennis Yurichev (c.f [beginners.](https://beginners.re) )
+- [crackmes.one](https://crackmes.one/) (Collection communautaire de crackmes par [sar](https://twitter.com/sar5430) 🇫🇷)
+- [root-me](https://root-me.org/) (Challenges toutes catégories - FR)
+- [newbiecontest](https://www.newbiecontest.org/) (Challenges toutes catégories)
+- [theblackside](https://www.theblackside.fr/) (Challenges toutes catégories - FR)
+- [brainshell](https://brainshell.fr/) (Challenges toutes catégories & CTF - FR)
+- [hackthebox](https://www.hackthebox.eu/) (Propose des challenges, des machines, des attack/defence (seul ou en équipe) et des "Pro Labs" (Formation interactive au piratage dans des environnements d'entreprise réalistes) )
+- [vulnhub](https://www.vulnhub.com/) (VM vulnérables)
+- [tryhackme](https://tryhackme.com/) (enseigne la cybersécurité par le biais de laboratoires concrets et ludiques et propose des réseaux virtuels vulnérables)
+- [dailysecurity](https://www.dailysecurity.fr/) (Blog de Geluchat)
+- [hackndo](https://beta.hackndo.com/) (Blog de pixis)
+- [hacktion](https://www.hacktion.be/) (Blog de Que20)
+- [inf0sec](https://inf0sec.fr/) (Blog de Unknow101, orienté test d'intrusion windows)
+- [sideway.re](https://sideway.re/) (Blog de @SideWay'CSS )
+- [inshallhack](https://inshallhack.org/) (Blog de l'équipe française de CTF [Inshall'hack] (https://ctftime.org/team/44256))
+- [Google](https://www.google.fr/) (RTFM, la base avant toute question.)
+- [exploit.education](https://exploit.education/) (Un bon site pour débuter en pwn)
 - [Rainbow](https://discord.gg/heAw9mZ) (Serveur discord parlant d'infosec mais aussi de programmation.)
-- [inf0sec](https://discord.gg/YEy6aZ4) (Serveur discord de [@inf0sec1] (https://twitter.com/inf0sec1) parlant de cybersécurité)
 - [ret2school](https://discord.gg/gFws9jH) (Serveur discord de [@nasm_re](https://twitter.com/nasm_re) et de l'équipe de CTF, [ret2school](https://twitter.com/ret2school_fr))
 
-##### Remerciements :
+#### Remerciements :
+
 Merci à SoEasY de m'avoir aidé pour la définition du RE.
 
 Merci à MorpheusH3x pour la liste des ressources.
