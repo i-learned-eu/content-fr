@@ -4,6 +4,7 @@ Date: 2022-02-16
 Slug: initramfs
 Author: Ownesis
 Summary: Dans cet article, on va voir ce qu'est initramfs et à quoi il sert.
+Lang: fr
 
 # Pour la faire courte
 Initramfs est un [système de fichier](https://ilearned.eu/fat.html) monté dans la [RAM](https://en.wikipedia.org/wiki/Random-access_memory) lors de l'initialisation du [noyau (kernel)](https://fr.wikipedia.org/wiki/Noyau_de_syst%C3%A8me_d%27exploitation).
