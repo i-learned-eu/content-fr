@@ -1,4 +1,2 @@
 include:
   - remote: 'https://gitlab.ilearned.eu/i-learned/blog/theme/-/raw/master/.gitlab-ci.yml'
-    rules:
-      - if: $CI_COMMIT_BRANCH == "master"
