@@ -25,7 +25,7 @@ total 8
 -rw-r-----. 1 raiponce pascal   0 19 mar 16:15 b
 -rwxr-xr-x. 1 raiponce raiponce 32 19 mar 16:16 c
 ```
-*insérer schéma*
+![Notation droit linux](/static/img/droit_linux/perm_notation.webp)
 
 On voit tout de suites l'utilité des lettres mises en gras plus haut. Elles sont utilisées pour visualiser les droits. Sous Linux de base, il y a 3 groupes de permissions :
 - utilisateur : ce que l'utilisateur peut faire
@@ -69,7 +69,13 @@ chmod 750 #Sur un dossier le droit d'exécution permet de lister les fichiers
 ||
 
 ## Capabilities et Setuid/Setgid
-Sous linux il existe des permissions plus poussées et fine pour donner certain droit à des binaires. Cela permet d'éviter de devoir lancer en root (root est le "super-utilisateur", c'est-à-dire qu'il a presque tous les droits).
+Sous linux il existe des permissions plus poussée et fine pour donner certains droit à des binaires. Cela permet d'éviter de devoir lancer en root (root est le "super-utilisateur", c'est à dire qu'il a presque tous les droits).
+
 ### Setuid et Setgid
-Ces droits permettent à un binaire de se lancer en tant qu'une autre personne. Par exemple, si le fichier `i_am_root` est propriété de root, il pourrait lancer un shell en root. Il est donc primordial de ne pas donner le setuid (souvent abrégé suid) ou setgid sur n'importe quel fichier. Bien sûr, la plupart des programmes qui requiert un suid ou guid rajoutent des règles pour limiter les utilisateurs pouvant utiliser entièrement la commande (on peut le voir dans [le code de passwd](https://github.com/shadow-maint/shadow/blob/master/src/passwd.c) par exemple).
-Pour rajouter un suid ou sgid c'est toujours la commande chmod qui le permet. Par exemple : `chmod ug+s y` ajouteras un suid et guid au fichier y. On peut aussi utiliser la notation à base de nombre, pour ça il faut utiliser 4 chiffres au lieu des 3 pour les permissions simple. 2 signifie un setguid et 4 un setuid, l'équivalent du chmod montré juste au-dessus serait donc `chmod 6755` (dans le cas ou les permissions du fichier sont `rwxr-x-rx`).
+Ces droits permettent à un binaire de se lancer en tant qu'une autre personne. Par exemple, si le fichier `i_am_root` est propriété de root il pourrait lancer un shell en root. Il est donc primordial de ne pas donner le setuid (souvent abrégé suid) ou setgid sur n'importe quel fichier. Bien sûr la plupart des programmes qui requiert un suid ou guid rajoutent des règles pour limiter les utilisateurs pouvant utiliser entièrement la commande (on peut le voir dans [le code de passwd](https://github.com/shadow-maint/shadow/blob/master/src/passwd.c) par exemple).
+Pour rajouter un suid ou sgid c'est toujours la commande chmod qui le permet. Par exemple : `chmod ug+s y` rajouteras un suid et guid au fichier y. On peut aussi utiliser la notation à base de nombre, pour ça il faut utiliser 4 chiffres au lieu des 3 pour les permissions simple. 2 signifie un setguid et 4 un setuid, l'équivalent du chmod montré juste au dessus serait donc `chmod 6755` (dans le cas ou les permissions du fichier sont `rwxr-x-rx`).
+
+# Capabilities
+Certaines actions sous Linux ne peuvent pas être faites en temps que simple utilisateur, pour éviter de devoir lancer en tant que root, ce qui est regrettable niveau sécurité, Linux possède ce qu'on nomme des capabilities. Elles permettent par exemple d'autoriser à un programme d'écouter un port en dessous de 1024. On peut lister celles présente sur un fichier via `getcap`. Par exemple pour `ping` on aura : `/usr/bin/ping cap_net_raw=ep`. Cela permet d'utiliser des socket raw. On peut voir dans la page de man : [capabilities(7)](https://man.archlinux.org/man/capabilities.7) la liste de celles-ci et leurs descriptions. Pour donner une capabilities à un binaire, on peut utiliser `setcap`, par exemple `setcap 'cap_net_bind_service=+ep' listener` donne le droit à `listener` d'écouter sur un port plus faible que le 1024.
+
+J'espère que cet article moins poussé techniquement que d'habitude vous auras plus, ça commençait à faire longtemps qu'on n'avait plus rien sorti 😅. On va essayer de vous sortir des articles d'ici pas trop longtemps, pour ne rien spoiler il y a un gros article qui ne parle pas d'informatique en préparation ;).
