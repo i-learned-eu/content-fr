@@ -28,9 +28,9 @@ total 8
 ![Notation droit linux](/static/img/droit_linux/perm_notation.webp)
 
 On voit tout de suite l'utilité des lettres mises en gras plus haut. Elles sont utilisées pour visualiser les droits. Sous Linux de base, il y a 3 groupes de permissions :
-- utilisateur : ce que l'utilisateur peut faire
-- groupe : ce que le groupe peut faire
-- tout le monde : ce que tout le monde peut faire
+- utilisateur
+- groupe
+- tout le monde
 
 Dans notre exemple, le fichier `a` est lisible, modifiable et exécutable par raiponce, pour le fichier. `b` est lisible et modifiable par l'utilisateur (ici raiponce) et lisible pour le groupe (ici pascal). Pour `c` tout le monde peut lancer et lire, mais seule raiponce peut modifier.
 
