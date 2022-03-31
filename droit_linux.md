@@ -27,7 +27,7 @@ total 8
 ```
 ![Notation droit linux](/static/img/droit_linux/perm_notation.webp)
 
-On voit tout de suites l'utilité des lettres mises en gras plus haut. Elles sont utilisées pour visualiser les droits. Sous Linux de base, il y a 3 groupes de permissions :
+On voit tout de suite l'utilité des lettres mises en gras plus haut. Elles sont utilisées pour visualiser les droits. Sous Linux de base, il y a 3 groupes de permissions :
 - utilisateur : ce que l'utilisateur peut faire
 - groupe : ce que le groupe peut faire
 - tout le monde : ce que tout le monde peut faire
@@ -71,20 +71,24 @@ chmod 750 #Sur un dossier le droit d'exécution permet de lister les fichiers
 ### Masquage
 Un autre aspect important est le  "masquage", cela permet de définir les permissions pour les nouveaux fichiers ou dossiers. On peut voir le masque d'un dossier via `umask -S`. Le masque est une soustraction, par exemple `umask 022` donnera les permissions 644 sur un fichier et 755 sur un dossier. Cela peut paraitre étrange, les permissions du fichier devrait être 755 non ? En fait, le masque par de la valeur 666 et non 777 (il faut donc manuellement donner les droits d'exécuter, le masque ne peut le faire) mais reste 777 pour les dossiers. Par exemple, si on veut que les nouveaux fichiers aient comme droit `rw-r-----` (640) on va pouvoir faire : `umask 027`, ce qui donnera aux dossiers les permissions 750.
 
-## Capabilities et Setuid/Setgid
+## Attributs spéciaux
 Sous linux il existe des permissions plus poussée et fine pour donner certains droit à des binaires. Cela permet d'éviter de devoir lancer en root (root est le "super-utilisateur", c'est à dire qu'il a presque tous les droits).
 
 ### Setuid et Setgid
 Ces droits permettent à un binaire de se lancer en tant qu'une autre personne. Par exemple, si le fichier `i_am_root` est propriété de root il pourrait lancer un shell en root. Il est donc primordial de ne pas donner le setuid (souvent abrégé suid) ou setgid sur n'importe quel fichier. Bien sûr la plupart des programmes qui requiert un suid ou guid rajoutent des règles pour limiter les utilisateurs pouvant utiliser entièrement la commande (on peut le voir dans [le code de passwd](https://github.com/shadow-maint/shadow/blob/master/src/passwd.c) par exemple).
 Pour rajouter un suid ou sgid c'est toujours la commande chmod qui le permet. Par exemple : `chmod ug+s y` rajouteras un suid et guid au fichier y. On peut aussi utiliser la notation à base de nombre, pour ça il faut utiliser 4 chiffres au lieu des 3 pour les permissions simple. 2 signifie un setguid et 4 un setuid, l'équivalent du chmod montré juste au dessus serait donc `chmod 6755` (dans le cas ou les permissions du fichier sont `rwxr-x-rx`).
 
+### Sticky bit
 Un autre attribut qui peut être intéressant c'est le sticky bit, il permet d'autoriser uniquement l'utilisateur propriétaire ou root de modifier, renommer ou supprimer. Un des usages courrants est le dossier `/tmp`, de nombreux dossiers y sont créer en pouvant être écrit par plusieurs personnes, mais ne doivent pas être supprimé. On peut voir via `ls -l` si un fichier le présente :
 ```
 drwxrwxrwt.  2 root     root      80 31 mar 13:13 .X11-unix
 ```
 Ici on peut voir qu'il est présent, c'est la notation `t` qui l'indique. Pour le retirer on peut  utiliser `chmod` pour le supprimer, avec la syntaxe classique : `chmod +t` pour ajouter, `-t` pour retirer ou via la notations en nombre, il est le numéro 1 donc par exemple `chmod 1666 fichier`.
 
-# Capabilities
+### Capabilities
 Certaines actions sous Linux ne peuvent pas être faites en temps que simple utilisateur, pour éviter de devoir lancer en tant que root, ce qui est regrettable niveau sécurité, Linux possède ce qu'on nomme des capabilities. Elles permettent par exemple d'autoriser à un programme d'écouter un port en dessous de 1024. On peut lister celles présente sur un fichier via `getcap`. Par exemple pour `ping` on aura : `/usr/bin/ping cap_net_raw=ep`. Cela permet d'utiliser des socket raw. On peut voir dans la page de man : [capabilities(7)](https://man.archlinux.org/man/capabilities.7) la liste de celles-ci et leurs descriptions. Pour donner une capabilities à un binaire, on peut utiliser `setcap`, par exemple `setcap 'cap_net_bind_service=+ep' listener` donne le droit à `listener` d'écouter sur un port plus faible que le 1024.
 
-J'espère que cet article moins poussé techniquement que d'habitude vous auras plus, ça commençait à faire longtemps qu'on n'avait plus rien sorti 😅. On va essayer de vous sortir des articles d'ici pas trop longtemps, pour ne rien spoiler il y a un gros article qui ne parle pas d'informatique en préparation ;).
+### Chattr
+`chattr` est un utilitaire qui permet d'attribuer certaines options à des fichiers ou dossiers, par exemple l'attribut `i` qui permet de rendre un fichier non modifiable, supprimable et aucun lien ne peut être fait vers lui. La commande à une syntaxe proche de `chmod` : `chattr +i fichier` pour donner l'attribut `i` et `-i` le retirer. Il existe d'autres options pouvant être intéressantes, je vous laisse lire la [man page de chattr(1)](https://man.archlinux.org/man/chattr.1.fr).
+
+J'espère que cet article moins poussé techniquement que d'habitude vous auras plus, ça commençait à faire longtemps qu'on n'avait plus rien sorti 😅. On va essayer de vous sortir des articles d'ici pas trop longtemps, pour ne rien spoiler il y a un gros article qui ne parle pas directement d'informatique en préparation ;).
