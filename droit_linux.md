@@ -8,7 +8,7 @@ Slug: droit_linux
 
 En utilisant Linux, vous avez probablement rencontré des erreurs telles que "permission denied" (permission refusée). Souvent des erreurs du genre sont frustrantes, pourquoi le système que j'ai installé me refuse l'accès ? Le but de cet article est justement de comprendre en détail le fonctionnement des permissions sous Linux et de vous aider.
 
-Pour parler de droit sous Linux, il faut bien comprendre que tout est fichiers, que ce soit les configurations, les périphériques ou encore les informations sur un pid. Comme tout est fichier, les droits d'accès à chacun sont donc primordiaux. Par exemple, un utilisateur qui accède à /dev/sda (dans le cas où votre disque est sda) serait dramatique.
+Pour parler de droit sous Linux, il faut bien comprendre que tout est fichiers, que ce soit les configurations, les périphériques ou encore les informations sur un pid. Comme tout est fichier, les droits d'accès à chacun sont donc primordiaux. Par exemple, un utilisateur non privilégié qui accède à /dev/sda (dans le cas où votre disque est sda) serait dramatique.
 
 ## Permission de base
 Pour pallier à ces soucis, Linux dispose de droits originalement plutôt basiques se limitant à :
