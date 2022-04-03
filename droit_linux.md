@@ -11,17 +11,17 @@ En utilisant Linux, vous avez probablement rencontré des erreurs telles que "pe
 Pour parler de droit sous Linux, il faut bien comprendre que tout est fichiers, que ce soit les configurations, les périphériques ou encore les informations sur un pid. Comme tout est fichier, les droits d'accès à chacun sont donc primordiaux. Par exemple, un utilisateur non privilégié qui accède à /dev/sda (dans le cas où votre disque est sda) serait dramatique.
 
 ## Permission de base
-Pour pallier à ces soucis, Linux dispose de droits originalement plutôt basiques se limitant à :
+Pour pallier à ces soucis, Linux dispose de droits plutôt basiques se limitant à :
 - **r**ead : autoriser à lire le fichier
 - **w**rite : autorise à écrire le fichier
 - e**x**ecute : autorise à exécuter le fichier
 
-Pour les dossiers, c'est la même chose mise à part que execute autorise à lister les fichiers.
+Pour les dossiers, c'est la même chose mise à part que execute autorise à traverser le dossier et read permet de lister les fichiers.
 On peut prendre un exemple :
 ```
 % ls -l
 total 8
--rwx------. 1 raiponce raiponce 32 19 mar 16:17 a
+-rwx------. 1 raiponce raiponce 32 19 mar 16:17 f
 -rw-r-----. 1 raiponce pascal   0 19 mar 16:15 b
 -rwxr-xr-x. 1 raiponce raiponce 32 19 mar 16:16 c
 ```
@@ -32,13 +32,13 @@ On voit tout de suite l'utilité des lettres mises en gras plus haut. Elles sont
 - groupe
 - tout le monde
 
-Dans notre exemple, le fichier `a` est lisible, modifiable et exécutable par raiponce, pour le fichier. `b` est lisible et modifiable par l'utilisateur (ici raiponce) et lisible pour le groupe (ici pascal). Pour `c` tout le monde peut lancer et lire, mais seule raiponce peut modifier.
+Dans notre exemple, le fichier `f` est lisible, modifiable et exécutable par raiponce, pour le fichier. `b` est lisible et modifiable par l'utilisateur (ici raiponce) et lisible pour le groupe (ici pascal). Pour `c` tout le monde peut lancer et lire, mais seule raiponce peut modifier.
 
 Les 2 principaux utilitaires pour gérer les droits de manière basique sur les fichiers sont `chmod` et `chown`. Pour chmod on peut l'utiliser soit en lui disant quel droit ajouter ou enlever à un fichier ou répertoire, par exemple :
 ```
-chmod g+rw a
+chmod g+rw f
 ```
-Ajoute les droits de lecture et écriture au groupe propriétaire sur le fichier `a`.
+Ajoute les droits de lecture et écriture au groupe propriétaire sur le fichier `f`.
 
 Une autre méthode consiste à utiliser des "nombres" ou chaque chiffre corresponds à une catégorie de droit (utilisateur, groupe, tous) et des permissions.
 | Droit                 | Valeur en lettres | Valeur en nombre |
@@ -79,14 +79,14 @@ Ces droits permettent à un binaire de se lancer en tant qu'une autre personne. 
 Pour rajouter un suid ou sgid c'est toujours la commande chmod qui le permet. Par exemple : `chmod ug+s y` rajouteras un suid et guid au fichier y. On peut aussi utiliser la notation à base de nombre, pour ça il faut utiliser 4 chiffres au lieu des 3 pour les permissions simple. 2 signifie un setguid et 4 un setuid, l'équivalent du chmod montré juste au dessus serait donc `chmod 6755` (dans le cas ou les permissions du fichier sont `rwxr-x-rx`).
 
 ### Sticky bit
-Un autre attribut qui peut être intéressant c'est le sticky bit, il permet d'autoriser uniquement l'utilisateur propriétaire ou root de modifier, renommer ou supprimer. Un des usages courrants est le dossier `/tmp`, de nombreux dossiers y sont créer en pouvant être écrit par plusieurs personnes, mais ne doivent pas être supprimé. On peut voir via `ls -l` si un fichier le présente :
+Un autre attribut qui peut être intéressant c'est le sticky bit. Il permet d'autoriser uniquement l'utilisateur propriétaire ou root de modifier, renommer ou supprimer. Un des usages courrants est le dossier `/tmp`, de nombreux dossiers y sont créer en pouvant être écrit par plusieurs personnes mais ne doivent pas être supprimé. On peut voir via `ls -l` si un fichier le présente :
 ```
 drwxrwxrwt.  2 root     root      80 31 mar 13:13 .X11-unix
 ```
 Ici on peut voir qu'il est présent, c'est la notation `t` qui l'indique. Pour le retirer on peut  utiliser `chmod` pour le supprimer, avec la syntaxe classique : `chmod +t` pour ajouter, `-t` pour retirer ou via la notations en nombre, il est le numéro 1 donc par exemple `chmod 1666 fichier`.
 
 ### Capabilities
-Certaines actions sous Linux ne peuvent pas être faites en temps que simple utilisateur, pour éviter de devoir lancer en tant que root, ce qui est regrettable niveau sécurité, Linux possède ce qu'on nomme des capabilities. Elles permettent par exemple d'autoriser à un programme d'écouter un port en dessous de 1024. On peut lister celles présente sur un fichier via `getcap`. Par exemple pour `ping` on aura : `/usr/bin/ping cap_net_raw=ep`. Cela permet d'utiliser des socket raw. On peut voir dans la page de man : [capabilities(7)](https://man.archlinux.org/man/capabilities.7) la liste de celles-ci et leurs descriptions. Pour donner une capabilities à un binaire, on peut utiliser `setcap`, par exemple `setcap 'cap_net_bind_service=+ep' listener` donne le droit à `listener` d'écouter sur un port plus faible que le 1024.
+Certaines actions sous Linux ne peuvent pas être faites en temps que simple utilisateur et pour éviter de devoir lancer en tant que root, ce qui est regrettable niveau sécurité, Linux possède ce qu'on nomme des capabilities. Elles permettent par exemple d'autoriser à un programme d'écouter un port en dessous de 1024. On peut lister celles présente sur un fichier via `getcap`. Par exemple pour `ping` on aura : `/usr/bin/ping cap_net_raw=ep` qui permet d'utiliser des socket raw. On peut voir dans la page de man : [capabilities(7)](https://man.archlinux.org/man/capabilities.7) la liste de celles-ci et leurs descriptions. Pour donner une capabilities à un binaire, on peut utiliser `setcap`. Par exemple `setcap 'cap_net_bind_service=+ep' listener` donne le droit à `listener` d'écouter sur un port plus faible que le 1024.
 
 ### Chattr
 `chattr` est un utilitaire qui permet d'attribuer certaines options à des fichiers ou dossiers, par exemple l'attribut `i` qui permet de rendre un fichier non modifiable, supprimable et aucun lien ne peut être fait vers lui. La commande à une syntaxe proche de `chmod` : `chattr +i fichier` pour donner l'attribut `i` et `-i` le retirer. Il existe d'autres options pouvant être intéressantes, je vous laisse lire la [man page de chattr(1)](https://man.archlinux.org/man/chattr.1.fr).
