@@ -3,7 +3,7 @@ Title: Permissions sous Linux
 Keywords: permission, Capabilities, linux, sécurité
 Date: 2022/03/31
 Author: Ramle
-Summary: En utilisant Linux, vous avez probablement rencontré des erreurs telles que "permission denied" (permission refusée). Souvent des erreurs du genre sont frustrantes, pourquoi le système que j'ai installé me refuse l'accès ? Le but de cet article est justement de comprendre en détail le fonctionnement des permissions sous Linux et de vous aider.
+Summary: En utilisant Linux, vous avez probablement rencontré des erreurs telles que "permission denied". Souvent des erreurs du genre sont frustrantes, pourquoi le système que j'ai installé me refuse l'accès ? Le but de cet article est justement de comprendre en détail le fonctionnement des permissions sous Linux et de vous aider.
 Slug: droit_linux
 
 En utilisant Linux, vous avez probablement rencontré des erreurs telles que "permission denied" (permission refusée). Souvent des erreurs du genre sont frustrantes, pourquoi le système que j'ai installé me refuse l'accès ? Le but de cet article est de comprendre en détail le fonctionnement des permissions sous Linux et de vous aider.
@@ -28,6 +28,7 @@ total 8
 ![Notation droit linux](/static/img/droit_linux/perm_notation.webp)
 
 On voit tout de suite l'utilité des lettres mises en gras plus haut. Elles sont utilisées pour visualiser les droits. Sous Linux de base, il y a 3 groupes de permissions :
+
 - utilisateur
 - groupe
 - tout le monde
@@ -41,6 +42,7 @@ chmod g+rw f
 Ajoute les droits de lecture et écriture au groupe propriétaire sur le fichier `f`.
 
 Une autre méthode consiste à utiliser des "nombres" ou chaque chiffre corresponds à une catégorie de droit (utilisateur, groupe, tous) et des permissions.
+
 | Droit                 | Valeur en lettres | Valeur en nombre |
 |-----------------------|-------------------|------------------|
 | Aucun droit           | ---               | 0                |
