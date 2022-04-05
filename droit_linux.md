@@ -12,12 +12,14 @@ Pour parler de droit sous Linux, il faut bien comprendre que tout est fichiers, 
 
 ## Permission de base
 Pour pallier à ces soucis, Linux dispose de droits plutôt basiques se limitant à :
+
 - **r**ead : autoriser à lire le fichier
 - **w**rite : autorise à écrire le fichier
 - e**x**ecute : autorise à exécuter le fichier
 
 Pour les dossiers, c'est la même chose mise à part que execute autorise à traverser le dossier et read permet de lister les fichiers.
 On peut prendre un exemple :
+
 ```
 % ls -l
 total 8
@@ -36,6 +38,7 @@ On voit tout de suite l'utilité des lettres mises en gras plus haut. Elles sont
 Dans notre exemple, le fichier `f` est lisible, modifiable et exécutable par raiponce, pour le fichier. `b` est lisible et modifiable par l'utilisateur (ici raiponce) et lisible pour le groupe (ici pascal). Pour `c` tout le monde peut lancer et lire, mais seule raiponce peut modifier.
 
 Les 2 principaux utilitaires pour gérer les droits de manière basique sur les fichiers sont `chmod` et `chown`. Pour chmod on peut l'utiliser soit en lui disant quel droit ajouter ou enlever à un fichier ou répertoire, par exemple :
+
 ```
 chmod g+rw f
 ```
@@ -75,9 +78,11 @@ Pour rajouter un suid ou sgid c'est toujours la commande chmod qui le permet. Pa
 
 ### Sticky bit
 Un autre attribut qui peut être intéressant c'est le sticky bit. Il permet d'autoriser uniquement l'utilisateur propriétaire ou root de modifier, renommer ou supprimer. Un des usages courrants est le dossier `/tmp`, de nombreux dossiers y sont créer en pouvant être écrit par plusieurs personnes mais ne doivent pas être supprimé. On peut voir via `ls -l` si un fichier le présente :
+
 ```
 drwxrwxrwt.  2 root     root      80 31 mar 13:13 .X11-unix
 ```
+
 Ici on peut voir qu'il est présent, c'est la notation `t` qui l'indique. Pour le retirer on peut  utiliser `chmod` pour le supprimer, avec la syntaxe classique : `chmod +t` pour ajouter, `-t` pour retirer ou via la notations en nombre, il est le numéro 1 donc par exemple `chmod 1666 fichier`.
 
 ### Capabilities
