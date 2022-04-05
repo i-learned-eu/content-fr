@@ -61,13 +61,6 @@ chmod 0640 x #On donne les droits : rw-r-----
 
 ```
 
-- Si je veux autoriser pascal à modifier son site qui se trouve dans /var/www/pascal/ tout en laissant le serveur web qui tourne via l'utilisateur et le groupe `www-data` servir les fichiers ? ||pascal:www-data en propriétaire et -rwx-r-x---, ce qui nous donne les commandes suivantes :
-```
-chown pascal:www-data
-chmod 750 #Sur un dossier le droit d'exécution permet de lister les fichiers
-```
-||
-
 ### Masquage
 Un autre aspect important est le  "masquage", cela permet de définir les permissions pour les nouveaux fichiers ou dossiers. On peut voir le masque d'un dossier via `umask -S`. Le masque est une soustraction, par exemple `umask 022` donnera les permissions 644 sur un fichier et 755 sur un dossier. Cela peut paraitre étrange, les permissions du fichier devrait être 755 non ? En fait, le masque par de la valeur 666 et non 777 (il faut donc manuellement donner les droits d'exécuter, le masque ne peut le faire) mais reste 777 pour les dossiers. Par exemple, si on veut que les nouveaux fichiers aient comme droit `rw-r-----` (640) on va pouvoir faire : `umask 027`, ce qui donnera aux dossiers les permissions 750.
 
