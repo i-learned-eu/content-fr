@@ -3,7 +3,7 @@ default:
     before_script:
         - rm -rf ./..?* ./.[!.]* ./*
         - git clone https://gitlab.ilearned.eu/i-learned/blog/theme .
-        - rm -f content/content-*
+        - rm -rf content/content-*
         - git clone https://gitlab.ilearned.eu/i-learned/blog/content-fr.git -b $CI_COMMIT_REF_NAME content/content-fr
         - git clone https://gitlab.ilearned.eu/i-learned/blog/content-en.git -b $CI_COMMIT_REF_NAME content/content-en
     tags:
@@ -26,7 +26,7 @@ prettier:
         - git config --global user.name "Gitlab CI"
         - git add .
         - git commit -m "[🧹 Lint] Linted code and updated submodule"
-        - git push https://CI_CD:$CI_GIT_USER_PASSWD@gitlab.ilearned.eu/i-learned/blog/theme/
+        - git push https://CI_CD:$CI_GIT_USER_PASSWD@gitlab.ilearned.eu/i-learned/blog/theme.git
     only:
         - master
 
