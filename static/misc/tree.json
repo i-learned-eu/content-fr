@@ -175,12 +175,12 @@
               "name": "À quoi sert initramfs ?",
               "type": "url",
               "url": "initramfs.html"
-            }
+            },
             {
               "name": " Permissions sous Linux ",
               "type": "url",
               "url": "droit_linux.html"
-            },
+            }
           ],
           "name": "Linux",
           "type": "folder"
