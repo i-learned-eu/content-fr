@@ -5,13 +5,14 @@ Slug: initramfs
 Author: Ownesis
 Summary: Dans cet article, on va voir ce qu'est initramfs et à quoi il sert.
 Lang: fr
+Category: Sysadmin/Linux
 
 # Pour la faire courte
 Initramfs est un [système de fichier](https://ilearned.eu/fat.html) monté dans la [RAM](https://en.wikipedia.org/wiki/Random-access_memory) lors de l'initialisation du [noyau (kernel)](https://fr.wikipedia.org/wiki/Noyau_de_syst%C3%A8me_d%27exploitation).
 
 # Un peu plus de détails
 Initramfs est présenté sous forme d'archive [cpio](https://fr.wikipedia.org/wiki/Cpio), c'est en quelque sorte l'ancêtre de [tar](https://doc.ubuntu-fr.org/tar).
-> Pourquoi ne pas utiliser tar ?? 🧐 
+> Pourquoi ne pas utiliser tar ?? 🧐
 
 Tout simplement parce que le code était plus facile à mettre en œuvre dans Linux et qu'il prend en charge des fichiers de périphériques, contrairement à `tar`.
 
@@ -44,7 +45,7 @@ Si la commande `file` vous retourne: `is ASCII cpio archive (SVR4 with no CRC)`,
 Effectuez ces commandes:
 
 `cpio -t < initramfs.img >/dev/null`
-Cette commande va vous retourner la taille du microcode, pour pouvoir ensuite le passer avec la commande `dd`. 
+Cette commande va vous retourner la taille du microcode, pour pouvoir ensuite le passer avec la commande `dd`.
 
 `dd if=initramfs.img of=initramfs_no_microcode.img bs=512 skip=<OFFSET>` *(remplacer `<OFFSET>` par la taille du block retourné par la commande précédente)*.
 
@@ -79,7 +80,7 @@ drwxr-xr-x 2 ownesis ownesis      60 14 févr. 11:32 var
 
 Je vous laisse vous balader dans les différents répertoires disponible. Par exemple dans `bin` qui pointe vers (`usr/bin`), vous verrez des outils comme :
 
-- `bzip` 
+- `bzip`
 - `mount`
 - `fsck.ext4`
 - `tftp` qui a un article dédié [ici](https://ilearned.eu/tftp.html) 😜

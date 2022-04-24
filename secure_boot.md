@@ -1,10 +1,11 @@
 lang: fr
-Author: Ramle 
+Author: Ramle
 Date: 2021/07/07
 Keywords: sécurité
 Slug: secure_boot
 Summary: La vérification de l’intégrité d'un système lors de son démarrage est crucial, si un attaquant est capable de modifier des fichiers il peut facilement avoir les pleins pouvoirs pour y implémenter un malware. Pour remédier à cela, Secure Boot a été créé.
 Title: Vérifier l’intégrité d'un système d'exploitation grâce à Secure Boot.
+Category: Cybersécurité/Blue Team
 
 La sécurité d’un système dépend de beaucoup de facteurs, un des facteurs importants est de pouvoir vérifier l’intégrité du système démarré, en effet sans cette vérification un attaquant pourrait sans trop de difficultés modifier les fichiers de démarrage pour ajouter un malware. Cet article se concentrera sur les machines de bureau.
 

@@ -1,10 +1,11 @@
 lang: fr
-Author: Ramle 
+Author: Ramle
 Date: 2021/10/17
 Keywords: Android, sécurité, Verified boot, secure boot
 slug: verified_boot
 Title: Fonctionnement du démarrage d'un système Android
 Summary: Les smartphones occupent une place de plus en plus importante, pour beaucoup d'usage ils remplacent même les machines de bureau plus classiques. La question de la sécurité du système embarqué dans ces machines est donc relativement importante, je vais, dans cet article, me pencher sur Android.
+Category: Sysadmin/Android
 
 Les smartphones occupent une place de plus en plus importante, pour beaucoup d'usage ils remplacent même les machines de bureau plus classiques. La question de la sécurité du système embarqué dans ces machines est donc relativement importante, je vais, dans cet article, me pencher sur Android.
 
@@ -17,9 +18,9 @@ Lorsque le bouton "Power" est appuyé, Un code présent dans la rom est éxecut�
 Le noyau s'occupe de monter les différentes partitions et systèmes de fichiers spéciaux comme `/dev` pour ensuite, démarrer le système d'initialisation (init). L'init c'est le premier programme qui est lancé, il s'occupe de lancer un certain nombre de logiciels. Systemd, par exemple, est un init. Un des logiciels intéressants qui est lancé se nomme "native daemons"
 
 ![Boot d'android](/static/img/boot-android/boot_android.webp)
-Native daemon lance plusieurs processus dont un qui est Zygote. 
+Native daemon lance plusieurs processus dont un qui est Zygote.
 
-Zygote est lancé dans une VM Android RunTime (ART), ART c'est la machine virtuelle android pour lancer du code Java, Zygote s'occupe de lancer un processus nommé System Server, il lance aussi d'autres processus par exemple il précharge les classes Java. ART n'est pas la seule application lancée par native daemon, native daemon permet de lancer directement en "userland" des processus. 
+Zygote est lancé dans une VM Android RunTime (ART), ART c'est la machine virtuelle android pour lancer du code Java, Zygote s'occupe de lancer un processus nommé System Server, il lance aussi d'autres processus par exemple il précharge les classes Java. ART n'est pas la seule application lancée par native daemon, native daemon permet de lancer directement en "userland" des processus.
 
 Un processus lancé en userland signifie qu'il est lancé avec des droits utilisateur classique et sans accès avec des privilèges élevés au kernel.
 
@@ -45,7 +46,7 @@ Verified boot permet d'éviter un kernel ou bootloader corrompu, mais les partit
 
 Device mapper permet de faire des périphériques de stockage virtuel qui peuvent avoir plusieurs propriétés spécifique, par exemple dans notre cas empêcher la lecture si le noyau détecte un bloc corrompu.
 
-Pour vérifier que la partition n'ai pas été modifiée, il y a une vérification du bloc lu en temps réel, la vérification se base sur une arborescence de condensats. 
+Pour vérifier que la partition n'ai pas été modifiée, il y a une vérification du bloc lu en temps réel, la vérification se base sur une arborescence de condensats.
 
 ![Dm-verity hash table](/static/img/boot-android/dm-verity-hash-table.webp)
 (source : [https://source.android.com/security/verifiedboot/dm-verity](https://source.android.com/security/verifiedboot/dm-verity))

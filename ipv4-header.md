@@ -5,6 +5,7 @@ Slug: ipv4-header
 Summary: Dans cet article, nous allons voir à quoi ressemble l’en-tête (header) de l’IPv4, avec son contenu et ce que fait tout ce beau monde.
 Title: Comprendre l’entête IPv4
 Author: Ownesis
+Category: Réseau/Routage & IP
 
 Dans cet article, nous allons voir à quoi ressemble l’en-tête (header) de l’IPv4, avec son contenu et ce que fait tout ce beau monde.
 

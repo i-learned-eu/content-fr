@@ -1,16 +1,17 @@
 lang: fr
-Author: Ramle 
+Author: Ramle
 Date: 2021/12/23
 Keywords: réseau
 Slug: ftp
 Summary: Dans cet article nous découvrirons le fonctionnement du protocole FTP !
 Title: Comment fonctionne le protocole FTP ?
+Category: Sysadmin
 
 Pour transférer des fichiers sur internet avant HTTP il existait un protocole qui se voulait assez simple : FTP (file transfer protocol).
 
 FTP se base sur TCP, par défaut le serveur écoute le port 21. Le client FTP qui va se connecter au serveur envoie une commande FTP au serveur. Par exemple pour récupérer un fichier sur le serveur :
 
-`RETR example.txt` 
+`RETR example.txt`
 
 Pour transférer les données FTP utilise un second canal. Il a 2 modes de connexions pour ce canal, actif et passif.
 

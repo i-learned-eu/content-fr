@@ -5,6 +5,7 @@ Keywords: Windows, sécurité
 Slug: secu_windows
 Summary: "Accès refusé". S’il y a bien une erreur frustrante, c'est sûrement celle-ci. Sur Windows nous y sommes pourtant souvent confrontés, surtout dans une perspective attaquante. Dans cet article, je tâcherais de vous présenter, dans les grandes lignes, le modèle de sécurité qu’utilise Windows.
 Title: Modèle de sécurité Windows
+Category: Cybersécurité/Blue Team
 
 ## Introduction
 
@@ -150,7 +151,7 @@ Ces droits standards permettent alors de construire ce que l’on appelle les dr
  - `GENERIC_EXECUTE` permet de lire les permissions d’un objet. Factuellement si c’est un programme, il permet de le lancer. Son équivalent sous linux serait le flag "x".
  - `GENERIC_ALL` est la combinaison de ces droits. Attention cependant, il est sensiblement plus fort, dans de très rare cas. Il peut s’avérer que la combinaison `GENERIC_READ/WRITE/EXECUTE` n’est pas équivalente à `GENERIC_ALL`, il n’a donc pas d’équivalent dans le système au pingouin.
 
-Il en existe encore un grand nombre mais l’objectif n’est pas l’exhaustivité. Pour voir ces accès, il faut utiliser l’onglet sécurité des propriétés d’un objet. On peut également utiliser notre shell préférer aka PowerShell (là pour le coup, vous n’avez pas d’excuse car PowerShell c’est génial et opensource). Une commande particulière est destinée à cela: `Get-Acl`. Elle prend comme argument le chemin vers notre objet, `-Path` et ce sera globalement tout pour une utilisation simple. Le résultat retourné est alors une "table" ce qui est assez inconfortable. Pour s’affranchir de se problème d’affichage, on utilise un pipe `|` vers la commande `Format-List` (ou son alias `fl`). On peut alors apercevoir entre autre le propriétaire du fichier dans notre cas, les accès accordés ainsi que le descripteur de sécurité au format `SDDL`. 
+Il en existe encore un grand nombre mais l’objectif n’est pas l’exhaustivité. Pour voir ces accès, il faut utiliser l’onglet sécurité des propriétés d’un objet. On peut également utiliser notre shell préférer aka PowerShell (là pour le coup, vous n’avez pas d’excuse car PowerShell c’est génial et opensource). Une commande particulière est destinée à cela: `Get-Acl`. Elle prend comme argument le chemin vers notre objet, `-Path` et ce sera globalement tout pour une utilisation simple. Le résultat retourné est alors une "table" ce qui est assez inconfortable. Pour s’affranchir de se problème d’affichage, on utilise un pipe `|` vers la commande `Format-List` (ou son alias `fl`). On peut alors apercevoir entre autre le propriétaire du fichier dans notre cas, les accès accordés ainsi que le descripteur de sécurité au format `SDDL`.
 ```text
 PS D:\tools\PowerShellScript\PSReflect-Functions> Get-Acl .\ | fl
 

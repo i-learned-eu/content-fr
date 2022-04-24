@@ -1,10 +1,11 @@
 lang: fr
-Author: Ramle 
+Author: Ramle
 Date: 2021-05-18
 Keywords: HTTP, http3, QUIC
 Slug: http3
 Title: Comment fonctionne HTTP/3 ?
 Summary: Dans l'article du jour nous allons voir comment fonctionne HTTP/3 et QUIC.
+Category: Réseau/HTTP & TLS
 
 Il n'y a pas longtemps nous avions découvert le fonctionnement d'[HTTP](https://ilearned.eu/http.html), et différentes versions de ce protocoles, mais l'une d'elle n'a pas été vue : HTTP/3, cette version apporte un changement sur la méthode de transport en se basant sur QUIC qui lui même utilise [UDP](https://ilearned.eu/udp.html) au lieu de [TCP](https://ilearned.eu/tcp.html).
 
@@ -36,6 +37,6 @@ L'amélioration qu'apporte HTTP/3 est relativement mineure mais se révèle asse
 
 Niveau performance, HTTP/3 apporte un gain au niveau de la latence grâce à la poignée de main réduite, pour ce qui est de la vitesse de chargement, la prioritisation des flux, et la possibilité d'envoyer sur plusieurs flux en simultané permet de gagner un peu. Selon [Cloudflare](https://blog.cloudflare.com/http-3-vs-http-2/) HTTP/3 améliore le temps d'établissement de la première connexion de 12,4%, pour ce qui est du chargement d'une page, ici leur propre blog, le temps diminue entre 1 et 4%, c'est au final assez peu, mais sur une connexions assez lente quelques pour-cent n'est pas négligeable.
 
-Si vous regardez un peu en détail votre navigateur vous remarquerez qu'HTTP/3 n'est pas encore activé par défaut, en effet ce protocole bien que prometteur n'est pas encore standardisé et est très minoritaire. Si par curiosité vous voulez tout de même activé dans `about:config` sur votre firefox vous pouvez changez la configuration `network.http.http3.enabled` vers `true`. Sachez toutefois que des sites comme celui de Cloudflare où de Google intègrent déjà HTTP/3 ! 
+Si vous regardez un peu en détail votre navigateur vous remarquerez qu'HTTP/3 n'est pas encore activé par défaut, en effet ce protocole bien que prometteur n'est pas encore standardisé et est très minoritaire. Si par curiosité vous voulez tout de même activé dans `about:config` sur votre firefox vous pouvez changez la configuration `network.http.http3.enabled` vers `true`. Sachez toutefois que des sites comme celui de Cloudflare où de Google intègrent déjà HTTP/3 !
 
 J'espère que cet article vous aura plus :), on se retrouve demain pour parler de **radius.**

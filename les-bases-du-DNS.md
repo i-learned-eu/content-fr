@@ -4,6 +4,7 @@ Keywords: DNS, Domain Name System, NS, knot, bind, apprendre, bases DNS, DNS sim
 Summary: Pour ce premier post dans la catégorie Today I Learned, on repart des bases, aujourd'hui on parle de DNS 😄.
 Date: 2021-04-24
 Author: Eban
+Category: Réseau/DNS
 
 Pour ce premier post dans la catégorie *Today I Learned*, on repart des bases, aujourd'hui on parle de DNS 😄. Pour les lecteurs les plus expérimentés connaissant déjà bien les bases du système de DNS, rendez-vous demain 😉. Les prérequis pour aborder cet article sont : des **petites bases de réseau**, la notion d'IP, de nom de domaine, et ça devrait suffire :) Vous trouverez à chaque fois en début d'article une petite "carte mentale" représentant les sujets que nous aurons déjà abordé en lien avec cet article, afin que vous puissiez avoir un accès plus facile aux pré-requis il suffit de cliquer sur le nom de l'article ou de la notion dans le schéma pour avoir le lien.
 
@@ -37,9 +38,9 @@ eban.bzh.	1800 IN A 89.234.156.60
 
 ![Frame 2](/static/img/les-bases-des-dns/schema2.webp)
 
-Les serveurs DNS "root" correspondent à la première couche, ils contiennent les records DNS pour tous les `TLD` *Un TLD ? Quèsaco ?* Un TLD (Top level domain name) c'est en fait tout les `.` quelque chose que vous rencontrez au quotidien, `bzh` , `fr`, `com`, `be` en sont quelques exemples. Les serveurs DNS root contiennent donc les record correspondants aux TLD. 
+Les serveurs DNS "root" correspondent à la première couche, ils contiennent les records DNS pour tous les `TLD` *Un TLD ? Quèsaco ?* Un TLD (Top level domain name) c'est en fait tout les `.` quelque chose que vous rencontrez au quotidien, `bzh` , `fr`, `com`, `be` en sont quelques exemples. Les serveurs DNS root contiennent donc les record correspondants aux TLD.
 
-Les TLD, `bzh.` dans notre exemple, contient quant à lui les informations sur les domaines de sa zone, `*.bzh.`. 
+Les TLD, `bzh.` dans notre exemple, contient quant à lui les informations sur les domaines de sa zone, `*.bzh.`.
 
 `eban.bzh.` pour finir contient tout les records pour `eban.bzh.` et tout ses sous-domaines (`git.eban.bzh.`, `blog.eban.bzh.`...) cette "couche" est appelée `FQDN` (Fully Qualified Domain Name). Pour rendre tout ça plus simple voici (à nouveau :p) un petit schéma.
 

@@ -1,10 +1,11 @@
 lang: fr
-Author: Eban 
+Author: Eban
 Date: 2021/07/22
 Keywords: ssh, sécurité
 Slug: ca-ssh
 Summary: SSH est un protocole très répandu sur internet, il est utilisé par des millions d'entreprises et de particuliers chaque jour, mais bien souvent de façon peu sécurisée. Pour remédier à cela il existe une solution que nous allons étudier dans cet article, les autorités de certification SSH.
 Title: Comment faire une autorité de certification (CA) SSH ?
+Category: Sysadmin
 
 SSH est un protocole très répandu sur internet, il est utilisé par des millions d'entreprises et particuliers chaque jour, mais bien souvent de façon peu sécurisée. Vous connaissez peut-être les clés SSH qui permettent une meilleure sécurité que les mots de passe, mais ces clés posent un problème, et notamment en entreprise, imaginez une entreprise avec 500 ingénieurs, il faudrait, sur chaque serveur SSH, mettre les 500 clés publiques des 500 ingénieurs ! Pour remédier à cela il existe une solution que nous allons étudier dans cet article, les autorités de certification SSH.
 
@@ -22,7 +23,7 @@ Lors de la première connexion à un serveur SSH, le serveur envoie sa clé publ
 The authenticity of host 'XXXXX' can't be established.
 ED25519 key fingerprint is SHA256:JxfJl38mBVY2jX0h/LWDuB1OtgYfgLBr3nJw/lw5GFE.
 This key is not known by any other names
-Are you sure you want to continue connecting (yes/no/[fingerprint])? 
+Are you sure you want to continue connecting (yes/no/[fingerprint])?
 ```
 
 Nous avons tous pour (mauvaise) habitude de simplement entrer `yes` sans se poser plus de questions, mais cette habitude est très dangereuse, un attaquant pourrait usurper le serveur SSH auquel nous essayons de nous connecter ! Pour remédier à cela il existe plusieurs solutions comme [SSHFP](https://fr.wikipedia.org/wiki/Enregistrement_DNS_SSHFP) (qui est relativement similaire à [TLSA](https://ilearned.eu.org/dane.html), mais avec SSH) ou les autorités de certification (CA) c'est ce que nous allons détailler ici.

@@ -4,6 +4,7 @@ Date: 2021/12/16
 Slug: ocsp
 Summary: Nous connaissons tous le protocole TLS, les certificats de TLS se basent sur le bien connu protocole x509, avec la généralisation de l'utilisation de ce protocole sur Internet, un problème se pose : comment faire en sorte que tous les clients sachent quand un certificat est révoqué ? Afin de répondre à cette question, a été créé le protocole OCSP (Online Certificate Status Protocol).
 Title: Comment fonctionne le protocole OCSP ?
+Category: Réseau/HTTP & TLS
 
 Nous connaissons tous le protocole [TLS](https://ilearned.eu/tls.html), les certificats de TLS se basent sur le bien connu protocole [X.509](https://fr.wikipedia.org/wiki/X.509), avec la généralisation de l'utilisation de ce protocole sur Internet, un problème se pose : comment faire en sorte que tous les clients sachent quand un certificat est révoqué ? Afin de répondre à cette question, a été créé le protocole OCSP (Online Certificate Status Protocol).
 

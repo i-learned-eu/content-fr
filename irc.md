@@ -5,6 +5,7 @@ Date: 2021-05-05
 Author: Ramle
 Summary: Bonjour, hier nous avions vu le protocole TCP, aujourd'hui nous allons en reparler en l'appliquant concrètement. :)
 Slug: irc
+Category: Réseau
 
 Hier nous avions vu le protocole TCP, aujourd'hui nous allons en reparler en l'appliquant concrètement. Le protocole que nous allons voir est IRC qui est très simple dans sa conception, ce qui permet de l'utiliser à la main sans se prendre trop la tête.
 
@@ -15,7 +16,7 @@ Comme sous entendu juste au dessus, IRC fonctionne dans un mode client serveur, 
 Pour essayer IRC on peut utiliser telnet qui est un outil qui permet d'établir des connexions TCP, on peut se connecter via la suite de commande :
 
 ```bash
-telnet irc.example.org 6667 
+telnet irc.example.org 6667
 USER utilisateur * * :Une description
 NICK utilisateur #Définit le fameux nick
 JOIN \#canal #Pour joindre un canal
@@ -43,15 +44,15 @@ NICK ramle
 :irc.lab.rameul.eu 005 ramle MAXTARGETS=20 MODES=20 NETWORK=rml-lab NICKLEN=32 PREFIX=(ov)@+ STATUSMSG=@+ TOPICLEN=307 VBANLIST WALLCHOPS WALLVOICES :are supported by this server
 :irc.lab.rameul.eu 042 ramle 476AAAAAK :your unique ID
 :irc.lab.rameul.eu 375 ramle :irc.lab.rameul.eu message of the day
-:irc.lab.rameul.eu 372 ramle :- 
-:irc.lab.rameul.eu 372 ramle :-  _ __ _ __ ___ | |      _ __   ___| |_ 
+:irc.lab.rameul.eu 372 ramle :-
+:irc.lab.rameul.eu 372 ramle :-  _ __ _ __ ___ | |      _ __   ___| |_
 :irc.lab.rameul.eu 372 ramle :- | '__| '_ ` _ \| |_____| '_ \ / _ \ __|
-:irc.lab.rameul.eu 372 ramle :- | |  | | | | | | |_____| | | |  __/ |_ 
+:irc.lab.rameul.eu 372 ramle :- | |  | | | | | | |_____| | | |  __/ |_
 :irc.lab.rameul.eu 372 ramle :- |_|  |_| |_| |_|_|     |_| |_|\___|\__|
-:irc.lab.rameul.eu 372 ramle :- 
+:irc.lab.rameul.eu 372 ramle :-
 :irc.lab.rameul.eu 372 ramle :- Description : Lab
 :irc.lab.rameul.eu 372 ramle :- NetAdmin : ramle
-:irc.lab.rameul.eu 372 ramle :- 
+:irc.lab.rameul.eu 372 ramle :-
 :irc.lab.rameul.eu 376 ramle :End of message of the day.
 :irc.lab.rameul.eu 251 ramle :There are 1 users and 0 invisible on 1 servers
 :irc.lab.rameul.eu 254 ramle 0 :channels formed
@@ -60,7 +61,7 @@ NICK ramle
 :irc.lab.rameul.eu 266 ramle :Current Global Users: 1  Max: 2
 JOIN #article
 :ramle!ramle@172.17.0.1 JOIN :#article
-:irc.lab.rameul.eu 353 ramle = #article :ramle @ramle2 
+:irc.lab.rameul.eu 353 ramle = #article :ramle @ramle2
 :irc.lab.rameul.eu 366 ramle #article :End of /NAMES list.
 PRIVMSG #article o/
 :ramle2!ramle2@172.17.0.1 PRIVMSG #article :o/
@@ -72,7 +73,7 @@ On peut voir dans ce court exemple plusieurs choses, déjà la simplicité du pr
 
 ![IRC%2021507d67dcf84cbba48c88b9daad068c/Frame_30.webp](/static/img/irc/Frame_30.webp)
 
-Sur la capture réseau, on peut observer le peu de requête pour chaque étape, l'envoi du contenu en lui même et l'accusé. Si vous voulez observer par vous même, le fichier est ici 
+Sur la capture réseau, on peut observer le peu de requête pour chaque étape, l'envoi du contenu en lui même et l'accusé. Si vous voulez observer par vous même, le fichier est ici
 
 [irc.pcap](/static/misc/irc/irc.pcap)
 

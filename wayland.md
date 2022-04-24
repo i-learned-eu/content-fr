@@ -1,10 +1,11 @@
 lang: fr
-Author: Ramle 
+Author: Ramle
 Date: 2021/12/21
 Slug: wayland
 Title: Comment fonctionne Wayland ?
 Summary: Cet article détaille le fonctionnement de Wayland, un système de fenetrage alternatif à X11
 Keywords: Linux
+Category: Sysadmin/Linux
 
 L’affichage graphique d’un système d’exploitation est très complexe, si l’on veut avoir plusieurs fenêtre et application affichée en même temps en harmonie un logiciel qui gère les différents périphériques d’entrées et de sorties, l’isolation de chacun d’elle pour éviter qu’une application puisse récupérer les données d’une autre. Le but de cet article est d’essayer de comprendre le protocole Wayland qui vise à remplacer le vieillissant X11.
 

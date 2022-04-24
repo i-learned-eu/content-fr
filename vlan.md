@@ -2,14 +2,14 @@ lang: fr
 Title: Usage des VLAN
 Keywords: VLAN, network, réseau
 Date: 2021-05-02
-Category: Today I Learned
 author: Ramle
 summary: Aujourd'hui, on va parler du principe des VLAN et de l'utilité de celle-ci.
 slug: vlan
+Category: Réseau/Routage & IP
 
 Souvent pour des raisons de sécurité ou par nécessité de priorisation du flux de certains appareils,  il est nécessaire de séparer le réseau en différentes parties, pour par exemple, séparer un réseau d'administration de serveurs et du matériel réseau avec le réseau destiné aux machines d'une entreprise. Dans ce cas deux solutions sont possible, soit utiliser plusieurs interfaces réseaux, soit faire des VLANs.
 
-Les VLANs permettent de gérer de manière plus aisée de la segmentation de réseaux, le principe est de par exemple permettre à un switch réseau en fonction du port sur lequel est branché une machine d'être sur une VLAN différente, chaque VLAN possède un ID numérique pour l'identifier. 
+Les VLANs permettent de gérer de manière plus aisée de la segmentation de réseaux, le principe est de par exemple permettre à un switch réseau en fonction du port sur lequel est branché une machine d'être sur une VLAN différente, chaque VLAN possède un ID numérique pour l'identifier.
 
 Un autre concept intéressant des VLAN, c'est le trunk, cela permet de faire passer plusieurs VLAN sur un seul port en tagant les paquets. Ce tag est rajouté dans l'en-tête ethernet  il contient l'ID de la VLAN dans laquelle le trafic doit aller. On peut aussi avoir des VLANs dites untagged, c'est à dire qui ne demande pas la modification de l'en-tête ethernet. Une VLAN untagged ne demande pas de configuration spécifique sur le client, c'est la VLAN "par défaut", contrairement à une VLAN tagged qui demande que le client rajoute l'information dans l'en-tête on ne peut donc avoir qu'une seule VLAN untagged.
 

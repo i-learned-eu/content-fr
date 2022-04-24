@@ -5,8 +5,9 @@ Keywords: windows, kerberos
 Slug: nopac
 Summary: Une vulnérabilité dans Kerberos a été découverte il y a peu, au début de ce mois de décembre. Dans cet article, nous tâcherons d'en comprendre le fonctionnement !
 Title: Comprendre la vulnérabilité NoPac
+Category: Cybersécurité/Red Team
 
-Les manières d'exploiter ActiveDirectory sont très diverses et il en va de même pour ses vulnérabilités. En cause, le nombre de services nécessaires au fonctionnement de l'environnement. C'est Kerberos qui récemment a été victime de la découverte d'une faille, menant à une vulnérabilité assez importante que nous allons découvrir dans cet article. 
+Les manières d'exploiter ActiveDirectory sont très diverses et il en va de même pour ses vulnérabilités. En cause, le nombre de services nécessaires au fonctionnement de l'environnement. C'est Kerberos qui récemment a été victime de la découverte d'une faille, menant à une vulnérabilité assez importante que nous allons découvrir dans cet article.
 
 Je recommande au préalable la lecture de [l'article sur Active Directory sur ilearned](https://ilearned.eu/ActiveDirectory.html) si vous n'êtes pas à l'aise avec le concept. A noter également que la majorité des informations que j'exposerais sont tirées de [l'article de l'auteur du protocole d'exploitation de la vulnérabilité](https://exploit.ph/cve-2021-42287-cve-2021-42278-weaponisation.html).
 
@@ -30,4 +31,4 @@ La plupart des méthodes d'exploitation de cette vulnérabilité se base sur Pow
 
 ## Conclusion
 
-Cette vulnérabilité permet donc une escalade de privilège assez rapide à effectuer dans un environnement Active Directory, et mène à sa compromission la plus totale. Pour s'en prémunir, il n'y a pas de secret, faire la mise à jour proposée par Microsoft, ne pas permettre à des utilisateurs d'ajouter des comptes machines au domaine (ce qui d'ailleurs endigue un grand nombre d'attaques), et mettre en place une détection des différentes traces que cause l'attaque ! 
+Cette vulnérabilité permet donc une escalade de privilège assez rapide à effectuer dans un environnement Active Directory, et mène à sa compromission la plus totale. Pour s'en prémunir, il n'y a pas de secret, faire la mise à jour proposée par Microsoft, ne pas permettre à des utilisateurs d'ajouter des comptes machines au domaine (ce qui d'ailleurs endigue un grand nombre d'attaques), et mettre en place une détection des différentes traces que cause l'attaque !

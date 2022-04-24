@@ -3,9 +3,9 @@ Title: Sécuriser la connexion entre Master et Slave
 Keywords: DNS, Domain Name System, NS, xfr, zone transfer, tsig, xot
 Summary: Dans cet article, on parle des différents moyens de sécuriser les échanges entre Master et Slave
 Date: 2021-04-27
-Category: Today I Learned
 Author: Eban
 Slug: tsig-xot
+Category: Réseau/DNS
 
 Comme nous l'avons vu [hier](https://google.com/), la communication entre `master` et `slave` est faite en claire ce qui peut représenter une problème de sécurité, plusieurs systèmes ont donc été mit en place afin de sécuriser ce système.
 

@@ -5,6 +5,7 @@ Date: 2021-05-10
 author: Ramle
 summary: Hello, aujourd'hui on parle de décentralisation :)
 Slug: decentralisation
+Category: Pensées du libre
 
 Internet est un grand réseau de réseau tous interconnectés de manière différentes, la conception permet en théorie une redondance importante, mais dans les faits ce n'est pas forcément le cas. En effet, beaucoup de services sont concentrer sur un nombre retreint d'acteur
 

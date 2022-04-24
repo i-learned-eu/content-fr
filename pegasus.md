@@ -1,20 +1,21 @@
 lang: fr
-Author: Eban 
+Author: Eban
 Date: 2021/08/12
 Keywords: sécurité
 Slug: pegasus
 Summary: Le 18 juillet 2021 à 19h, Amnesty International révèle dans une enquête en collaboration avec Forbidden Stories que le logiciel Pegasus, édité par la société israélienne NSO Group, a été utilisé à des fins d'espionnage contre des militants politiques, des journalistes, des membre d'ONG etc. Nous analyserons dans cet article l'aspect technique du spyware Pegasus dans sa version pour iOS.
 Title: Pegasus, à la croisée du technique et du politique
+Category: Cybersécurité/Red Team
 
 Le 18 juillet 2021 à 19h, [Amnesty International](https://www.amnesty.org/en/) révèle dans une enquête en collaboration avec [Forbidden Stories](https://forbiddenstories.org/) que le logiciel Pegasus, édité par la société israélienne [NSO Group](https://www.nsogroup.com/), a été utilisé à des fins d'espionnage contre des militants politiques, des journalistes, des membres d'ONG etc. On apprendra quelques jours plus tard que l'État marocain a acheté à NSO sa solution d'espionnage afin de placer sur écoute de nombreux ministres français, mais aussi Edwy Plenel, Eric Zemmour ou encore Emmanuel Macron. Ce logiciel avait déjà été mis sous le feu des projecteurs en 2016 par [Citizen Lab](https://citizenlab.ca/) pour dénoncer le même genre de pratiques. Nous analyserons dans cet article l'aspect technique du spyware Pegasus dans sa version pour iOS.
 
 # Première révélations, 2016 − Trident
 
-En 2016, la société Lookout publie [un whitepaper](https://info.lookout.com/rs/051-ESQ-475/images/lookout-pegasus-technical-analysis.pdf) détaillant le fonctionnement technique de Pegasus sur iOS. Le mode opératoire de ce spyware est relativement simple, un message contenant un lien est envoyé à la cible, lorsque la cible clique sur le lien une faille 0day est exploitée sur le téléphone de la victime, et le spyware s'installe. 
+En 2016, la société Lookout publie [un whitepaper](https://info.lookout.com/rs/051-ESQ-475/images/lookout-pegasus-technical-analysis.pdf) détaillant le fonctionnement technique de Pegasus sur iOS. Le mode opératoire de ce spyware est relativement simple, un message contenant un lien est envoyé à la cible, lorsque la cible clique sur le lien une faille 0day est exploitée sur le téléphone de la victime, et le spyware s'installe.
 
 ![Schéma montrant une infection par un lien vérolé.](/static/img/pegasus/Infection_via_clic_sms.webp)
 
-Afin d'infecter le téléphone de la victime, le malware Pegasus utilise trois vulnérabilités différentes, la première est la [CVE-2016-4657](https://sites.cs.ucsb.edu/~vigna/publications/2017_Phrack_CyberGrandShellphish.pdf). − Une CVE est une faille de sécurité rendue publique, c'est l'acronyme de Common Vulnerabilities and Exposures. − Cette CVE consiste en une vulnérabilité dans la façon qu'a Webkit, le moteur de rendu de page web utilisé par iOS, d'interpréter le JavaScript, et plus particulièrement dans la fonction `arrayProtoFuncSlice` qui permet simplement de couper un array à un endroit précis. 
+Afin d'infecter le téléphone de la victime, le malware Pegasus utilise trois vulnérabilités différentes, la première est la [CVE-2016-4657](https://sites.cs.ucsb.edu/~vigna/publications/2017_Phrack_CyberGrandShellphish.pdf). − Une CVE est une faille de sécurité rendue publique, c'est l'acronyme de Common Vulnerabilities and Exposures. − Cette CVE consiste en une vulnérabilité dans la façon qu'a Webkit, le moteur de rendu de page web utilisé par iOS, d'interpréter le JavaScript, et plus particulièrement dans la fonction `arrayProtoFuncSlice` qui permet simplement de couper un array à un endroit précis.
 
 ```diff
 var a = [1, 2, 3, 4];

@@ -5,6 +5,7 @@ Keywords: socks, tor, proxy, protocole, tcp, udp, header
 Slug: socks
 Summary: Dans cet article, nous allons voir ce qu'est le protocole SOCKS, les versions qu'il a connues, comprendre son fonctionnement, son utilité et comment l'utiliser.
 Title: Tout savoir sur le protocole SOCKS
+Category: Réseau/Proxy & VPN
 
 Le protocole
 Socks est un protocole réseau qui permet à un `client` de faire transiter ses données par un `serveur`.
@@ -50,7 +51,7 @@ Voici la [RFC](https://www.openssh.com/txt/socks4.protocol) de cette version du 
 	 	- `92` : demande rejetée car le serveur SOCKS ne peut pas se connecter à [`identd`](https://en.wikipedia.org/wiki/Ident_protocol) sur le client.
 	 	- `93` : demande rejetée car le programme client et identd signaler des identifiants différents.
 	- `DSPORT` est  ignoré pour `CONNECT`, mais pour `BIND` cela correspond au port mis en écoute par le serveur socks.
-	- `DSTIP` est ignoré pour `CONNECT`, mais pour `BIND` cela correpond à l'ip utilisé par le serveur socks qui attend la connexion. 
+	- `DSTIP` est ignoré pour `CONNECT`, mais pour `BIND` cela correpond à l'ip utilisé par le serveur socks qui attend la connexion.
 
 Le type de connexion `BIND` devrait être envoyé seulement après une connexion de type `CONNECT`, ceci est utilisé par les services qui utilisent le "multiple connexion", par exemple lors d'une connexion FTP en mode "active", quand le client écoute sur un port pour recevoir les données.
 Cette option permet donc de ne pas créer de connexions direct entre le serveur et le client.
@@ -75,7 +76,7 @@ En représentation décimale, *(c'est comme ça que devra être représentée l'
 Cette IPv4 est bien entendue invalide, et le serveur "comprend" qu'il doit lui même résoudre un nom de domaine.
 > mais... ou mettons-nous ce nom de domaine ?!
 
-On le met après l'octet `NULL` qui termine le nom d'utilisateur, et on rajoute un octet `NULL` à la fin du nom de domaine. 
+On le met après l'octet `NULL` qui termine le nom d'utilisateur, et on rajoute un octet `NULL` à la fin du nom de domaine.
 
 C'est fastidieux je vous l'accorde, mais heureusement la version 5 de socks implémente cette idée d'une bien meilleure façon, et bien plus encore.
 
@@ -138,7 +139,7 @@ Voici comment ça se passe:
 		| 1  |  1  | X'00' |  1   | Variable |    2     |
 		+----+-----+-------+------+----------+----------+
 	- `VER`: Version du protocole : `5`.
-	- `CMD` : Commande: 
+	- `CMD` : Commande:
 		- `01` CONNECT.
 		- `02` BIND.
 		- `03` UDP ASSOCIATE.
@@ -186,7 +187,7 @@ Voici comment ça se passe:
 		+----+------+------+----------+----------+----------+
 		| 2  |  1   |  1   | Variable |    2     | Variable |
 		+----+------+------+----------+----------+----------+
-	
+
 	- `RSV`: Réservé (`0x0`).
 	-  `FRAG`: Numéro du fragment actuel.
 	- `ATYP`: Type d’adresse:
@@ -227,7 +228,7 @@ Cela ouvre  le  port `9090` sur la machine `iusearchbtw` et si j'accède à `loc
 
 Il existe l'outil [microsocks](https://github.com/rofl0r/microsocks) écrit en **C** qui permet de mettre en place un serveur socks5 facilement.
 
-# Le client 
+# Le client
 Le client socks, comme son nom l'indique, c'est celui qui contactera le serveur socks, c'est l'application qui se connecte au serveur socks et qui dit à ce dernier d'établir une connexion avec un serveur distant.
 
 C'est rare de trouver des clients socks comme ça "native", c'est généralement une "option" à une application. Par exemple, `curl` a une option `--socks5` permettant de passer par un serveur socks5.

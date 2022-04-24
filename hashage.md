@@ -1,10 +1,11 @@
 lang: fr
-Author: Lancelot 
+Author: Lancelot
 Date: 2021/12/08
 Keywords: cryptographie, sécurité
 Slug: hashage
 Summary: Lorsque l'on calcule l'image par une fonction mathématique, on peut souvent trouver un moyen pour effectuer l'opération inverse, partir du résultat et retrouver le nombre de départ. Pourtant les fonctions de hachage cryptographique sont aussi des fonctions mathématiques, alors pourquoi dit-on que nous ne pouvons pas revenir en arrière ? C'est le but de l'article !
 Title: Comment fonctionnent les fonctions de hashage ?
+Category: Cybersécurité/Cryptographie
 
 # Fonction cryptographique de hachage
 
@@ -28,7 +29,7 @@ Ce qui m'offre une super transition… Au sujet des objets ensemblistes:
 - On note, pour tout ensemble $E$, son cardinal noté $\text{Card}(E)$ (aussi $|E|$), se définit intuitivement comme l'entier naturel correspondant au nombre d'éléments de $E$.
 - Une application $f$ est une relation entre deux ensembles $E$ et $F$ qui à tout élément $x\in E$, associe un élément $f(x) \in F$, on la note $f: E \rightarrow F$. On confondra volontairement les termes applications et fonctions.
 - Prenons $x \in E$, $f(x)$ est appelée image, et $x$ antécédant. Pour coller au vocabulaire utilisé en cryptographie, un antécédant sera appelée préimage, et une image pourra être appelée condensat.
-- Une fonction $f: E \rightarrow F$ est dite injective (est une injection) si et seulement si tout élément de $F$ admet au plus un antécédent par $f$. 
+- Une fonction $f: E \rightarrow F$ est dite injective (est une injection) si et seulement si tout élément de $F$ admet au plus un antécédent par $f$.
 - Une fonction $f: E \rightarrow F$ est dite surjective (est une surjection) si et seulement si tout élément de $F$ admet au moins un antécédent par $f$.
 
 Au sujet de la logique booléenne:
@@ -44,21 +45,21 @@ On considère $M$ l'ensemble des messages possibles, une fonction de hachage $h$
 
 En fonction des caractéristiques de $h$, on lui donne des adjectifs spécifiques. En outre, on dira que $h$ est parfaite pour $M$ si elle est une injection de $M$ dans $H$ (en particulier, si de plus $\text{Card}(M) = \text{Card}(H)$, elle sera dite minimale). Un corolaire immédiat de cette définition est que si $h$ est parfaite, alors elle n'admet aucune collision (la preuve se tient à l'application de deux définitions, elle est donc laissée au soin du lecteur) c'est à dire des couples $(x,x') \in M^2, x\neq x'$ tels que $f(x) = f(x')$ (on peut minorer le nombre de collisions $c$, dans le cas où $M$ et $H$ sont finis: $c \geq \text{Card}(M) - \text{Card}(H)$) et on appelle seconde préimage $x'$. En revanche, cela paraît tout simplement impossible à obtenir, sans fixer l'ensemble $M$ ce qui risque d'entacher à la sécurité de $h$. Ainsi, le cas le plus fréquent sera de considérer une fonction de hachage qui est surjective, par conséquent, il existera toujours des collisions. Si $M$ est de taille infinie, c'est à dire s'il contient tout les messages imaginables, alors il y a une infinité de collisions possibles. Le but est désormais de pouvoir avoir une répartition homogène (statistiquement parlant, intuitivement cela signifie qu'il y en a un peu partout) de ces collisions. Nouvelle définition. On dit que $h$ est résistante aux collisions (ou Collision-Resistant Hash Function en anglais) si le calcul d'une collision est complexe calculatoirement (pour la même raison que que les One-Way-Function). Rendre une fonction résistante aux collisions est donc un objectif de sécurité important.
 
-Je fais un petit aparté sur l'attaque des anniversaires. Le problème est simple, étant donné une population de $n$ individus, combien sont-ils nécessaires pour que la probabilité que deux aient la même date d'anniversaire soit supérieur à $\frac{1}{2}$. En effet, on peut assimiler cela, dans notre contexte, à la taille de l'ensemble des messages possibles pour que la probabilité d'avoir une collision soit supérieur à ladite probabilité. Avoir une connaissance de cette probabilité indique jusqu'à quel point une fonction cryptographique peut être résistante aux collisions. 
+Je fais un petit aparté sur l'attaque des anniversaires. Le problème est simple, étant donné une population de $n$ individus, combien sont-ils nécessaires pour que la probabilité que deux aient la même date d'anniversaire soit supérieur à $\frac{1}{2}$. En effet, on peut assimiler cela, dans notre contexte, à la taille de l'ensemble des messages possibles pour que la probabilité d'avoir une collision soit supérieur à ladite probabilité. Avoir une connaissance de cette probabilité indique jusqu'à quel point une fonction cryptographique peut être résistante aux collisions.
 
 L'explication qui suit repose énormément sur les mathématiques, et est uniquement présente pour expliquer plus en détail l'idée exposée, elle n'est pas essentielle pour la suite.
 
 Soit $M = \{0,1\}^n$, pour chaque message possible. On souhaite approximer la probabilité que $p$ éléments aient la même image par $h$. Ainsi, il y a au total, $n^p$ possibilités. Si virtuellement on test chacune d'entre elles, on représente cela avec un arrangement: $A^p_n = \frac{n!}{(n-p)!}$ que l'on divise par le nombre totale de possibilités. En revanche, ici on à le cas où chacun à une image différente, donc l'évènement $X$ "au moins deux éléments ont leurs images identiques" a pour probabilité $\mathbb{P}(X) = 1 -  \frac{n!}{(n-p)!n^p}$. On cherche alors à approximer ce résultat. Commençons par rappeler qu'au voisinage de $0$ (autrement dit très proche), on a $(1)~e^x = 1 + x + o(x)$ (où le $o(x)$ indique que le terme est négligeable en $0$, c'est à dire que quand $x$ tend vers $0$, $o(x)$ fait de même). Or à l'aide du produit il vient:
 $$A^p_n = \frac{n!}{(n-p)!} = \prod_{k=n-p+1} ^{n}{k} = \prod_{j=0}^{p-1}{[j+n-p+1]}.$$
-Et en inversant ce dernier on obtient: 
-$$\prod_{j=0}^{p-1}[n-j].$$ 
+Et en inversant ce dernier on obtient:
+$$\prod_{j=0}^{p-1}[n-j].$$
 Mais:
 $$\frac{1}{n^k} = \frac{1}{\prod_{j=0}^{n}n}.$$
-Finalement: 
-$$\frac{n!}{(n-p)!n^p} = \prod_{j=0}^{p-1}[n-j]\cdot\frac{1}{\prod_{j=0}^{p-1}n} = \prod^{p-1}_{j=0}\left[1-\frac{j}{n}\right]$$. 
-En reprenant $(1)$ il vient que: 
+Finalement:
+$$\frac{n!}{(n-p)!n^p} = \prod_{j=0}^{p-1}[n-j]\cdot\frac{1}{\prod_{j=0}^{p-1}n} = \prod^{p-1}_{j=0}\left[1-\frac{j}{n}\right]$$.
+En reprenant $(1)$ il vient que:
 $$\prod_{j=0}^{n}e^{-j/n} = \prod^{p-1}_{j=0}\left[1-\frac{j}{n} + o(j/n)\right].$$
-Soit que: 
+Soit que:
 $$\mathbb{P}(X) \approx \prod_{j=0}^{n}e^{-j/n} =1- \exp\left(-\frac{1}{n}\sum_{j=0}^{p-1}j\right) = 1- \exp\left(-\frac{p(p-1)}{2n}\right).$$
 Cette approximation permet alors d'estimer le nombre de calculs nécessaires à un attaquant pour que la probabilité que deux messages forment une collision soit supérieure à $1/2$.
 
@@ -78,7 +79,7 @@ Donc, c'est MD4 qui est utilisé (à noter que la fonction `UNICODE()` renvoie u
     BB = B
     CC = C
     DD = D
-    
+
     /* Round 1. */
     /* Let [abcd k s] denote the operation:
              a = (a + F(b,c,d) + X[k]) <<< s. */

@@ -5,10 +5,11 @@ Keywords: mail
 Slug: pop3
 Summary: Nous avons vu dans une série de trois précédents articles le protocole SMTP et tous (ou presque 😉) les processus autour de l'envoi de mails. Maintenant qu'on sait envoyer des mails, ce serait intéressant de pouvoir les lire n'est-ce pas ? 😄 Cet article s'intéressera au protocole POP3 qui a été conçu à cet effet, un autre sera dédié à IMAP.
 Title: Comment fonctionne POP3 ?
+Category: Réseau/Mail
 
 Nous avons vu dans une série de trois précédents articles [¹](https://ilearned.eu/smtp.html) [²](https://ilearned.eu/secu_smtp.html) [³](https://ilearned.eu/spoofing_email.html) le protocole SMTP et tous (ou presque 😉) les processus autour de l'envoi de mails. Maintenant qu'on sait envoyer des mails, ce serait intéressant de pouvoir les lire n'est-ce pas ? 😄 Cet article s'intéressera au protocole POP3 qui a été conçu à cet effet, un autre sera dédié à IMAP.
 
-POP3 (Post Office Protocol version 3) tout comme SMTP, POP3 est une protocole plutôt simple. 
+POP3 (Post Office Protocol version 3) tout comme SMTP, POP3 est une protocole plutôt simple.
 
 Un échange typique ressemble à cela :
 
@@ -52,6 +53,6 @@ Détaillons les différentes commandes utilisées ici :
 - DELE : permet de supprimer un mail en précisant son ID
 - QUIT : ferme la session
 
-Comme vous pouvez le voir, à l'instar de SMTP, POP3 est un protocole vraiment simple dans son fonctionnement. Afin d'ajouter une couche de sécurité supplémentaire, supporte STARTTLS, mais tout comme avec SMTP, STARTTLS pose un problème, il est dit "opportuniste". Ceci signifie que quand STARTTLS est présent, il ne rend pas obligatoire l'utilisation de TLS. 
+Comme vous pouvez le voir, à l'instar de SMTP, POP3 est un protocole vraiment simple dans son fonctionnement. Afin d'ajouter une couche de sécurité supplémentaire, supporte STARTTLS, mais tout comme avec SMTP, STARTTLS pose un problème, il est dit "opportuniste". Ceci signifie que quand STARTTLS est présent, il ne rend pas obligatoire l'utilisation de TLS.
 
 La simplicité de POP3 est à la fois une force, et une tare, une force en ce qu'elle permet aux implémentations de ce protocole d'être légères, et une tare car ce protocole ne correspond pas aux besoin des utilisateurs une utilisation plus poussées des mail, cette simplicité apporte aussi un niveau de sécurité critiquable. Au vu de ces éléments un protocole alternatif a été créé, IMAP, que nous verrons de plus près dans un prochain article.

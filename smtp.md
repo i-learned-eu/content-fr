@@ -5,10 +5,11 @@ Keywords: mail, réseau
 Slug: smtp
 Summary: Nous utilisons les mails quotidiennement, mais savons nous seulement comment fonctionnent les protocoles qui sous-tendent ce service ? Aujourd'hui nous aborderons le protocole SMTP.
 Title: Comment fonctionne SMTP ?
+Category: Réseau/Mail
 
 Nous utilisons les mails quotidiennement, mais savons-nous seulement comment fonctionnent les protocoles qui sous-tendent ce service ? Vous trouverez dans ce calendrier de l'Avent de décembre un ensemble d'articles répondants à cette question. Aujourd'hui nous aborderons le protocole SMTP.
 
-SMTP (Simple Mail Transfer Protocol) est un très ancien protocole qui a été standardisé pour la première fois en 1981, soit un an avant que le minitel soit présenté au grand publique en France ! De par son ancienneté, il hérite aussi d'une certaine simplicité. La communication avec SMTP s'organise autour de cinq acteurs majeurs : 
+SMTP (Simple Mail Transfer Protocol) est un très ancien protocole qui a été standardisé pour la première fois en 1981, soit un an avant que le minitel soit présenté au grand publique en France ! De par son ancienneté, il hérite aussi d'une certaine simplicité. La communication avec SMTP s'organise autour de cinq acteurs majeurs :
 
 - Le client mail (MUA pour mail user agent) c'est lui qui envoie le mail
 - L'agent de dépôt (MSA pour mail submission agent) il est chargé de recevoir les mails à envoyer.

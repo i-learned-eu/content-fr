@@ -1,10 +1,11 @@
 lang: fr
-Author: Ramle 
+Author: Ramle
 Date: 2021/05/20
 Keywords: 802.1x, networking, RADIUS, réseau, sécurité, udp
 Slug: RADIUS
 Summary: Une question se pose parfois, comment gérer facilement de l'authentification et des autorisations d'utilisateur sur un réseau avec plusieurs machines sans répliquer la liste d'utilisateur avec les propriétés unique à chacun sur chaque machine.
 Title: Fonctionnement de RADIUS
+Category: Réseau
 
 Une question se pose parfois, comment gérer facilement de l'authentification et des autorisations d'utilisateur sur un réseau avec plusieurs machines sans répliquer la liste d'utilisateur avec les propriétés unique à chacun sur chaque machine.
 
@@ -18,7 +19,7 @@ Un cas d'usage est par exemple un stockage réseau (aussi appelé [NAS](https://
 
 La communication entre le serveur RADIUS et son client se base sur [UDP](https://ilearned.eu/udp.html) (il peut aussi passer par [TCP](https://ilearned.eu/tcp.html), mais nous n'en parlerons pas), le client doit donc être capable de gérer la retransmission dans le cas ou aucune réponse ne lui est accordée.
 
-La phase d'authentification du client se base sur un paquet contenant l'utilisateur et le mot de passe. Ce paquet est nommé `Access Challenge`, il contient par exemple l'attribut `User-Name = ramle` et `User-Passsword = phrase-de-passe`. Le client reçoit ensuite une réponse du serveur, si le client RADIUS n'est pas connu du serveur il ne recevra pas de réponse. Si le client est connu alors, le serveur peut répondre de 3 manières 
+La phase d'authentification du client se base sur un paquet contenant l'utilisateur et le mot de passe. Ce paquet est nommé `Access Challenge`, il contient par exemple l'attribut `User-Name = ramle` et `User-Passsword = phrase-de-passe`. Le client reçoit ensuite une réponse du serveur, si le client RADIUS n'est pas connu du serveur il ne recevra pas de réponse. Si le client est connu alors, le serveur peut répondre de 3 manières
 
 - `Access-Accept` en cas d'identifiant valide
 - `Access-Reject` en cas d'identifiant invalide

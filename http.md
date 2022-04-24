@@ -5,6 +5,7 @@ slug: http
 Keywords: HTTPS, HTTP, web, internet
 Date: 2021-05-08
 author: Ramle
+Category: Réseau/HTTP & TLS
 
 Le web est l'usage le plus connu d'internet, un protocole assez vieux (mais pas aussi vieux qu'internet) se cache derrière ce succès : HTTP.
 
@@ -31,7 +32,7 @@ Un autre aspect intéressant d'HTTP sont les en-têtes (headers) qui donnent des
 
 ```bash
 % curl -I https://ramle.be
-HTTP/2 200 
+HTTP/2 200
 server: nginx
 date: Sat, 08 May 2021 14:40:55 GMT
 content-type: text/html; charset=utf-8
@@ -62,7 +63,7 @@ J'ai cité plus haut la version 2 d'HTTP (notée HTTP/2) sans expliquer les chan
 ://
 ![Schéma HTTP/2 vs HTTP/1.1](/static/img/http/http2.webp):
 
-Vous avez probablement remarqué qu'HTTP ne présente presque aucun mécanisme de sécurité de base, il n'est en effet pas possible de vérifier l'authenticité des ressources ni d'empêcher un attaquant d'espionner la connexion, pour résoudre ce problème HTTPS est né, il s'agit simplement de faire passer HTTP via TLS, pour ce qui est de la vérification on se base sur les autorités de certification, contrairement à d'autres protocoles comme [Gemini](https://ilearned.eu/gemini.html), je vous invite à aller voir l'article sur [DANE](https://ilearned.eu/dane.html) pour plus de détails à propos des autorités de certification. 
+Vous avez probablement remarqué qu'HTTP ne présente presque aucun mécanisme de sécurité de base, il n'est en effet pas possible de vérifier l'authenticité des ressources ni d'empêcher un attaquant d'espionner la connexion, pour résoudre ce problème HTTPS est né, il s'agit simplement de faire passer HTTP via TLS, pour ce qui est de la vérification on se base sur les autorités de certification, contrairement à d'autres protocoles comme [Gemini](https://ilearned.eu/gemini.html), je vous invite à aller voir l'article sur [DANE](https://ilearned.eu/dane.html) pour plus de détails à propos des autorités de certification.
 
 HTTP permet de réduire la taille des données envoyées en les compressant, les deux algorithmes utilisés pour compresser les données sont gzip et brotli, le client peut dire au serveur lequel de ces algorithmes il supporte via l'en-tête "**Accept-encoding**".
 

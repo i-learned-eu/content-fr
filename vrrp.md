@@ -1,11 +1,11 @@
 lang: fr
-Author: Ramle 
+Author: Ramle
 Date: 2021/12/17
 Title: VRRP
 Keywords: networking, réseau, vrrp
 Slug: vrrp
 Summary: Comment permettre la redondance de la passerelle par défaut pour un utilisateur final ?
-
+Category: Réseau/Routage & IP
 
 Il peut être très utile pour un réseau, en entreprise par exemple, d'avoir une certaine redondance. Le DNS ou SLAAC/DHCP sont des protocoles relativement simple à redonder, l'utilisateur prendra le plus rapide cependant pour la route par défaut, souvent appelé passerelle ou gateway il est rarement possible d'avoir plusieurs IPs qui répondent (pour des utilisateurs finaux du moins, pour des routeurs ou serveurs on peut utiliser de l'ECMP). Une technologie a été créée pour pallier ce problème : VRRP.
 
@@ -15,9 +15,9 @@ Pour savoir le status de chaque routeur tous les membres du groupe s'échangent 
 
 Le paquet VRRP est échangé par les routeurs comme dit plus haut en multicast. L'adresse utilisée en IPv6 est `FF02:0:0:0:0:0:0:12` et  `224.0.0.18` en IPv4.
 
-Le numéro de protocole utilisé pour VRRP est le 112, et le paquet est présenté sur la forme : 
+Le numéro de protocole utilisé pour VRRP est le 112, et le paquet est présenté sur la forme :
 
- 
+
 
 ![En-tête d'un paquet VRRP](/static/img/vrrp/vrrp_header.webp)
 

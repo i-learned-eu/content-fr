@@ -1,11 +1,11 @@
 lang: fr
-Author: Ramle 
+Author: Ramle
 Date: 2021/12/13
 Keywords: réseau, sécurité, wep, wifi
 Slug: wep
 Summary: Pour se connecter à Internet on utilise énormément des réseaux wifi, mais mais sont-ils pour autant sécurisés correctement ? Dans cet article, je vais parler de WEP.
 Title: Le fonctionnement de WEP
-
+Category: Cybersécurité/Cryptographie
 
 Pour se connecter à Internet on utilise énormément des réseaux wifi, mais sont-ils pour autant sécurisés correctement ? Dans cet article, je vais parler de WEP.
 
@@ -28,4 +28,4 @@ Un attaquant pour essayer de casser du WEP peut analyser les trames réseaux. Le
 
 Le vecteur d'initialisation ne fait que 24 bits, la probabilité de réutilisation du même au bout d'un certain nombre de paquets est donc fort probable or comme nous l'avons vu RC4 utilise XOR, et si la même clé est utilisée plusieurs fois, il peut être plus simple de retrouver la clé. On peut donc, sur base du vecteur d'initialisation qui est visible, repérer des valeurs similaire et récupérer la clé.
 
-WEP comme on l'a vu est très peu sécurisé, de nos jours des technologies comme WPA devrait être utilisé, nous en reparlerons d'ailleurs dans un prochain article ;) 
+WEP comme on l'a vu est très peu sécurisé, de nos jours des technologies comme WPA devrait être utilisé, nous en reparlerons d'ailleurs dans un prochain article ;)

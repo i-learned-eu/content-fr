@@ -5,6 +5,7 @@ Date: 2021-12-09
 Author: Ownesis
 Summary: Dans cet article, nous allons voir ensemble ce que propose la protocole TFTP à quoi il sert et comment fonctionne-t-il.
 Slug: tftp
+Category: Sysadmin
 
 Aujourd'hui je vais vous présenter et vous parlez du protocole **TFTP**.
 J'imagine que vous pensez tout de suite au protocole **FTP**, et vous avez raison.
@@ -16,11 +17,11 @@ Qu'est-ce qu'il enlève de FTP voulez-vous dire ? :eyes:
 
 Oui, vous avez bien lu, **TFTP**, même si celui ci rajoute une lettre au protocole **FTP**, il retire une "plus ou moins importante" fonctionnalité a ce dernier.
 Il n'est pas possible d'exécuter des commandes, comme lister les fichiers, changer les droits des fichiers,  se déplacer dans le système de fichier, etc.
-**TFTP** permet seulement de lire ou écrire sur le serveur distant, autrement dit, il permet seulement de récupérer ou envoyer (voir en créer dans certain cas) des fichiers (ou des courriers). 
+**TFTP** permet seulement de lire ou écrire sur le serveur distant, autrement dit, il permet seulement de récupérer ou envoyer (voir en créer dans certain cas) des fichiers (ou des courriers).
 Autre chose importante à savoir, il n'y a pas d'authentification des utilisateurs.
 Bon, vous l'aurez deviné, **TFTP** est un protocole de la [couche application](https://fr.wikipedia.org/wiki/Couche_application), il faut donc permettre le transport et c'est avec le protocole [**UDP**](https://ilearned.eu/udp.html) que cela ce fait.
 
-On utilise le protocole **TFTP** notamment pour la mise à jour des firmwares sur les équipements réseaux, la sauvegarde de la configuration de ces équipements réseau, mais aussi pour amorcer des stations de travail sans disque dur. 
+On utilise le protocole **TFTP** notamment pour la mise à jour des firmwares sur les équipements réseaux, la sauvegarde de la configuration de ces équipements réseau, mais aussi pour amorcer des stations de travail sans disque dur.
 C'en est tout pour la présentation de **TFTP**.
 
 Maintenant rentrons dans le vif du sujet, voyons comment le protocole fonctionne :
@@ -31,7 +32,7 @@ Pour signaler la fin d'un transfert, un paquet de données d'une taille **infér
 Si le client demande une connexion pour lire un fichier, il envoie l'OPcode `RRQ` ou  l'OPcode `WRQ` pour écrire, le serveur envoie ensuite une réponse "positive", un accusé de réception pour acquitté la demande du client (si la demande est pour lire, le serveur envoie directement le bloc de données comme accusé de réception).
 Si un paquet se perd dans le réseau, le receveur sera alors mis en "timeout" et l'envoyeur devra réenvoyer le paquet.
 En général, un paquet d'accusé de réception contiendra le numéro de bloc du paquet de données reçu.
-Chaque paquet de données est associé à un numéro de bloc. 
+Chaque paquet de données est associé à un numéro de bloc.
 Les numéros de bloc sont consécutives et le premier commence à `1`.
 Lors d'une demande d'écriture (OPcode `WRQ`), l'accusé de réception à cette demande aura comme numéro de bloc de donnée `0`.
 
@@ -103,13 +104,13 @@ Le paquet d'erreur (**ERR**) ressemble à ceci:
 
 - **OPcode**: `2 octets` (est mis à `0x0005` **ERR**).
 - **ErrCode**: `2octets`, correspond aux codes erreur suivant:
-    - `0x0000` Non défini, voir le message d'erreur (le cas échéant). 
-    - `0x0001` Fichier introuvable. 
-    - `0x0002` Violation d'accès. 
-    - `0x0003` Disque plein ou allocation dépassée. 
-    - `0x0004` Opération TFTP illégale. 
-    - `0x0005` ID de transfert inconnu. 
-    - `0x0006` Le fichier existe déjà. 
+    - `0x0000` Non défini, voir le message d'erreur (le cas échéant).
+    - `0x0001` Fichier introuvable.
+    - `0x0002` Violation d'accès.
+    - `0x0003` Disque plein ou allocation dépassée.
+    - `0x0004` Opération TFTP illégale.
+    - `0x0005` ID de transfert inconnu.
+    - `0x0006` Le fichier existe déjà.
     - `0x0007` Aucun utilisateur de ce type.
  - **ErrMsg**: Taille variable, correspond a une chaine de caractère définissant le code d'erreur.
  - `0`: `1 octet`: Spécifie la fin de la chaine de caractère *ErrMsg*.

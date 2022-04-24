@@ -1,14 +1,15 @@
 lang: fr
-Author: Eban 
+Author: Eban
 Date: 2021/09/05
 Keywords: linux, sandboxing, systemd, sécurité
 Slug: systemd-sandboxing
 Summary: Si vous être un utilisateur de Linux, vous connaissez sûrement systemd, systemd est ce que l'on appelle un init, c'est le premier logiciel lancé par le système d'exploitation et il est chargé de démarrer tous les autres. Pour être démarré par systemd un logiciel doit être reconnu comme un service par systemd. Un service c'est un fichier qui détaille les informations à propos des logiciels à lancer, comment les lancer, les arrêter, leur nom, quels sont leurs dépendances et plus encore. systemd propose des fonctionnalités de sécurité plutôt avancées et très utiles pour sécuriser son système. C'est ces fonctionnalités que nous détaillerons dans cet article.
 Title: Comment sécuriser ses services systemd ?
+Category: Cybersécurité/Blue Team
 
 Si vous être un utilisateur de Linux, vous connaissez sûrement `systemd`, systemd est ce que l'on appelle un init, c'est le premier logiciel lancé par le système d'exploitation et il est chargé de démarrer tous les autres. Pour être démarré par `systemd` un logiciel doit être reconnu comme un `service`. Un service c'est un fichier qui détaille les informations à propos des logiciels à lancer, comment les lancer, les arrêter, leur nom, quels sont leurs dépendances et plus encore. `systemd` propose des fonctionnalités de sécurité plutôt avancées et très utiles pour sécuriser son système. C'est ces fonctionnalités que nous détaillerons dans cet article.
 
-Dans cet article, nous sécuriserons le service systemd de unbound, un serveur DNS résolveur. Pour inspecter la sécurité d'un service systemd, on peut utiliser la commande `systemd-analyze security example.service`, essayons donc avec le service systemd de unbound : 
+Dans cet article, nous sécuriserons le service systemd de unbound, un serveur DNS résolveur. Pour inspecter la sécurité d'un service systemd, on peut utiliser la commande `systemd-analyze security example.service`, essayons donc avec le service systemd de unbound :
 
 ```diff
 user@vm01:~$ systemd-analyze security unbound.service
@@ -64,7 +65,7 @@ Afin d'améliorer la sécurité de ce service systemd, voici la liste des diffé
 - `RestrictSUIDSGID` permet d'empêcher le service de changer l'utilisateur ou le groupe qui détient un fichier ou un dossier.
 - `SystemCallFilter` permet de n'autoriser que certains appels systèmes (syscall).
 
-Ça fait beaucoup de directives 😅 Si vous souhaitez en avoir une liste plus détaillée je vous invite à lire [la documentation de systemd](https://www.freedesktop.org/software/systemd/man/systemd.exec.html). Appliquons maintenant toutes ces directives que nous venons de voir, cela nous donne ce service systemd 
+Ça fait beaucoup de directives 😅 Si vous souhaitez en avoir une liste plus détaillée je vous invite à lire [la documentation de systemd](https://www.freedesktop.org/software/systemd/man/systemd.exec.html). Appliquons maintenant toutes ces directives que nous venons de voir, cela nous donne ce service systemd
 
 ```diff
 [Unit]

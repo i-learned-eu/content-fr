@@ -5,6 +5,7 @@ Date: 2021-05-07
 author: Eban
 summary: Décembre 1998, c’est la date de parution de la RFC 2460 introduisant IPv6, aujourd’hui, seulement 26% des sites les plus visités en France sont accessibles en IPv6 d’après l’Arcep. Faisons donc un petit tour d’horizon de l’adoption d’IPv6 en 2021.
 Slug: ipv6
+Category: Réseau/Routage & IP
 
 Décembre 1998, c’est la date de parution de la [RFC 2460](https://tools.ietf.org/html/rfc2460) introduisant IPv6, aujourd’hui, seulement 26% des sites les plus visités en France sont accessibles en IPv6 [d’après l’Arcep](https://www.arcep.fr/cartes-et-donnees/nos-publications-chiffrees/transition-ipv6/barometre-annuel-de-la-transition-vers-ipv6-en-france.html). Faisons donc un petit tour d’horizon de l’adoption d’IPv6.
 
@@ -20,7 +21,7 @@ La solution à ces maux est donc IPv6, mais comme nous l'avons vu en introductio
 
 ![Adoption de l'ipv6 par les opérateurs en france](/static/img/ipv6/adoption_fai.webp)
 
-Un des raisons de la lenteur du déploiement d'IPv6 est le fait qu'utilisateurs et hébergeurs se renvoient systématiquement la balle, les uns se demandant à quoi bon avoir de l'IPv6 si tous les sites qu'ils visitent sont disponibles en IPv4, les autres disant qu'il est inutile de déployer IPv6 puisque les clients ne sont en majorité pas équipés. Cette attitude dilatoire a pour conséquence de ralentir le déploiement d'IPv6 au détriment des petits hébergeurs associatifs qui n'ont pas forcément les moyens d'acheter des ranges d'IPv4 souvent très couteuses. 
+Un des raisons de la lenteur du déploiement d'IPv6 est le fait qu'utilisateurs et hébergeurs se renvoient systématiquement la balle, les uns se demandant à quoi bon avoir de l'IPv6 si tous les sites qu'ils visitent sont disponibles en IPv4, les autres disant qu'il est inutile de déployer IPv6 puisque les clients ne sont en majorité pas équipés. Cette attitude dilatoire a pour conséquence de ralentir le déploiement d'IPv6 au détriment des petits hébergeurs associatifs qui n'ont pas forcément les moyens d'acheter des ranges d'IPv4 souvent très couteuses.
 
 Il existe un autre frein, et pas des moindres, au déploiement et l'utilisation massive d'IPv6, le réseau IPv6 est actuellement divisé en deux, en effet, Cogent un très gros fournisseur de [transit](https://en.wikipedia.org/wiki/Internet_transit) refuse de peer (d'échanger ses routes) avec Hurrican Electric, un autre mastodonte du secteur. Ainsi, depuis le réseau IPv6 de Cogent il est impossible d'accéder à [he.net](https://he.net) (le site de Hurrican Electric) en IPv6. Ce bloquage dure depuis 2009, et malgré les nombreuses demandes de Hurrican Electric, ces deux entreprises ne parviennent pas à un accord financier.
 

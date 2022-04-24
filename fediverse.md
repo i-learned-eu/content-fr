@@ -5,6 +5,7 @@ Keywords: Décentralisation
 Slug: fediverse
 Summary: Si vous vous êtes déjà intéressé à la décentralisation, vous avez sûrement déjà entendu parler du Fediverse, vendu par certain-e-s comme le futur des réseaux sociaux et décrit comme une invention de barbus par d'autres ; nous tenterons de faire la lumière sur ce qu'est le Fediverse dans cet article.
 Title: Comment fonctionne le Fediverse ? Introduction à ActivityPub
+Category: Pensées du libre
 
 Si vous vous êtes déjà intéressé à la [décentralisation](https://ilearned.eu/decentralisation.html), vous avez sûrement déjà entendu parler du Fediverse, vendu par certain-e-s comme le futur des réseaux sociaux et décrit comme une invention de barbus par d'autres ; nous tenterons de faire la lumière sur ce qu'est le Fediverse dans cet article.
 
@@ -67,11 +68,11 @@ Et ici un objet encore plus classique appelé "Note", il est accepté par un gra
 }
 ```
 
-Comme vous pouvez le voir, certaines propriétés prennent en valeur des balises HTML (🤮). Le fonctionnement du format ActivityStream est vraiment trivial. 
+Comme vous pouvez le voir, certaines propriétés prennent en valeur des balises HTML (🤮). Le fonctionnement du format ActivityStream est vraiment trivial.
 
 ## 🌐 ActivityPub
 
-Avoir un format de fichiers, c'est bien beau, mais encore faut-il pouvoir partager ces fichiers. 
+Avoir un format de fichiers, c'est bien beau, mais encore faut-il pouvoir partager ces fichiers.
 
 ActivityPub normalise certains objets, comme l'objet Person qui se voit affublé de nombreuses valeurs comme les followers, l'image de profil, etc.
 
@@ -97,7 +98,7 @@ ActivityPub normalise certains objets, comme l'objet Person qui se voit affublé
 
 ActivityPub normalise aussi bien les communications client/serveur que serveur/serveur. Avec ce protocole, un utilisateur est appelé "acteur", il a deux "boîtes", une boite d'envoi et une boite de réception. Les URL de ces deux boites sont indiquées dans l'objet Person correspondant.
 
-Le fonctionnement est assez trivial, pour recevoir les messages, les différentes instances qui veulent poster un message auprès de l'acteur envoient une requête HTTP POST contenant les nouveaux messages. Ledit acteur peut ensuite, via une requête HTTP GET récupérer le contenu de son Inbox. Ensuite, si l'acteur veut poster un message, il peut envoyer une requête POST à l'outbox et les autres acteurs pourront consulter cette outbox avec une simple requête GET. 
+Le fonctionnement est assez trivial, pour recevoir les messages, les différentes instances qui veulent poster un message auprès de l'acteur envoient une requête HTTP POST contenant les nouveaux messages. Ledit acteur peut ensuite, via une requête HTTP GET récupérer le contenu de son Inbox. Ensuite, si l'acteur veut poster un message, il peut envoyer une requête POST à l'outbox et les autres acteurs pourront consulter cette outbox avec une simple requête GET.
 
 Si Alice veut envoyer un message à Bob, elle poste simplement son message dans son outbox avec le destinataire, l'instance d'Alice s'occupera d'aller trouver l'inbox de Bob et d'acheminer le message vers cette inbox.
 

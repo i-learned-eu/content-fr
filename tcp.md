@@ -5,7 +5,7 @@ Date: 2021-05-04
 Author: Eban
 Summary: Aujourd'hui on s'attaque à un gros morceau, le protocole `TCP`, vous êtes prêt·e·s ? C'est partit ! ;)
 Slug: tcp
-Category: Today I Learned
+Category: Réseau
 
 Aujourd'hui on s'attaque à un gros morceau, le protocole `TCP`, vous êtes prêt·e·s ? C'est partit ! ;) TCP (= Transmission Control Protocol) est le protocole de [couche 4](https://fr.wikipedia.org/wiki/Couche_transport) le plus utilisé et il fait partie intégrante de nos vies sans que nous ne nous en rendions compte. TCP a été créé afin de répondre à une problématique simple, permettre la communication de façon fiable entre deux machines. TCP est basé, comme de nombreux protocoles, sur une architecture `client-serveur`. Les données sont découpées en blocs appelés segments.
 
@@ -21,7 +21,7 @@ Une fois cette initialisation faite, la communication peut commencer, regardons 
 
 Les numéros d'acquittement et de séquence sont deux valeurs aléatoires que l'on incrémente avec le nombre de données reçues afin de vérifier que tout les paquets sont bien arrivées dans l'ordre. Les numéros d'acquittement et de séquence initiaux sont générés aléatoirement durant la séquence d'initialisation de la connexion que nous avons vu plus tôt, le three way handshaking.
 
-Le partie "Somme de contrôle" est en fait un condensat des données transmises qui est calculé par le serveur et vérifié par le client afin de garantir l'intégrité des paquets. Si les hash correspondent on considère alors que le paquet a été transmit sans erreur. 
+Le partie "Somme de contrôle" est en fait un condensat des données transmises qui est calculé par le serveur et vérifié par le client afin de garantir l'intégrité des paquets. Si les hash correspondent on considère alors que le paquet a été transmit sans erreur.
 
 ![Comprendre%20le%20protocole%20TCP%20c2ad32e581ef4daebd3dee3d401ad213/Frame_27.webp](/static/img/tcp/Frame_27.webp)
 
@@ -31,7 +31,7 @@ Le flag `URG` indique la présence de données urgentes.
 
 Le flag `ECN/NS` sert quant à lui à signaler la présence de congestion sur le réseau.
 
-Dans la partie `Options` on pourrait par exemple citer la MSS (Maximum Segment Size) qui correspond à la taille maximale de la partie data. 
+Dans la partie `Options` on pourrait par exemple citer la MSS (Maximum Segment Size) qui correspond à la taille maximale de la partie data.
 
 Nous avons vu les parties les plus importantes d'un trame TCP, étudions maintenant comment fermer une session avec le protocole TCP.
 

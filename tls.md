@@ -1,12 +1,13 @@
 lang: fr
-Author: Eban 
+Author: Eban
 Date: 2021/05/30
 Keywords: réseau, sécurité, tls
 Slug: tls
 Summary: TLS est un protocole que nous utilisons quotidiennement, il est notamment utilisé dans HTTPS pour sécuriser la connexion, explorons ensemble le fonctionnement de ce protocole.
 Title: Comment fonctionne le protocole TLS
+Category: Réseau/HTTP & TLS
 
-TLS est un protocole que nous utilisons quotidiennement, il est notamment utilisé dans `HTTPS` pour sécuriser la connexion. TLS est le successeur de SSL, nous verrons prochainement pourquoi SSL a été abandonné au profit de TLS. Dans cet article, nous étudierons TLS1.3 qui est la dernière version du protocole sortie en 2018. TLS se base à la fois sur le chiffrement asymétrique et le chiffrement symétrique. Un échange de clé (appelé handshake ou poignée de main) a lieu au début de la connexion, une clé secrète est échangée de façon asymétrique, cette clé est ensuite utilisée pour chiffrer les données (du chiffrement symétrique donc). Voyons donc plus en détail comment se passe un handshake avec TLS1.3. 
+TLS est un protocole que nous utilisons quotidiennement, il est notamment utilisé dans `HTTPS` pour sécuriser la connexion. TLS est le successeur de SSL, nous verrons prochainement pourquoi SSL a été abandonné au profit de TLS. Dans cet article, nous étudierons TLS1.3 qui est la dernière version du protocole sortie en 2018. TLS se base à la fois sur le chiffrement asymétrique et le chiffrement symétrique. Un échange de clé (appelé handshake ou poignée de main) a lieu au début de la connexion, une clé secrète est échangée de façon asymétrique, cette clé est ensuite utilisée pour chiffrer les données (du chiffrement symétrique donc). Voyons donc plus en détail comment se passe un handshake avec TLS1.3.
 
 ![Schémas d'un handshake TLS1.3](/static/img/tls/handshake.webp)
 

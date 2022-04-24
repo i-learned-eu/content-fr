@@ -5,11 +5,12 @@ Date: 2021-12-19
 Author: Ownesis
 Summary: Dans cet article, je vais vous présenter les 3 types de sauvegarde connue comment ils fonctionnent et quels outils utiliser.
 Slug: backup
+Category: Sysadmin
 
 Est-ce que ça vous est déjà arrivé de vous dire :
-> "Si seulement je faisais des sauvegardes" 
+> "Si seulement je faisais des sauvegardes"
 
-ou 
+ou
 > "Heureusement que j'ai fais des sauvegardes"
 
 Si vous avez connu ou connaissez toujours la première situation, cet article est fait pour vous.
@@ -170,7 +171,7 @@ Du coup, plus besoin de liens symboliques ou physiques vu qu'on se basera sur la
 Ce type de sauvegarde consomme plus de place que la sauvegarde incrémentielle, mais ça restera toujours moins que plusieurs sauvegardes complètes.
 
 ## Différence entre sauvegarde différentielle et incrémentielle
-> Quelles sont donc leurs différences si au final, avec l'incrémentielle et les liens physiques, on se met à comparer la totalité d'une sauvegarde (comme la différentielle) ? 
+> Quelles sont donc leurs différences si au final, avec l'incrémentielle et les liens physiques, on se met à comparer la totalité d'une sauvegarde (comme la différentielle) ?
 
 La seule différence, c'est que la **différentielle se basera toujours sur la première sauvegarde complète** et **l'incrémentielle sur la sauvegarde précedente**.
 Ce qui veux dire que dans le cas d'une différentielle, si on crée ou modifie un fichier, que ce soit le mardi, mercredi ou autres jours, ces fichiers seront toujours copiés (même si inchangé par la suite), car ils ne sont pas présents où sont différents par rapport à la première sauvegarde.

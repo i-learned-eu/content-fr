@@ -1,10 +1,11 @@
 lang: fr
-Author: Lancelot 
+Author: Lancelot
 Date: 2021/12/15
 Keywords: Windows, réseau
 Slug: ActiveDirectory
 Summary: Active Directory est un système au cœur des réseaux Windows et ce depuis 1996. Véritable incontournable de la sécurité informatique, il est devenu en quelques années une cible de choix pour les attaquants. Mais avant tout, il est nécessaire de comprendre ce qu’il est. Cet article destiné aux néophytes présentera, sans entrer dans trop de détails, comment il fonctionne.
 Title: C'est quoi un Active Directory
+Category: Sysadmin/Windows
 
 # C'est quoi un Active Directory
 Active Directory est un système au cœur des réseaux Windows et ce depuis 1996. Véritable incontournable de la sécurité informatique, il est devenu en quelques années une cible de choix pour les attaquants. Mais avant tout, il est nécessaire de comprendre ce qu’il est. Cet article destiné aux néophytes présentera, sans entrer dans trop de détails, comment il fonctionne.
@@ -17,7 +18,7 @@ Un active Directory est composé de trois services principaux :
 - Un serveur Kerberos.
 - Un serveur LDAP.
 
-Le premier permet d’identifier clairement les machines dans un Active Directory en leur attribuant un nom. Ce nom dérive du nom du domaine, spécifié lors de la création d’un Active Directory (`testlab.local` par exemple) 
+Le premier permet d’identifier clairement les machines dans un Active Directory en leur attribuant un nom. Ce nom dérive du nom du domaine, spécifié lors de la création d’un Active Directory (`testlab.local` par exemple)
 
 Le second est un élément clé. En effet Kerberos permet d’authentifier les différents objets du domaine. Pour cela il procède par un système d’échange de tickets en 3 étapes, pour obtenir le ticket principal d’accès nommé `TGT` ("Ticket Granting Ticket"). En premier lieu, l’utilisateur par exemple, va effectuer une demande de d’authentification (`KRB_AS_REQ`) auprès du serveur d’authentification appelé KDC pour Key Distribution Center. Cette demande contient entre autres le hash NT (dans le langage de Kerberos il est aussi appelé RC4) de l’utilisateur, qui est un hash de son mot de passe (si vous voulez plus de détails sur l’algorithme utilisé, la fin de  [cet article vous éclairera](https://ilearned.eu/hashage.html)). Puis ce dernier va retourner une réponse nommée `AS_REP` dans le cas où les identifiants sont valides, et cette réponse contiendra le `TGT`. Une fois ce fameux `TGT` obtenu, un utilisateur (ou une machine) s’en sert pour acquérir des `TGS` ("Ticket Granting Service") qui garantissent l’accès à un service sur une autre machine de l’environnement. Ces différents tickets ont un certain temps limite d’utilisation, une sorte de date de péremption qui est soigneusement réglée dans les paramètres de l’Active Directory. Pour ceux qui souhaiteraient plus de détails, je recommande chaudement  [cette article de Pixis](https://beta.hackndo.com/kerberos/).
 
@@ -29,7 +30,7 @@ Ces services sont assurés par par un contrôleur de domaine qui est le cœur de
 
 ## Extension des domaines
 
-Il existe une série de fonctionnalités très intéressantes qui sont mises à disposition par Active Directory. En premier lieu, les Contrôleurs de Domaine possèdent des rôles spécifiques (appelés FSMO). Chaque rôle leur permet d’assurer l’exposition d’un service clé, mais en plus avec un certain nombre de privilèges. Par exemple, l’un des rôles est le KDC que nous avons déjà vue, mais il en existe 4 autres que  [vous pouvez retrouver ici](https://www.it-connect.fr/chapitres/les-cinq-roles-fsmo/). La répartition de ces rôles permet un bénéfice énorme, un environnement Active Directory peut posséder plusieurs contrôleurs de domaine. Cela permet une plus grande souplesse en terme d’architecture (mais peut exposer dans le même temps plus de points faibles). En second lieu, pour que plusieurs domaines interagissent entre eux, il convient d’appliquer des « relations de confiances » entre ces domaines. De manière grossière, ils accordent aux utilisateurs certains droits dans un autre domaine (comme la lecture de l’annuaire). À remarquer qu’il n’est pas nécessaire que ces domaines aient une chose en commun, ils peuvent être différents en tous points. 
+Il existe une série de fonctionnalités très intéressantes qui sont mises à disposition par Active Directory. En premier lieu, les Contrôleurs de Domaine possèdent des rôles spécifiques (appelés FSMO). Chaque rôle leur permet d’assurer l’exposition d’un service clé, mais en plus avec un certain nombre de privilèges. Par exemple, l’un des rôles est le KDC que nous avons déjà vue, mais il en existe 4 autres que  [vous pouvez retrouver ici](https://www.it-connect.fr/chapitres/les-cinq-roles-fsmo/). La répartition de ces rôles permet un bénéfice énorme, un environnement Active Directory peut posséder plusieurs contrôleurs de domaine. Cela permet une plus grande souplesse en terme d’architecture (mais peut exposer dans le même temps plus de points faibles). En second lieu, pour que plusieurs domaines interagissent entre eux, il convient d’appliquer des « relations de confiances » entre ces domaines. De manière grossière, ils accordent aux utilisateurs certains droits dans un autre domaine (comme la lecture de l’annuaire). À remarquer qu’il n’est pas nécessaire que ces domaines aient une chose en commun, ils peuvent être différents en tous points.
 
 ![Relation de confiance entre deux domaines](static/img/ActiveDirectory/Trust.webp)
 

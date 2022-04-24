@@ -1,10 +1,11 @@
 lang: fr
-Author: Eban 
+Author: Eban
 Date: 2021/07/09
 Keywords: automatisation, domotique
 Slug: mqtt
 Summary: Si vous vous êtes déjà intéressé⋅e à la domotique, vous avez sûrement entendu parler du protocole MQTT (Message Queuing Telemetry Transport), MQTT est un protocole très utilisé pour faire de l'automatisation notamment, nous allons entrer plus en profondeur dans le fonctionnement d'MQTT dans cet article.
 Title: MQTT, comprendre le standard de la domotique
+Category: Réseau
 
 Si vous vous êtes déjà intéressé⋅e à la domotique, vous avez sûrement entendu parler du protocole MQTT (Message Queuing Telemetry Transport), MQTT est un protocole très utilisé pour faire de l'automatisation notamment, nous allons entrer plus en profondeur dans le fonctionnement d'MQTT dans cet article à travers l'exemple d'une lampe connectée.
 

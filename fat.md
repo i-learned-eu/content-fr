@@ -5,6 +5,7 @@ Date: 2021-12-05
 Author: Ownesis
 Summary: FAT, qu'est-ce que c'est, a quoi il sert et comment fonctionne ce système de fichier ?.
 Slug: fat
+Category: Sysadmin
 
 Aujourd'hui je vais vous parler du système de fichier `FAT` (File Allocation Table).
 Avant de commencer, qu'est-ce qu'un système de fichier ?
@@ -30,7 +31,7 @@ Revenons sur notre système 16 bits. Que signifie les `16 bits` ? C'est le nombr
 
 Pour faire simple, un **cluster** est un groupe de **secteurs**, c'est dans ces clusters que sont stocké les données d'un fichier.
 
-> Et qu'est ce que c'est qu'un **secteurs** ? 
+> Et qu'est ce que c'est qu'un **secteurs** ?
 
 Un **secteur** est la plus petite unité physique de stockage sur un support de donnée.
 
@@ -62,10 +63,10 @@ Chaque "nombres", correspond à une information concernant le cluster :
 | --------------- |-------------------------------------------------:|
 | 0x0000          | Cluster vide                                     |
 | 0x0001          | Cluster réservé                                  |
-| 0x0002 - 0xFFEF | Cluster utilisé, pointant vers le cluster suivant | 
-| 0xFFF0 - 0xFFF6 | Valeurs réservées                                | 
-| 0xFFF7          | Mauvais cluster                                  | 
-| 0xFFF8 - 0xFFFF | Cluster utilisé, dernier cluster                  | 
+| 0x0002 - 0xFFEF | Cluster utilisé, pointant vers le cluster suivant |
+| 0xFFF0 - 0xFFF6 | Valeurs réservées                                |
+| 0xFFF7          | Mauvais cluster                                  |
+| 0xFFF8 - 0xFFFF | Cluster utilisé, dernier cluster                  |
 
 On pourrait imaginer la table d'allocation suivante :
 > C*x* = Cluster n°*x*

@@ -5,6 +5,7 @@ Keywords: réseau, sécurité
 Slug: upnp
 Summary: On entend souvent parler d'UPnP (Universal Plug and Play) comme étant un protocole représentant une faille de sécurité béante permettant de changer la configuration du NAT d'à peu près n'importe quel routeur, dans cet article nous détaillerons le fonctionnement de ce protocole afin de mieux comprendre son fonctionnement et la vulnérabilité qu'il représente.
 Title: UPnP un protocole dangereux, vraiment ?
+Category: Réseau
 
 On entend souvent parler d'UPnP (Universal Plug and Play) comme étant un protocole représentant une faille de sécurité béante permettant de changer la configuration du NAT d'à peu près n'importe quel routeur, dans cet article nous détaillerons le fonctionnement de ce protocole afin de mieux comprendre son fonctionnement et la vulnérabilité qu'il représente.
 
@@ -12,7 +13,7 @@ Avant toute chose, il est important de savoir qu'UPnP est un protocole destiné 
 
 UPnP a été créé afin de faciliter la découverte des différents services sur un réseau, comme les imprimantes, un partage de fichier en réseau etc. Quand un appareil se connecte à un réseau utilisant UPnP, tous ces services sont détectées automatiquement.
 
-Avec UPnP, chaque appareil sur le réseau (appelé périphérique) contient une liste de services ainsi que leurs caractéristiques sous la forme d'un fichier XML. Les chromecast par exemple (petits appareils créés par Google pour pouvoir "envoyer" des vidéos sur sa TV) utilise UPnP pour annoncer sa présence. 
+Avec UPnP, chaque appareil sur le réseau (appelé périphérique) contient une liste de services ainsi que leurs caractéristiques sous la forme d'un fichier XML. Les chromecast par exemple (petits appareils créés par Google pour pouvoir "envoyer" des vidéos sur sa TV) utilise UPnP pour annoncer sa présence.
 
 ```xml
 <root

@@ -1,10 +1,11 @@
 lang: fr
-Title: Permissions sous Linux
+Title: Découverte des permissions sous Linux
 Keywords: permission, Capabilities, linux, sécurité
-Date: 2022/04/5
+Date: 2022/03/31
 Author: Ramle
 Summary: En utilisant Linux, vous avez probablement rencontré des erreurs telles que permission denied. Souvent des erreurs du genre sont frustrantes, pourquoi le système que j'ai installé me refuse l'accès ? Le but de cet article est justement de comprendre en détail le fonctionnement des permissions sous Linux et de vous aider.
 Slug: droit_linux
+Category: Sysadmin/Linux
 
 En utilisant Linux, vous avez probablement rencontré des erreurs telles que "permission denied" (permission refusée). Souvent des erreurs du genre sont frustrantes, pourquoi le système que j'ai installé me refuse l'accès ? Le but de cet article est de comprendre en détail le fonctionnement des permissions sous Linux et de vous aider.
 

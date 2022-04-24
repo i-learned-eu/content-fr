@@ -5,10 +5,11 @@ Summary: Dans cet article, nous allons parler du *relai privé* que propose Appl
 Slug: private_relay
 Date: 2021-09-26
 Author: Ownesis
+Category: Réseau/Proxy & VPN
 
 Dans cet article, nous allons parler du *relai privé* que propose Apple pour les personnes abonnées à iCloud+, cette fonctionnalité est arrivée avec IOS 15 et est souvent, à tort, confondue avec un VPN.
 
-### Relai privé 
+### Relai privé
 
 Sur son [site officiel](https://www.apple.com/ios/ios-15/), Apple présente la fonctionnalité de relai privé avec ces mots:
 
@@ -17,7 +18,7 @@ Sur son [site officiel](https://www.apple.com/ios/ios-15/), Apple présente la f
 *Il faut savoir, avant toutes choses que cette fonctionnalité de relai privé est en version bêta.*
 
 
-Voyons maintenant comment ceci fonctionne (dans la théorie): 
+Voyons maintenant comment ceci fonctionne (dans la théorie):
 
 Lorsque vous activez le relai privé, toute votre activité de navigation web ([http](https://ilearned.eu.org/http.html), https et [DNS](https://ilearned.eu.org/les-bases-du-dns.html)) dans **Safari** *(et une petite partie du trafic provenant des applications)* est relayée de façon chiffrée vers un relai géré par Apple.
 
@@ -27,7 +28,7 @@ Apple conserve votre adresse IP MAIS votre requête DNS est transmise de façon 
 Voici un [fichier `csv`](https://mask-api.icloud.com/egress-ip-ranges.csv) contenant la liste des plages d'adresses IP utilisées pour les relais de sortie.
 
 Le premier relai qui connait votre adresse IP et donc votre emplacement approximatif, choisira le second relai le plus proche de vous (localisé dans votre région).
-> Et pourquoi pas en Estonie comme dans Mr Robot ? ! 
+> Et pourquoi pas en Estonie comme dans Mr Robot ? !
 
 Tout simplement pour permettre aux sites qui utilisent votre adresse IP de diffuser des informations locales comme la météo, les infos etc...
 
@@ -36,12 +37,12 @@ Du coup on se retrouve dans cette situation:
 - Le premier relai (géré par Apple) connait votre adresse IP mais pas le contenu de vos requetes DNS.
 - Le second relai (géré par un "partenaire de confiance") connait le contenu de vos requetes DNS mais ne connait pas votre adresse IP, seulement votre localisation encore plus approximative (votre région comme mentionné plus haut).
 - Le serveur web que vous cherchez à contacter se retrouve dans la même situation que le second relai, il ne connait pas votre adresse IP mais seulement une zone géographique approximative.
-   
+
 Les trois parties ne peuvent donc pas créer un profil numérique basé sur votre adresse IP car ils n'ont que trop peu d'information pour faire cela.
 
 ### Quelques informations concernant les relais
 - Le relai privé valide le fait que le client qui se connecte est bien un appareil Apple.
-- Les relais s’appuient sur QUIC, un nouveau protocole de transport standard basé sur UDP  ([un de nos articles](https://ilearned.eu.org/http3.html) en parle). Toutes les connexions au relai privé ont lieu sur le port 443. 
+- Les relais s’appuient sur QUIC, un nouveau protocole de transport standard basé sur UDP  ([un de nos articles](https://ilearned.eu.org/http3.html) en parle). Toutes les connexions au relai privé ont lieu sur le port 443.
 - Le second relai utilise [DoH](https://ilearned.eu.org/dot-doh.html) (**D**NS **O**ver **H**TTPS).
 - Le relai privé empêche les clients de pouvoir prétendre se trouver dans un autre pays (des sites internet comme Netflix restreignent l'accès à certains contenus par pays pour des raisons de droits d'auteur).
 - Le premier relai est géré par Apple.
@@ -58,7 +59,7 @@ Partons du principe que l'utilisateur souhaite accéder à `ilearned.eu.org`, il
 1. L'utilisateur ouvre Safari et cherche à contacter `ilearned.eu.org`.
 2. Safari établie une connexion sécurisé avec QUIC vers le premier relai géré par Apple.
 3. Le premier relai reçoit une connexion provenant de Nice, il vérifie si l'utilisateur utilise un appareil Apple et cherche un second relai géolocalisé en Côtes d'Azur et envoie l'identité de ce serveur au client.
-4. Le client reçoit l'identité du second relai et commence à établir une connexion sécurisé (toujours avec QUIC) vers celui-ci MAIS à travers le premier relai, afin que le second ne puisse connaitre son adresse IP. *(Le protocolee utilisé est peut-etre SOCKS5, ou un protocolee créé spécialement par Apple.)* 
+4. Le client reçoit l'identité du second relai et commence à établir une connexion sécurisé (toujours avec QUIC) vers celui-ci MAIS à travers le premier relai, afin que le second ne puisse connaitre son adresse IP. *(Le protocolee utilisé est peut-etre SOCKS5, ou un protocolee créé spécialement par Apple.)*
 5. Le second relai reçoit une demande de connexion du premier relai (qui provient en réalité du client). Le client envoie sa requête DNS via le protocolee DoH - toujours à travers le premier relai - le paquet DNS est donc chiffré avec la clé publique du second relai, un échange de clés a eu lieu lors de la première connexion entre le second relai et le client. Le serveur déchiffre la requête, résout le nom de domaine `ilearned.eu.org` et initie la connexion avec celui ci.
 6. Le serveur `ilearned.eu.org` reçoit une connexion provenant du second relai qui a une IP provenant de la Côte d'Azur.
 7. Chaque requête du client et/ou serveur web, transitera désormais entre ces deux relais.
@@ -66,7 +67,7 @@ Partons du principe que l'utilisateur souhaite accéder à `ilearned.eu.org`, il
 ### Explications sur certains points
  - Dans l'étape **4**, le client établie une connexion avec le second relai mais en passant par le premier relai. Il demande au premier relai de relayer/transférer ce qu'il lui envoie vers le second relai, de cette manière, le second relai recoit un paquet provenant de l'adresse IP du premier relai et non du client (Cela ressemble beaucoup au protocolee SOCKS qui permet de faire ce genre de proxy de 'relais', un article sur ce protocolee sera bientôt disponible).
  - Dans l'étape **5**, le premier relai, ne faisant que relayer ce que le client envoie et reçoit, n'est pas en capacité de déchiffrer les paquets, il ne sert que de passerelle (voir l'article sur [TLS](https://ilearned.eu.org/tls.html) pour plus d'informations à ce sujet).
- 
+
 Du coup on se retrouve bien dans cette situation où :
 
  - Le premier relai connait l'adresse IP (et donc la localisation approximatif) du client mais ne sait pas ce qu'il demande au second relai, car le premier relai n'a pas connaissance de la clé de chiffrement utilisée par le client et le second relai, le premier relai n'a pas connaissance non plus du nom de domaine auquel veut se connecter le client.
@@ -77,7 +78,7 @@ Dans cette section je comparerais le relai privé aux VPNs commerciaux (NordVPN,
 
 Pour la faire courte, ce qui differencie les VPNs commerciaux et les VPNs dits "professionels" c'est que les VPNs commerciaux sont utilisés par le grand public et c'est surement à ceux-ci que les gens font référence en considèrant le relai privé porposé par Apple comme étant un VPN.
 
-Un VPN commercial permet de changer d'adresse IP (et donc de localisation), pour contourner la censure, accéder à d'autres contenus sur les sites de streaming, sécuriser une connexion (généralement, les VPNs commerciaux chiffrent les données des client. Attention cependant, cet argument ne soit pas valable dans le cas d'une connexion HTTPS, ce qui est le cas de la majorité des connexions aujourd'hui), esquiver Hadopi ou se faire appeler Mr. Robot dans la cour de récréation. 
+Un VPN commercial permet de changer d'adresse IP (et donc de localisation), pour contourner la censure, accéder à d'autres contenus sur les sites de streaming, sécuriser une connexion (généralement, les VPNs commerciaux chiffrent les données des client. Attention cependant, cet argument ne soit pas valable dans le cas d'une connexion HTTPS, ce qui est le cas de la majorité des connexions aujourd'hui), esquiver Hadopi ou se faire appeler Mr. Robot dans la cour de récréation.
 
 Tandis qu'un VPN professionel, permet d'accéder à un réseau privée (d'entreprise ou autres) ou de créer un réseau virtuel. (et oui, il y avait un indice dans le nom **V**irtual **P**rivate **N**etwork ;) ).
 

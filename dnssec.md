@@ -5,6 +5,7 @@ Date: 2021-04-29
 author: Ramle
 summary: Aujourd'hui, on va parler du fonctionnement de DNSSEC et voir les différents risques encourus que ce mécanisme résout ou non.
 slug: dnssec
+Category: Réseau/DNS
 
 Petit rappel: ce blog a un [flux RSS](https://ilearned.eu/rss.xml), n'hésitez pas à l'ajouter à votre lecteur de flux RSS favori :)
 
@@ -12,7 +13,7 @@ Hier nous avons vu comment sécuriser la connexion entre un serveur slave et un 
 
 ![Schéma sur les risques sans DNSSEC](/static/img/dns/schema_risques_dnssec.webp)
 
-`DNSSEC` est une manière de signer de façon cryptographique une zone DNS sur base d'un système de clés asymétriques, un système de clés asymétriques repose sur 2 clés, une privée qui est gardée précieusement et qui sert à signer ou déchiffrer des données et une publique qui sert à vérifier ou chiffrer des données. Dans le cadre du DNSSEC le chiffrement ne sert pas, la clé privée sert donc uniquement à signer. 
+`DNSSEC` est une manière de signer de façon cryptographique une zone DNS sur base d'un système de clés asymétriques, un système de clés asymétriques repose sur 2 clés, une privée qui est gardée précieusement et qui sert à signer ou déchiffrer des données et une publique qui sert à vérifier ou chiffrer des données. Dans le cadre du DNSSEC le chiffrement ne sert pas, la clé privée sert donc uniquement à signer.
 
 Pour procéder on utilise en général deux pairs de clés : la `KSK` (key-signing key) et la `ZSK` (zone-signing key). La clé KSK est seulement là pour la signature de la ZSK, on lui donne une durée de vie plus grande que la ZSK et elle peut être stockée et générée hors ligne pour accroitre la sécurités de celle ci, l'avantage de ce système est de pouvoir garder plus longtemps la même clé sans rajouter trop de risque de fuite vu que stockée hors ligne, dans un lieu sécurisé. La ZSK quand à elle est sert à signer la zone, elle doit donc être présente sur la machine qui génère la zone, on la change plus souvent pour éviter les risques de fuites. Les serveurs esclaves n'ont besoin d'aucune des 2 clés, ils reçoivent directement la zone signée, la modification de la zone de leur part n'est donc plus possible si le résolveur vérifie avec DNSSEC.
 

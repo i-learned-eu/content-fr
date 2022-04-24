@@ -5,12 +5,13 @@ Date: 2022/01/09
 Author: Ownesis
 Summary: Dans cet article, nous allons voir ensemble comment des chercheurs ont réussi à activer la Webcam d'un macbook sans avoir de témoin lumineux.
 Slug: macbook_cam_hack
+Category: Cybersécurité/Red Team
 
 Aujourd'hui on va parler hacking, espionnage, électronique et Macbook.
 Ça donne envie n'est-ce pas 👀 ?
 
 - Est-ce que l'exploit de LUX dans la série STALK saison 1 est possible et ou a été réalisable ?
-- Est-ce qu'Orelsan a bien raison de se méfier de [sa](https://www.youtube.com/watch?v=B9F0e5gUmxY) webcam ? 
+- Est-ce qu'Orelsan a bien raison de se méfier de [sa](https://www.youtube.com/watch?v=B9F0e5gUmxY) webcam ?
 - Est-ce que Mark Zuckerberg fait bien de mettre du ruban adhésif sur son Macbook ?
 
 Je ne vais pas vous expliquez par qui et quand et pourquoi est ce que cette faille a été découverte.
@@ -110,5 +111,3 @@ Mais comme l'explique Micode dans sa vidéo, à présent certains logiciels malv
 
 J'espère que cet article, vous a plus, article un peu technique, en parlant d'électronique/électricité  ça change un peu.
 Mais j'espère que j'ai réussi à vous faire comprendre le fonctionnement de la Webcam et de sa LED sur les anciens Macbook, ainsi que leurs vulnérabilités.
-
-

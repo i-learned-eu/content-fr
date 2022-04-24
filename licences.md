@@ -3,10 +3,11 @@ Author: Rick
 Date: 2022/01/25
 Keywords: droit
 Slug: comprendre-licences
-Summary: La licence est une sorte de contrat qui permet d'expliquer les différentes utilisations que peuvent faire les utilisateurs du logiciel et du code source. Il en existe plusieurs types (libre, open source et propriétaire) avec certaines subtilités parfois (copyleft). 
+Summary: La licence est une sorte de contrat qui permet d'expliquer les différentes utilisations que peuvent faire les utilisateurs du logiciel et du code source. Il en existe plusieurs types (libre, open source et propriétaire) avec certaines subtilités parfois (copyleft).
 Title: Comprendre les différentes licences
+Category: Pensées du libre
 
-La licence est une sorte de contrat qui permet d'expliquer les différentes utilisations que peuvent faire les utilisateurs du logiciel et du code source. Il en existe plusieurs types (libre, open source et propriétaire) avec certaines subtilités parfois (copyleft). 
+La licence est une sorte de contrat qui permet d'expliquer les différentes utilisations que peuvent faire les utilisateurs du logiciel et du code source. Il en existe plusieurs types (libre, open source et propriétaire) avec certaines subtilités parfois (copyleft).
 
 Je vais essayer ici d'expliquer clairement les différents concepts autour de ces licences ainsi que leurs différences. Et ce de la manière la plus claire possible, ce qui n'est pas chose aisée. Et j'essaierai de rester objectif.
 
@@ -56,7 +57,7 @@ Si on peut résumer cet article :
  * Propriétaire = peut être bien moralement, mais surtout code fermé
  * Copyleft = type de licence "contaminante"
 
-Il convient ensuite de choisir la bonne licence selon vos projets et vos convictions. 
+Il convient ensuite de choisir la bonne licence selon vos projets et vos convictions.
 
 Comme je l'ai indiqué plus haut, les licences (libres ou non) peuvent s'appliquer à des logiciels, des dessins, des vidéos ou encore du texte (comme des articles, de la documentation, un livre...). Cependant, certaines sont plus adaptées pour du code et d'autres pour du texte, de la musique, etc. Je ne suis pas rentré dans ces détails, car la philosophie derrière reste à peu près la même peu importe le support.
 

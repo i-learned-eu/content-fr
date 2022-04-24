@@ -1,10 +1,11 @@
 lang: fr
-Author: Ramle 
+Author: Ramle
 Date: 2021/07/20
 Keywords: sécurité
 Slug: mac
 Summary: Un reproche souvent fait à Linux est sa gestion des droits souvent trop permissive, pour remédier à cela on été créés les MAC
 Title: Sécuriser votre système d'exploitation grâce aux MAC
+Category: Cybersécurité/Blue Team
 
 Un reproche souvent fait à Linux est sa gestion des droits souvent trop permissive. Il y a bien sûr une raison historique, à la naissance des différents systèmes d'exploitation que l'on connait aujourd'hui la sécurité n'était pas la préoccupation principale. Le but de base n'était pas non plus de compliquer la tâche des utilisateurs (la sécurité se fait toujours au prix de complexité supplémentaire). Le problème de cette philosophie de départ est qu'il faut repenser la sécurité avec une base trop ouverte.
 

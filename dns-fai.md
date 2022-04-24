@@ -5,6 +5,7 @@ slug: dns-fai
 Date: 2021-05-03
 author: Ramle
 keywords: DNS, network, réseau, sécurité, fai
+Category: Pensées du libre
 
 # Le soucis du DNS de son opérateur
 

@@ -5,6 +5,7 @@ Keywords: windows, registre
 Slug: registre
 Summary: Sous Windows, les paramètres de l'OS sont sauvegardés dans les registres. Ces derniers sont vitaux pour le système et nous tacherons de les comprendre dans cet article.
 Title: Les bases de registres Windows
+Category: Sysadmin/Windows
 
 Les registres Windows sont un composant vital du système d'exploitation. En effet, ils contiennent l'ensemble des paramètres que le système doit appliquer à chaque démarrage, mais exposent aussi des informations cruciales que certains programmes doivent pouvoir disposer. Dans cet article, nous explorerons le fonctionnement des registres Windows et des interactions élémentaires avec ceux-ci.
 
@@ -79,7 +80,7 @@ Attention cependant, car le type de la valeur sera inchangé. S'il faut le chang
 
 Pour supprimer une clé avec Reg.exe, rien de plus simple:
 ```
- Reg.exe DELETE [Chemin de la clé] 
+ Reg.exe DELETE [Chemin de la clé]
  ```
  Avec PowerShell on utilise `Remove-Item` !
 ![Suppression d'une clé avec PowerShell](static/img/Registre/Delete.webp)

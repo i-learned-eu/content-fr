@@ -5,19 +5,20 @@ Keywords: Décentralisation
 Slug: ipfs
 Summary: Aujourd'hui la tendance est de plus en plus à la décentralisation, dans ce mouvement, a été créé le protocole IPFS (Interplanetary File System, rien que ça oui). C'est un protocole qui a pour objectif de stocker des fichiers de n'importe quel type (image, vidéo, document texte, site web...) de façon décentralisée.
 Title: Comment fonctionne IPFS ?
+Category: Sysadmin
 
 Aujourd'hui la tendance est de plus en plus à la [décentralisation](https://ilearned.eu.org/decentralisation.html), dans ce mouvement, a été créé le protocole IPFS (Interplanetary File System, rien que ça oui). C'est un protocole qui a pour objectif de stocker des fichiers de n'importe quel type (image, vidéo, document texte, site web...) de façon décentralisée.
 
-Ce protocole fonctionne en paire à paire (P2P) afin de garantir une plus grande accessibilité des fichiers hébergés. 
+Ce protocole fonctionne en paire à paire (P2P) afin de garantir une plus grande accessibilité des fichiers hébergés.
 
 # Un changement de paradigme
 
 Aujourd'hui sur le web, quand on fait la requête HTTP `GET https://ilearned.eu/static/img/favicon.webp` on va demander au serveur à l'adresse ilearned.eu le fichier contenu dans le chemin `/static/img/favicon.webp`. Le serveur pourrait alors nous renvoyer le favicon que nous cherchons, ou n'importe quoi d'autre, comme une photo de chaton.
 
 > Avec HTTP, on demande le contenu à un emplacement, pas un fichier spécifique directement.
-> 
+>
 
-Avec IPFS c'est tout à fait différent, plutôt que d'aller demander le fichier contenu à l'emplacement `/static/img/favicon.webp`, on va demander le hash du fichier que nous souhaitons consulter. 
+Avec IPFS c'est tout à fait différent, plutôt que d'aller demander le fichier contenu à l'emplacement `/static/img/favicon.webp`, on va demander le hash du fichier que nous souhaitons consulter.
 
 Si je souhaite consulter le favicon d'I Learned, je vais demander le hash (appelé CID) `QmfJpxjQezydRAswGezKs9qqqM1fFAjEZRgA4VdwwCNUsw`. Je suis alors sûr de recevoir l'image que j'ai demandé, et pas une photo de chaton qui aurait un CID (hash) différent (ici, `QmYKfEPmNbuN9mYYmPENvpNpQ6yQQ3d1EfynYNA6qPGjTA`).
 
