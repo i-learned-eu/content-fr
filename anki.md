@@ -101,7 +101,7 @@ Les élèves sont ensuite revenus une semaine plus tard pour un nouveau test. Le
 
 On voit ici très clairement que les élèves ayant eu les meilleurs résultats au test sont ceux ayant révisé en faisant de l’”active recall”.
 
-Nous cherchions donc un logiciel, qui nous permettrait de créer
+Nous chercherions donc un logiciel, qui nous permettrait de créer
 
 - Des “quizz” (active recall)
 - ... qui contiennent différents types de contenus multimédia (maximiser le nombre de connexion neuronales)
