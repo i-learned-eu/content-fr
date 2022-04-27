@@ -3,9 +3,8 @@ default:
     before_script:
         - rm -rf ./..?* ./.[!.]* ./*
         - git clone https://gitlab.ilearned.eu/i-learned/blog/theme .
-        - rm -rf content/content-*
-        - git clone https://gitlab.ilearned.eu/i-learned/blog/content-fr.git -b $CI_COMMIT_REF_NAME content/content-fr
-        - git clone https://gitlab.ilearned.eu/i-learned/blog/content-en.git content/content-en
+        - rm -rf content/*
+        - git clone https://gitlab.ilearned.eu/i-learned/blog/content-fr.git -b $CI_COMMIT_REF_NAME content/
     tags:
         - AMD64
 
@@ -45,8 +44,7 @@ prod-deploy-job:
         - chmod 600 ~/.ssh/id_ed25519
         - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
         - sh build.sh
-        - rsync -az --delete -e "ssh -i ~/.ssh/id_ed25519" output/ deploy@vm01.eban.eu.org:/var/www/ilearned
-        - rsync -az --delete -e "ssh -i ~/.ssh/id_ed25519" en/ deploy@vm01.eban.eu.org:/var/www/ilearned-en
+        - rsync -az --delete -e "ssh -i ~/.ssh/id_ed25519" output/ deploy@vm01.eban.eu.org:/var/www/ilearned-blog
     only:
         - master
 
