@@ -2,10 +2,10 @@ Author: Eban
 Date: 2022/03/27
 Keywords: mémoire, apprentissage, biologie, learning, sciences
 Slug: memory
-Summary: Qui, dans sa vie, n’a jamais souhaité retenir à jamais certaines notions ? Qui, n’a jamais rencontré des problèmes dans la mémorisation de ses cours ? Vous avez peut-être déjà vu passer des publicités sur divers réseaux sociaux à propos de méthodes magiques pour “tout retenir sans effort”, nous traiterons aujourd’hui d’un logiciel libre permettent — réellement 😉 — de “tout retenir sans effort” — ou presque.
+Summary: Qui, dans sa vie, n’a jamais souhaité retenir à jamais certaines notions ? Qui n’a jamais rencontré des problèmes dans la mémorisation de ses cours ? Vous avez peut-être déjà vu passer des publicités sur divers réseaux sociaux à propos de méthodes magiques pour “tout retenir sans effort”, nous traiterons aujourd’hui d’un logiciel libre permettant — réellement 😉 — de “tout retenir sans effort” — ou presque.
 Title: Plongée dans le fonctionnement de la mémoire
 
-Qui, dans sa vie, n’a jamais souhaité retenir à jamais certaines notions ? Qui, n’a jamais rencontré des problèmes dans la mémorisation de ses cours ? Vous avez peut-être déjà vu passer des publicités sur divers réseaux sociaux à propos de méthodes magiques pour “tout retenir sans effort”, nous traiterons aujourd’hui d’un logiciel libre permettent — réellement 😉 — de “tout retenir sans effort” — ou presque. Cet article sera surement moins technique que d’habitude, faisant plutôt appel à des notions de neurosciences, mais, rassurez-vous, aucun prérequis n’est nécessaire pour aborder celui-ci !
+Qui, dans sa vie, n’a jamais souhaité retenir à jamais certaines notions ? Qui n’a jamais rencontré des problèmes dans la mémorisation de ses cours ? Vous avez peut-être déjà vu passer des publicités sur divers réseaux sociaux à propos de méthodes magiques pour “tout retenir sans effort”, nous traiterons aujourd’hui d’un logiciel libre permettant — réellement 😉 — de “tout retenir sans effort” — ou presque. Cet article sera surement moins technique que d’habitude, faisant plutôt appel à des notions de neurosciences, mais rassurez-vous, aucun prérequis n’est nécessaire pour aborder celui-ci !
 
 Le logiciel dont je vous parlais en introduction est nommé Anki, afin de comprendre son fonctionnement, intéressons-nous d’abord à la façon dont notre cerveau traite, et surtout, stocke les informations.
 
@@ -13,14 +13,14 @@ Le logiciel dont je vous parlais en introduction est nommé Anki, afin de compre
 
 ## 📦 Stockage
 
-La mémoire, voici donc un concept bien obscur, premièrement, il faut savoir que l’on distingue habituellement cinq *types* de mémoire, chacun de ces systèmes communicants avec les autres, nous ne nous intéresserons qu’à deux d’entre eux ici, pour les plus curieux une description plus détaillée des cinq est disponible dans la bibliographie en bas de cet article.
+La mémoire, voici donc un concept bien obscur, premièrement, il faut savoir que l’on distingue habituellement cinq *types* de mémoire, chacun de ces systèmes communicant avec les autres, nous ne nous intéresserons qu’à deux d’entre eux, pour les plus curieux, une description plus détaillée des cinq types est disponible dans la bibliographie en bas de cet article.
 
 - **La mémoire de travail** (aussi appelée mémoire à court terme) ****: Ce “type” de mémoire ne dure que quelques secondes, sans elle, vous ne pourriez retenir de quoi traite cette ligne de texte, ni même retenir un numéro de téléphone quelques secondes.
 - **La mémoire sémantique** : C’est celle qui nous intéressera le plus ici, elle permet de retenir tous nos “savoirs”, la date de la bataille de Marignan, la traduction de “I Learned” ou les paroles du dernier titre de votre artiste préféré-e.
 
 Quand on cherche à retenir une information, on va donc tenter de faire passer une information de la mémoire à court terme vers notre mémoire sémantique.
 
-Concrètement, quand une information arrive dans le cerveau, elle est encodée par celui-ci, il paraît évident que lesdites informations ne sont pas encodées sous forme binaire comme dans nos ordinateurs, sous quelle forme le sont-elles ?
+Concrètement, quand une information arrive dans le cerveau, elle est encodée par celui-ci, il parait évident que lesdites informations ne sont pas encodées sous forme binaire comme dans nos ordinateurs, sous quelle forme le sont-elles ?
 
 Pour répondre à cette question, il faut d’abord faire un tour dans le fonctionnement de notre cerveau.
 
@@ -35,23 +35,23 @@ Bon, une image de cellule comme ça, ce n'est pas bien parlant, mais je vous ass
 Un neurone tout seul n’est capable de rien — ou [presque](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3585427/) — c’est cet immense réseau qui permet nos capacités cognitives. Chaque petit sous réseau qui contiendrait une information est appelé **engramme**.
 
 <aside>
-🤔 Bon, et concrètement, comment un neurone peut stocker une information ? C’est qu’un tas de dendrites et d’axones après tout ?
+🤔 Concrètement, comment un neurone peut stocker une information ? C’est qu’un tas de dendrites et d’axones après tout ?
 
 </aside>
 
 *Petit avertissement, l’étude du fonctionnement du cerveau est un champ de recherche en évolution constante, les informations présentées ici ne représentent que de l’état de la recherche scientifique à date de publication.*
 
-Pour encoder une information — i.e “moduler” le signal électrique qui parcourt un neurone —, les neurones disposent de trois leviers, le premier est le placement de la synapse (rappelez-vous, c’est le nom donné à la région où se lient une dendrite et un axone !) sur la dendrite, l’endroit par lequel le signal passe d’un neurone à l’autre, plus la synapse est éloignée du corps cellulaire, plus le signal va faiblir.
+Pour encoder une information — i.e “moduler” le signal électrique qui parcourt un neurone —, les neurones disposent de trois leviers, le premier est le placement de la synapse (rappelez-vous, c’est le nom donné à la région où se lient une dendrite et un axone !) sur la dendrite, l’endroit par lequel le signal passe d’un neurone à l’autre. Plus la synapse est éloignée du corps cellulaire, plus le signal va faiblir.
 
 ![Frame 1(17).png](/static/img/anki/Frame_1(17).png)
 
 Le second levier est la force des synapses, des ions calcium peuvent être lâchés au niveau de la synapse, et ainsi changer la force de ces dernières.
 
-Le second levier, est la capacité des synapses à faire varier leur force, c’est un fonctionnement assez complexe que nous ne détaillerons pas ici, mais pour faire simple, l’axone va lâcher certaines molécules au niveau de la synapse, ce qui va avoir pour effet de modifier la puissance avec laquelle est transmis le signal.
+Le troisième levier est la capacité des synapses à faire varier leur force, c’est un fonctionnement assez complexe que nous ne détaillerons pas ici, mais pour faire simple, l’axone va lâcher certaines molécules au niveau de la synapse, ce qui va avoir pour effet de modifier la puissance avec laquelle est transmis le signal.
 
 ![Group 3(4).png](/static/img/anki/Group_3(4).png)
 
-Il existe enfin un dernier levier, d’après [certaines études](https://www.researchgate.net/publication/235789215_Passive_Dendrites_Enable_Single_Neurons_to_Compute_Linearly_Non-separable_Functions) les dendrites pourraient transformer le signal de façon non-linéaire, le mot fait peur, mais ce n’est pas si compliqué, cela veut simplement dire que la puissance du signal ne serait pas simplement multipliée par un certain nombre (rappelez vous de vos cours de math 😛, une fonction linéaire, c’est une fonction exprimée sur la forme f(x) = m × x), mais que cette modification pourrait différer en fonction du signal en entrée.
+Il existe enfin un dernier levier, d’après [certaines études](https://www.researchgate.net/publication/235789215_Passive_Dendrites_Enable_Single_Neurons_to_Compute_Linearly_Non-separable_Functions) les dendrites pourraient transformer le signal de façon non-linéaire, le mot fait peur, mais ce n’est pas si compliqué, cela veut simplement dire que la puissance du signal ne serait pas simplement multipliée par un certain nombre (rappelez vous de vos cours de maths 😛, une fonction linéaire, c’est une fonction exprimée sur la forme f(x) = m × x), mais que cette modification pourrait différer en fonction du signal en entrée.
 
 Grâce à ces trois leviers, les neurones sont en capacité d’encoder des informations, et elles le font d’ailleurs bien mieux que n’importe lequel de nos ordinateurs !
 
@@ -62,7 +62,7 @@ Grâce à ces trois leviers, les neurones sont en capacité d’encoder des info
 
 ## 🤔 Oubli
 
-On oublie tous des informations, chaque seconde, l’oubli est un processus naturel auquel certaines personnes (amnésiques notamment) sont plus confrontées que d’autres. [Certaines études](https://doi.org/10.1098/rstb.2013.0141) suggèrent que ce serait la quantité d’une certaine protéine (appelée GluA2) qui dirigerait le déclenchement de l’oubli, il a par exemple été prouvé que retirer le récepteur de la protéine GluA2 permettait d’[empêcher l’oubli](https://pubmed.ncbi.nlm.nih.gov/25437879/) d’avoir lieu dans la mémoire à long terme, dans une moindre mesure, la présence de cette protéine baisserait la force de la synapse, une synapse avec une force trop basse ne saurait de fait être activé, une certaine quantité de cette protéine permettrait donc de baisser suffisamment la force de la synapse afin de créer un oubli total. La présence de la protéine GluA2 n’est pas le seul mécanisme, Tomás J. Ryan et Paul W. Frankland écrivent dans un [récent article](https://www.nature.com/articles/s41583-021-00548-3) (auteurs que je remercie par ailleurs de m’avoir envoyé leur article qui m’a en partie permît d’écrire celui-ci !) la phrase suivante, qui résume bien le fonctionnement des mécanismes de l’oubli :
+On oublie tous des informations, chaque seconde, l’oubli est un processus naturel auquel certaines personnes (amnésiques notamment) sont plus confrontées que d’autres. [Certaines études](https://doi.org/10.1098/rstb.2013.0141) suggèrent que ce serait la quantité d’une certaine protéine (appelée GluA2) qui dirigerait le déclenchement de l’oubli, il a par exemple été prouvé que retirer le récepteur de la protéine GluA2 permettait d’[empêcher l’oubli](https://pubmed.ncbi.nlm.nih.gov/25437879/) d’avoir lieu dans la mémoire à long terme, dans une moindre mesure, la présence de cette protéine baisserait la force de la synapse, une synapse avec une force trop basse ne saurait de fait être activé, une certaine quantité de cette protéine permettrait donc de baisser suffisamment la force de la synapse afin de créer un oubli total. La présence de la protéine GluA2 n’est pas le seul mécanisme, Tomás J. Ryan et Paul W. Frankland écrivent dans un [récent article](https://www.nature.com/articles/s41583-021-00548-3) (auteurs que je remercie par ailleurs de m’avoir envoyé leur article qui m’a en partie permis d’écrire celui-ci !) la phrase suivante, qui résume bien le fonctionnement des mécanismes de l’oubli :
 
 > We therefore propose that synaptic weight changes, leading to reduced engram cell accessibility, are a general (but perhaps not ubiquitous) mechanism of forgetting.
 
@@ -72,17 +72,17 @@ Maintenant, on a une idée de **comment** notre cerveau fait pour oublier des in
 
 L’oubli aurait tout d’abord un rôle adaptatif, c'est-à-dire qu’en dégradant volontairement une information, on permet au cerveau de mieux “généraliser”, par exemple, un animal est attaqué un jour où il pleut, il y a 5 oiseaux qui chantent, l'animal qui l'attaque est un guépard, celui-ci a 94 taches noires sur son pelage, une oreille plus petite que l’autre, et plein d'autres détails. Le cerveau va dégrader l'information pour ne garder que "l'animal est beige avec des taches noires sur son pelage, il fait deux fois ma taille, il est dangereux" de sorte que l'animal déclenche la peur pour toutes les situations durant lesquelles il rencontre un guépard, même si ce n’est pas exactement le même.
 
-L’oubli est aussi dirigé par des paramètres dû à l’environnement du sujet, en clair, une souris si elle rencontre un chat une première fois dans son environnement, un engramme va être créé, son cerveau va faire des asomptions, des prédictions sur certains caractères qu’il devrait retrouver la prochaine fois qu’il croise un chat. Si ces prédiction s’avèrent vraies, l’engrame est maintenu, voir mis à jour si de nouvelles informations sont ajoutées. Cependant, si les prédictions s’avèrent fausses, le processus d’oubli est alors déclenché et l’engrame est altéré.
+L’oubli est aussi dirigé par des paramètres dû à l’environnement du sujet, en clair, si une souris rencontre un chat pour la première fois dans son environnement, un engramme va être créé, son cerveau va faire des asomptions, des prédictions sur certains caractères qu’il devrait retrouver la prochaine fois qu’il croise un chat. Si ces prédictions s’avèrent vraies, l’engrame est maintenu, voir mis à jour si de nouvelles informations sont ajoutées. Cependant, si les prédictions s’avèrent fausses, le processus d’oubli est alors déclenché et l’engrame est altéré.
 
 ![Frame 3.png](/static/img/anki/Frame_3.png)
 
-Il existe aussi, un oubli “automatique”, après un certain temps sans qu’une information soit consultée, le cerveau fait “du ménage”.
+Il existe aussi un oubli “automatique”, après un certain temps sans qu’une information soit consultée, le cerveau fait “du ménage”.
 
 ## 🚀 Optimisation de l’apprentissage
 
-On le sait tous-tes, la durée de rétention varie en fonction du type d’information stocké — on oublie facilement notre repas de la semaine dernière, mais pas ce super plat qu’on a mangé au restaurant il y a trois mois — il [est attesté](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5657245/) que, plus un engramme contient de neurones différentes, et donc de connexion, plus il sera facile pour nous d’aller ensuite rechercher l’information contenue dans cet engramme. On peut ici conclure, que si on veut apprendre par exemple la traduction de “chat” en anglais, afin de mieux s’en rappeler, il faudrait, durant l’apprentissage, “relier” cette notion à un maximum d’éléments, la prononciation du mot, un son de miaulement, une photo de chat etc.
+On le sait tous-tes, la durée de rétention varie en fonction du type d’information stocké — on oublie facilement notre repas de la semaine dernière, mais pas ce super plat qu’on a mangé au restaurant il y a trois mois — il [est attesté](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5657245/) que plus un engramme contient de neurones différentes, et donc de connexion, plus il sera facile pour nous d’aller ensuite rechercher l’information contenue dans cet engramme. On peut ici conclure que si, par exemple, on veut apprendre la traduction de “chat” en anglais, afin de mieux s’en rappeler, il faudrait, durant l’apprentissage, “relier” cette notion à un maximum d’éléments, la prononciation du mot, un son de miaulement, une photo de chat etc.
 
-On sait aussi, que quand notre cerveau choisit de maintenir un engramme, après validation des assomptions faites, le temps avant que ne se déclenche l’oubli “automatique” est réduit. Ceci a été nottament [illustré](https://archive.org/details/memorycontributi00ebbiuoft/page/vi/mode/2up) par un pionnier du domaine, Hermann Ebbinghaus durant la seconde moitié du 19ème siècle, expérience qui sera ensuite [reproduite](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0120644) avec succès. Les résultats de cette expérience sont reproduits ci-dessous :
+On sait aussi que quand notre cerveau choisit de maintenir un engramme, après validation des assomptions faites, le temps avant que ne se déclenche l’oubli “automatique” est réduit. Ceci a été nottament [illustré](https://archive.org/details/memorycontributi00ebbiuoft/page/vi/mode/2up) par un pionnier du domaine, Hermann Ebbinghaus durant la seconde moitié du 19ème siècle, expérience qui sera ensuite [reproduite](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0120644) avec succès. Les résultats de cette expérience sont reproduits ci-dessous :
 
 ![Ebbinghaus-forgetting-curve-and-review-cycle.png](/static/img/anki/Ebbinghaus-forgetting-curve-and-review-cycle.png)
 
@@ -95,17 +95,17 @@ On sait sous quelle forme apprendre notre notion, à quelle fréquence la révis
 - L'élève continue à étudier ce couple de mots, mais n'a plus été testé sur celui-ci.
 - L'élève n'a plus étudié et n'a plus été testé sur cette paire de mots.
 
-Les élèves sont ensuite revenus une semaine plus tard pour un nouveau test. Les résultats de l’étude sont présent ci-dessous :
+Les élèves sont ensuite revenus une semaine plus tard pour un nouveau test. Les résultats de l’étude sont présents ci-dessous :
 
 ![Kuvakaappaus 2022-04-21 18-21-21.png](/static/img/anki/Kuvakaappaus_2022-04-21_18-21-21.png)
 
 On voit ici très clairement que les élèves ayant eu les meilleurs résultats au test sont ceux ayant révisé en faisant de l’”active recall”.
 
-On chercherait donc un logiciel, qui nous permetterait de créer
+Nous cherchions donc un logiciel, qui nous permettrait de créer
 
 - Des “quizz” (active recall)
 - ... qui contiennent différents types de contenus multimédia (maximiser le nombre de connexion neuronales)
-- ... et qui permetterait de revoir à une certaine fréquence, correspondant à la courbe de l’oubli, ces quizz (spaced repetition)
+- ... et qui permettrait de revoir à une certaine fréquence, correspondant à la courbe de l’oubli, ces quizz (spaced repetition)
 
 Il existe un outil tout trouvé afin d’accomplir ces taches, [Anki](https://apps.ankiweb.net/) que je vais vous présenter dans le prochain article, à paraitre demain !
 
