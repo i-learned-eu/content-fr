@@ -1,7 +1,8 @@
 Author: Eban
 Date: 2022/03/27
 Keywords: mémoire, apprentissage, biologie, learning, sciences
-Slug: memory
+Slug: memoire
+Category: sciences
 Summary: Qui, dans sa vie, n’a jamais souhaité retenir à jamais certaines notions ? Qui n’a jamais rencontré des problèmes dans la mémorisation de ses cours ? Vous avez peut-être déjà vu passer des publicités sur divers réseaux sociaux à propos de méthodes magiques pour “tout retenir sans effort”, nous traiterons aujourd’hui d’un logiciel libre permettant — réellement 😉 — de “tout retenir sans effort” — ou presque.
 Title: Plongée dans le fonctionnement de la mémoire
 
