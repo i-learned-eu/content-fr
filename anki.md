@@ -26,11 +26,11 @@ Pour répondre à cette question, il faut d’abord faire un tour dans le foncti
 
 Les informations de la mémoire sémantique n’ont pas de lieu de stockage à proprement parler, elles sont stockées au niveau des neurones un peu partout dans le cerveau. Un neurone, ça ressemble à ça, le schéma présent ci-dessous n’est pas complet, il ne présente que les informations qui nous intéressent ici.
 
-![From Fabuio - Own work, CC BY 4.0](/static/img/anki/Piramidal_cell_1(1).png)
+![From Fabuio - Own work, CC BY 4.0, schéma d'un neurone avec mis en avant les dendrites et les axones](/static/img/anki/neuron-schema.png)
 
 Bon, une image de cellule comme ça, ce n'est pas bien parlant, mais je vous assure que celle-ci a plus d’une particularité intéressante 😄. Comme vous pouvez le voir, un neurone est doté de nombreuses “branches”, appelées dendrites et axone dans lesquelles peut circuler un courant électrique, et d’un “centre” appelé “corps cellulaire” ou “soma”. Sur ce schéma, les dendrites sont les branches vertes, tandis que les bleues sont les axones.  Sur ces branches, des dizaines d’autres neurones viennent s’accrocher, la région où ces cellules se lient est appelée synapse. Le courant électrique qui parcourt le neurone entre par les dendrites et sort par les axones.
 
-![Frame 1(16).png](/static/img/anki/Frame_1(16).png)
+![Le signal électrique rentre par les dendrites, et ressort par les axones](/static/img/anki/electricy-through-neuron.png)
 
 Un neurone tout seul n’est capable de rien — ou [presque](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3585427/) — c’est cet immense réseau qui permet nos capacités cognitives. Chaque petit sous réseau qui contiendrait une information est appelé **engramme**.
 
@@ -43,13 +43,13 @@ Un neurone tout seul n’est capable de rien — ou [presque](https://www.ncbi.n
 
 Pour encoder une information — i.e “moduler” le signal électrique qui parcourt un neurone —, les neurones disposent de trois leviers, le premier est le placement de la synapse (rappelez-vous, c’est le nom donné à la région où se lient une dendrite et un axone !) sur la dendrite, l’endroit par lequel le signal passe d’un neurone à l’autre. Plus la synapse est éloignée du corps cellulaire, plus le signal va faiblir.
 
-![Frame 1(17).png](/static/img/anki/Frame_1(17).png)
+![Plus le synapse est proche du noyau, plus le signal est fort.](/static/img/anki/dendrit-weight-by-distance.png)
 
 Le second levier est la force des synapses, des ions calcium peuvent être lâchés au niveau de la synapse, et ainsi changer la force de ces dernières.
 
 Le troisième levier est la capacité des synapses à faire varier leur force, c’est un fonctionnement assez complexe que nous ne détaillerons pas ici, mais pour faire simple, l’axone va lâcher certaines molécules au niveau de la synapse, ce qui va avoir pour effet de modifier la puissance avec laquelle est transmis le signal.
 
-![Group 3(4).png](/static/img/anki/Group_3(4).png)
+![Un schéma de synapse](/static/img/anki/synapse-schema.png)
 
 Il existe enfin un dernier levier, d’après [certaines études](https://www.researchgate.net/publication/235789215_Passive_Dendrites_Enable_Single_Neurons_to_Compute_Linearly_Non-separable_Functions) les dendrites pourraient transformer le signal de façon non-linéaire, le mot fait peur, mais ce n’est pas si compliqué, cela veut simplement dire que la puissance du signal ne serait pas simplement multipliée par un certain nombre (rappelez vous de vos cours de maths 😛, une fonction linéaire, c’est une fonction exprimée sur la forme f(x) = m × x), mais que cette modification pourrait différer en fonction du signal en entrée.
 
@@ -74,7 +74,7 @@ L’oubli aurait tout d’abord un rôle adaptatif, c'est-à-dire qu’en dégra
 
 L’oubli est aussi dirigé par des paramètres dû à l’environnement du sujet, en clair, si une souris rencontre un chat pour la première fois dans son environnement, un engramme va être créé, son cerveau va faire des asomptions, des prédictions sur certains caractères qu’il devrait retrouver la prochaine fois qu’il croise un chat. Si ces prédictions s’avèrent vraies, l’engrame est maintenu, voir mis à jour si de nouvelles informations sont ajoutées. Cependant, si les prédictions s’avèrent fausses, le processus d’oubli est alors déclenché et l’engrame est altéré.
 
-![Frame 3.png](/static/img/anki/Frame_3.png)
+![Schéma décrivant le processus d'oubli par assomptions décrit plus haut.](/static/img/anki/assomptions.png)
 
 Il existe aussi un oubli “automatique”, après un certain temps sans qu’une information soit consultée, le cerveau fait “du ménage”.
 
@@ -84,7 +84,7 @@ On le sait tous-tes, la durée de rétention varie en fonction du type d’infor
 
 On sait aussi que quand notre cerveau choisit de maintenir un engramme, après validation des assomptions faites, le temps avant que ne se déclenche l’oubli “automatique” est réduit. Ceci a été nottament [illustré](https://archive.org/details/memorycontributi00ebbiuoft/page/vi/mode/2up) par un pionnier du domaine, Hermann Ebbinghaus durant la seconde moitié du 19ème siècle, expérience qui sera ensuite [reproduite](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0120644) avec succès. Les résultats de cette expérience sont reproduits ci-dessous :
 
-![Ebbinghaus-forgetting-curve-and-review-cycle.png](/static/img/anki/Ebbinghaus-forgetting-curve-and-review-cycle.png)
+![À chaque nouvelle révision, le temps avant l'oubli augmente](/static/img/anki/forgetting-curve-and-review-cycle.png)
 
 On peut clairement observer, qu’après chaque nouvelle “validation” par la mémoire d’un engramme, la durée de rétention augmente considérablement. Afin de retenir la traduction du mot chat dans la durée, on devrait donc “réviser” cette notion fréquemment, fréquence que l’on pourra abaisser au cours du temps. On parle ici de “spaced repetition”.
 
@@ -97,7 +97,7 @@ On sait sous quelle forme apprendre notre notion, à quelle fréquence la révis
 
 Les élèves sont ensuite revenus une semaine plus tard pour un nouveau test. Les résultats de l’étude sont présents ci-dessous :
 
-![Kuvakaappaus 2022-04-21 18-21-21.png](/static/img/anki/Kuvakaappaus_2022-04-21_18-21-21.png)
+![Schéma des résultats de l'expérience](/static/img/anki/active-recall-graph.png)
 
 On voit ici très clairement que les élèves ayant eu les meilleurs résultats au test sont ceux ayant révisé en faisant de l’”active recall”.
 
