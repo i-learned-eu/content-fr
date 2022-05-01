@@ -16,7 +16,7 @@ Le logiciel dont je vous parlais en introduction est nommé Anki, afin de compre
 
 La mémoire, voici donc un concept bien obscur, premièrement, il faut savoir que l’on distingue habituellement cinq *types* de mémoire, chacun de ces systèmes communicant avec les autres, nous ne nous intéresserons qu’à deux d’entre eux, pour les plus curieux, une description plus détaillée des cinq types est disponible dans la bibliographie en bas de cet article.
 
-- **La mémoire de travail** (aussi appelée mémoire à court terme) ****: Ce “type” de mémoire ne dure que quelques secondes, sans elle, vous ne pourriez retenir de quoi traite cette ligne de texte, ni même retenir un numéro de téléphone quelques secondes.
+- **La mémoire de travail** (aussi appelée mémoire à court terme) : Ce “type” de mémoire ne dure que quelques secondes, sans elle, vous ne pourriez retenir de quoi traite cette ligne de texte, ni même retenir un numéro de téléphone quelques secondes.
 - **La mémoire sémantique** : C’est celle qui nous intéressera le plus ici, elle permet de retenir tous nos “savoirs”, la date de la bataille de Marignan, la traduction de “I Learned” ou les paroles du dernier titre de votre artiste préféré-e.
 
 Quand on cherche à retenir une information, on va donc tenter de faire passer une information de la mémoire à court terme vers notre mémoire sémantique.
