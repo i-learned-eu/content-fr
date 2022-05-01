@@ -108,7 +108,7 @@ Nous chercherions donc un logiciel, qui nous permettrait de créer
 - ... qui contiennent différents types de contenus multimédia (maximiser le nombre de connexion neuronales)
 - ... et qui permettrait de revoir à une certaine fréquence, correspondant à la courbe de l’oubli, ces quizz (spaced repetition)
 
-Il existe un outil tout trouvé afin d’accomplir ces taches, [Anki](https://apps.ankiweb.net/) que je vais vous présenter dans le prochain article, à paraitre demain !
+Il existe un outil tout trouvé afin d’accomplir ces taches, [Anki](https://apps.ankiweb.net/) que je vais vous présenter dans le prochain article, à paraitre dans une semaine !
 
 # 🙏 Remerciements
 
@@ -118,7 +118,7 @@ Merci à [Jaap Murre](http://www.murre.com/nl/about/) d’avoir répondu à mes 
 
 Merci à Leni/[Romain Cazé](https://scholar.google.com/citations?user=OrrKirkAAAAJ&hl=en) d’avoir répondu à mes questions sur le fonctionnement biologique de la mémoire et pour sa relecture !
 
-Merci à Ynulpezao d’avoir répondu à mes diverses questions,  et de m’avoir transmit de nombreuses ressources permettant l’écriture de cet article et pour sa relecture !
+Merci à Ynulpezao d’avoir répondu à mes diverses questions, de m’avoir transmit de nombreuses ressources permettant l’écriture de cet article et pour sa relecture !
 
 Merci à tous-tes les autres contributeur-ices d’I Learned ayant relu cet article !
 
