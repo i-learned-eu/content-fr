@@ -42,4 +42,4 @@ On doit ensuite cliquer sur un des quatre boutons qui nous sont présentés, att
 
 Nous avons ici fait un tour rapide du fonctionnement de Anki, c’est un logiciel permettant d’effectuer des paramétrages assez avancés que vous retrouverez sur [le wiki](https://docs.ankiweb.net/#/). Après quelques semaines d’utilisation, je vous invite à consulter la page “Statistiques” qui contient de nombreuses informations très intéressantes !
 
-Sachez, qu’il existe aussi une version Android (gratuite) et iOS (payante) ! Je vous recommande d’essayer par vous-même Anki, et de poser vos éventuelles questions en commentaires, ou sur le [Discord d’I Learned](https://discord.gg/ZyWUJYSc3C) ! 😉
+Sachez, qu’il existe aussi une version Android (gratuite) et iOS (payante) ! Je vous recommande d’essayer par vous-même Anki, et de poser vos éventuelles questions en commentaires, ou sur le [Discord d’I Learned](https://discord.ilearned.eu) ! 😉
