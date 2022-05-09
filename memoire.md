@@ -104,7 +104,7 @@ On voit ici très clairement que les élèves ayant eu les meilleurs résultats 
 
 Nous chercherions donc un logiciel, qui nous permettrait de créer
 
-- Des “quizz” (active recall)
+- Des “quiz” (active recall)
 - ... qui contiennent différents types de contenus multimédia (maximiser le nombre de connexion neuronales)
 - ... et qui permettrait de revoir à une certaine fréquence, correspondant à la courbe de l’oubli, ces quizz (spaced repetition)
 

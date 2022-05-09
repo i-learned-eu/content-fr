@@ -10,7 +10,8 @@ Title: Découverte de Anki — Plongée dans le fonctionnement de la mémoire Pa
 Dans [le précédent article](blog.ilearned.eu/memoire.html), nous avons traité du fonctionnement de la mémoire et des différentes façons de favoriser la mémorisation, nous étions venus à la conclusion suivante :
 
 > Nous chercherions donc un logiciel, qui nous permettrait de créer
-> - Des “quizz” (*active recall*)
+> 
+> - Des “quiz” (*active recall*)
 > - ... qui contiennent différents types de contenus multimédia (maximiser le nombre de connexions neuronales)
 > - ... et qui permettrait de revoir à une certaine fréquence, correspondant à la courbe de l’oubli, ces quizz (*spaced repetition*)
 
