@@ -4,7 +4,7 @@ Keywords: anki, memory, mémoire
 Slug: anki
 Category: Sciences
 Summary: Dans le précédent article, nous avons traité du fonctionnement de la mémoire et des différentes façons de favoriser la mémorisation, nous découvrons dans celui-ci le logiciel Anki qui met en application ce que nous avons découvert précédemment !
-Title: Découverte de Anki — Plongée dans le fonctionnement de la mémoire Partie 2
+Title: Découverte de Anki — Plongée dans le fonctionnement de la mémoire — Partie 2
 
 
 Dans [le précédent article](blog.ilearned.eu/memoire.html), nous avons traité du fonctionnement de la mémoire et des différentes façons de favoriser la mémorisation, nous étions venus à la conclusion suivante :
