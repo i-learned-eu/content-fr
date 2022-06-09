@@ -1,4 +1,4 @@
-lang: fr
+ang: fr
 title: Comment fonctionne la compilation de programme
 Keywords: Compilation, programme, Windows, Linux
 Date: 2022-04-08
@@ -81,15 +81,15 @@ Bon, maintenant que vous avez compris que c'était plus drôle d'écrire avec un
 
 Les 3 plus grosses phases (les plus souvents présenté dans les schémas) sont:
 
-- La phases préprocesseur
+- La phases préprocesseurs
 - Compilation
 - Edition de liens
 
-Ce sont les plus grosses étapes, mais il y'en a d'autres.. pleins d'autre qui se passe avant, pendant et apres ces 3 la.
+Ce sont les plus grosses étapes, mais il y'en a d'autres.. pleins d'autre qui se passe avant, pendant et après ces 3 la.
 
 ## Le prétraitement
 Cette phase permet de substituer des macros dans le code.
-Prenom les exemples suivants
+Prenons les exemples suivants
 
 `#include <stdio.h>`
 `#define TOTO 42`
@@ -98,7 +98,7 @@ Lors de cette phase, tout le contenu du fihier `stdio.h` est insérer dans le fi
 
 Tout les `TOTO` sont remplacer par `42`.
 
-Il existe aussi des préprocesseur "conditionnel" (if, else, ...) qui sont souvent utilisé, par exemple lorsque le programme est en developpement on peut écrire des macros qui permettent d'ajouter du code pour faciliter le débug du programme, mais lors de la publication de la version "final" du programme, on peut ommetre certain code pour ne pas surcharger le code source avec du code en plus.
+Il existe aussi des préprocesseurs "conditionnels" (if, else, ...) qui sont souvent utilisé, par exemple lorsque le programme est en developpement on peut écrire des macros qui permettent d'ajouter du code pour faciliter le débug du programme, mais lors de la publication de la version "final" du programme, on peut ommetre certain code pour ne pas surcharger le code source avec du code en plus.
 
 Exemple:
 
@@ -115,11 +115,11 @@ Si lors de la compilation on spécifie la macro `DEBUG` le code au dessus sera p
 
 Mais si on ne spécifie pas cette macro, la phase de prétraitement passera outre ce code la.
 
-## L'analyse lexicale
-Et oui, tres souvent oublié dans les petit schéma récapitulatif, il y'a une [analyse lexicale](https://fr.wikipedia.org/wiki/Analyse_lexicale) et ses confrères.
-Elle est réalisé en parcourant le code source en une seul fois.
+## L'analyse lexical
+Et oui, très souvent oublié dans les petits schémas récapitulatifs, il y'a une [analyse lexical](https://fr.wikipedia.org/wiki/Analyse_lexical).
+Elle est réalisée en parcourant le code source en une seul fois.
 
-Cette phase permet de verifier si les mots existent dans le language et de quel unité de lexique ils appartiennent puis les "découpes" de sorte à former des "token".
+Cette phase permet de verifier si les mots existent dans le language et à quel unité de lexique ils appartiennent puis les "découpes" de sorte à former des "token".
 
 ### Unité de lexique
 **identifiants**:   `une_variable`, `une_fonction`, `x`, *etc...*
@@ -128,7 +128,7 @@ Cette phase permet de verifier si les mots existent dans le language et de quel 
 **opérateurs**: 	`+`, `<`, `=`, `<=`, `==`, *etc...*
 **littéraux** 	    `42`, `69.0f`, `"hello"`, `0xb00b`
 
-Une fois l'analyse lexicale faites les "tokens" sont généré.
+Une fois l'analyse lexical faites les "tokens" sont générés.
 Par exemple, prenont le code suivant:
 ```c
 int ma_variable = 32 + 8 + 2;
@@ -146,17 +146,17 @@ On se retrouve avec les tokens suivant:
 `2`             :	entier littéral
 `;`             : 	fin de l'initialisation
 
-Dans l'analyse lexicale il se pase encore plein d'autre chose comme le "balayage" et "L'evaluation" mais qui sont justes des étapes intermédiaire pour arriver à l'objectif de l'analyse léxicale.
+Dans l'analyse lexical il se passe encore plein d'autre chose comme le "balayage" et "L'évaluation" mais qui sont justes des étapes intermédiaires pour arriver à l'objectif de l'analyse léxicale.
 
-En conclusion, l'analyseur lexicale vérifie si les mots existe bien et les transforme en token pour l'[analyseur syntaxique](https://fr.wikipedia.org/wiki/Analyse_syntaxique).
+En conclusion, l'analyseur lexical vérifie si les mots existe bien et les transforme en token pour l'[analyseur syntaxique](https://fr.wikipedia.org/wiki/Analyse_syntaxique).
 
 Par exemple en language Francais: `Loubala` n'est pas correcte, ce mot n'existe pas dans la langue Française.
 
 ## L'analyse syntaxique
-L'analyse syntaxique suit directement l'analyse lexicale et permet de vérifier si les mots/groupes de mots forment des "phrases" conforme du language en analysant les tokens générer par l'analyse lexicale.
+L'analyse syntaxique suit directement l'analyse lexical et permet de vérifier si les mots/groupes de mots forment des "phrases" conforme du language en analysant les tokens générer par l'analyse lexical.
 
 Si on reprend l'exemple avec le Francais: `Manger boire`.
-Cette suite de mot est lexicalement correct, ces mots existent dans la langue Française, mais synaxiquement fausse car ils ne forment pas une phrase correct en Francais.
+Cette suite de mot est lexicalment correct, ces mots existent dans la langue Française, mais synaxiquement fausse car ils ne forment pas une phrase correct en Francais.
 
 L'analyseur syntaxique genère un arbre de syntaxe abstraite (ASA) qui sera utilisé pour l'analyse sémantique.
 
@@ -225,9 +225,9 @@ Ce qui nous donne un fichier "objet" contenant du code machine.
 ## Édition de lien
 Enfin nous voila à la dernière étape ! L'édition de lien.
 
-Cette étape permet de lier plusieur fichier objet qui on était généré par le compilateur.
+Cette étape permet de lier plusieur fichier objet qui on était générés par le compilateur.
 
-Quand un programme dépend d'autre fichier, notamment de la librairie standard du language (la libc par exemple), il faut spécifier à vôtre programme ou se trouve le code de `printf` ou `fgets` ou tout autre fonction se trouvant dans la librairie standard, car ce que vous incluez avec le préprocesseur `include` c'est juste les déclaration des fonctions et autre macro, donc votre `main` a connaissance de la fonction `printf` il sait qu'elle type de donnée la fonciton retourne, le type et nombre d'arguement que la fonction à besoin, mais vous n'avez pas le code de la fonction, le code est dans la librairie `libc`.
+Quand un programme dépend d'autre fichier, notamment de la librairie standard du language (la libc par exemple), il faut spécifier à vôtre programme ou se trouve le code de `printf` ou `fgets` ou tout autre fonction se trouvant dans la librairie standard, car ce que vous incluez avec le préprocesseurs `include` c'est juste les déclaration des fonctions et autre macro, donc votre `main` a connaissance de la fonction `printf` il sait qu'elle type de donnée la fonciton retourne, le type et nombre d'arguement que la fonction à besoin, mais vous n'avez pas le code de la fonction, le code est dans la librairie `libc`.
 
 Il faut donc lié cette librarire a vôtre programme et cela ce fait avec l'éditeur de lien.
 
@@ -235,5 +235,5 @@ Il faut donc lié cette librarire a vôtre programme et cela ce fait avec l'édi
 En résumé nous avons ce schéma:
 ![schema](https://fr.wikipedia.org/wiki/Compilateur#/media/Fichier:Cha%C3%AEne_de_compilation.svg)
 
-C'est fini pour cette article, j'espère qu'il vous à plu, je pense avoir parler du plus important, il se passe bien évidemment d'autre chose lors de la compilation mais c'est plus pour de l'optimisation ou parce que le language utilise des choses plus complexe comme le polymorphisme avec les templates ou les fonctions inlines etc (qui sont comme des macro-fonctions mais substitué lors de la compilation et non lors de la phase prétraitement).
-Mais j'estime avoir parler du plus important et du plus basique.
+C'est fini pour cet article, j'espère qu'il vous à plu, je pense avoir parlé du plus important, il se passe bien évidemment d'autre chose lors de la compilation mais c'est plus pour de l'optimisation ou parce que le language utilise des choses plus complexes comme le polymorphisme avec les templates ou les fonctions inlines etc (qui sont comme des macro-fonctions mais substitué lors de la compilation et non lors de la phase prétraitement).
+Mais j'estime avoir parlé du plus important et du plus basique.
