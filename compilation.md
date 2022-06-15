@@ -214,7 +214,7 @@ Il faut donc lier cette librarire a votre programme et cela ce fait avec l'édit
 
 # Schéma récapitulatif
 En résumé nous avons ce schéma:
-![schema](https://fr.wikipedia.org/wiki/Compilateur#/media/Fichier:Cha%C3%AEne_de_compilation.svg)
+![schema](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Cha%C3%AEne_de_compilation.svg/1024px-Cha%C3%AEne_de_compilation.svg.png)
 
 C'est fini pour cet article, j'espère qu'il vous a plu, je pense avoir parlé du plus important, il se passe bien évidemment d'autre chose lors de la compilation mais c'est plus pour de l'optimisation ou parce que le language utilise des choses plus complexes comme le polymorphisme avec les templates ou les fonctions inlines etc (qui sont comme des macro-fonctions mais substitué lors de la compilation et non lors de la phase prétraitement).
 Mais j'estime avoir parlé du plus important et du plus basique.
