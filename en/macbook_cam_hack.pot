@@ -1,0 +1,386 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-06-15 13:37+0000\n"
+"Plural-Forms: \n"
+
+#: fr/macbook_cam_hack.md:0
+msgid ""
+"lang: fr\n"
+"Title: Comment pirater la webcam d'un macbook sans allumer la LED ?\n"
+"Keywords: Macbook, WebCam, cam, led, driver, hacking, spying, électronique\n"
+"Date: 2022/01/09\n"
+"Author: Ownesis\n"
+"Summary: Dans cet article, nous allons voir ensemble comment des chercheurs "
+"ont réussi à activer la Webcam d'un macbook sans avoir de témoin lumineux.\n"
+"Slug: macbook_cam_hack\n"
+"Category: Cybersécurité/Red Team"
+msgstr ""
+
+#: fr/macbook_cam_hack.md:2
+msgid ""
+"Aujourd'hui on va parler hacking, espionnage, électronique et Macbook.\n"
+"Ça donne envie n'est-ce pas 👀 ?"
+msgstr ""
+
+#: fr/macbook_cam_hack.md:6
+msgid ""
+"Est-ce que l'exploit de LUX dans la série STALK saison 1 est possible et ou "
+"a été réalisable ?"
+msgstr ""
+
+#: fr/macbook_cam_hack.md:9
+msgid ""
+"Est-ce qu'Orelsan a bien raison de se méfier de "
+"[sa](https://www.youtube.com/watch?v=B9F0e5gUmxY) webcam ?"
+msgstr ""
+
+#: fr/macbook_cam_hack.md:12
+msgid ""
+"Est-ce que Mark Zuckerberg fait bien de mettre du ruban adhésif sur son "
+"Macbook ?"
+msgstr ""
+
+#: fr/macbook_cam_hack.md:16
+msgid ""
+"Je ne vais pas vous expliquez par qui et quand et pourquoi est ce que cette "
+"faille a été découverte.\n"
+"Je vous laisse regarder [cette vidéo de "
+"Micode](https://www.youtube.com/watch?v=5FNm4ZRNJMk) qui explique "
+"l'histoire et vulagarise la théorie de l'exploit."
+msgstr ""
+
+#: fr/macbook_cam_hack.md:18
+msgid ""
+"Sur les MacBook de 2008, on retrouve une configuration bien particulière "
+"pour la gestion de la caméra et de sa LED (qui \"témoigne\" de son "
+"activité)."
+msgstr ""
+
+#: fr/macbook_cam_hack.md:20
+msgid "![Macbook camera schematic](static/img/macbook_cam_hack/schematic.webp)"
+msgstr ""
+
+#: fr/macbook_cam_hack.md:22
+msgid "On retrouve **4** éléments bien distinctifs :"
+msgstr ""
+
+#: fr/macbook_cam_hack.md:26
+msgid ""
+"Un \"Support de stockage\" "
+"[EEPROM](https://fr.wikipedia.org/wiki/Electrically-erasable_programmable_"
+"read-only_memory)"
+msgstr ""
+
+#: fr/macbook_cam_hack.md:29
+msgid "Le capteur de la caméra (MT9V112)"
+msgstr ""
+
+#: fr/macbook_cam_hack.md:32
+msgid "Une [LED](https://fr.wikipedia.org/wiki/Diode_%C3%A9lectroluminescente)"
+msgstr ""
+
+#: fr/macbook_cam_hack.md:35
+msgid ""
+"Un [micro contrôleur](https://fr.wikipedia.org/wiki/Microcontr%C3%B4leur) "
+"(EZ-USB)"
+msgstr ""
+
+#: fr/macbook_cam_hack.md:39
+msgid "L'EEPROM"
+msgstr ""
+
+#: fr/macbook_cam_hack.md:40
+msgid ""
+"EEPROM signifie **E**lectrically-**E**rasable **P**rogrammable "
+"**R**ead-**O**nly **M**emory (Mémoire morte effaçable électriquement et "
+"programmable)"
+msgstr ""
+
+#: fr/macbook_cam_hack.md:43
+msgid ""
+"Mémoire morte veut dire que ce qui est stocké dans cette mémoire, ne sera "
+"pas supprimé si celle ci n'est plus alimentée, contrairement à la mémoire "
+"vive (RAM) qui s'efface une fois qu'elle n'est plus alimenté"
+msgstr ""
+
+#: fr/macbook_cam_hack.md:46
+msgid ""
+"Pour être honnête je ne connais pas trop son utilité ici, probablement elle "
+"qui stock le code (firmware) du capteur (j'en doute car, ce n'est pas "
+"donnée d'effacer la mémoire d'une EEPROM pour en changer le contenu, mais "
+"le fait qu'il soit connecté avec le micro contrôleur USB, le doute "
+"m'habite, vous verrez plus tard pourquoi)."
+msgstr ""
+
+#: fr/macbook_cam_hack.md:48
+msgid "Le capteur de la caméra"
+msgstr ""
+
+#: fr/macbook_cam_hack.md:49
+msgid ""
+"Ici, c'est le capteur, donc ce qui capte les images, etc.\n"
+"Il a **5** E/S (**E**ntrée/**S**ortie) :"
+msgstr ""
+
+#: fr/macbook_cam_hack.md:53
+msgid ""
+"**SCL** (1) et **SDA** (2) sont les E/S du protocole "
+"[I2C](https://fr.wikipedia.org/wiki/I2C), c'est un protocole qui permet "
+"l'échange d'informations/de données entre micro contrôleur, etc."
+msgstr ""
+
+#: fr/macbook_cam_hack.md:56
+msgid ""
+"**DOUT[7:0]** (3) Sont 8 PIN qui sont connectés avec le micro contrôleur "
+"USB, aucune idée de leur utilité, mais ils permettent aussi de "
+"configurer/échanger avec le micro contrôleur."
+msgstr ""
+
+#: fr/macbook_cam_hack.md:59
+msgid "**RESET** (4) Surement pour réinitialiser les paramètres du capteur."
+msgstr ""
+
+#: fr/macbook_cam_hack.md:62
+msgid ""
+"**STANDBY** (5) L'une des parties de la faille. Il permet de dire au "
+"capteur s'il doit se mettre en mode veille ou non."
+msgstr ""
+
+#: fr/macbook_cam_hack.md:66
+msgid ""
+"Parlons plus en détail du fameux PIN \"**STANDBY**\" :\n"
+"Lorsque celui-ci reçoit du courant, le capteur arrête la capture et "
+"l'envoie d'images, il se met en Standby (en veille).\n"
+"Mais lorsque celui ci ne reçoit plus de courant, il commence la capture et "
+"envoie les images."
+msgstr ""
+
+#: fr/macbook_cam_hack.md:68
+msgid "La LED"
+msgstr ""
+
+#: fr/macbook_cam_hack.md:69
+msgid ""
+"Ce composant permet de diffuser une lumière d'une certaine couleur lorsque "
+"que du courant passe. Cette LED à sa propre source de courant, elle est "
+"reliée au micro contrôleur USB (qu'on verra plus tard) et au capteur."
+msgstr ""
+
+#: fr/macbook_cam_hack.md:71
+msgid "Le micro contrôleur"
+msgstr ""
+
+#: fr/macbook_cam_hack.md:72
+msgid ""
+"Lui, c'est le maitre de tous les composants qu'on vient de voir, c'est lui "
+"qui \"contrôle\" le capteur et la LED.\n"
+"Il a aussi `5` E/S:"
+msgstr ""
+
+#: fr/macbook_cam_hack.md:76
+msgid ""
+"**SCL** (1) et **SDA** (2), ce sont la même chose que pour le capteur, sauf "
+"que c'est le micro contrôleur qui donne le \"tempo\" pour l'envoie et la "
+"réception de données, **SCL** c'est pour le cycle de l'horloge, c'est le "
+"micro contrôleur USB qui donne ce cycle à l'EEPROM et au capteur."
+msgstr ""
+
+#: fr/macbook_cam_hack.md:79
+msgid ""
+"**FD[7:0]** (3), comporte 8 PIN et sont connecté aux 8 PINs de **DOUT** du "
+"capteur."
+msgstr ""
+
+#: fr/macbook_cam_hack.md:82
+msgid ""
+"**PA0** (4), C'est lui qui \"active\" le **RESET** du capteur en envoyant "
+"ou non du courant."
+msgstr ""
+
+#: fr/macbook_cam_hack.md:85
+msgid ""
+"**PD3** (5), Le PIN qui permet en plus d'activer ou de désactiver le mode "
+"veille (**STANDBY**) du capteur, permet aussi d'allumer ou non la LED."
+msgstr ""
+
+#: fr/macbook_cam_hack.md:89
+msgid ""
+"Vu que la LED a sa propre source d'énergie et est \"constamment "
+"alimentée\", pour l'éteindre, il faut soit :"
+msgstr ""
+
+#: fr/macbook_cam_hack.md:93
+msgid "Couper la source d'énergie"
+msgstr ""
+
+#: fr/macbook_cam_hack.md:96
+msgid ""
+"Envoyer du courant à la cathode (au \"MOINS\") de la LED. *L'anode étant le "
+"\"PLUS\" qui est connecté à la fameuse source d'énergie.*"
+msgstr ""
+
+#: fr/macbook_cam_hack.md:100
+msgid "La solution `2` est utilisé ici."
+msgstr ""
+
+#: fr/macbook_cam_hack.md:103
+msgid ""
+"Si on envoie du courant des 2 cotés de la LED, les électrons ne pourront "
+"plus circuler donc la LED ne sera plus alimenté.\n"
+"*Pour faire court, un circuit électrique doit toujours être \"bouclé\", les "
+"électrons devront toujours, (dans le sens conventionnel du courant), aller "
+"du positive (PLUS '+') vers le négative (MOINS '-').*\n"
+"*Si on à du positive vers du positive ou négative vers négative, on "
+"\"casse\" cette boucle, donc le courant ne circulera plus et n'alimentera "
+"plus les composants.*"
+msgstr ""
+
+#: fr/macbook_cam_hack.md:106
+msgid ""
+"La cathode de la LED est relié aux broches \"**STANDBY**\" du capteur et "
+"\"**PD3**\" du contrôleur USB.\n"
+"Donc, si le port **PD3** envoie du courant, ça aura pour effet "
+"d'**ETEINDRE** la LED, et d'activer le mode veille du capteur (donc ne plus "
+"capturer et partager les images).\n"
+"Tandis que si le port **PD3** n'envoie pas de courant, alors, le circuit de "
+"la LED se \"boucle\", alors la LED s'**ALLUME** et le capteur n'est plus en "
+"veille."
+msgstr ""
+
+#: fr/macbook_cam_hack.md:109
+msgid ""
+"Pour ceux qui ont un peu fait d'Arduino, le port **PD3** et comme configuré "
+"en **OUTPUT**, et mit en **LOW** pour allumer la LED et sortir du mode "
+"veille; et mit en **HIGH** pour éteindre la LED et activer le mode veille"
+msgstr ""
+
+#: fr/macbook_cam_hack.md:112
+msgid ""
+"Du coup, parfait me diriez-vous, LED allumé si le capteur en activité et "
+"LED éteinte si le capteur est en veille."
+msgstr ""
+
+#: fr/macbook_cam_hack.md:114
+msgid ""
+"SAUF QUE ! Le mode veille est géré \"logiciellement\", c'est le firmware du "
+"capteur qui prend en compte le courant qui arrive ou non sur ce port "
+"**STANDBY**, et c'est le code du firmware qui permet de rentrer en mode "
+"veille ou non (capturer ou non les images)"
+msgstr ""
+
+#: fr/macbook_cam_hack.md:117
+msgid ""
+"Pour ceux qui ont fait de l'Arduino, c'est comme si le firmware faisait un "
+"`DigitalRead(STANDBY)`, si c'est **HIGH** alors on se met en veille, si "
+"c'est **LOW** on commence la capture/envoie des images."
+msgstr ""
+
+#: fr/macbook_cam_hack.md:120
+msgid ""
+"Le firmware par défaut d'Apple respecte le mode veille.\n"
+"Il faut donc réussir à modifier ce code, mais comment faire ?!"
+msgstr ""
+
+#: fr/macbook_cam_hack.md:122
+msgid ""
+"Et bien, c'est \"plutôt simple\", il faut les connaissances évidement, mais "
+"l'envoie du firmware malveillant est assez simple finalement. Je "
+"m'explique.\n"
+"Le capteur et le micro contrôleur USB n'ont pas de stockage permanent pour "
+"leurs firmwares (c'est pour ça que je ne sais pas trop à quoi sert l'EEPROM "
+"du schéma, *surement des paramètres plus ou moins constante pour le "
+"calibrage la colorimétrie du capteur ?*)\n"
+"Du coup, à chaque fois que le driver de la caméra est chargé, le MacBook "
+"télécharge le firmware du **contrôleur USB** qui permet de configurer le "
+"capteur.\n"
+"Le capteur n'a pas beaucoup de possibilité concernant sa configuration, "
+"mais il en a une, **LA** fonctionnalité en question qui rend possible cet "
+"exploit, le fait de ne pas prendre en compte le port **STANDBY**, autrement "
+"dit, pas de mode veille, qu'il y a du courant qui arrive ou non sur ce "
+"port, la caméra capturera et enverra les images en continu.\n"
+"Mais il ne faut pas oublier de quand même envoyer du courant sur ce port "
+"(pour éteindre la LED ;) )."
+msgstr ""
+
+#: fr/macbook_cam_hack.md:124
+msgid ""
+"Il faut donc trouver l'emplacement de ce firmware qui sera téléchargé sur "
+"le contrôleur USB pour le remplacer avec notre firmware fait maison et la "
+"cerise sur le gâteau, le pompon sur la Garonne, il n'était pas nécessaire "
+"d'avoir des droits administrateur pour remplacer ce firmware."
+msgstr ""
+
+#: fr/macbook_cam_hack.md:126
+msgid ""
+"Vous l'aurez compris le Graal de cet exploit est le firmware \"facilement\" "
+"remplaçable, car il n'est pas codé en dur et est téléchargé à chaque "
+"chargement du driver de la caméra et le fait que n'importe quel utilisateur "
+"peut remplacer le firmware."
+msgstr ""
+
+#: fr/macbook_cam_hack.md:128
+msgid "Je n'arrive pas à savoir ce qu'est le plus grave dans cette histoire :"
+msgstr ""
+
+#: fr/macbook_cam_hack.md:132
+msgid ""
+"Le fait qu'un utilisateur autre que l'administrateur puisse remplacer le "
+"firmware ?"
+msgstr ""
+
+#: fr/macbook_cam_hack.md:135
+msgid "Le fait que la configuration du capteur permet d'ignorer la mise en veille ?"
+msgstr ""
+
+#: fr/macbook_cam_hack.md:138
+msgid ""
+"Que la LED ne soit pas branchée autre part, part exemple sur la broche qui "
+"alimente le capteur ou sur la broche qui envoie les images capturées ?"
+msgstr ""
+
+#: fr/macbook_cam_hack.md:142
+msgid ""
+"Il y a sûrement de bonnes explications à ces questions ou de bonnes raisons "
+"à ce pourquoi cela a été pensé comme cela à cette époque."
+msgstr ""
+
+#: fr/macbook_cam_hack.md:144
+msgid ""
+"Il existe toujours des webcams bas de gamme (même qui proposent une bonne "
+"qualité d'image) qui ont une LED, mais qui peut être TRÈS, voire TROP "
+"facilement désactivable, comment en modifiant un [registre "
+"Windows](https://ilearned.eu/registre.html) ou fichier sous Linux."
+msgstr ""
+
+#: fr/macbook_cam_hack.md:146
+msgid ""
+"Mais maintenant les webcams ou les ordinateurs portables de nos jours sont "
+"mieux pensé et mieux sécurisé sur ça."
+msgstr ""
+
+#: fr/macbook_cam_hack.md:148
+msgid ""
+"Mais comme l'explique Micode dans sa vidéo, à présent certains logiciels "
+"malveillant peuvent accéder à la webcam en même temps que vous, bon "
+"d'accord les méchants bonhommes de la NSA ou le vilain hackeur qui veut "
+"vous espionner pendant que vous êtes en live sur Twitch, auront cependant "
+"les captures de ce moment-là, et pas les images de ce qui se passe avant ou "
+"après le lancement de votre facecam, mais tout de même..."
+msgstr ""
+
+#: fr/macbook_cam_hack.md:150
+msgid ""
+"J'espère que cet article, vous a plus, article un peu technique, en parlant "
+"d'électronique/électricité  ça change un peu.\n"
+"Mais j'espère que j'ai réussi à vous faire comprendre le fonctionnement de "
+"la Webcam et de sa LED sur les anciens Macbook, ainsi que leurs "
+"vulnérabilités."
+msgstr ""

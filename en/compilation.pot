@@ -1,0 +1,553 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-06-15 13:41+0000\n"
+"Plural-Forms: \n"
+
+#: fr/compilation.md:0
+msgid ""
+"lang: fr\n"
+"title: Comment fonctionne la compilation de programme\n"
+"Keywords: Compilation, programme, Windows, Linux\n"
+"Date: 2022-06-15\n"
+"Author: Ownesis\n"
+"Summary: La compilation, qu'est ce que c'est ? à quoi ca sert et comment "
+"fonctionne-t-elle ?\n"
+"Slug: compilation"
+msgstr ""
+
+#: fr/compilation.md:2
+msgid ""
+"Dans cet article je vais vous parler de la compilation d'un programme "
+"informatique, quelles sont ses \"phases\" et leurs utilité, et tout ce qui "
+"se cache derrière tout ça."
+msgstr ""
+
+#: fr/compilation.md:4
+msgid ""
+"Initialement cet article devait traiter de la compilation, de "
+"l'interprétation et de la semi interprétation, mais il y'a tellement de "
+"chose à dire que vous parler de tout ce bon monde dans un seul est unique "
+"article serait un enfer pour vous, alors j'ai décidé de faire un article "
+"pour chacun de ces sujets."
+msgstr ""
+
+#: fr/compilation.md:6
+msgid "La Compilation"
+msgstr ""
+
+#: fr/compilation.md:8
+msgid "Alors, premièrement qu'est ce que c'est la compilation ?"
+msgstr ""
+
+#: fr/compilation.md:11
+msgid ""
+"La compilation permet, en bref, de transformer/traduire le code source d'un "
+"programme en [langage "
+"machine](https://fr.wikipedia.org/wiki/Langage_machine) pour qu'il puisse "
+"être exécuté par votre "
+"[processeur](https://fr.wikipedia.org/wiki/Processeur)."
+msgstr ""
+
+#: fr/compilation.md:14
+msgid "Pourquoi ne pas directement progammer en langage machine alors ?"
+msgstr ""
+
+#: fr/compilation.md:17
+msgid ""
+"Je pense que vous êtes des êtres humains *(sinon faudrait complètement "
+"revoir nos statistiques sur le blog)*.\n"
+"Le langages machine, comme son nom l'indique, c'est du langage pour la "
+"machine, et vous en ête pas une ... ~~*en tout cas pas encore*~~ il vous "
+"faut donc une alternative au langage machine pour nous, un langage qui se "
+"rapproche du language humain pour que ce soit plus simple de lire et/ou "
+"écrire du code."
+msgstr ""
+
+#: fr/compilation.md:19
+msgid ""
+"Le premier language créé pour \"humaniser\" le langage machine, c'est le "
+"[langage d'assemblage](https://fr.wikipedia.org/wiki/Assembleur) ou plus "
+"couramment dit: \"language d'assembleur\".\n"
+"Voici un exemple du fameux \"Hello world !\" en language d'assembleur sous "
+"Linux 64bits"
+msgstr ""
+
+#: fr/compilation.md:21
+msgid ""
+"bits 64\n"
+"global main\n"
+"\n"
+"section .data\n"
+"Hello db \"Hello world !\", 10, 0\n"
+"\n"
+"section .text\n"
+"\n"
+"main:\n"
+"    push rbp\n"
+"    mov rbp, rsp\n"
+"    mov rax, 1 ; syscall write\n"
+"    mov rdi, 1 ; stdout\n"
+"    mov rsi, Hello\n"
+"    mov rdx, 15 ; size of \"Hello world!\\n"
+"\" + nullbyte\n"
+"    syscall\n"
+"    leave"
+msgstr ""
+
+#: fr/compilation.md:22
+msgid ""
+"Je ne vais pas vous expliquer qui fait quoi dans ce code, les commentaires "
+"reste assez explicite et de toute façon ce n'est pas l'objet de cet article."
+msgstr ""
+
+#: fr/compilation.md:24
+msgid ""
+"Et le language machine correspondant (de la section `main`) ressemble à "
+"ceci:"
+msgstr ""
+
+#: fr/compilation.md:26
+msgid ""
+"55                          \n"
+"48 89 e5            \n"
+"b8 01 00 00 00      \n"
+"bf 01 00 00 00      \n"
+"48 be 28 40 40 00 00\n"
+"ba 0f 00 00 00      \n"
+"0f 05                \n"
+"c9"
+msgstr ""
+
+#: fr/compilation.md:27
+msgid ""
+"Vous voyez c'est le jour et la nuit, même si le language d'assemblage reste "
+"assez austere, ca reste humainement plus lisible que du language machine."
+msgstr ""
+
+#: fr/compilation.md:29
+msgid "Languages moderne"
+msgstr ""
+
+#: fr/compilation.md:30
+msgid ""
+"Heureusement aujourd'hui les languages de programmation ont changé "
+"notamment grace à la venue du [language "
+"B](https://en.wikipedia.org/wiki/B_(programming_language) dont le language "
+"C s'est inspiré et qui a ensuite inspiré quasiment tout les autres "
+"languages suivant celui-ci.\n"
+"Si vous jettez un oeil aux langages précédant le langage B ; "
+"[Fortran](https://en.wikipedia.org/wiki/Fortran), "
+"[Cobol](https://en.wikipedia.org/wiki/ALGOL_68), vous remarquez qu'ils "
+"restent plus ou moins similaires au language d'assembleur."
+msgstr ""
+
+#: fr/compilation.md:32
+msgid "Exemple de \"Hello world !\" en C:"
+msgstr ""
+
+#: fr/compilation.md:34
+msgid ""
+"#include <stdio.h>\n"
+"\n"
+"int main() {\n"
+"    printf(\"Hello world !\");\n"
+"\n"
+"    return 0;\n"
+"}"
+msgstr ""
+
+#: fr/compilation.md:35
+msgid "C'est tout de suite plus agréable que le language d'assembleur !"
+msgstr ""
+
+#: fr/compilation.md:37
+msgid "Les étapes de la compilation"
+msgstr ""
+
+#: fr/compilation.md:38
+msgid ""
+"Bon, maintenant que vous avez compris que c'était plus drôle d'écrire avec "
+"un language autre que le language machine, je vais vous parler des "
+"différentes phases de la compilation."
+msgstr ""
+
+#: fr/compilation.md:40
+msgid ""
+"Les 3 plus grosses phases (les plus souvents présentées dans les schémas) "
+"sont:"
+msgstr ""
+
+#: fr/compilation.md:44
+msgid "La phase préprocesseurs"
+msgstr ""
+
+#: fr/compilation.md:47
+msgid "La compilation"
+msgstr ""
+
+#: fr/compilation.md:50
+msgid "L'édition de liens"
+msgstr ""
+
+#: fr/compilation.md:54
+msgid ""
+"Ce sont les plus grosses étapes, mais il y'en a d'autres.. pleins d'autres "
+"qui se passent avant, pendant et après ces 3 là."
+msgstr ""
+
+#: fr/compilation.md:56
+msgid "Le prétraitement"
+msgstr ""
+
+#: fr/compilation.md:57
+msgid ""
+"Cette phase permet de substituer des macros dans le code.\n"
+"Prenons les exemples suivants"
+msgstr ""
+
+#: fr/compilation.md:59
+msgid ""
+"`#include <stdio.h>`\n"
+"`#define TOTO 42`"
+msgstr ""
+
+#: fr/compilation.md:61
+msgid ""
+"Lors de cette phase, tout le contenu du fichier `stdio.h` est inséré dans "
+"le fichier source."
+msgstr ""
+
+#: fr/compilation.md:63
+msgid "Tous les `TOTO` sont remplacés par `42`."
+msgstr ""
+
+#: fr/compilation.md:65
+msgid ""
+"Il existe aussi des préprocesseurs \"conditionnels\" (if, else, ...) qui "
+"sont souvent utilisés, par exemple lorsque le programme est en "
+"developpement on peut écrire des macros qui permettent d'ajouter du code "
+"pour faciliter le débug du programme, mais lors de la publication de la "
+"version \"finale\" du programme, on peut ommetre certains codes pour ne pas "
+"surcharger le code source avec du code en plus."
+msgstr ""
+
+#: fr/compilation.md:67
+msgid "Exemple:"
+msgstr ""
+
+#: fr/compilation.md:69
+msgid ""
+"#if DEBUG\n"
+"    assert(var == false)\n"
+"    assert(var2 > var3)\n"
+"\n"
+"    printf(\"Tout est correct\");\n"
+"#endif"
+msgstr ""
+
+#: fr/compilation.md:70
+msgid ""
+"Si lors de la compilation on spécifie la macro `DEBUG` le code au dessus "
+"sera pris en compte dans le code source."
+msgstr ""
+
+#: fr/compilation.md:72
+msgid ""
+"Mais si on ne spécifie pas cette macro, la phase de prétraitement passera "
+"outre ce code la."
+msgstr ""
+
+#: fr/compilation.md:74
+msgid "L'analyse lexicale"
+msgstr ""
+
+#: fr/compilation.md:75
+msgid ""
+"Et oui, très souvent oublié dans les petits schémas récapitulatifs, il y'a "
+"une [analyse lexicale](https://fr.wikipedia.org/wiki/Analyse_lexicale).\n"
+"Elle est réalisée en parcourant le code source en une seul fois."
+msgstr ""
+
+#: fr/compilation.md:77
+msgid ""
+"Cette phase permet de verifier si les mots existent dans le language et à "
+"quel unité de lexique ils appartiennent puis les \"découpes\" de sorte à "
+"former des \"token\"."
+msgstr ""
+
+#: fr/compilation.md:79
+msgid "Unité de lexique"
+msgstr ""
+
+#: fr/compilation.md:82
+msgid "**identifiants**:   `une_variable`, `une_fonction`, `x`, *etc...*"
+msgstr ""
+
+#: fr/compilation.md:85
+msgid ""
+"**mots-clefs**:     `if`, `while`, `return`, `for`, `extern`, `auto`, "
+"`static`, *etc...*"
+msgstr ""
+
+#: fr/compilation.md:88
+msgid "**ponctuation**:     `}`, `(`, `;`"
+msgstr ""
+
+#: fr/compilation.md:91
+msgid "**opérateurs**:     `+`, `<`, `=`, `<=`, `==`, *etc...*"
+msgstr ""
+
+#: fr/compilation.md:94
+msgid "**littéraux**         `42`, `69.0f`, `\"hello\"`, `0xb00b`"
+msgstr ""
+
+#: fr/compilation.md:98
+msgid ""
+"Une fois l'analyse lexicale faites les \"tokens\" sont générés.\n"
+"Par exemple, prenont le code suivant:"
+msgstr ""
+
+#: fr/compilation.md:100
+msgid "int ma_variable = 32 + 8 + 2;"
+msgstr ""
+
+#: fr/compilation.md:101
+msgid "On se retrouve avec les tokens suivant:"
+msgstr ""
+
+#: fr/compilation.md:103
+msgid ""
+"`int`           :   mot-clef du type entier\n"
+"`ma_variable`   :   identifiant\n"
+"`=`             :     opérateur d'affectation\n"
+"`32`             :   entier littéral\n"
+"`+`             :     opérateur d'addition\n"
+"`8`             :    entier littéral\n"
+"`+`             :     opérateur d'addition\n"
+"`2`             :    entier littéral\n"
+"`;`             :     fin de l'initialisation"
+msgstr ""
+
+#: fr/compilation.md:105
+msgid ""
+"Dans l'analyse lexicale il se passe encore plein d'autre chose comme le "
+"\"balayage\" et \"L'évaluation\" mais qui sont justes des étapes "
+"intermédiaires pour arriver à l'objectif de l'analyse léxicale."
+msgstr ""
+
+#: fr/compilation.md:107
+msgid ""
+"En conclusion, l'analyseur lexical vérifie si les mots existent bien et les "
+"transforme en token pour l'[analyseur "
+"syntaxique](https://fr.wikipedia.org/wiki/Analyse_syntaxique)."
+msgstr ""
+
+#: fr/compilation.md:109
+msgid ""
+"Par exemple en language Francais: `Loubala` n'est pas correcte, ce mot "
+"n'existe pas dans la langue Française."
+msgstr ""
+
+#: fr/compilation.md:111
+msgid "L'analyse syntaxique"
+msgstr ""
+
+#: fr/compilation.md:112
+msgid ""
+"L'analyse syntaxique suit directement l'analyse lexicale et permet de "
+"vérifier si les mots/groupes de mots forment des \"phrases\" conforme du "
+"language en analysant les tokens générer par l'analyse lexicale."
+msgstr ""
+
+#: fr/compilation.md:114
+msgid ""
+"Si on reprend l'exemple avec le Francais: `Manger boire`.\n"
+"Cette suite de mot est lexicalment correct, ces mots existent dans la "
+"langue Française, mais synaxiquement fausse car ils ne forment pas une "
+"phrase correct en Francais."
+msgstr ""
+
+#: fr/compilation.md:116
+msgid ""
+"L'analyseur syntaxique genère un arbre de syntaxe abstraite (ASA) qui sera "
+"utilisé pour l'analyse sémantique."
+msgstr ""
+
+#: fr/compilation.md:118
+msgid "Arbre de syntaxe abstraite"
+msgstr ""
+
+#: fr/compilation.md:119
+msgid ""
+"![ASA](https://www.isit.fr/photos/grammatech/2049/arbre_syntaxiquecodesonar."
+"png)"
+msgstr ""
+
+#: fr/compilation.md:121
+msgid "Analyse sémantique"
+msgstr ""
+
+#: fr/compilation.md:122
+msgid ""
+"Cette phase suit immediatement l'analyse syntaxique.\n"
+"Ici, on analyse l'ASA fourni par l'analyseur syntaxique. L’objectif de "
+"cette phase est de vérifier que toutes les phrases écrites dans l’ASA ont "
+"un sens dans le language utilisé."
+msgstr ""
+
+#: fr/compilation.md:124
+msgid "Par exemple dans la langue Francaise: `L'avion manges des fruits`."
+msgstr ""
+
+#: fr/compilation.md:128
+msgid ""
+"Le lexique est correct, chaques mots utilisé existent dans la langue "
+"Francaise."
+msgstr ""
+
+#: fr/compilation.md:131
+msgid ""
+"La syntaxe est également correcte, c'est une phrase conforme à la langue "
+"Francaise."
+msgstr ""
+
+#: fr/compilation.md:134
+msgid "Mais sémantiquement fausse car la phrase ne veut rien dire."
+msgstr ""
+
+#: fr/compilation.md:138
+msgid ""
+"C'est lors de l'analyse sémantique que le compilateur génère [la table des "
+"symboles](https://fr.wikipedia.org/wiki/Table_des_symboles) qui permet, "
+"dans les grandes lignes, de ranger les identificateur avec\n"
+"leur type, l'emplacement mémoire, la portée, la visibilité, etc."
+msgstr ""
+
+#: fr/compilation.md:140
+msgid "Three Address Code"
+msgstr ""
+
+#: fr/compilation.md:141
+msgid ""
+"Le [\"Thee Address "
+"Code\"](https://en.wikipedia.org/wiki/Three-address_code) (TAC) est une "
+"optimisation de compilation qui permet de traduire chaque instruction en "
+"maximum 3 opérandes *(comme en language d'assembleur)*."
+msgstr ""
+
+#: fr/compilation.md:143
+msgid "Par exemple, si on reprend le code suivant:"
+msgstr ""
+
+#: fr/compilation.md:145
+msgid "ma_variable = 32 + 8 + 2"
+msgstr ""
+
+#: fr/compilation.md:146
+msgid "en TAC cela donnerait:"
+msgstr ""
+
+#: fr/compilation.md:148
+msgid ""
+"t1 = 32 + 8\n"
+"t2 = t1 + 2\n"
+"ma_variable = t2"
+msgstr ""
+
+#: fr/compilation.md:149
+msgid "L'optimisation du code"
+msgstr ""
+
+#: fr/compilation.md:150
+msgid ""
+"Ici le code est optimisé (il peut aussi l'êtres avant la génération de code "
+"intermédaire 'TAC')"
+msgstr ""
+
+#: fr/compilation.md:152
+msgid "Language Assemblage"
+msgstr ""
+
+#: fr/compilation.md:153
+msgid ""
+"Le code est ensuite traduit en langage d'assembleur *(qu'on a vu dans la "
+"première section de cet article)*"
+msgstr ""
+
+#: fr/compilation.md:155
+msgid "Assembleur"
+msgstr ""
+
+#: fr/compilation.md:156
+msgid ""
+"Avant dernière étape, le langage d'assembleur est ensuite passé à un "
+"*suspense* assembleur pour être *re suspense* assemblé !"
+msgstr ""
+
+#: fr/compilation.md:158
+msgid "Ce qui nous donne un fichier \"objet\" contenant du code machine."
+msgstr ""
+
+#: fr/compilation.md:160
+msgid "Édition de lien"
+msgstr ""
+
+#: fr/compilation.md:161
+msgid "Enfin nous voila à la dernière étape ! L'édition de lien."
+msgstr ""
+
+#: fr/compilation.md:163
+msgid ""
+"Cette étape permet de lier plusieur fichiers objet qui on été générés par "
+"le compilateur."
+msgstr ""
+
+#: fr/compilation.md:165
+msgid ""
+"Quand un programme dépend d'autre fichier, notamment de la librairie "
+"standard du language (la libc par exemple), il faut spécifier à votre "
+"programme où se trouve le code de `printf` ou `fgets` ou tout autre "
+"fonction se trouvant dans la librairie standard, car ce que vous incluez "
+"avec le préprocesseurs `include` c'est juste les déclaration des fonctions "
+"et autre macro, donc votre `main` a connaissance de la fonction `printf` il "
+"sait qu'elle type de donnée la fonction retourne, le type et nombre "
+"d'arguments que la fonction a besoin, mais vous n'avez pas le code de la "
+"fonction, le code est dans la librairie `libc`."
+msgstr ""
+
+#: fr/compilation.md:167
+msgid ""
+"Il faut donc lier cette librarire a votre programme et cela ce fait avec "
+"l'éditeur de lien."
+msgstr ""
+
+#: fr/compilation.md:169
+msgid "Schéma récapitulatif"
+msgstr ""
+
+#: fr/compilation.md:170
+msgid ""
+"En résumé nous avons ce schéma:\n"
+"![schema](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Cha%C3%"
+"AEne_de_compilation.svg/1024px-Cha%C3%AEne_de_compilation.svg.png)"
+msgstr ""
+
+#: fr/compilation.md:172
+msgid ""
+"C'est fini pour cet article, j'espère qu'il vous a plu, je pense avoir "
+"parlé du plus important, il se passe bien évidemment d'autre chose lors de "
+"la compilation mais c'est plus pour de l'optimisation ou parce que le "
+"language utilise des choses plus complexes comme le polymorphisme avec les "
+"templates ou les fonctions inlines etc (qui sont comme des macro-fonctions "
+"mais substitué lors de la compilation et non lors de la phase "
+"prétraitement).\n"
+"Mais j'estime avoir parlé du plus important et du plus basique."
+msgstr ""

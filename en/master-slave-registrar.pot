@@ -1,0 +1,101 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-06-15 13:37+0000\n"
+"Plural-Forms: \n"
+
+#: fr/master-slave-registrar.md:0
+msgid ""
+"lang: fr\n"
+"Title: Le principe de Master/Slave - Le rôle du registrar\n"
+"Keywords: DNS, Domain Name System, NS, knot, bind, apprendre, bases DNS, "
+"DNS simple\n"
+"Summary: Pour ce second post dans la catégorie Today I Learned, on regarde "
+"le principe de registrar et Master/Slave appliqué au monde du DNS.\n"
+"Date: 2021-04-25\n"
+"Author: Ramle\n"
+"Slug: master-slave-registrar\n"
+"Category: Réseau/DNS"
+msgstr ""
+
+#: fr/master-slave-registrar.md:2
+msgid ""
+"Aujourd'hui, on parle du rôle d'un Registrar puis dans une seconde partie "
+"du principe de Master/Slave dans le cadre de serveur DNS autoritaire."
+msgstr ""
+
+#: fr/master-slave-registrar.md:4
+msgid ""
+"Les registrars ou bureaux d'enregistrement en français sont des "
+"organisations qui gèrent les domaines de premier niveau (TLD). On peut "
+"citer par exemple EURid qui gère le `.eu`, DNS Belgium pour le `.be` ou "
+"encore l'AFNIC pour le `.fr`."
+msgstr ""
+
+#: fr/master-slave-registrar.md:6
+msgid ""
+"Ces registrars obtiennent leurs domaines de premier niveau auprès de "
+"l'IANA. *je suppose que vous vous demandez ce qu'est l'IANA ?* L'IANA est "
+"une branche de l'iCANN, c'est la branche qui gère l'attribution de "
+"ressource comme les blocs d'IP ou les TLD."
+msgstr ""
+
+#: fr/master-slave-registrar.md:8
+msgid ""
+"Pour ce qui est de la revente de domaines, souvent les bureaux "
+"d'enregistrements passent par des sous-traitants, ces sous-traitants "
+"doivent respecter certaines règles comme par exemple un prix fixe reversé "
+"au registrar, ou des restrictions géographiques."
+msgstr ""
+
+#: fr/master-slave-registrar.md:10
+msgid "Le principe de Master/Slave"
+msgstr ""
+
+#: fr/master-slave-registrar.md:11
+msgid ""
+"Le principe de master et de slave est assez important dans le monde du DNS "
+"et de l'informatique en général, il permet, dans le cadre du DNS, de "
+"redonder facilement une zone sur plusieurs serveurs autoritaires."
+msgstr ""
+
+#: fr/master-slave-registrar.md:13
+msgid ""
+"Le serveur dit `master` (maître) est celui qui contrôle la zone, il possède "
+"le fichier \"original\"."
+msgstr ""
+
+#: fr/master-slave-registrar.md:15
+msgid ""
+"Dans certains contextes, comme pour éviter la corruption de tous les "
+"serveurs en cas d'erreur sur le maître, on utilise plusieurs serveurs "
+"masters, il n'y a plus une seule zone \"original \" mais plusieurs, le "
+"désavantage d'un tel système c'est qu'on est obligé de mettre à jour chaque "
+"serveurs master *manuellement*."
+msgstr ""
+
+#: fr/master-slave-registrar.md:17
+msgid ""
+"Le serveur dit `slave` (esclave) est celui qui reçoit la zone depuis un "
+"serveur master, ce transfert de zone DNS **utilise des protocoles comme "
+"AXFR ou IXFR *mais ça c'est pour demain 😉.*"
+msgstr ""
+
+#: fr/master-slave-registrar.md:19
+msgid ""
+"Ce concept de master/slave permet de redonder une zone bien plus facilement "
+"que si on le faisait manuellement."
+msgstr ""
+
+#: fr/master-slave-registrar.md:21
+msgid ""
+"![Schéma sur le fonctionnement "
+"master/slave](/static/img/master-slave-registrar/schema-master-slave.webp)"
+msgstr ""
