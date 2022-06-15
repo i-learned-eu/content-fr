@@ -5,6 +5,7 @@ Date: 2022-06-15
 Author: Ownesis
 Summary: La compilation, qu'est ce que c'est ? à quoi ca sert et comment fonctionne-t-elle ?
 Slug: compilation
+Category: Sysadmin
 
 Dans cet article je vais vous parler de la compilation d'un programme informatique, quelles sont ses "phases" et leurs utilité, et tout ce qui se cache derrière tout ça.
 
@@ -61,7 +62,7 @@ c9
 Vous voyez c'est le jour et la nuit, même si le language d'assemblage reste assez austere, ca reste humainement plus lisible que du language machine.
 
 # Languages moderne
-Heureusement aujourd'hui les languages de programmation ont changé notamment grace à la venue du [language B](https://en.wikipedia.org/wiki/B_(programming_language) dont le language C s'est inspiré et qui a ensuite inspiré quasiment tout les autres languages suivant celui-ci.
+Heureusement aujourd'hui les languages de programmation ont changé notamment grace à la venue du [language B](https://en.wikipedia.org/wiki/B_(programming_language))dont le language C s'est inspiré et qui a ensuite inspiré quasiment tout les autres languages suivant celui-ci.
 Si vous jettez un oeil aux langages précédant le langage B ; [Fortran](https://en.wikipedia.org/wiki/Fortran), [Cobol](https://en.wikipedia.org/wiki/ALGOL_68), vous remarquez qu'ils restent plus ou moins similaires au language d'assembleur.
 
 Exemple de "Hello world !" en C:
