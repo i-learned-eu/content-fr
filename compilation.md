@@ -1,7 +1,7 @@
 lang: fr
 title: Comment fonctionne la compilation de programme
 Keywords: Compilation, programme, Windows, Linux
-Date: 2022-04-08
+Date: 2022-06-15
 Author: Ownesis
 Summary: La compilation, qu'est ce que c'est ? à quoi ca sert et comment fonctionne-t-elle ?
 Slug: compilation
