@@ -164,26 +164,6 @@ L'analyseur syntaxique genère un arbre de syntaxe abstraite (ASA) qui sera util
 ### Arbre de syntaxe abstraite
 ![ASA](https://www.isit.fr/photos/grammatech/2049/arbre_syntaxiquecodesonar.png)
 
-```
-              +--------+
-              |  main  |
-              +--+-----+
-         +-------+      
-     +---+---+          
-     | while +----------------------+
-     ++------+        ^body         |
-      | <-condition                 |
-      |                             |
-   +--+-------------+               |
-   |  compare '>'   |             +-+---------+
-   +--+--------+-+--+             |  assign   +-----+
-      |          |                +---+-------+     |
-+-----+----+   +-+----------+         |          +--+-------+
-| variable |   | constante  |      +--+------+   | variable |
-|    x     |   |     42     |      | op: '+' |   |    y     |
-+----------+   +------------+      +---------+   +----------+
-```
-
 ## Analyse sémantique
 Cette phase suit immediatement l'analyse syntaxique. 
 Ici, on analyse l'ASA fourni par l'analyseur syntaxique. L’objectif de cette phase est de vérifier que toutes les phrases écrites dans l’ASA ont un sens dans le language utilisé.
