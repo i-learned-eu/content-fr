@@ -1,4 +1,4 @@
-ang: fr
+lang: fr
 title: Comment fonctionne la compilation de programme
 Keywords: Compilation, programme, Windows, Linux
 Date: 2022-04-08
@@ -6,21 +6,22 @@ Author: Ownesis
 Summary: La compilation, qu'est ce que c'est ? à quoi ca sert et comment fonctionne-t-elle ?
 Slug: compilation
 
-Dans cet article je vais vous parler de la compilation d'un programme informatique, quelles sont ces "phases" et leurs utilités, et tout ce qui se cache derrière tout ca.
+Dans cet article je vais vous parler de la compilation d'un programme informatique, quelles sont ses "phases" et leurs utilité, et tout ce qui se cache derrière tout ça.
 
-Initialement cet article devait traité de la compilation, de l'interprétation et de la semi interprétation, mais il y'a tellement de chose à dire que vous parler de tout ce bon monde dans un seul est unique article serait un enfer pour vous, alors j'ai décidé de faire un article chacun.
+Initialement cet article devait traiter de la compilation, de l'interprétation et de la semi interprétation, mais il y'a tellement de chose à dire que vous parler de tout ce bon monde dans un seul est unique article serait un enfer pour vous, alors j'ai décidé de faire un article pour chacun de ces sujets.
 
 # La Compilation
+
 > Alors, premièrement qu'est ce que c'est la compilation ? 
 
-La compilation permet, en bref, de transformer/traduire le code source d'un programme en [langage machine](https://fr.wikipedia.org/wiki/Langage_machine) pour qu'il puisse être exécuter par votre [processeur](https://fr.wikipedia.org/wiki/Processeur).
+La compilation permet, en bref, de transformer/traduire le code source d'un programme en [langage machine](https://fr.wikipedia.org/wiki/Langage_machine) pour qu'il puisse être exécuté par votre [processeur](https://fr.wikipedia.org/wiki/Processeur).
 
 > Pourquoi ne pas directement progammer en langage machine alors ?
 
 Je pense que vous êtes des êtres humains *(sinon faudrait complètement revoir nos statistiques sur le blog)*.
 Le langages machine, comme son nom l'indique, c'est du langage pour la machine, et vous en ête pas une ... ~~*en tout cas pas encore*~~ il vous faut donc une alternative au langage machine pour nous, un langage qui se rapproche du language humain pour que ce soit plus simple de lire et/ou écrire du code.
 
-Le premier language créer pour "humanisé" le langage machine, c'est le [langage d'assemblage](https://fr.wikipedia.org/wiki/Assembleur) ou plus couramment dit: "language d'assembleur".
+Le premier language créé pour "humaniser" le langage machine, c'est le [langage d'assemblage](https://fr.wikipedia.org/wiki/Assembleur) ou plus couramment dit: "language d'assembleur".
 Voici un exemple du fameux "Hello world !" en language d'assembleur sous Linux 64bits
 
 ```asm
@@ -60,10 +61,10 @@ c9
 Vous voyez c'est le jour et la nuit, même si le language d'assemblage reste assez austere, ca reste humainement plus lisible que du language machine.
 
 # Languages moderne
-Heureusement aujourd'hui les languages de programmation ont changé notamment grace à la venue du [language B](https://en.wikipedia.org/wiki/B_(programming_language) dont le language C c'est inspiré et qui a ensuite inspiré quasiment tout les autres languages suivant celui-ci.
-Si vous jettez un oeil aux langage précédent le langage B ; [Fortran](https://en.wikipedia.org/wiki/Fortran), [Cobol](https://en.wikipedia.org/wiki/ALGOL_68), vous remarquez qu'ils restent plus ou moins similaire au language d'assembleur.
+Heureusement aujourd'hui les languages de programmation ont changé notamment grace à la venue du [language B](https://en.wikipedia.org/wiki/B_(programming_language) dont le language C s'est inspiré et qui a ensuite inspiré quasiment tout les autres languages suivant celui-ci.
+Si vous jettez un oeil aux langages précédant le langage B ; [Fortran](https://en.wikipedia.org/wiki/Fortran), [Cobol](https://en.wikipedia.org/wiki/ALGOL_68), vous remarquez qu'ils restent plus ou moins similaires au language d'assembleur.
 
-Example de "Hello world !" en C:
+Exemple de "Hello world !" en C:
 ```c
 #include <stdio.h>
 
@@ -79,13 +80,13 @@ C'est tout de suite plus agréable que le language d'assembleur !
 # Les étapes de la compilation
 Bon, maintenant que vous avez compris que c'était plus drôle d'écrire avec un language autre que le language machine, je vais vous parler des différentes phases de la compilation.
 
-Les 3 plus grosses phases (les plus souvents présenté dans les schémas) sont:
+Les 3 plus grosses phases (les plus souvents présentées dans les schémas) sont:
 
-- La phases préprocesseurs
-- Compilation
-- Edition de liens
+- La phase préprocesseurs
+- La compilation
+- L'édition de liens
 
-Ce sont les plus grosses étapes, mais il y'en a d'autres.. pleins d'autre qui se passe avant, pendant et après ces 3 la.
+Ce sont les plus grosses étapes, mais il y'en a d'autres.. pleins d'autres qui se passent avant, pendant et après ces 3 là.
 
 ## Le prétraitement
 Cette phase permet de substituer des macros dans le code.
@@ -94,11 +95,11 @@ Prenons les exemples suivants
 `#include <stdio.h>`
 `#define TOTO 42`
 
-Lors de cette phase, tout le contenu du fihier `stdio.h` est insérer dans le fichier source.
+Lors de cette phase, tout le contenu du fichier `stdio.h` est inséré dans le fichier source.
 
-Tout les `TOTO` sont remplacer par `42`.
+Tous les `TOTO` sont remplacés par `42`.
 
-Il existe aussi des préprocesseurs "conditionnels" (if, else, ...) qui sont souvent utilisé, par exemple lorsque le programme est en developpement on peut écrire des macros qui permettent d'ajouter du code pour faciliter le débug du programme, mais lors de la publication de la version "final" du programme, on peut ommetre certain code pour ne pas surcharger le code source avec du code en plus.
+Il existe aussi des préprocesseurs "conditionnels" (if, else, ...) qui sont souvent utilisés, par exemple lorsque le programme est en developpement on peut écrire des macros qui permettent d'ajouter du code pour faciliter le débug du programme, mais lors de la publication de la version "finale" du programme, on peut ommetre certains codes pour ne pas surcharger le code source avec du code en plus.
 
 Exemple:
 
@@ -115,8 +116,8 @@ Si lors de la compilation on spécifie la macro `DEBUG` le code au dessus sera p
 
 Mais si on ne spécifie pas cette macro, la phase de prétraitement passera outre ce code la.
 
-## L'analyse lexical
-Et oui, très souvent oublié dans les petits schémas récapitulatifs, il y'a une [analyse lexical](https://fr.wikipedia.org/wiki/Analyse_lexical).
+## L'analyse lexicale
+Et oui, très souvent oublié dans les petits schémas récapitulatifs, il y'a une [analyse lexicale](https://fr.wikipedia.org/wiki/Analyse_lexicale).
 Elle est réalisée en parcourant le code source en une seul fois.
 
 Cette phase permet de verifier si les mots existent dans le language et à quel unité de lexique ils appartiennent puis les "découpes" de sorte à former des "token".
@@ -128,7 +129,7 @@ Cette phase permet de verifier si les mots existent dans le language et à quel 
 **opérateurs**: 	`+`, `<`, `=`, `<=`, `==`, *etc...*
 **littéraux** 	    `42`, `69.0f`, `"hello"`, `0xb00b`
 
-Une fois l'analyse lexical faites les "tokens" sont générés.
+Une fois l'analyse lexicale faites les "tokens" sont générés.
 Par exemple, prenont le code suivant:
 ```c
 int ma_variable = 32 + 8 + 2;
@@ -146,14 +147,14 @@ On se retrouve avec les tokens suivant:
 `2`             :	entier littéral
 `;`             : 	fin de l'initialisation
 
-Dans l'analyse lexical il se passe encore plein d'autre chose comme le "balayage" et "L'évaluation" mais qui sont justes des étapes intermédiaires pour arriver à l'objectif de l'analyse léxicale.
+Dans l'analyse lexicale il se passe encore plein d'autre chose comme le "balayage" et "L'évaluation" mais qui sont justes des étapes intermédiaires pour arriver à l'objectif de l'analyse léxicale.
 
-En conclusion, l'analyseur lexical vérifie si les mots existe bien et les transforme en token pour l'[analyseur syntaxique](https://fr.wikipedia.org/wiki/Analyse_syntaxique).
+En conclusion, l'analyseur lexical vérifie si les mots existent bien et les transforme en token pour l'[analyseur syntaxique](https://fr.wikipedia.org/wiki/Analyse_syntaxique).
 
 Par exemple en language Francais: `Loubala` n'est pas correcte, ce mot n'existe pas dans la langue Française.
 
 ## L'analyse syntaxique
-L'analyse syntaxique suit directement l'analyse lexical et permet de vérifier si les mots/groupes de mots forment des "phrases" conforme du language en analysant les tokens générer par l'analyse lexical.
+L'analyse syntaxique suit directement l'analyse lexicale et permet de vérifier si les mots/groupes de mots forment des "phrases" conforme du language en analysant les tokens générer par l'analyse lexicale.
 
 Si on reprend l'exemple avec le Francais: `Manger boire`.
 Cette suite de mot est lexicalment correct, ces mots existent dans la langue Française, mais synaxiquement fausse car ils ne forment pas une phrase correct en Francais.
@@ -225,15 +226,15 @@ Ce qui nous donne un fichier "objet" contenant du code machine.
 ## Édition de lien
 Enfin nous voila à la dernière étape ! L'édition de lien.
 
-Cette étape permet de lier plusieur fichier objet qui on était générés par le compilateur.
+Cette étape permet de lier plusieur fichiers objet qui on été générés par le compilateur.
 
-Quand un programme dépend d'autre fichier, notamment de la librairie standard du language (la libc par exemple), il faut spécifier à vôtre programme ou se trouve le code de `printf` ou `fgets` ou tout autre fonction se trouvant dans la librairie standard, car ce que vous incluez avec le préprocesseurs `include` c'est juste les déclaration des fonctions et autre macro, donc votre `main` a connaissance de la fonction `printf` il sait qu'elle type de donnée la fonciton retourne, le type et nombre d'arguement que la fonction à besoin, mais vous n'avez pas le code de la fonction, le code est dans la librairie `libc`.
+Quand un programme dépend d'autre fichier, notamment de la librairie standard du language (la libc par exemple), il faut spécifier à votre programme où se trouve le code de `printf` ou `fgets` ou tout autre fonction se trouvant dans la librairie standard, car ce que vous incluez avec le préprocesseurs `include` c'est juste les déclaration des fonctions et autre macro, donc votre `main` a connaissance de la fonction `printf` il sait qu'elle type de donnée la fonction retourne, le type et nombre d'arguments que la fonction a besoin, mais vous n'avez pas le code de la fonction, le code est dans la librairie `libc`.
 
-Il faut donc lié cette librarire a vôtre programme et cela ce fait avec l'éditeur de lien.
+Il faut donc lier cette librarire a votre programme et cela ce fait avec l'éditeur de lien.
 
 # Schéma récapitulatif
 En résumé nous avons ce schéma:
 ![schema](https://fr.wikipedia.org/wiki/Compilateur#/media/Fichier:Cha%C3%AEne_de_compilation.svg)
 
-C'est fini pour cet article, j'espère qu'il vous à plu, je pense avoir parlé du plus important, il se passe bien évidemment d'autre chose lors de la compilation mais c'est plus pour de l'optimisation ou parce que le language utilise des choses plus complexes comme le polymorphisme avec les templates ou les fonctions inlines etc (qui sont comme des macro-fonctions mais substitué lors de la compilation et non lors de la phase prétraitement).
+C'est fini pour cet article, j'espère qu'il vous a plu, je pense avoir parlé du plus important, il se passe bien évidemment d'autre chose lors de la compilation mais c'est plus pour de l'optimisation ou parce que le language utilise des choses plus complexes comme le polymorphisme avec les templates ou les fonctions inlines etc (qui sont comme des macro-fonctions mais substitué lors de la compilation et non lors de la phase prétraitement).
 Mais j'estime avoir parlé du plus important et du plus basique.
