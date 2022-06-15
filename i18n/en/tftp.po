@@ -1,0 +1,596 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Language-Team: English\n"
+"PO-Revision-Date: 2022-06-15 16:18+0200\n"
+"Language: en_EN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-06-15 13:37+0000\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: Eban <contact@eban.eu.org>\n"
+
+#: fr/tftp.md:0
+msgid ""
+"lang: fr\n"
+"Title: TFTP, présentation et aperçu d'un protocole simple de transfert de "
+"fichier.\n"
+"Keywords: UDP, FTP, Application, Transfert de fichier, File Transfer "
+"Protocol\n"
+"Date: 2021-12-09\n"
+"Author: Ownesis\n"
+"Summary: Dans cet article, nous allons voir ensemble ce que propose la "
+"protocole TFTP à quoi il sert et comment fonctionne-t-il.\n"
+"Slug: tftp\n"
+"Category: Sysadmin"
+msgstr ""
+"lang: fr\n"
+"Title: TFTP, présentation et aperçu d'un protocole simple de transfert de "
+"fichier.\n"
+"Keywords: UDP, FTP, Application, Transfert de fichier, File Transfer "
+"Protocol\n"
+"Date: 2021-12-09\n"
+"Author: Ownesis\n"
+"Summary: Dans cet article, nous allons voir ensemble ce que propose la "
+"protocole TFTP à quoi il sert et comment fonctionne-t-il.\n"
+"Slug: tftp\n"
+"Category: Sysadmin"
+
+#: fr/tftp.md:2
+msgid ""
+"Aujourd'hui je vais vous présenter et vous parlez du protocole **TFTP**.\n"
+"J'imagine que vous pensez tout de suite au protocole **FTP**, et vous avez "
+"raison.\n"
+"**TFTP** signifie **T**rivial **F**ile **T**ransfer **P**rotocol."
+msgstr ""
+"Aujourd'hui je vais vous présenter et vous parlez du protocole **TFTP**.\n"
+"J'imagine que vous pensez tout de suite au protocole **FTP**, et vous avez "
+"raison.\n"
+"**TFTP** signifie **T**rivial **F**ile **T**ransfer **P**rotocol."
+
+#: fr/tftp.md:5
+msgid "Mais qu'est ce qu'il rajoute à FTP ?"
+msgstr "Mais qu'est ce qu'il rajoute à FTP ?"
+
+#: fr/tftp.md:8
+msgid "Qu'est-ce qu'il enlève de FTP voulez-vous dire ? :eyes:"
+msgstr "Qu'est-ce qu'il enlève de FTP voulez-vous dire ? :eyes:"
+
+#: fr/tftp.md:10
+msgid ""
+"Oui, vous avez bien lu, **TFTP**, même si celui ci rajoute une lettre au "
+"protocole **FTP**, il retire une \"plus ou moins importante\" fonctionnalité "
+"a ce dernier.\n"
+"Il n'est pas possible d'exécuter des commandes, comme lister les fichiers, "
+"changer les droits des fichiers,  se déplacer dans le système de fichier, "
+"etc.\n"
+"**TFTP** permet seulement de lire ou écrire sur le serveur distant, "
+"autrement dit, il permet seulement de récupérer ou envoyer (voir en créer "
+"dans certain cas) des fichiers (ou des courriers).\n"
+"Autre chose importante à savoir, il n'y a pas d'authentification des "
+"utilisateurs.\n"
+"Bon, vous l'aurez deviné, **TFTP** est un protocole de la [couche "
+"application](https://fr.wikipedia.org/wiki/Couche_application), il faut donc "
+"permettre le transport et c'est avec le protocole [**UDP**](https://ilearned."
+"eu/udp.html) que cela ce fait."
+msgstr ""
+"Oui, vous avez bien lu, **TFTP**, même si celui ci rajoute une lettre au "
+"protocole **FTP**, il retire une \"plus ou moins importante\" fonctionnalité "
+"a ce dernier.\n"
+"Il n'est pas possible d'exécuter des commandes, comme lister les fichiers, "
+"changer les droits des fichiers,  se déplacer dans le système de fichier, "
+"etc.\n"
+"**TFTP** permet seulement de lire ou écrire sur le serveur distant, "
+"autrement dit, il permet seulement de récupérer ou envoyer (voir en créer "
+"dans certain cas) des fichiers (ou des courriers).\n"
+"Autre chose importante à savoir, il n'y a pas d'authentification des "
+"utilisateurs.\n"
+"Bon, vous l'aurez deviné, **TFTP** est un protocole de la [couche "
+"application](https://fr.wikipedia.org/wiki/Couche_application), il faut donc "
+"permettre le transport et c'est avec le protocole [**UDP**](https://ilearned."
+"eu/udp.html) que cela ce fait."
+
+#: fr/tftp.md:12
+msgid ""
+"On utilise le protocole **TFTP** notamment pour la mise à jour des firmwares "
+"sur les équipements réseaux, la sauvegarde de la configuration de ces "
+"équipements réseau, mais aussi pour amorcer des stations de travail sans "
+"disque dur.\n"
+"C'en est tout pour la présentation de **TFTP**."
+msgstr ""
+"On utilise le protocole **TFTP** notamment pour la mise à jour des firmwares "
+"sur les équipements réseaux, la sauvegarde de la configuration de ces "
+"équipements réseau, mais aussi pour amorcer des stations de travail sans "
+"disque dur.\n"
+"C'en est tout pour la présentation de **TFTP**."
+
+#: fr/tftp.md:14
+msgid ""
+"Maintenant rentrons dans le vif du sujet, voyons comment le protocole "
+"fonctionne :\n"
+"Pour commencer, le client demande une connexion au serveur **TFTP**, dans "
+"cette demande de connexion, le client précise si c'est pour de la lecture ou "
+"d'écriture de fichier.\n"
+"Le serveur accepte ou non la demande, si le serveur accepte, la connexion "
+"est de ce fait \"ouverte\" et le partage du fichier peut avoir lieu. Le bloc "
+"de donnée utilisé pour envoyer le fichier, que ce soit du côté client ou "
+"serveur, est d'une taille fixée à `512 octets`, chaque paquet contient un "
+"bloc de données et doit être acquitté par un paquet d'accusé de réception "
+"avant l'envoie d'un prochain paquet.\n"
+"Pour signaler la fin d'un transfert, un paquet de données d'une taille "
+"**inférieur** à `512 octects` doit être envoyé."
+msgstr ""
+"Maintenant rentrons dans le vif du sujet, voyons comment le protocole "
+"fonctionne :\n"
+"Pour commencer, le client demande une connexion au serveur **TFTP**, dans "
+"cette demande de connexion, le client précise si c'est pour de la lecture ou "
+"d'écriture de fichier.\n"
+"Le serveur accepte ou non la demande, si le serveur accepte, la connexion "
+"est de ce fait \"ouverte\" et le partage du fichier peut avoir lieu. Le bloc "
+"de donnée utilisé pour envoyer le fichier, que ce soit du côté client ou "
+"serveur, est d'une taille fixée à `512 octets`, chaque paquet contient un "
+"bloc de données et doit être acquitté par un paquet d'accusé de réception "
+"avant l'envoie d'un prochain paquet.\n"
+"Pour signaler la fin d'un transfert, un paquet de données d'une taille "
+"**inférieur** à `512 octects` doit être envoyé."
+
+#: fr/tftp.md:16
+msgid ""
+"Si le client demande une connexion pour lire un fichier, il envoie l'OPcode "
+"`RRQ` ou  l'OPcode `WRQ` pour écrire, le serveur envoie ensuite une réponse "
+"\"positive\", un accusé de réception pour acquitté la demande du client (si "
+"la demande est pour lire, le serveur envoie directement le bloc de données "
+"comme accusé de réception).\n"
+"Si un paquet se perd dans le réseau, le receveur sera alors mis en \"timeout"
+"\" et l'envoyeur devra réenvoyer le paquet.\n"
+"En général, un paquet d'accusé de réception contiendra le numéro de bloc du "
+"paquet de données reçu.\n"
+"Chaque paquet de données est associé à un numéro de bloc.\n"
+"Les numéros de bloc sont consécutives et le premier commence à `1`.\n"
+"Lors d'une demande d'écriture (OPcode `WRQ`), l'accusé de réception à cette "
+"demande aura comme numéro de bloc de donnée `0`."
+msgstr ""
+"Si le client demande une connexion pour lire un fichier, il envoie l'OPcode "
+"`RRQ` ou  l'OPcode `WRQ` pour écrire, le serveur envoie ensuite une réponse "
+"\"positive\", un accusé de réception pour acquitté la demande du client (si "
+"la demande est pour lire, le serveur envoie directement le bloc de données "
+"comme accusé de réception).\n"
+"Si un paquet se perd dans le réseau, le receveur sera alors mis en \"timeout"
+"\" et l'envoyeur devra réenvoyer le paquet.\n"
+"En général, un paquet d'accusé de réception contiendra le numéro de bloc du "
+"paquet de données reçu.\n"
+"Chaque paquet de données est associé à un numéro de bloc.\n"
+"Les numéros de bloc sont consécutives et le premier commence à `1`.\n"
+"Lors d'une demande d'écriture (OPcode `WRQ`), l'accusé de réception à cette "
+"demande aura comme numéro de bloc de donnée `0`."
+
+#: fr/tftp.md:18
+msgid ""
+"Lors d'une création de connexion, chaque extrémité de la connexion choisit "
+"un **TID** (**T**ransfer **ID**), une identification de transfert donc, pour "
+"lui-même.\n"
+"Les **TID** doivent être choisis au hasard.\n"
+"Chaque paquet est associé aux deux **TID** des extrémités de la connexion, "
+"le **TID** source et de destination.\n"
+"Ces **TID** sont remis à **UDP** comme ports source et destination.\n"
+"Le client, choisis sont **TID** (le port UDP) comme décrit ci-dessus et "
+"envoie sa requête initiale au **TID** `69` du serveur."
+msgstr ""
+"Lors d'une création de connexion, chaque extrémité de la connexion choisit "
+"un **TID** (**T**ransfer **ID**), une identification de transfert donc, pour "
+"lui-même.\n"
+"Les **TID** doivent être choisis au hasard.\n"
+"Chaque paquet est associé aux deux **TID** des extrémités de la connexion, "
+"le **TID** source et de destination.\n"
+"Ces **TID** sont remis à **UDP** comme ports source et destination.\n"
+"Le client, choisis sont **TID** (le port UDP) comme décrit ci-dessus et "
+"envoie sa requête initiale au **TID** `69` du serveur."
+
+#: fr/tftp.md:21
+msgid ""
+"Vous l'aurez compris, le serveur **TFTP** écoute de base sur le port `69`."
+msgstr ""
+"Vous l'aurez compris, le serveur **TFTP** écoute de base sur le port `69`."
+
+#: fr/tftp.md:24
+msgid ""
+"Lors de la réponse à la demande de connexion du client, le serveur choisis "
+"un **TID** (un autre port source), qui sera utilisé pour le reste de "
+"l'échange.\n"
+"À ce moment les deux extrémités de la connexion ont leurs propres **TID** et "
+"l'échange pour ce faire.\n"
+"Les hôtes doivent s'assurer que le **TID** source correspond toujours aux "
+"**TID** choisis.\n"
+"Si un **TID** ne correspond pas, le paquet doit être rejeté et un paquet "
+"d'erreur doit être envoyé à la source du paquet incorrect, sans perturber le "
+"transfert."
+msgstr ""
+"Lors de la réponse à la demande de connexion du client, le serveur choisis "
+"un **TID** (un autre port source), qui sera utilisé pour le reste de "
+"l'échange.\n"
+"À ce moment les deux extrémités de la connexion ont leurs propres **TID** et "
+"l'échange pour ce faire.\n"
+"Les hôtes doivent s'assurer que le **TID** source correspond toujours aux "
+"**TID** choisis.\n"
+"Si un **TID** ne correspond pas, le paquet doit être rejeté et un paquet "
+"d'erreur doit être envoyé à la source du paquet incorrect, sans perturber le "
+"transfert."
+
+#: fr/tftp.md:26
+msgid "Paquet TFTP"
+msgstr "Paquet TFTP"
+
+#: fr/tftp.md:27
+msgid ""
+"**TFTP** prend en charge `5` types de paquets (OPcode) codé sur `2 octets`, "
+"les voici:"
+msgstr ""
+"**TFTP** prend en charge `5` types de paquets (OPcode) codé sur `2 octets`, "
+"les voici:"
+
+#: fr/tftp.md:31
+msgid "`0x0001` **RRQ**  (Demande de lecture)"
+msgstr "`0x0001` **RRQ**  (Demande de lecture)"
+
+#: fr/tftp.md:34
+msgid "`0x0002` **WRQ**  (Demande d'écriture)"
+msgstr "`0x0002` **WRQ**  (Demande d'écriture)"
+
+#: fr/tftp.md:37
+msgid "`0x0003` **DATA** (Données)"
+msgstr "`0x0003` **DATA** (Données)"
+
+#: fr/tftp.md:40
+msgid "`0x0004` **ACK**  (Accusé de réception)"
+msgstr "`0x0004` **ACK**  (Accusé de réception)"
+
+#: fr/tftp.md:43
+msgid "`0x0005` **ERR**  (Erreur)"
+msgstr "`0x0005` **ERR**  (Erreur)"
+
+#: fr/tftp.md:47
+msgid "Paquet de demande de lecture ou d'écriture"
+msgstr "Paquet de demande de lecture ou d'écriture"
+
+#: fr/tftp.md:48
+msgid "Le paquet `RRQ/RWQ` ressemble à ceci :"
+msgstr "Le paquet `RRQ/RWQ` ressemble à ceci :"
+
+#: fr/tftp.md:50
+msgid "![RRQ & RWQ headers](static/img/tftp/1.webp)"
+msgstr "![RRQ & RWQ headers](static/img/tftp/1.webp)"
+
+#: fr/tftp.md:54
+msgid "**OPcode**: `2 octets` (`0x0001` **RRQ** ou `0x0002` **RWQ**)."
+msgstr "**OPcode**: `2 octets` (`0x0001` **RRQ** ou `0x0002` **RWQ**)."
+
+#: fr/tftp.md:57
+msgid ""
+"**Nom de fichier** : Taille variable, il correspond au nom/chemin du fichier."
+msgstr ""
+"**Nom de fichier** : Taille variable, il correspond au nom/chemin du fichier."
+
+#: fr/tftp.md:60
+msgid ""
+"**0**: `1 octet`, correspond à la fin de la chaine de caractère désignant le "
+"fichier."
+msgstr ""
+"**0**: `1 octet`, correspond à la fin de la chaine de caractère désignant le "
+"fichier."
+
+#: fr/tftp.md:63
+msgid ""
+"**Mode**: Taille variable, voici les différents modes (insensible à la "
+"casse) :"
+msgstr ""
+"**Mode**: Taille variable, voici les différents modes (insensible à la "
+"casse) :"
+
+#: fr/tftp.md:66
+msgid "'netascii'"
+msgstr "'netascii'"
+
+#: fr/tftp.md:69
+msgid "'octet'"
+msgstr "'octet'"
+
+#: fr/tftp.md:72
+msgid "'mail' (obsolète)"
+msgstr "'mail' (obsolète)"
+
+#: fr/tftp.md:77
+msgid ""
+"**0**: `1 octet`, correspond à la fin de la chaine de caractère désignant le "
+"**Mode**."
+msgstr ""
+"**0**: `1 octet`, correspond à la fin de la chaine de caractère désignant le "
+"**Mode**."
+
+#: fr/tftp.md:81
+msgid ""
+"L'hôte qui reçoit le mode `netascii`, doit \"traduire\" les données dans son "
+"propre format (en modifiant la fin de ligne \\r\\n ou \\n ou \\n\\r, ...)\n"
+"Le mode `octet` permet d'envoyer le fichier \"tel quel\"."
+msgstr ""
+"L'hôte qui reçoit le mode `netascii`, doit \"traduire\" les données dans son "
+"propre format (en modifiant la fin de ligne \\r\\n ou \\n ou \\n\\r, ...)\n"
+"Le mode `octet` permet d'envoyer le fichier \"tel quel\"."
+
+#: fr/tftp.md:83
+msgid "Paquet de Données"
+msgstr "Paquet de Données"
+
+#: fr/tftp.md:84
+msgid "Le paquet de Données (**DATA**) ressemble à ceci :"
+msgstr "Le paquet de Données (**DATA**) ressemble à ceci :"
+
+#: fr/tftp.md:86
+msgid "![DATA header](static/img/tftp/2.webp)"
+msgstr "![DATA header](static/img/tftp/2.webp)"
+
+#: fr/tftp.md:90
+msgid "**OPcode**: `2 octets` (est mis à `0x0003` **DATA**)."
+msgstr "**OPcode**: `2 octets` (est mis à `0x0003` **DATA**)."
+
+#: fr/tftp.md:93
+msgid "**# de bloc**: `2octets` Numéro de bloc."
+msgstr "**# de bloc**: `2octets` Numéro de bloc."
+
+#: fr/tftp.md:96
+msgid "**Données**: Taille variable, ce sont les données à envoyer"
+msgstr "**Données**: Taille variable, ce sont les données à envoyer"
+
+#: fr/tftp.md:100
+msgid ""
+"Le numéro de bloc commence à `1` et est incrémenté à chaque envoi.\n"
+"La taille des données est limité à un maximum de `512 octets`, si le paquet "
+"de données n'est pas le premier et que la taille de la donnée et inférieur à "
+"`512 octets`, cela correspond à la fin du fichier et du transfert."
+msgstr ""
+"Le numéro de bloc commence à `1` et est incrémenté à chaque envoi.\n"
+"La taille des données est limité à un maximum de `512 octets`, si le paquet "
+"de données n'est pas le premier et que la taille de la donnée et inférieur à "
+"`512 octets`, cela correspond à la fin du fichier et du transfert."
+
+#: fr/tftp.md:102
+msgid "Paquet d'acquittement"
+msgstr "Paquet d'acquittement"
+
+#: fr/tftp.md:103
+msgid "Le paquet d'accusé de réception (**ACK**) ressemble à ceci :"
+msgstr "Le paquet d'accusé de réception (**ACK**) ressemble à ceci :"
+
+#: fr/tftp.md:105
+msgid "![ACK header](static/img/tftp/3.webp)"
+msgstr "![ACK header](static/img/tftp/3.webp)"
+
+#: fr/tftp.md:109
+msgid "**OPcode**: `2 octets` (est mis à `0x0004` **ACK**)."
+msgstr "**OPcode**: `2 octets` (est mis à `0x0004` **ACK**)."
+
+#: fr/tftp.md:112
+msgid "**# de bloc**: `2 octets`, correspond au numéro de bloc reçu."
+msgstr "**# de bloc**: `2 octets`, correspond au numéro de bloc reçu."
+
+#: fr/tftp.md:116
+msgid ""
+"Si la demande du client est une demande d'écriture (OPcode `0x0002`), Le "
+"serveur acquitte la demande avec le numéro de bloc `0x0000`."
+msgstr ""
+"Si la demande du client est une demande d'écriture (OPcode `0x0002`), Le "
+"serveur acquitte la demande avec le numéro de bloc `0x0000`."
+
+#: fr/tftp.md:118
+msgid "Paquet d'Erreur"
+msgstr "Paquet d'Erreur"
+
+#: fr/tftp.md:119
+msgid "Le paquet d'erreur (**ERR**) ressemble à ceci:"
+msgstr "Le paquet d'erreur (**ERR**) ressemble à ceci:"
+
+#: fr/tftp.md:121
+msgid "![ERR header](static/img/tftp/4.webp)"
+msgstr "![ERR header](static/img/tftp/4.webp)"
+
+#: fr/tftp.md:125
+msgid "**OPcode**: `2 octets` (est mis à `0x0005` **ERR**)."
+msgstr "**OPcode**: `2 octets` (est mis à `0x0005` **ERR**)."
+
+#: fr/tftp.md:128
+msgid "**ErrCode**: `2octets`, correspond aux codes erreur suivant:"
+msgstr "**ErrCode**: `2octets`, correspond aux codes erreur suivant:"
+
+#: fr/tftp.md:131
+msgid "`0x0000` Non défini, voir le message d'erreur (le cas échéant)."
+msgstr "`0x0000` Non défini, voir le message d'erreur (le cas échéant)."
+
+#: fr/tftp.md:134
+msgid "`0x0001` Fichier introuvable."
+msgstr "`0x0001` Fichier introuvable."
+
+#: fr/tftp.md:137
+msgid "`0x0002` Violation d'accès."
+msgstr "`0x0002` Violation d'accès."
+
+#: fr/tftp.md:140
+msgid "`0x0003` Disque plein ou allocation dépassée."
+msgstr "`0x0003` Disque plein ou allocation dépassée."
+
+#: fr/tftp.md:143
+msgid "`0x0004` Opération TFTP illégale."
+msgstr "`0x0004` Opération TFTP illégale."
+
+#: fr/tftp.md:146
+msgid "`0x0005` ID de transfert inconnu."
+msgstr "`0x0005` ID de transfert inconnu."
+
+#: fr/tftp.md:149
+msgid "`0x0006` Le fichier existe déjà."
+msgstr "`0x0006` Le fichier existe déjà."
+
+#: fr/tftp.md:152
+msgid "`0x0007` Aucun utilisateur de ce type."
+msgstr "`0x0007` Aucun utilisateur de ce type."
+
+#: fr/tftp.md:155
+msgid ""
+"**ErrMsg**: Taille variable, correspond a une chaine de caractère "
+"définissant le code d'erreur."
+msgstr ""
+"**ErrMsg**: Taille variable, correspond a une chaine de caractère "
+"définissant le code d'erreur."
+
+#: fr/tftp.md:158
+msgid "`0`: `1 octet`: Spécifie la fin de la chaine de caractère *ErrMsg*."
+msgstr "`0`: `1 octet`: Spécifie la fin de la chaine de caractère *ErrMsg*."
+
+#: fr/tftp.md:166
+msgid "Exemple de connexion et de transfert"
+msgstr "Exemple de connexion et de transfert"
+
+#: fr/tftp.md:167
+msgid "Voici un exemple de connexion et de récupération de fichier :"
+msgstr "Voici un exemple de connexion et de récupération de fichier :"
+
+#: fr/tftp.md:170
+msgid ""
+"HostA récupère le fichier `file.txt` d'une taille de `920 octets` sur HostB "
+"qui héberge un serveur **TFTP**."
+msgstr ""
+"HostA récupère le fichier `file.txt` d'une taille de `920 octets` sur HostB "
+"qui héberge un serveur **TFTP**."
+
+#: fr/tftp.md:173
+msgid "![Exchange schema](static/img/tftp/TFTP_exchange.webp)"
+msgstr "![Exchange schema](static/img/tftp/TFTP_exchange.webp)"
+
+#: fr/tftp.md:175
+msgid ""
+"HostA:4242 (OPcode=RRD; file=file.txt; mode=netascii)  --> HostB:69\n"
+"HostB:9090 (OPcode=DATA; BLOCK=1; [512 bytes data...]) --> HostA:4242\n"
+"HostA:4242 (OPcode=ACK; BLOCK=1) --> HostB:9090\n"
+"HostB:9090 (OPcode=DATA; BLOCK=2; [408 bytes data...]) --> HostA:4242\n"
+"HostA:4242 (OPcode=ACK; BLOCK=2) --> HostB:9090"
+msgstr ""
+"HostA:4242 (OPcode=RRD; file=file.txt; mode=netascii)  --> HostB:69\n"
+"HostB:9090 (OPcode=DATA; BLOCK=1; [512 bytes data...]) --> HostA:4242\n"
+"HostA:4242 (OPcode=ACK; BLOCK=1) --> HostB:9090\n"
+"HostB:9090 (OPcode=DATA; BLOCK=2; [408 bytes data...]) --> HostA:4242\n"
+"HostA:4242 (OPcode=ACK; BLOCK=2) --> HostB:9090"
+
+#: fr/tftp.md:177
+msgid ""
+"Ici, `4242` et `9090` correspond au **TID**/Port **UDP** de `HostA` et "
+"`HostB` respectivement."
+msgstr ""
+"Ici, `4242` et `9090` correspond au **TID**/Port **UDP** de `HostA` et "
+"`HostB` respectivement."
+
+#: fr/tftp.md:180
+msgid "Serveur / Client TFTP"
+msgstr "Serveur / Client TFTP"
+
+#: fr/tftp.md:181
+msgid ""
+"Vous pouvez télécharger le daemon `tftpd` et le client `tftp` avec les "
+"paquets suivant: `tftpd-hpa` et `tftp-hpa`.\n"
+"Le client Curl intègre aussi le protocole **TFTP**:\n"
+"Upload: `curl -T file.txt tftp://HOST`\n"
+"Donwload: `curl -o file.txt tftp://HOST/FILE`"
+msgstr ""
+"Vous pouvez télécharger le daemon `tftpd` et le client `tftp` avec les "
+"paquets suivant: `tftpd-hpa` et `tftp-hpa`.\n"
+"Le client Curl intègre aussi le protocole **TFTP**:\n"
+"Upload: `curl -T file.txt tftp://HOST`\n"
+"Donwload: `curl -o file.txt tftp://HOST/FILE`"
+
+#: fr/tftp.md:183
+msgid ""
+"Voilà, c'est fini j'espère que cet article vous a plu et que vous avez "
+"compris l'utilité et le fonctionnement de **TFTP**."
+msgstr ""
+"Voilà, c'est fini j'espère que cet article vous a plu et que vous avez "
+"compris l'utilité et le fonctionnement de **TFTP**."
+
+#: fr/tftp.md:185
+msgid "Conclusion"
+msgstr "Conclusion"
+
+#: fr/tftp.md:186
+msgid ""
+"**TFTP** est donc un protocole simple permettant uniquement le transfert (et "
+"la création dans certain cas) de fichier, il fonctionne sur **UDP**.\n"
+"Il ne propose pas d'authentification, ni de chiffrement (mais il est "
+"possible de passer par un serveur [**SOCKS**](https://ilearned.eu/socks."
+"html), donc Tor :eyes:).\n"
+"C'est une sorte de **FTP** plus léger et plus simple à programmer/mettre en "
+"place, il ne permet pas l'exécution de commande, mais seulement le transfert "
+"de fichier.\n"
+"Contrairement aussi à **FTP**, il n'y a pas de mode dit \"passive\" ou "
+"\"active\", vu que le protocole utilise **UDP**.\n"
+"Le choix de ce protocole de transport permet aussi une meilleure rapidité, "
+"même si les limites de taille de bloc sont limité à `512 octet`, en moyenne, "
+"en partant du principe que l'[entête IPv4](https://ilearned.eu/ipv4-header."
+"html) n'a pas d'option, la taille MAXIMUM THÉORIQUE (ma théorie) ne devrait "
+"pas dépasser les `558 octets`:"
+msgstr ""
+"**TFTP** est donc un protocole simple permettant uniquement le transfert (et "
+"la création dans certain cas) de fichier, il fonctionne sur **UDP**.\n"
+"Il ne propose pas d'authentification, ni de chiffrement (mais il est "
+"possible de passer par un serveur [**SOCKS**](https://ilearned.eu/socks."
+"html), donc Tor :eyes:).\n"
+"C'est une sorte de **FTP** plus léger et plus simple à programmer/mettre en "
+"place, il ne permet pas l'exécution de commande, mais seulement le transfert "
+"de fichier.\n"
+"Contrairement aussi à **FTP**, il n'y a pas de mode dit \"passive\" ou "
+"\"active\", vu que le protocole utilise **UDP**.\n"
+"Le choix de ce protocole de transport permet aussi une meilleure rapidité, "
+"même si les limites de taille de bloc sont limité à `512 octet`, en moyenne, "
+"en partant du principe que l'[entête IPv4](https://ilearned.eu/ipv4-header."
+"html) n'a pas d'option, la taille MAXIMUM THÉORIQUE (ma théorie) ne devrait "
+"pas dépasser les `558 octets`:"
+
+#: fr/tftp.md:190
+msgid "Trame Ethernet : `14 octets`"
+msgstr "Trame Ethernet : `14 octets`"
+
+#: fr/tftp.md:193
+msgid "Entête IPv4 : `20 octets`"
+msgstr "Entête IPv4 : `20 octets`"
+
+#: fr/tftp.md:196
+msgid "Entête UDP : `8 octets`"
+msgstr "Entête UDP : `8 octets`"
+
+#: fr/tftp.md:199
+msgid "Entête TFTP: `516 octets` (OPcode + # bloc + bloc maxi)"
+msgstr "Entête TFTP: `516 octets` (OPcode + # bloc + bloc maxi)"
+
+#: fr/tftp.md:204
+msgid "Total: `(14 + 20 + 8 + 516) = 558`"
+msgstr "Total: `(14 + 20 + 8 + 516) = 558`"
+
+#: fr/tftp.md:207
+msgid ""
+"**UDP** ajoute la rapidité, mais le fait que la taille des blocs est limitée "
+"à `512 octets`, qu'entre chaque envoi de bloc il faut attendre l'accusé de "
+"réception et, qui plus est, que l'accusé de réception ou le bloc de données "
+"peut se perdre dans le réseau, la durée peut varier, surtout pour des "
+"fichiers volumineux (ces problèmes là peuvent intervenir aussi avec **TCP**, "
+"mais celui-ci reste beaucoup plus fiable)."
+msgstr ""
+"**UDP** ajoute la rapidité, mais le fait que la taille des blocs est limitée "
+"à `512 octets`, qu'entre chaque envoi de bloc il faut attendre l'accusé de "
+"réception et, qui plus est, que l'accusé de réception ou le bloc de données "
+"peut se perdre dans le réseau, la durée peut varier, surtout pour des "
+"fichiers volumineux (ces problèmes là peuvent intervenir aussi avec **TCP**, "
+"mais celui-ci reste beaucoup plus fiable)."
+
+#: fr/tftp.md:209
+msgid ""
+"Source: [RFC 1350](https://datatracker.ietf.org/doc/html/rfc1350/) - [doc. "
+"Ubuntu](https://doc.ubuntu-fr.org/tftpd)"
+msgstr ""
+"Source: [RFC 1350](https://datatracker.ietf.org/doc/html/rfc1350/) - [doc. "
+"Ubuntu](https://doc.ubuntu-fr.org/tftpd)"

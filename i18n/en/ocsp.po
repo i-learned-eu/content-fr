@@ -1,0 +1,176 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Language-Team: English\n"
+"PO-Revision-Date: 2022-06-15 16:18+0200\n"
+"Language: en_EN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-06-15 13:37+0000\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: Eban <contact@eban.eu.org>\n"
+
+#: fr/ocsp.md:0
+msgid ""
+"lang: fr\n"
+"Author: Eban\n"
+"Date: 2021/12/16\n"
+"Slug: ocsp\n"
+"Summary: Nous connaissons tous le protocole TLS, les certificats de TLS se "
+"basent sur le bien connu protocole x509, avec la généralisation de "
+"l'utilisation de ce protocole sur Internet, un problème se pose : comment "
+"faire en sorte que tous les clients sachent quand un certificat est "
+"révoqué ? Afin de répondre à cette question, a été créé le protocole OCSP "
+"(Online Certificate Status Protocol).\n"
+"Title: Comment fonctionne le protocole OCSP ?\n"
+"Category: Réseau/HTTP & TLS"
+msgstr ""
+"lang: fr\n"
+"Author: Eban\n"
+"Date: 2021/12/16\n"
+"Slug: ocsp\n"
+"Summary: Nous connaissons tous le protocole TLS, les certificats de TLS se "
+"basent sur le bien connu protocole x509, avec la généralisation de "
+"l'utilisation de ce protocole sur Internet, un problème se pose : comment "
+"faire en sorte que tous les clients sachent quand un certificat est "
+"révoqué ? Afin de répondre à cette question, a été créé le protocole OCSP "
+"(Online Certificate Status Protocol).\n"
+"Title: Comment fonctionne le protocole OCSP ?\n"
+"Category: Réseau/HTTP & TLS"
+
+#: fr/ocsp.md:2
+msgid ""
+"Nous connaissons tous le protocole [TLS](https://ilearned.eu/tls.html), les "
+"certificats de TLS se basent sur le bien connu protocole [X.509](https://fr."
+"wikipedia.org/wiki/X.509), avec la généralisation de l'utilisation de ce "
+"protocole sur Internet, un problème se pose : comment faire en sorte que "
+"tous les clients sachent quand un certificat est révoqué ? Afin de répondre "
+"à cette question, a été créé le protocole OCSP (Online Certificate Status "
+"Protocol)."
+msgstr ""
+"Nous connaissons tous le protocole [TLS](https://ilearned.eu/tls.html), les "
+"certificats de TLS se basent sur le bien connu protocole [X.509](https://fr."
+"wikipedia.org/wiki/X.509), avec la généralisation de l'utilisation de ce "
+"protocole sur Internet, un problème se pose : comment faire en sorte que "
+"tous les clients sachent quand un certificat est révoqué ? Afin de répondre "
+"à cette question, a été créé le protocole OCSP (Online Certificate Status "
+"Protocol)."
+
+#: fr/ocsp.md:4
+msgid ""
+"Un client qui utilise OCSP (tous les navigateurs web récents) va interroger "
+"à chaque fois un serveur OCSP (appelé répondeur OCSP) en lui demandant le "
+"status dudit certificat (révoqué ou non)."
+msgstr ""
+"Un client qui utilise OCSP (tous les navigateurs web récents) va interroger "
+"à chaque fois un serveur OCSP (appelé répondeur OCSP) en lui demandant le "
+"status dudit certificat (révoqué ou non)."
+
+#: fr/ocsp.md:6
+msgid "Une requête OCSP ressemble à ça :"
+msgstr "Une requête OCSP ressemble à ça :"
+
+#: fr/ocsp.md:8
+msgid "![Requête du client OCSP](/static/img/ocsp/ocsp_request.webp)"
+msgstr "![Requête du client OCSP](/static/img/ocsp/ocsp_request.webp)"
+
+#: fr/ocsp.md:12
+msgid "requestorName correspond au nom du client, ce champ est optionnel"
+msgstr "requestorName correspond au nom du client, ce champ est optionnel"
+
+#: fr/ocsp.md:16
+msgid ""
+"Le client indique ensuite des informations qui permettent d'identifier le "
+"certificat"
+msgstr ""
+"Le client indique ensuite des informations qui permettent d'identifier le "
+"certificat"
+
+#: fr/ocsp.md:20
+msgid "L'algorithme de hashage utilisé pour hasher les deux champs suivants"
+msgstr "L'algorithme de hashage utilisé pour hasher les deux champs suivants"
+
+#: fr/ocsp.md:23
+msgid ""
+"Le hash du nom de l'issuer (celui du certificat TLS de ce site est Let's "
+"Encrypt par exemple)"
+msgstr ""
+"Le hash du nom de l'issuer (celui du certificat TLS de ce site est Let's "
+"Encrypt par exemple)"
+
+#: fr/ocsp.md:26
+msgid "Le hash de la clé publique de l'issuer"
+msgstr "Le hash de la clé publique de l'issuer"
+
+#: fr/ocsp.md:29
+msgid "Le numéro de série du certificat pour lequel on demande le certificat"
+msgstr "Le numéro de série du certificat pour lequel on demande le certificat"
+
+#: fr/ocsp.md:33
+msgid "Le serveur répond ensuite avec une réponse au format suivant :"
+msgstr "Le serveur répond ensuite avec une réponse au format suivant :"
+
+#: fr/ocsp.md:35
+msgid "![Réponse du server OCSP](/static/img/ocsp/ocsp_response.webp)"
+msgstr "![Réponse du server OCSP](/static/img/ocsp/ocsp_response.webp)"
+
+#: fr/ocsp.md:39
+msgid "responderID correspond à l'identifiant du serveur qui nous a répondu"
+msgstr "responderID correspond à l'identifiant du serveur qui nous a répondu"
+
+#: fr/ocsp.md:42
+msgid "producedAt correspond à l'heure à laquelle la vérification a été faite"
+msgstr "producedAt correspond à l'heure à laquelle la vérification a été faite"
+
+#: fr/ocsp.md:45
+msgid ""
+"certID contient les mêmes valeurs que celles données lors de la requête "
+"initiale"
+msgstr ""
+"certID contient les mêmes valeurs que celles données lors de la requête "
+"initiale"
+
+#: fr/ocsp.md:48
+msgid "certStatus peut être trois valeurs"
+msgstr "certStatus peut être trois valeurs"
+
+#: fr/ocsp.md:51
+msgid "good : le certificat est valide"
+msgstr "good : le certificat est valide"
+
+#: fr/ocsp.md:54
+msgid "revoked : le certificat est révoqué"
+msgstr "revoked : le certificat est révoqué"
+
+#: fr/ocsp.md:57
+msgid "unknown : le status du certificat est inconnu"
+msgstr "unknown : le status du certificat est inconnu"
+
+#: fr/ocsp.md:62
+msgid ""
+"thisUpdate l'heure la plus récente où le certificat a été reconnu comme "
+"valide par le responder."
+msgstr ""
+"thisUpdate l'heure la plus récente où le certificat a été reconnu comme "
+"valide par le responder."
+
+#: fr/ocsp.md:66
+msgid ""
+"Le protocole OCSP est très simple dans son fonctionnement et son concept, "
+"mais il est une brique essentielle de la sécurité des certificats TLS que "
+"nous utilisons quotidiennement. Il comporte néanmoins un problème majeur, le "
+"respect de la vie privée. En effet, le répondeur OSCP pourrait facilement "
+"connaître l'ensemble des sites que visite une IP. Pour pallier à cela il "
+"existe une technique appelée OCSP Stapling qui permet au serveur web "
+"d'envoyer directement la réponse OCSP au client. Ainsi, seul le client et le "
+"serveur web sont impliqués dans cet échange."
+msgstr ""
+"Le protocole OCSP est très simple dans son fonctionnement et son concept, "
+"mais il est une brique essentielle de la sécurité des certificats TLS que "
+"nous utilisons quotidiennement. Il comporte néanmoins un problème majeur, le "
+"respect de la vie privée. En effet, le répondeur OSCP pourrait facilement "
+"connaître l'ensemble des sites que visite une IP. Pour pallier à cela il "
+"existe une technique appelée OCSP Stapling qui permet au serveur web "
+"d'envoyer directement la réponse OCSP au client. Ainsi, seul le client et le "
+"serveur web sont impliqués dans cet échange."
