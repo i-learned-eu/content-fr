@@ -123,11 +123,12 @@ Elle est réalisée en parcourant le code source en une seul fois.
 Cette phase permet de verifier si les mots existent dans le language et à quel unité de lexique ils appartiennent puis les "découpes" de sorte à former des "token".
 
 ### Unité de lexique
-**identifiants**:   `une_variable`, `une_fonction`, `x`, *etc...*
-**mots-clefs**: 	`if`, `while`, `return`, `for`, `extern`, `auto`, `static`, *etc...*
-**ponctuation**: 	`}`, `(`, `;`
-**opérateurs**: 	`+`, `<`, `=`, `<=`, `==`, *etc...*
-**littéraux** 	    `42`, `69.0f`, `"hello"`, `0xb00b`
+
+- **identifiants**:   `une_variable`, `une_fonction`, `x`, *etc...*
+- **mots-clefs**: 	`if`, `while`, `return`, `for`, `extern`, `auto`, `static`, *etc...*
+- **ponctuation**: 	`}`, `(`, `;`
+- **opérateurs**: 	`+`, `<`, `=`, `<=`, `==`, *etc...*
+- **littéraux** 	    `42`, `69.0f`, `"hello"`, `0xb00b`
 
 Une fois l'analyse lexicale faites les "tokens" sont générés.
 Par exemple, prenont le code suivant:
