@@ -1,29 +1,25 @@
 default:
     image: hub.ilearned.eu/i-learned/ci-cd/pelican-builder
-    before_script:
-        - rm -rf ./..?* ./.[!.]* ./*
-        - git clone https://gitlab.ilearned.eu/i-learned/blog/theme .
-        - rm -rf content/*
-        - git clone https://gitlab.ilearned.eu/i-learned/blog/content-fr.git -b $CI_COMMIT_REF_NAME content/
     tags:
         - AMD64
 
 stages:
-    - lint
+    - updateTranslation
     - test
     - test-deploy
     - prod-deploy
 
-prettier:
+updateTranslation:
     image: node:latest
-    stage: lint
+    stage: updateTranslation
     allow_failure: true
     script:
+        - rm -rf ./..?* ./.[!.]* ./*
+        - git clone https://gitlab.ilearned.eu/i-learned/blog/content-fr .
         - apt update
         - apt install gettext sed
-        - npm install -g prettier gettext-markdown
-        - prettier . -w
-        - bash updateTranslation.sh
+        - npm install -g gettext-markdown
+        - bash ./updateTranslation.sh
         - git config --global user.email "contact@ilearned.eu"
         - git config --global user.name "Gitlab CI"
         - git add .
@@ -35,12 +31,20 @@ prettier:
 test-job:
     stage: test
     script:
+        - rm -rf ./..?* ./.[!.]* ./*
+        - git clone https://gitlab.ilearned.eu/i-learned/blog/theme .
+        - rm -rf content/*
+        - git clone https://gitlab.ilearned.eu/i-learned/blog/content-fr.git -b $CI_COMMIT_REF_NAME content/
         - pelican -o /tmp --fatal warnings
         - sh build.sh
 
 prod-deploy-job:
     stage: prod-deploy
     script:
+        - rm -rf ./..?* ./.[!.]* ./*
+        - git clone https://gitlab.ilearned.eu/i-learned/blog/theme .
+        - rm -rf content/*
+        - git clone https://gitlab.ilearned.eu/i-learned/blog/content-fr.git -b $CI_COMMIT_REF_NAME content/
         - eval $(ssh-agent -s)
         - mkdir -p ~/.ssh
         - echo "$SSH_EBANVM01_PRIVATE_KEY" > ~/.ssh/id_ed25519
@@ -55,6 +59,10 @@ test-deploy-job:
     image: hub.ilearned.eu/i-learned/ci-cd/pelican-builder-dev
     stage: test-deploy
     script:
+        - rm -rf ./..?* ./.[!.]* ./*
+        - git clone https://gitlab.ilearned.eu/i-learned/blog/theme .
+        - rm -rf content/*
+        - git clone https://gitlab.ilearned.eu/i-learned/blog/content-fr.git -b $CI_COMMIT_REF_NAME content/
         - sh build.sh
         - netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --dir output
     only:
