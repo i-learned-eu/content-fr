@@ -11,7 +11,7 @@ Il peut être très utile pour un réseau, en entreprise par exemple, d'avoir un
 
 VRRP fonctionne avec plusieurs routeurs qui partagent une adresse MAC virtuelle. Chaque routeur a une priorité, celui a la priorité la plus haute est le "master".
 
-Pour savoir le status de chaque routeur tous les membres du groupe s'échangent des paquets avec une adresse multicast, si le maitre ne répond plus le routeur avec la deuxième priorité la plus haute va prendre le relai. Leur échangent utilisent un protocole spécifique à VRRP.
+Pour savoir le status de chaque routeur tous les membres du groupe s'échangent des paquets avec une adresse multicast, si le maitre ne répond plus le routeur avec la deuxième priorité la plus haute va prendre le relai. Leur échanges utilisent un protocole spécifique à VRRP.
 
 Le paquet VRRP est échangé par les routeurs comme dit plus haut en multicast. L'adresse utilisée en IPv6 est `FF02:0:0:0:0:0:0:12` et  `224.0.0.18` en IPv4.
 
