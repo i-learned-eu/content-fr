@@ -19,7 +19,8 @@ prettier:
     stage: lint
     allow_failure: true
     script:
-        - apk add gettext sed
+        - apt update
+        - apt install gettext sed
         - npm install -g prettier gettext-markdown
         - prettier . -w
         - bash updateTranslation
