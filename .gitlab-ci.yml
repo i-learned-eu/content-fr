@@ -2,8 +2,6 @@ default:
     image: hub.ilearned.eu/i-learned/ci-cd/pelican-builder
     tags:
         - AMD64
-    rules:
-        - if: $CI_COMMIT_AUTHOR != "Gitlab CI <contact@ilearned.eu>"
 
 stages:
     - updateTranslation
@@ -30,6 +28,7 @@ updateTranslation:
         - git push https://CI_CD:$CI_GIT_USER_PASSWD@gitlab.ilearned.eu/i-learned/blog/content-fr.git
     rules:
         - if: $CI_COMMIT_BRANCH == "master"
+        - if: $CI_COMMIT_AUTHOR != "Gitlab CI <contact@ilearned.eu>"
 
 test-job:
     stage: test
@@ -40,6 +39,8 @@ test-job:
         - git clone https://gitlab.ilearned.eu/i-learned/blog/content-fr.git -b $CI_COMMIT_REF_NAME content/
         - pelican -o /tmp --fatal warnings
         - sh build.sh
+    rules:
+        - if: $CI_COMMIT_AUTHOR != "Gitlab CI <contact@ilearned.eu>"
 
 prod-deploy-job:
     stage: prod-deploy
@@ -55,8 +56,9 @@ prod-deploy-job:
         - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
         - sh build.sh
         - rsync -az --delete -e "ssh -i ~/.ssh/id_ed25519" output/ deploy@vm01.eban.eu.org:/var/www/ilearned-blog
-    only:
-        - master
+    rules:
+        - if: $CI_COMMIT_BRANCH == "master"
+        - if: $CI_COMMIT_AUTHOR != "Gitlab CI <contact@ilearned.eu>"
 
 test-deploy-job:
     image: hub.ilearned.eu/i-learned/ci-cd/pelican-builder-dev
