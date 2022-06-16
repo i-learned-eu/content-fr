@@ -22,6 +22,7 @@ updateTranslation:
         - bash ./updateTranslation.sh
         - git config --global user.email "contact@ilearned.eu"
         - git config --global user.name "Gitlab CI"
+        - git pull
         - git add .
         - git commit -m "[🧹 Lint] Linted code and updated submodule"
         - git push https://CI_CD:$CI_GIT_USER_PASSWD@gitlab.ilearned.eu/i-learned/blog/theme.git
