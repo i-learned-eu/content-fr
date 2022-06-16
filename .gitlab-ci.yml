@@ -18,7 +18,7 @@ updateTranslation:
         - apt install git gettext sed coreutils -y
         - rm -rf ./..?* ./.[!.]* ./*
         - git clone https://gitlab.ilearned.eu/i-learned/blog/content-fr .
-        - npm install -g gettext-markdown
+        - npm install --location=global gettext-markdown
         - gettext-md
         - PATH=$PATH:$(npm bin) bash ./updateTranslation.sh
         - git config --global user.email "contact@ilearned.eu"
