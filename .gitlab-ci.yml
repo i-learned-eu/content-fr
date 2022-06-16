@@ -19,6 +19,7 @@ updateTranslation:
         - apt update
         - apt install gettext sed
         - npm install -g gettext-markdown
+        - npm bin
         - bash ./updateTranslation.sh
         - git config --global user.email "contact@ilearned.eu"
         - git config --global user.name "Gitlab CI"
