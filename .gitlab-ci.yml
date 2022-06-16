@@ -2,6 +2,8 @@ default:
     image: hub.ilearned.eu/i-learned/ci-cd/pelican-builder
     tags:
         - AMD64
+    rules:
+        - if: $CI_COMMIT_AUTHOR != "Gitlab CI <contact@ilearned.eu>"
 
 stages:
     - updateTranslation
@@ -27,7 +29,6 @@ updateTranslation:
         - git pull
         - git push https://CI_CD:$CI_GIT_USER_PASSWD@gitlab.ilearned.eu/i-learned/blog/content-fr.git
     rules:
-        - if: $CI_COMMIT_AUTHOR != "Gitlab CI <contact@ilearned.eu>"
         - if: $CI_COMMIT_BRANCH == "master"
 
 test-job:
