@@ -23,9 +23,9 @@ updateTranslation:
         - git config --global user.email "contact@ilearned.eu"
         - git config --global user.name "Gitlab CI"
         - git add .
-        - git commit -m "[🧹 Lint] Linted code and updated submodule"
+        - git commit -m "[🧹 Lint] Updated translations"
         - git pull
-        - git push https://CI_CD:$CI_GIT_USER_PASSWD@gitlab.ilearned.eu/i-learned/blog/theme.git
+        - git push https://CI_CD:$CI_GIT_USER_PASSWD@gitlab.ilearned.eu/i-learned/blog/content-fr.git
     rules:
         - if: $CI_COMMIT_AUTHOR != "Gitlab CI <contact@ilearned.eu>"
         - if: $CI_COMMIT_BRANCH == "master"
