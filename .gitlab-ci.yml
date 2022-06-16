@@ -27,6 +27,8 @@ updateTranslation:
         - git push https://CI_CD:$CI_GIT_USER_PASSWD@gitlab.ilearned.eu/i-learned/blog/theme.git
     only:
         - master
+    rules:
+        - if: $CI_COMMIT_AUTHOR != "Gitlab CI <contact@ilearned.eu>"
 
 test-job:
     stage: test
