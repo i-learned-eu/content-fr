@@ -19,7 +19,7 @@ updateTranslation:
         - rm -rf ./..?* ./.[!.]* ./*
         - git clone https://gitlab.ilearned.eu/i-learned/blog/content-fr .
         - npm install --location=global gettext-markdown
-        - PATH=$PATH:/usr/local/lib/node_modules/ bash ./updateTranslation.sh
+        - bash ./updateTranslation.sh
         - git config --global user.email "contact@ilearned.eu"
         - git config --global user.name "Gitlab CI"
         - git add .
