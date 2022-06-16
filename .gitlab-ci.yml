@@ -16,9 +16,8 @@ updateTranslation:
     script:
         - rm -rf ./..?* ./.[!.]* ./*
         - git clone https://gitlab.ilearned.eu/i-learned/blog/content-fr .
-        - npm bin
         - apt update
-        - apt install gettext sed
+        - apt install gettext sed env
         - npm install -g gettext-markdown
         - PATH=$PATH:$(npm bin) bash ./updateTranslation.sh
         - git config --global user.email "contact@ilearned.eu"
