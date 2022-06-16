@@ -10,12 +10,12 @@ stages:
     - prod-deploy
 
 updateTranslation:
-    image: debian:latest
+    image: node:latest
     stage: updateTranslation
     allow_failure: true
     script:
         - apt update
-        - apt install git gettext sed coreutils npm -y
+        - apt install git gettext sed coreutils -y
         - rm -rf ./..?* ./.[!.]* ./*
         - git clone https://gitlab.ilearned.eu/i-learned/blog/content-fr .
         - npm install -g gettext-markdown
