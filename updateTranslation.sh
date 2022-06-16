@@ -1,6 +1,7 @@
-latestCommit='$(git show $(git rev-parse origin/master) | grep "Author")'
+lastCommit=$(git rev-parse origin/master)
+lastCommitAuthor=$(git log -1 | grep Author)
 
-if [$latestCommit -ne "Author: Gitlab CI <contact@ilearned.eu>"]; then
+if echo ${lastCommitAuthor} | grep -q "contact@ilearned.eu"; then
   for i in $(ls -1 -p fr/ | grep -v / | sed -e 's/\..*$//')
   do
     gettext-md -o i18n/__name__.pot --pot fr/$i.md
