@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Language-Team: English\n"
-"PO-Revision-Date: 2022-06-15 16:17+0200\n"
-"Language: en_EN\n"
+"Language-Team: none\n"
+"PO-Revision-Date: 2022-06-15 13:37+0000\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2022-06-15 13:37+0000\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: Eban <contact@eban.eu.org>\n"
+"Last-Translator: Automatically generated\n"
 
 #: fr/debuter-dans-l-infosec.md:0
 msgid ""
@@ -26,34 +26,20 @@ msgid ""
 "Author: Eban\n"
 "Category: Cybersécurité/Blue Team"
 msgstr ""
-"lang: fr\n"
-"Title: Debuter dans l'infosec 👨‍💻\n"
-"Keywords: [Debuter, infosec, hacking, pentesting, commencer, comment, eban]\n"
-"Summary: Dans ce nouvel article, nous allons traiter de la fameuse question "
-"''La sécurité informatique, ca m'intéresse, mais par où commencer ?'' Par où "
-"commencer, la question est vaste mais voici un petit résumé des prérequis "
-"nécessaires pour commencer dans l'Infosec.\n"
-"Image: https://images.unsplash.com/photo-1541728472741-03e45a58cf88?"
-"ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80\n"
-"Date: 2020-07-10\n"
-"Author: Eban\n"
-"Category: Cybersécurité/Blue Team"
 
 #: fr/debuter-dans-l-infosec.md:2
 msgid "Dans ce nouvel article, nous allons traiter de la fameuse question"
-msgstr "Dans ce nouvel article, nous allons traiter de la fameuse question"
+msgstr ""
 
 #: fr/debuter-dans-l-infosec.md:5
 msgid "La sécurité informatique, ca m'intéresse, mais par où commencer ?"
-msgstr "La sécurité informatique, ca m'intéresse, mais par où commencer ?"
+msgstr ""
 
 #: fr/debuter-dans-l-infosec.md:8
 msgid ""
 "Par où commencer, la question est vaste mais voici un petit résumé des "
 "prérequis nécessaires pour commencer dans l'Infosec :"
 msgstr ""
-"Par où commencer, la question est vaste mais voici un petit résumé des "
-"prérequis nécessaires pour commencer dans l'Infosec :"
 
 #: fr/debuter-dans-l-infosec.md:10
 msgid ""
@@ -72,42 +58,25 @@ msgid ""
 "Linux comme Ubuntu ou Arch pour les plus téméraires et de vous familiariser "
 "avec cet OS et au terminal linux."
 msgstr ""
-"Pour commencer dans le monde de la cybersecurité, il est recommandé "
-"d'apprendre un language de scripting tel que le python ( voici un très bon "
-"cours venant du site de [zeste de savoir](https://zestedesavoir.com/"
-"tutoriels/799/apprendre-a-programmer-avec-python-3/), les bases des "
-"languages web sont aussi quasi-indispensables ([ici](https://apprendre-"
-"html.3wa.fr/courses) ou [là](https://openclassrooms.com/fr/courses/918836-"
-"concevez-votre-site-web-avec-php-et-mysql) vous pourrez trouver un cours sur "
-"le html, le css, le js ainsi que le php) il est aussi important d'apprendre "
-"les bases du fonctionnement des protocoles réseaux les plus courants (voici "
-"[un cours](https://openclassrooms.com/fr/courses/857447-apprenez-le-"
-"fonctionnement-des-reseaux-tcp-ip) qui peut vous aider à comprendre ces "
-"protocoles), pour finir, je recommanderais de passer sous une distribution "
-"Linux comme Ubuntu ou Arch pour les plus téméraires et de vous familiariser "
-"avec cet OS et au terminal linux."
 
 #: fr/debuter-dans-l-infosec.md:12
 msgid ""
 "Une fois tout ces prerequis validés, vous pourrez vous entrainer sur Root-Me"
 msgstr ""
-"Une fois tout ces prerequis validés, vous pourrez vous entrainer sur Root-Me"
 
 #: fr/debuter-dans-l-infosec.md:14
 msgid "Spécialisation"
-msgstr "Spécialisation"
+msgstr ""
 
 #: fr/debuter-dans-l-infosec.md:15
 msgid ""
 "Après avoir découvert les bases de ce milieu, vous pourrez vous spécialiser "
 "dans certains domaines spécifiques"
 msgstr ""
-"Après avoir découvert les bases de ce milieu, vous pourrez vous spécialiser "
-"dans certains domaines spécifiques"
 
 #: fr/debuter-dans-l-infosec.md:17
 msgid "Le RE(Reverse Engineering / Rétro Ingénerie)"
-msgstr "Le RE(Reverse Engineering / Rétro Ingénerie)"
+msgstr ""
 
 #: fr/debuter-dans-l-infosec.md:18
 msgid ""
@@ -123,21 +92,10 @@ msgid ""
 "ou seulement discuter de ces sujets, je vous invite à rejoindre l'un des "
 "serveurs discord listés ci-dessous."
 msgstr ""
-"Le Reverse Engineering est le fait d'étudier le fonctionnement d'un "
-"programme pour en comprendre le fonctionnement sans avoir le code source de "
-"celui-ci.\n"
-"Pour débuter dans ce domaine, il est indispensable de connaitre le [language "
-"C](https://zestedesavoir.com/tutoriels/755/le-langage-c-1/) ainsi que de "
-"[l'assembleur](https://www.youtube.com/watch?"
-"v=yxzUi8MdOAA&list=PLcT0DaY68xGzzmj47WSbb8XaIwWFjVlKz) (de préférence "
-"x86_64).\n"
-"Vous pourrez alors vous entraîner sur des crackme, si vous voulez de l'aide "
-"ou seulement discuter de ces sujets, je vous invite à rejoindre l'un des "
-"serveurs discord listés ci-dessous."
 
 #: fr/debuter-dans-l-infosec.md:20
 msgid "Les Boxs"
-msgstr "Les Boxs"
+msgstr ""
 
 #: fr/debuter-dans-l-infosec.md:21
 msgid ""
@@ -147,15 +105,10 @@ msgid ""
 "sur [HackTheBox](https://hackthebox.eu) ainsi que sur [Vulnhub](https://"
 "vulnhub.com)."
 msgstr ""
-"Les Boxs consistent en un machine faite pour être *piratée*, le but est de "
-"devenir administrateur (ou *root*) de la machine en utilisant plusieurs "
-"failles informatiques. Pour vous entrainer à cela, je vous invite à aller "
-"sur [HackTheBox](https://hackthebox.eu) ainsi que sur [Vulnhub](https://"
-"vulnhub.com)."
 
 #: fr/debuter-dans-l-infosec.md:23
 msgid "Les CTF"
-msgstr "Les CTF"
+msgstr ""
 
 #: fr/debuter-dans-l-infosec.md:24
 msgid ""
@@ -168,28 +121,19 @@ msgid ""
 "sur [HackTheBox](https://hackthebox.eu) ainsi que sur [Vulnhub](https://"
 "vulnhub.com)."
 msgstr ""
-"Les CTF (Capture The Flag) sont des compétitions où l'on se penche seul ou "
-"en équipe sur une multitude d'épreuves appartenant à des catégories diverses "
-"(Reverse Engineering, Pwn, Crypto(graphy), OSINT (OpenSource Information "
-"Gatering)) consistent en un machine faite pour être *piratée*, le but est de "
-"devenir administrateur (ou *root*) de la machine en utilisant plusieurs "
-"failles informatiques. Pour vous entrainer à cela, je vous invite à aller "
-"sur [HackTheBox](https://hackthebox.eu) ainsi que sur [Vulnhub](https://"
-"vulnhub.com)."
 
 #: fr/debuter-dans-l-infosec.md:26
 msgid "Bonus : Ressources"
-msgstr "Bonus : Ressources"
+msgstr ""
 
 #: fr/debuter-dans-l-infosec.md:27
 msgid ""
 "Voici une liste non exhaustive de ressources qui pourraient vous aider :"
 msgstr ""
-"Voici une liste non exhaustive de ressources qui pourraient vous aider :"
 
 #: fr/debuter-dans-l-infosec.md:31
 msgid "[exrs](https://github.com/wapiflapi/exrs) (Exercices de RE)"
-msgstr "[exrs](https://github.com/wapiflapi/exrs) (Exercices de RE)"
+msgstr ""
 
 #: fr/debuter-dans-l-infosec.md:34
 msgid ""
@@ -197,45 +141,34 @@ msgid ""
 "livre \"Reverse Engineering for Beginners\" de Dennis Yurichev (c.f "
 "[beginners.](https://beginners.re) )"
 msgstr ""
-"[challenges.re](https://challenges.re/) (Exercices de RE allant avec le "
-"livre \"Reverse Engineering for Beginners\" de Dennis Yurichev (c.f "
-"[beginners.](https://beginners.re) )"
 
 #: fr/debuter-dans-l-infosec.md:37
 msgid ""
 "[crackmes.one](https://crackmes.one/) (Collection communautaire de crackmes "
 "par [sar](https://twitter.com/sar5430) 🇫🇷)"
 msgstr ""
-"[crackmes.one](https://crackmes.one/) (Collection communautaire de crackmes "
-"par [sar](https://twitter.com/sar5430) 🇫🇷)"
 
 #: fr/debuter-dans-l-infosec.md:40
 msgid "[root-me](https://root-me.org/) (Challenges toutes catégories - FR)"
-msgstr "[root-me](https://root-me.org/) (Challenges toutes catégories - FR)"
+msgstr ""
 
 #: fr/debuter-dans-l-infosec.md:43
 msgid ""
 "[newbiecontest](https://www.newbiecontest.org/) (Challenges toutes "
 "catégories)"
 msgstr ""
-"[newbiecontest](https://www.newbiecontest.org/) (Challenges toutes "
-"catégories)"
 
 #: fr/debuter-dans-l-infosec.md:46
 msgid ""
 "[theblackside](https://www.theblackside.fr/) (Challenges toutes catégories - "
 "FR)"
 msgstr ""
-"[theblackside](https://www.theblackside.fr/) (Challenges toutes catégories - "
-"FR)"
 
 #: fr/debuter-dans-l-infosec.md:49
 msgid ""
 "[brainshell](https://brainshell.fr/) (Challenges toutes catégories & CTF - "
 "FR)"
 msgstr ""
-"[brainshell](https://brainshell.fr/) (Challenges toutes catégories & CTF - "
-"FR)"
 
 #: fr/debuter-dans-l-infosec.md:52
 msgid ""
@@ -244,14 +177,10 @@ msgid ""
 "\" (Formation interactive au piratage dans des environnements d'entreprise "
 "réalistes) )"
 msgstr ""
-"[hackthebox](https://www.hackthebox.eu/) (Propose des challenges, des "
-"machines, des attack/defence (seul ou en équipe) et des \"Pro Labs"
-"\" (Formation interactive au piratage dans des environnements d'entreprise "
-"réalistes) )"
 
 #: fr/debuter-dans-l-infosec.md:55
 msgid "[vulnhub](https://www.vulnhub.com/) (VM vulnérables)"
-msgstr "[vulnhub](https://www.vulnhub.com/) (VM vulnérables)"
+msgstr ""
 
 #: fr/debuter-dans-l-infosec.md:58
 msgid ""
@@ -259,61 +188,50 @@ msgid ""
 "de laboratoires concrets et ludiques et propose des réseaux virtuels "
 "vulnérables)"
 msgstr ""
-"[tryhackme](https://tryhackme.com/) (enseigne la cybersécurité par le biais "
-"de laboratoires concrets et ludiques et propose des réseaux virtuels "
-"vulnérables)"
 
 #: fr/debuter-dans-l-infosec.md:61
 msgid "[dailysecurity](https://www.dailysecurity.fr/) (Blog de Geluchat)"
-msgstr "[dailysecurity](https://www.dailysecurity.fr/) (Blog de Geluchat)"
+msgstr ""
 
 #: fr/debuter-dans-l-infosec.md:64
 msgid "[hackndo](https://beta.hackndo.com/) (Blog de pixis)"
-msgstr "[hackndo](https://beta.hackndo.com/) (Blog de pixis)"
+msgstr ""
 
 #: fr/debuter-dans-l-infosec.md:67
 msgid "[hacktion](https://www.hacktion.be/) (Blog de Que20)"
-msgstr "[hacktion](https://www.hacktion.be/) (Blog de Que20)"
+msgstr ""
 
 #: fr/debuter-dans-l-infosec.md:70
 msgid ""
 "[inf0sec](https://inf0sec.fr/) (Blog de Unknow101, orienté test d'intrusion "
 "windows)"
 msgstr ""
-"[inf0sec](https://inf0sec.fr/) (Blog de Unknow101, orienté test d'intrusion "
-"windows)"
 
 #: fr/debuter-dans-l-infosec.md:73
 msgid "[sideway.re](https://sideway.re/) (Blog de @SideWay'CSS )"
-msgstr "[sideway.re](https://sideway.re/) (Blog de @SideWay'CSS )"
+msgstr ""
 
 #: fr/debuter-dans-l-infosec.md:76
 msgid ""
 "[inshallhack](https://inshallhack.org/) (Blog de l'équipe française de CTF "
 "[Inshall'hack] (https://ctftime.org/team/44256))"
 msgstr ""
-"[inshallhack](https://inshallhack.org/) (Blog de l'équipe française de CTF "
-"[Inshall'hack] (https://ctftime.org/team/44256))"
 
 #: fr/debuter-dans-l-infosec.md:79
 msgid "[Google](https://www.google.fr/) (RTFM, la base avant toute question.)"
-msgstr "[Google](https://www.google.fr/) (RTFM, la base avant toute question.)"
+msgstr ""
 
 #: fr/debuter-dans-l-infosec.md:82
 msgid ""
 "[exploit.education](https://exploit.education/) (Un bon site pour débuter en "
 "pwn)"
 msgstr ""
-"[exploit.education](https://exploit.education/) (Un bon site pour débuter en "
-"pwn)"
 
 #: fr/debuter-dans-l-infosec.md:85
 msgid ""
 "[Rainbow](https://discord.gg/heAw9mZ) (Serveur discord parlant d'infosec "
 "mais aussi de programmation.)"
 msgstr ""
-"[Rainbow](https://discord.gg/heAw9mZ) (Serveur discord parlant d'infosec "
-"mais aussi de programmation.)"
 
 #: fr/debuter-dans-l-infosec.md:88
 msgid ""
@@ -321,18 +239,15 @@ msgid ""
 "(https://twitter.com/nasm_re) et de l'équipe de CTF, [ret2school](https://"
 "twitter.com/ret2school_fr))"
 msgstr ""
-"[ret2school](https://discord.gg/gFws9jH) (Serveur discord de [@nasm_re]"
-"(https://twitter.com/nasm_re) et de l'équipe de CTF, [ret2school](https://"
-"twitter.com/ret2school_fr))"
 
 #: fr/debuter-dans-l-infosec.md:92
 msgid "Remerciements :"
-msgstr "Remerciements :"
+msgstr ""
 
 #: fr/debuter-dans-l-infosec.md:93
 msgid "Merci à SoEasY de m'avoir aidé pour la définition du RE."
-msgstr "Merci à SoEasY de m'avoir aidé pour la définition du RE."
+msgstr ""
 
 #: fr/debuter-dans-l-infosec.md:95
 msgid "Merci à MorpheusH3x pour la liste des ressources."
-msgstr "Merci à MorpheusH3x pour la liste des ressources."
+msgstr ""

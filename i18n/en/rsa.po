@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Language-Team: English\n"
-"PO-Revision-Date: 2022-06-15 16:18+0200\n"
-"Language: en_EN\n"
+"Language-Team: none\n"
+"PO-Revision-Date: 2022-06-15 13:37+0000\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2022-06-15 13:37+0000\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: Eban <contact@eban.eu.org>\n"
+"Last-Translator: Automatically generated\n"
 
 #: fr/rsa.md:0
 msgid ""
@@ -26,18 +26,6 @@ msgid ""
 "Title: RSA, comment ça marche ?\n"
 "Category: Cybersécurité/Cryptographie"
 msgstr ""
-"lang: fr\n"
-"Author: Eban\n"
-"Date: 2021/11/14\n"
-"Keywords: cryptographie, sécurité\n"
-"Slug: rsa\n"
-"Summary: RSA est sûrement l'algorithme de chiffrement asymétrique le plus "
-"connu, il est utilisé chaque jour par des millions d'appareils, même le "
-"certificat TLS du site que vous visitez en ce moment est basé sur RSA ! Cet "
-"article détaillera le fonctionnement mathématique de RSA, aucun pré-requis "
-"n'est nécessaire (à part peut-être une tasse de café ☕).\n"
-"Title: RSA, comment ça marche ?\n"
-"Category: Cybersécurité/Cryptographie"
 
 #: fr/rsa.md:2
 msgid ""
@@ -47,19 +35,14 @@ msgid ""
 "détaillera le fonctionnement mathématique de RSA, aucun prérequis n'est "
 "nécessaire (à part peut-être une tasse de café ☕)."
 msgstr ""
-"RSA est sûrement l'algorithme de chiffrement asymétrique le plus connu, il "
-"est utilisé chaque jour par des millions d'appareils, même le certificat TLS "
-"du site que vous visitez en ce moment est basé sur RSA ! Cet article "
-"détaillera le fonctionnement mathématique de RSA, aucun prérequis n'est "
-"nécessaire (à part peut-être une tasse de café ☕)."
 
 #: fr/rsa.md:4
 msgid "La cryptographie asymétrique, qu'est-ce que c'est ?"
-msgstr "La cryptographie asymétrique, qu'est-ce que c'est ?"
+msgstr ""
 
 #: fr/rsa.md:5
 msgid "Il existe deux types d'algorithmes de chiffrement"
-msgstr "Il existe deux types d'algorithmes de chiffrement"
+msgstr ""
 
 #: fr/rsa.md:9
 msgid ""
@@ -69,11 +52,6 @@ msgid ""
 "inconvénient, et pas des moindres, de devoir avoir un canal sécurisé pour "
 "transmettre le secret."
 msgstr ""
-"Les algorithmes de chiffrement **symétriques** : ils impliquent d'avoir un "
-"secret (un \"mot de passe\") partagé entre les différents appareils. Ce "
-"genre d'algorithme a pour avantage d'être plutôt rapide mais a pour "
-"inconvénient, et pas des moindres, de devoir avoir un canal sécurisé pour "
-"transmettre le secret."
 
 #: fr/rsa.md:12
 msgid ""
@@ -84,16 +62,10 @@ msgid ""
 "un canal sécurisé pour initier la connexion, mais pour inconvénient d'être "
 "nettement moins rapide que les algorithmes de chiffrement symétriques."
 msgstr ""
-"Les algorithmes de chiffrement **asymétriques** : ces algorithmes, dont RSA "
-"fait partie, ne nécessitent pas de partager un secret à l'avance. Ils se "
-"basent sur une paire de clés (une publique et une privée) liées "
-"mathématiquement. Cet algorithme a donc pour avantage de ne pas nécessiter "
-"un canal sécurisé pour initier la connexion, mais pour inconvénient d'être "
-"nettement moins rapide que les algorithmes de chiffrement symétriques."
 
 #: fr/rsa.md:16
 msgid "Alors, comment fonctionne RSA ?"
-msgstr "Alors, comment fonctionne RSA ?"
+msgstr ""
 
 #: fr/rsa.md:17
 msgid ""
@@ -101,41 +73,36 @@ msgid ""
 "tout le monde. Si vous avez des questions, n'hésitez pas à les poser dans "
 "les commentaires en bas de cet article !"
 msgstr ""
-"Cette partie sera un peu plus mathématique mais devrait être accessible pour "
-"tout le monde. Si vous avez des questions, n'hésitez pas à les poser dans "
-"les commentaires en bas de cet article !"
 
 #: fr/rsa.md:19
 msgid "Génération des clés"
-msgstr "Génération des clés"
+msgstr ""
 
 #: fr/rsa.md:22
 msgid ""
 "On choisit deux nombres premier distincts $p$ et $q$ (pour rappel, un nombre "
 "premier est un nombre qui n'a que deux diviseurs, 1 et lui-même.)"
 msgstr ""
-"On choisit deux nombres premier distincts $p$ et $q$ (pour rappel, un nombre "
-"premier est un nombre qui n'a que deux diviseurs, 1 et lui-même.)"
 
 #: fr/rsa.md:24
 msgid "$$p = 5 \\\\"
-msgstr "$$p = 5 \\\\"
+msgstr ""
 
 #: fr/rsa.md:25
 msgid "q = 13$$"
-msgstr "q = 13$$"
+msgstr ""
 
 #: fr/rsa.md:28
 msgid "On calcule $n$ le produit de $p$ et $q$."
-msgstr "On calcule $n$ le produit de $p$ et $q$."
+msgstr ""
 
 #: fr/rsa.md:30
 msgid "$$n = 5×13 \\\\"
-msgstr "$$n = 5×13 \\\\"
+msgstr ""
 
 #: fr/rsa.md:31
 msgid "n = 65$$"
-msgstr "n = 65$$"
+msgstr ""
 
 #: fr/rsa.md:34
 msgid ""
@@ -146,134 +113,117 @@ msgid ""
 "entre eux, ça veut simplement dire qu'ils n'ont aucun [facteur premier]"
 "(http://www.recreomath.qc.ca/am_facteur.htm) en commun."
 msgstr ""
-"On calcule la *valeur indicatrice d'Euler* en $n$. *L'indicaquoi ?* 🤨 La "
-"valeur indicatrice d'Euler c'est une fonction notée $\\phi$ qui, à tout "
-"entier naturel $n$ associe le nombre d'entiers naturels compris entre 1 et $n"
-"$ et premiers avec $n$. *Premier avec ?* 🤔 Quand deux nombres sont premiers "
-"entre eux, ça veut simplement dire qu'ils n'ont aucun [facteur premier]"
-"(http://www.recreomath.qc.ca/am_facteur.htm) en commun."
 
 #: fr/rsa.md:36
 msgid ""
 "Par exemple, 12 est premier avec 5 car dans la décomposition en facteurs "
 "premiers de 12 ($2\\times2\\times3$) on ne retrouve pas 5"
 msgstr ""
-"Par exemple, 12 est premier avec 5 car dans la décomposition en facteurs "
-"premiers de 12 ($2\\times2\\times3$) on ne retrouve pas 5"
 
 #: fr/rsa.md:38
 msgid ""
 "Voici un petit exemple de la valeur indicatrice d'Euler qui devrait vous "
 "permettre de bien comprendre :"
 msgstr ""
-"Voici un petit exemple de la valeur indicatrice d'Euler qui devrait vous "
-"permettre de bien comprendre :"
 
 #: fr/rsa.md:40
 msgid "$$\\phi(12) = 4 \\\\ \\small{(1, 5, 7, 11)}$$"
-msgstr "$$\\phi(12) = 4 \\\\ \\small{(1, 5, 7, 11)}$$"
+msgstr ""
 
 #: fr/rsa.md:42
 msgid "Les nombres 1, 5, 7 et 11 sont bien premiers avec 12."
-msgstr "Les nombres 1, 5, 7 et 11 sont bien premiers avec 12."
+msgstr ""
 
 #: fr/rsa.md:44
 msgid "Nous allons donc calculer la valeur indicatrice d'Euler en $n$."
-msgstr "Nous allons donc calculer la valeur indicatrice d'Euler en $n$."
+msgstr ""
 
 #: fr/rsa.md:45
 msgid ""
 "Pour calculer cette dernière, il faut connaitre les propriétés suivantes :"
 msgstr ""
-"Pour calculer cette dernière, il faut connaitre les propriétés suivantes :"
 
 #: fr/rsa.md:47
 msgid "$$\\phi(a\\times b) = \\phi(a)\\times \\phi(b)$$"
-msgstr "$$\\phi(a\\times b) = \\phi(a)\\times \\phi(b)$$"
+msgstr ""
 
 #: fr/rsa.md:49
 msgid "Pour n'importe quel nombre premier c, $\\phi(c)=c-1$"
-msgstr "Pour n'importe quel nombre premier c, $\\phi(c)=c-1$"
+msgstr ""
 
 #: fr/rsa.md:51
 msgid ""
 "Avec ces deux propriétés en tête et sachant que p et q sont deux nombres "
 "premiers, on peut affirmer que"
 msgstr ""
-"Avec ces deux propriétés en tête et sachant que p et q sont deux nombres "
-"premiers, on peut affirmer que"
 
 #: fr/rsa.md:53
 msgid "$$\\phi(p) =p - 1 \\\\"
-msgstr "$$\\phi(p) =p - 1 \\\\"
+msgstr ""
 
 #: fr/rsa.md:54
 msgid "\\phi(q) = q-1 \\\\"
-msgstr "\\phi(q) = q-1 \\\\"
+msgstr ""
 
 #: fr/rsa.md:55
 msgid "\\phi(n) = \\phi(p \\times q) = \\phi(p) \\times \\phi(q) \\\\"
-msgstr "\\phi(n) = \\phi(p \\times q) = \\phi(p) \\times \\phi(q) \\\\"
+msgstr ""
 
 #: fr/rsa.md:56
 msgid "\\phi(n) = (p - 1) \\times (q - 1)$$"
-msgstr "\\phi(n) = (p - 1) \\times (q - 1)$$"
+msgstr ""
 
 #: fr/rsa.md:58
 msgid "On remplace par nos valeurs d'exemple"
-msgstr "On remplace par nos valeurs d'exemple"
+msgstr ""
 
 #: fr/rsa.md:60
 msgid "$$\\phi(5) = 5 - 1 \\\\"
-msgstr "$$\\phi(5) = 5 - 1 \\\\"
+msgstr ""
 
 #: fr/rsa.md:61
 msgid "\\phi(13) = 13-1 \\\\"
-msgstr "\\phi(13) = 13-1 \\\\"
+msgstr ""
 
 #: fr/rsa.md:62
 msgid "\\phi(5 \\times 13) = \\phi(5)*\\phi(13) \\\\"
-msgstr "\\phi(5 \\times 13) = \\phi(5)*\\phi(13) \\\\"
+msgstr ""
 
 #: fr/rsa.md:63
 msgid "\\phi(65) = (5 - 1)(13 - 1) \\\\"
-msgstr "\\phi(65) = (5 - 1)(13 - 1) \\\\"
+msgstr ""
 
 #: fr/rsa.md:64
 msgid "\\phi(65) = 4*12 \\\\"
-msgstr "\\phi(65) = 4*12 \\\\"
+msgstr ""
 
 #: fr/rsa.md:65
 msgid "\\phi(65) = 48 \\\\"
-msgstr "\\phi(65) = 48 \\\\"
+msgstr ""
 
 #: fr/rsa.md:66 fr/rsa.md:93
 msgid "$$"
-msgstr "$$"
+msgstr ""
 
 #: fr/rsa.md:69
 msgid ""
 "On choisit un entier naturel $e$ premier avec $\\phi(n)$ (qui est donc ici "
 "48)."
 msgstr ""
-"On choisit un entier naturel $e$ premier avec $\\phi(n)$ (qui est donc ici "
-"48)."
 
 #: fr/rsa.md:71
 msgid "$$e ="
-msgstr "$$e ="
+msgstr ""
 
 #: fr/rsa.md:72
 msgid "5$$"
-msgstr "5$$"
+msgstr ""
 
 #: fr/rsa.md:75
 msgid ""
 "On calcule $d$, l'inverse modulaire de $e$ modulo $n$. *L'inverse "
 "modulaire ? Modulo ? Qu'est-ce que c'est ces trucs ?* 🧐"
 msgstr ""
-"On calcule $d$, l'inverse modulaire de $e$ modulo $n$. *L'inverse "
-"modulaire ? Modulo ? Qu'est-ce que c'est ces trucs ?* 🧐"
 
 #: fr/rsa.md:76
 msgid ""
@@ -285,21 +235,14 @@ msgid ""
 "est 9, et que le reste de la division euclidienne de 9 par 12 est 9. On note "
 "cela de la façon suivante :"
 msgstr ""
-"Pour comprendre le concept d'inverse modulaire, il est nécessaire de "
-"comprendre ce qu'est la congruence sur les entiers. Deux entiers $a$ et $b$ "
-"sont dits congrus modulo $n$ si le reste de la division euclidienne de $a$ "
-"par $n$ et de $b$ par $n$ est identique. Par exemple 33 et 9 sont dits "
-"congrus modulo 12 car le reste de la division euclidienneHee de 33 par 12 "
-"est 9, et que le reste de la division euclidienne de 9 par 12 est 9. On note "
-"cela de la façon suivante :"
 
 #: fr/rsa.md:78
 msgid "$$33 \\equiv 9 \\mod{12} \\\\"
-msgstr "$$33 \\equiv 9 \\mod{12} \\\\"
+msgstr ""
 
 #: fr/rsa.md:79
 msgid "\\small\\textit{33 et 9 sont congrus modulo 12}$$"
-msgstr "\\small\\textit{33 et 9 sont congrus modulo 12}$$"
+msgstr ""
 
 #: fr/rsa.md:81
 msgid ""
@@ -307,29 +250,22 @@ msgid ""
 "(avec donc 12 heures), si on fait tourner l'aiguille des heures de 9 heures "
 "ou de 33, elle se retrouvera au même endroit à la fin."
 msgstr ""
-"Une autre façon de se représenter la chose serait d'imaginer une horloge "
-"(avec donc 12 heures), si on fait tourner l'aiguille des heures de 9 heures "
-"ou de 33, elle se retrouvera au même endroit à la fin."
 
 #: fr/rsa.md:83
 msgid ""
 "![Horloge tournant 33 heures et horloge tournant 9 heurs](/static/img/rsa/"
 "clock.gif)"
 msgstr ""
-"![Horloge tournant 33 heures et horloge tournant 9 heurs](/static/img/rsa/"
-"clock.gif)"
 
 #: fr/rsa.md:85
 msgid ""
 "Donc, calculer l'inverse modulaire d'un entier $a$ modulo $n$ c'est trouver "
 "un entier $u$ résolvant l'équation :"
 msgstr ""
-"Donc, calculer l'inverse modulaire d'un entier $a$ modulo $n$ c'est trouver "
-"un entier $u$ résolvant l'équation :"
 
 #: fr/rsa.md:87
 msgid "$$au \\equiv 1 \\mod{n}$$"
-msgstr "$$au \\equiv 1 \\mod{n}$$"
+msgstr ""
 
 #: fr/rsa.md:89
 msgid ""
@@ -337,101 +273,84 @@ msgid ""
 "euclidienne de $a \\times u$ par n soit égal au reste de la division "
 "euclidienne de 1 par $e$."
 msgstr ""
-"Ce qui revient donc à chercher un nombre $u$ tel que le reste de la division "
-"euclidienne de $a \\times u$ par n soit égal au reste de la division "
-"euclidienne de 1 par $e$."
 
 #: fr/rsa.md:91
 msgid ""
 "Comment déterminer $u$ ? Et bien pas de formule magique, il suffit de "
 "bruteforcer tous les nombres entiers entre 0 et $n$. On note cela :"
 msgstr ""
-"Comment déterminer $u$ ? Et bien pas de formule magique, il suffit de "
-"bruteforcer tous les nombres entiers entre 0 et $n$. On note cela :"
 
 #: fr/rsa.md:94
 msgid "u \\in~ ⟦0~;~n⟧$$"
-msgstr "u \\in~ ⟦0~;~n⟧$$"
+msgstr ""
 
 #: fr/rsa.md:96
 msgid ""
 "Dans notre exemple, on veut calculer l'inverse modulaire de $e$ modulo $"
 "\\phi(p\\times q)$. On fait donc"
 msgstr ""
-"Dans notre exemple, on veut calculer l'inverse modulaire de $e$ modulo $"
-"\\phi(p\\times q)$. On fait donc"
 
 #: fr/rsa.md:98
 msgid "$$5d \\equiv 1 \\mod{48} \\\\"
-msgstr "$$5d \\equiv 1 \\mod{48} \\\\"
+msgstr ""
 
 #: fr/rsa.md:99
 msgid "5*29\\equiv 1 \\mod 48 \\\\"
-msgstr "5*29\\equiv 1 \\mod 48 \\\\"
+msgstr ""
 
 #: fr/rsa.md:100
 msgid "d = 29$$"
-msgstr "d = 29$$"
+msgstr ""
 
 #: fr/rsa.md:102
 msgid ""
 "Et c'est fini ! On a nos clés publiques et privées. Le couple (n,e) est "
 "notre clé publique et le nombre d notre clé privée."
 msgstr ""
-"Et c'est fini ! On a nos clés publiques et privées. Le couple (n,e) est "
-"notre clé publique et le nombre d notre clé privée."
 
 #: fr/rsa.md:106
 msgid "Chiffrement d'un message"
-msgstr "Chiffrement d'un message"
+msgstr ""
 
 #: fr/rsa.md:107
 msgid ""
 "Maintenant que l'on a notre paire de clés, on peut chiffrer notre premier "
 "message."
 msgstr ""
-"Maintenant que l'on a notre paire de clés, on peut chiffrer notre premier "
-"message."
 
 #: fr/rsa.md:109
 msgid ""
 "Soit M, le message que l'on souhaite chiffrer strictement inférieur à n, on "
 "calcule C le message chiffré de la façon suivante."
 msgstr ""
-"Soit M, le message que l'on souhaite chiffrer strictement inférieur à n, on "
-"calcule C le message chiffré de la façon suivante."
 
 #: fr/rsa.md:111
 msgid "$$M^{e}\\equiv C \\mod n$$"
-msgstr "$$M^{e}\\equiv C \\mod n$$"
+msgstr ""
 
 #: fr/rsa.md:113
 msgid "Exemple avec M = 42"
-msgstr "Exemple avec M = 42"
+msgstr ""
 
 #: fr/rsa.md:115
 msgid ""
 "$$42^{5}\\equiv C \\mod 65 \\\\\n"
 "42^5 \\equiv 22 \\mod 65$$"
 msgstr ""
-"$$42^{5}\\equiv C \\mod 65 \\\\\n"
-"42^5 \\equiv 22 \\mod 65$$"
 
 #: fr/rsa.md:117
 msgid "Le message chiffré pour notre clé publique est donc 22"
-msgstr "Le message chiffré pour notre clé publique est donc 22"
+msgstr ""
 
 #: fr/rsa.md:119
 msgid "Déchiffrement d'un message"
-msgstr "Déchiffrement d'un message"
+msgstr ""
 
 #: fr/rsa.md:120
 msgid ""
 "Une fois notre message chiffré, on peut le déchiffrer en appliquant la "
 "formule suivante :"
 msgstr ""
-"Une fois notre message chiffré, on peut le déchiffrer en appliquant la "
-"formule suivante :"
 
 #: fr/rsa.md:122
 msgid ""
@@ -439,21 +358,16 @@ msgid ""
 "M \\equiv 22^{29} \\mod 65 \\\\\n"
 "M = 42$$"
 msgstr ""
-"$$M \\equiv C^d \\mod n \\\\\n"
-"M \\equiv 22^{29} \\mod 65 \\\\\n"
-"M = 42$$"
 
 #: fr/rsa.md:124
 msgid "Décryptage d'un message"
-msgstr "Décryptage d'un message"
+msgstr ""
 
 #: fr/rsa.md:125
 msgid ""
 "*Petit rappel, décrypter un message consiste à déterminer le contenu du dit "
 "message sans connaitre la clé utilisée pour le chiffrer.*"
 msgstr ""
-"*Petit rappel, décrypter un message consiste à déterminer le contenu du dit "
-"message sans connaitre la clé utilisée pour le chiffrer.*"
 
 #: fr/rsa.md:127
 msgid ""
@@ -462,14 +376,10 @@ msgid ""
 "donc bruteforcer en vérifiant pour chaque nombre qu'il est premier, mais "
 "aussi que le produit de ces deux nombres n'est pas factorisable."
 msgstr ""
-"Pour décrypter un message, il faut trouver l'inverse modulaire de $e$ modulo "
-"$n$ ce qui n'est pas possible sans connaître $p$ et $q$. Le seul moyen est "
-"donc bruteforcer en vérifiant pour chaque nombre qu'il est premier, mais "
-"aussi que le produit de ces deux nombres n'est pas factorisable."
 
 #: fr/rsa.md:129
 msgid "Conclusion"
-msgstr "Conclusion"
+msgstr ""
 
 #: fr/rsa.md:130
 msgid ""
@@ -481,10 +391,3 @@ msgid ""
 "introduites des fonctions de chiffrement asymétrique basées sur les courbes "
 "elliptiques."
 msgstr ""
-"La robustesse de RSA se base donc sur la complexité calculatoire des "
-"algorithmes de vérification de primauté de très grands nombres. Le problème "
-"est que pour créer des clés toujours plus robustes, il faut augmenter la "
-"taille de la clé ce qui peut devenir contraignant. Afin de répondre à cette "
-"problématique, et à d'autres que nous aborderons plus tard, ont été "
-"introduites des fonctions de chiffrement asymétrique basées sur les courbes "
-"elliptiques."

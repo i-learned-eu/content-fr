@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Language-Team: English\n"
-"PO-Revision-Date: 2022-06-15 16:17+0200\n"
-"Language: en_EN\n"
+"Language-Team: none\n"
+"PO-Revision-Date: 2022-06-15 13:37+0000\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2022-06-15 13:37+0000\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: Eban <contact@eban.eu.org>\n"
+"Last-Translator: Automatically generated\n"
 
 #: fr/ca-ssh.md:0
 msgid ""
@@ -25,17 +25,6 @@ msgid ""
 "Title: Comment faire une autorité de certification (CA) SSH ?\n"
 "Category: Sysadmin"
 msgstr ""
-"lang: fr\n"
-"Author: Eban\n"
-"Date: 2021/07/22\n"
-"Keywords: ssh, sécurité\n"
-"Slug: ca-ssh\n"
-"Summary: SSH est un protocole très répandu sur internet, il est utilisé par "
-"des millions d'entreprises et de particuliers chaque jour, mais bien souvent "
-"de façon peu sécurisée. Pour remédier à cela il existe une solution que nous "
-"allons étudier dans cet article, les autorités de certification SSH.\n"
-"Title: Comment faire une autorité de certification (CA) SSH ?\n"
-"Category: Sysadmin"
 
 #: fr/ca-ssh.md:2
 msgid ""
@@ -48,18 +37,10 @@ msgid ""
 "publiques des 500 ingénieurs ! Pour remédier à cela il existe une solution "
 "que nous allons étudier dans cet article, les autorités de certification SSH."
 msgstr ""
-"SSH est un protocole très répandu sur internet, il est utilisé par des "
-"millions d'entreprises et particuliers chaque jour, mais bien souvent de "
-"façon peu sécurisée. Vous connaissez peut-être les clés SSH qui permettent "
-"une meilleure sécurité que les mots de passe, mais ces clés posent un "
-"problème, et notamment en entreprise, imaginez une entreprise avec 500 "
-"ingénieurs, il faudrait, sur chaque serveur SSH, mettre les 500 clés "
-"publiques des 500 ingénieurs ! Pour remédier à cela il existe une solution "
-"que nous allons étudier dans cet article, les autorités de certification SSH."
 
 #: fr/ca-ssh.md:4
 msgid "La théorie"
-msgstr "La théorie"
+msgstr ""
 
 #: fr/ca-ssh.md:5
 msgid ""
@@ -73,27 +54,16 @@ msgid ""
 "signé par notre autorité de certification peut être considérée comme \"de "
 "confiance\"."
 msgstr ""
-"Le système de certificats de SSH est relativement similaire à celui de TLS "
-"(x509), une première paire de clés publiques/privées est générée, elle "
-"servira d'**autorité de certification**, le clé privée de cette autorité de "
-"certification doit bien évidemment rester ultra confidentielle. On va "
-"ensuite générer une autre paire de clé sur chaque client. On pourra ensuite, "
-"avec la clé privée de notre autorité de certification, signer la publique "
-"des clients afin de générer un certificat. Ainsi, n'importe quel certificat "
-"signé par notre autorité de certification peut être considérée comme \"de "
-"confiance\"."
 
 #: fr/ca-ssh.md:7
 msgid ""
 "![Principe d'une autorité de certification](/static/img/ca-ssh/"
 "CA_principe(1).webp)"
 msgstr ""
-"![Principe d'une autorité de certification](/static/img/ca-ssh/"
-"CA_principe(1).webp)"
 
 #: fr/ca-ssh.md:9
 msgid "Signer les clés hôte"
-msgstr "Signer les clés hôte"
+msgstr ""
 
 #: fr/ca-ssh.md:10
 msgid ""
@@ -101,9 +71,6 @@ msgid ""
 "publique (appelée clé hôte) au client et le client doit approuver, ou non, "
 "l'authenticité de la clé envoyée par le serveur, c'est le fameux message"
 msgstr ""
-"Lors de la première connexion à un serveur SSH, le serveur envoie sa clé "
-"publique (appelée clé hôte) au client et le client doit approuver, ou non, "
-"l'authenticité de la clé envoyée par le serveur, c'est le fameux message"
 
 #: fr/ca-ssh.md:12
 msgid ""
@@ -113,11 +80,6 @@ msgid ""
 "This key is not known by any other names\n"
 "Are you sure you want to continue connecting (yes/no/[fingerprint])?"
 msgstr ""
-"The authenticity of host 'XXXXX' can't be established.\n"
-"ED25519 key fingerprint is SHA256:JxfJl38mBVY2jX0h/LWDuB1OtgYfgLBr3nJw/"
-"lw5GFE.\n"
-"This key is not known by any other names\n"
-"Are you sure you want to continue connecting (yes/no/[fingerprint])?"
 
 #: fr/ca-ssh.md:13
 msgid ""
@@ -130,30 +92,18 @@ msgid ""
 "avec SSH) ou les autorités de certification (CA) c'est ce que nous allons "
 "détailler ici."
 msgstr ""
-"Nous avons tous pour (mauvaise) habitude de simplement entrer `yes` sans se "
-"poser plus de questions, mais cette habitude est très dangereuse, un "
-"attaquant pourrait usurper le serveur SSH auquel nous essayons de nous "
-"connecter ! Pour remédier à cela il existe plusieurs solutions comme [SSHFP]"
-"(https://fr.wikipedia.org/wiki/Enregistrement_DNS_SSHFP) (qui est "
-"relativement similaire à [TLSA](https://ilearned.eu.org/dane.html), mais "
-"avec SSH) ou les autorités de certification (CA) c'est ce que nous allons "
-"détailler ici."
 
 #: fr/ca-ssh.md:15
 msgid ""
 "La première étape est donc de créer une paire de clés pour notre autorité de "
 "certification avec la commande"
 msgstr ""
-"La première étape est donc de créer une paire de clés pour notre autorité de "
-"certification avec la commande"
 
 #: fr/ca-ssh.md:17
 msgid ""
 "ssh-keygen -a 1000 -t ed25519 -f /etc/ssh/ca/id_ed25519 -C \"contact+ca@eban."
 "bzh\""
 msgstr ""
-"ssh-keygen -a 1000 -t ed25519 -f /etc/ssh/ca/id_ed25519 -C \"contact+ca@eban."
-"bzh\""
 
 #: fr/ca-ssh.md:18
 msgid ""
@@ -161,9 +111,6 @@ msgid ""
 "clé), plus ce nombre est élevé, plus la vérification du mot de passe sera "
 "lente, mais plus la clé sera résistante au bruteforce."
 msgstr ""
-"L'option `-a` indique le nombre de tours KDF (fonction de dérivation de la "
-"clé), plus ce nombre est élevé, plus la vérification du mot de passe sera "
-"lente, mais plus la clé sera résistante au bruteforce."
 
 #: fr/ca-ssh.md:20
 msgid ""
@@ -172,10 +119,6 @@ msgid ""
 "medium.com/a-real-world-comparison-of-the-ssh-key-algorithms-b26b0b31bfd9) "
 "supporté par SSH."
 msgstr ""
-"`-t` indique l'algorithme à utiliser pour la clé, ici c'est ed25519, "
-"l'algorithme de chiffrement [le plus sécurisé à ce jour](https://nbeguier."
-"medium.com/a-real-world-comparison-of-the-ssh-key-algorithms-b26b0b31bfd9) "
-"supporté par SSH."
 
 #: fr/ca-ssh.md:22
 msgid ""
@@ -189,23 +132,12 @@ msgid ""
 "etc/ssh/ca` de la machine sur laquelle nous avons généré l'autorité de "
 "certification. On peut ensuite lancer la commande"
 msgstr ""
-"Une fois cette première paire de clé créée, nous allons pouvoir l'utiliser "
-"pour signer les clés hôtes publiques de nos serveurs SSH, la première étape "
-"est donc d'aller cherche ces clés hôtes, elles sont, sur chaque serveur SSH, "
-"dans le répertoire /etc/ssh, ici je ne génèrerait qu'un certificat en "
-"`ed25519` mais la même démarche est possible avec n'importe quel algorithme "
-"supporté par OpenSSH. La clé publique hôte est donc disponible sous le "
-"chemin `/etc/ssh/ssh_host_ed25519_key.pub` copions-là dans le répertoire `/"
-"etc/ssh/ca` de la machine sur laquelle nous avons généré l'autorité de "
-"certification. On peut ensuite lancer la commande"
 
 #: fr/ca-ssh.md:24
 msgid ""
 "ssh-keygen -h -s /etc/ssh/ca/id_ed25519 -n pi01,pi01.infra.eban.bzh -I pi01 -"
 "V +3650d ssh_host_ed25519_key.pub"
 msgstr ""
-"ssh-keygen -h -s /etc/ssh/ca/id_ed25519 -n pi01,pi01.infra.eban.bzh -I pi01 -"
-"V +3650d ssh_host_ed25519_key.pub"
 
 #: fr/ca-ssh.md:25
 msgid ""
@@ -213,17 +145,12 @@ msgid ""
 "doit correspondre aux différents noms de domaine auxquelles la clé pourrait "
 "être associée."
 msgstr ""
-"L'option `-n` correspond aux `principals`, dans le cas d'une clé hôte, elle "
-"doit correspondre aux différents noms de domaine auxquelles la clé pourrait "
-"être associée."
 
 #: fr/ca-ssh.md:27
 msgid ""
 "`-I` correspond à l'`ID`, un identifiant unique attribué à la clé, c'est "
 "simplement son \"nom\"."
 msgstr ""
-"`-I` correspond à l'`ID`, un identifiant unique attribué à la clé, c'est "
-"simplement son \"nom\"."
 
 #: fr/ca-ssh.md:29
 msgid ""
@@ -233,21 +160,15 @@ msgid ""
 "l'emplacement `/etc/ssh/ssh_host_ed25519_key-cert.pub`) et à ajouter la "
 "ligne suivante à la fin du fichier `/etc/sshd_config`."
 msgstr ""
-"Une fois la clé publique signée, il ne nous reste plus qu'à copier le "
-"certificat qui aura été généré dans le répertoire `/etc/ssh/ca/"
-"ssh_host_ed25519_key-cert.pub` sur le serveur SSH (ici nous le mettrons à "
-"l'emplacement `/etc/ssh/ssh_host_ed25519_key-cert.pub`) et à ajouter la "
-"ligne suivante à la fin du fichier `/etc/sshd_config`."
 
 #: fr/ca-ssh.md:31
 msgid "HostCertificate /etc/ssh/ssh_host_ed25519_key-cert.pub"
-msgstr "HostCertificate /etc/ssh/ssh_host_ed25519_key-cert.pub"
+msgstr ""
 
 #: fr/ca-ssh.md:32
 msgid ""
 "On redémarre ensuite le démon ssh avec la commande `systemctl restart sshd`."
 msgstr ""
-"On redémarre ensuite le démon ssh avec la commande `systemctl restart sshd`."
 
 #: fr/ca-ssh.md:34
 msgid ""
@@ -255,29 +176,22 @@ msgid ""
 "certificats hôtes signés par notre autorité de certification en utilisant la "
 "commande"
 msgstr ""
-"Dernière étape, on va indiquer à tous les clients SSH de faire confiance aux "
-"certificats hôtes signés par notre autorité de certification en utilisant la "
-"commande"
 
 #: fr/ca-ssh.md:36
 msgid ""
 "echo \"@cert-authority * $(cat /etc/ssh/ca/id_ed25519.pub)\" >> ~/.ssh/"
 "known_hosts"
 msgstr ""
-"echo \"@cert-authority * $(cat /etc/ssh/ca/id_ed25519.pub)\" >> ~/.ssh/"
-"known_hosts"
 
 #: fr/ca-ssh.md:37
 msgid ""
 "Et voilà ! Notre autorité de certification est maintenant configurée sur le "
 "serveur SSH."
 msgstr ""
-"Et voilà ! Notre autorité de certification est maintenant configurée sur le "
-"serveur SSH."
 
 #: fr/ca-ssh.md:39
 msgid "Signer les clés clients"
-msgstr "Signer les clés clients"
+msgstr ""
 
 #: fr/ca-ssh.md:40
 msgid ""
@@ -286,40 +200,31 @@ msgid ""
 "gardera la même que celle générée dans la partie précédente), on lance la "
 "commande"
 msgstr ""
-"La procédure pour signer les clés des clients est relativement similaire, "
-"après avoir généré une paire de clés pour l'autorité de certification (on "
-"gardera la même que celle générée dans la partie précédente), on lance la "
-"commande"
 
 #: fr/ca-ssh.md:42
 msgid ""
 "ssh-keygen -s /etc/ssh/ca/id_ed25519 -n pi -I pc01@eban.bzh -V +30d -z 1 /"
 "home/USERNAME/.ssh/id_ed25519.pub"
 msgstr ""
-"ssh-keygen -s /etc/ssh/ca/id_ed25519 -n pi -I pc01@eban.bzh -V +30d -z 1 /"
-"home/USERNAME/.ssh/id_ed25519.pub"
 
 #: fr/ca-ssh.md:43
 msgid "N'oubliez pas de changer `USERNAME` par votre nom d'utilisateur."
-msgstr "N'oubliez pas de changer `USERNAME` par votre nom d'utilisateur."
+msgstr ""
 
 #: fr/ca-ssh.md:45
 msgid ""
 "Si vous obtenez une erreur, c'est probablement que n'avez pas déjà une paire "
 "de clé SSH en `ed25519` vous pouvez en générer une avec la commande"
 msgstr ""
-"Si vous obtenez une erreur, c'est probablement que n'avez pas déjà une paire "
-"de clé SSH en `ed25519` vous pouvez en générer une avec la commande"
 
 #: fr/ca-ssh.md:47
 msgid "ssh-keygen -t ed25519"
-msgstr "ssh-keygen -t ed25519"
+msgstr ""
 
 #: fr/ca-ssh.md:48
 msgid ""
 "Une fois la paire de clé générée, vous pouvez relancer la première commande."
 msgstr ""
-"Une fois la paire de clé générée, vous pouvez relancer la première commande."
 
 #: fr/ca-ssh.md:50
 msgid ""
@@ -328,10 +233,6 @@ msgid ""
 "valide, cette clé ne sera donc valide que pour le nom d'utilisateur distant  "
 "`pi`."
 msgstr ""
-"Ici l'option `-n` correspond au⋅x **nom**⋅s **d'utilisateur distant** (= sur "
-"le serveur SSH) pour lesquels vous souhaitez autoriser que cette clé soit "
-"valide, cette clé ne sera donc valide que pour le nom d'utilisateur distant  "
-"`pi`."
 
 #: fr/ca-ssh.md:52
 msgid ""
@@ -339,9 +240,6 @@ msgid ""
 "devrez incrémenter si vous régénérez la clé après la durée d'expiration (ici "
 "mise à 30 jours)."
 msgstr ""
-"`-z` correspond au `serial` de ce certificat, c'est un nombre que vous "
-"devrez incrémenter si vous régénérez la clé après la durée d'expiration (ici "
-"mise à 30 jours)."
 
 #: fr/ca-ssh.md:54
 msgid ""
@@ -352,12 +250,6 @@ msgid ""
 "fichier `/etc/ssh/sshd_config`. On termine par redémarrer le service SSH, "
 "`sudo systemctl restart sshd`."
 msgstr ""
-"Une fois cela fait, il ne nous reste plus qu'à copier la clé publique de "
-"notre autorité de certification (contenue dans `/etc/ssh/ca/id_ed25519.pub`) "
-"sur notre serveur SSH, ici nous la mettrons dans le fichier `/etc/ssh/ca."
-"pub` et à ajouter la ligne `TrustedUserCAKeys /etc/ssh/ca.pub` à la fin du "
-"fichier `/etc/ssh/sshd_config`. On termine par redémarrer le service SSH, "
-"`sudo systemctl restart sshd`."
 
 #: fr/ca-ssh.md:56
 msgid ""
@@ -368,9 +260,3 @@ msgid ""
 "vous aura été utile, si vous avez des questions n'hésitez pas à nous les "
 "poser en commentaire ou sur [Twitter](https://twitter.com/ilearned_eu)."
 msgstr ""
-"Nous avons maintenant mit en place notre autorité de certification ! On peut "
-"simplement la tester en se connectant via SSH au serveur, vous ne devriez "
-"pouvoir vous connecter sans mot de passe et n'avoir aucune demande de "
-"validation de la clé publique de la machine hôte. J'espère que cet article "
-"vous aura été utile, si vous avez des questions n'hésitez pas à nous les "
-"poser en commentaire ou sur [Twitter](https://twitter.com/ilearned_eu)."

@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Language-Team: English\n"
-"PO-Revision-Date: 2022-06-15 16:18+0200\n"
-"Language: en_EN\n"
+"Language-Team: none\n"
+"PO-Revision-Date: 2022-06-15 13:37+0000\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2022-06-15 13:37+0000\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: Eban <contact@eban.eu.org>\n"
+"Last-Translator: Automatically generated\n"
 
 #: fr/ntp.md:0
 msgid ""
@@ -25,17 +25,6 @@ msgid ""
 "Slug: ntp\n"
 "Category: Réseau/NTP"
 msgstr ""
-"lang: fr\n"
-"Title: NTP, comment ça marche ?\n"
-"Keywords: ntp, time\n"
-"Date: 2021-05-13\n"
-"Author: Eban\n"
-"Summary: Depuis la démocratisation d'internet et de l'informatique en "
-"général, une question s'est posée, comment faire en sorte que les horloges "
-"de tous les ordinateurs soient coordonnées ? Aujourd'hui, regardons de plus "
-"près le protocole NTP qui répond à cette problématique.\n"
-"Slug: ntp\n"
-"Category: Réseau/NTP"
 
 #: fr/ntp.md:2
 msgid ""
@@ -48,18 +37,10 @@ msgid ""
 "typologie de réseau dite *mesh*, elle est découpée en strates afin de "
 "délivrer un temps équivalent partout et d'assurer une redondance."
 msgstr ""
-"Depuis la démocratisation d'internet et de l'informatique en général, une "
-"question s'est posée, comment faire en sorte que les horloges de tous les "
-"ordinateurs soient coordonnées ? En septembre 1985 une première version du "
-"protocole NTP (Network Time Protocol) est publiée dans la [RFC 958](https://"
-"datatracker.ietf.org/doc/html/rfc958), ce protocole se base sur [UDP]"
-"(https://ilearned.eu/udp.html) pour sa légèreté. NTP fonctionne sur une "
-"typologie de réseau dite *mesh*, elle est découpée en strates afin de "
-"délivrer un temps équivalent partout et d'assurer une redondance."
 
 #: fr/ntp.md:4
 msgid "![L'architecture de NTP](/static/img/ntp/schema_archi.webp)"
-msgstr "![L'architecture de NTP](/static/img/ntp/schema_archi.webp)"
+msgstr ""
 
 #: fr/ntp.md:6
 msgid ""
@@ -71,29 +52,20 @@ msgid ""
 "correspond bien. Quand nous, utilisateurs, accédons à un serveur NTP, on "
 "accède bien souvent à un serveur de strate 2 ou 3."
 msgstr ""
-"Les serveurs de strate 1 sont les horloges principales, le temps qu'elles "
-"donne peut provenir de différentes sources comme le [GPS](https://en."
-"wikipedia.org/wiki/Global_Positioning_System) ou une [horloge atomique]"
-"(https://fr.wikipedia.org/wiki/Horloge_atomique). Les serveurs des strates "
-"plus basse s'échangent entre eux leur temps afin de vérifier qu'il "
-"correspond bien. Quand nous, utilisateurs, accédons à un serveur NTP, on "
-"accède bien souvent à un serveur de strate 2 ou 3."
 
 #: fr/ntp.md:8
 msgid "Voici à quoi ressemble une requête NTP :"
-msgstr "Voici à quoi ressemble une requête NTP :"
+msgstr ""
 
 #: fr/ntp.md:10
 msgid "![Les headers d'une requête NTP](/static/img/ntp/schema_headers.webp)"
-msgstr "![Les headers d'une requête NTP](/static/img/ntp/schema_headers.webp)"
+msgstr ""
 
 #: fr/ntp.md:12
 msgid ""
 "Ça fait pas mal de parties 😄. Nous ne commenterons ici que les plus "
 "importantes."
 msgstr ""
-"Ça fait pas mal de parties 😄. Nous ne commenterons ici que les plus "
-"importantes."
 
 #: fr/ntp.md:14
 msgid ""
@@ -103,27 +75,20 @@ msgid ""
 "occasionnellement afin de synchroniser le temps universel coordonné (UTC) "
 "avec le temps solaire."
 msgstr ""
-"LI, Leap Indicator indique une [seconde intercalaire](https://fr.m.wikipedia."
-"org/wiki/Seconde_intercalaire) imminente. Une seconde intercalaire "
-"correspond, pour faire simple, à une seconde ajoutée sur toutes les horloges "
-"occasionnellement afin de synchroniser le temps universel coordonné (UTC) "
-"avec le temps solaire."
 
 #: fr/ntp.md:16
 msgid "VN, Version Number indique simplement la version de NTP utilisée."
-msgstr "VN, Version Number indique simplement la version de NTP utilisée."
+msgstr ""
 
 #: fr/ntp.md:18
 msgid "Mode, indique le mode dans lequel est l'émetteur, client, serveur etc."
-msgstr "Mode, indique le mode dans lequel est l'émetteur, client, serveur etc."
+msgstr ""
 
 #: fr/ntp.md:20
 msgid ""
 "Poll correspond à l'intervalle à laquelle le client doit reinterroger le "
 "serveur NTP."
 msgstr ""
-"Poll correspond à l'intervalle à laquelle le client doit reinterroger le "
-"serveur NTP."
 
 #: fr/ntp.md:22
 msgid ""
@@ -131,41 +96,32 @@ msgid ""
 "strate 1. Et root dispersion est une estimation de la marge d'erreur du "
 "serveur de strate 1."
 msgstr ""
-"Root delay correspond au temps pour faire un aller-retour vers un serveur de "
-"strate 1. Et root dispersion est une estimation de la marge d'erreur du "
-"serveur de strate 1."
 
 #: fr/ntp.md:24
 msgid ""
 "Reference ID correspond au type d'outil utilisé par le serveur root (strate "
 "1) comme par exemple le GPS ou une horloge atomique."
 msgstr ""
-"Reference ID correspond au type d'outil utilisé par le serveur root (strate "
-"1) comme par exemple le GPS ou une horloge atomique."
 
 #: fr/ntp.md:26
 msgid "Reference Timestamp est le temps de la dernière mise à jour via NTP."
-msgstr "Reference Timestamp est le temps de la dernière mise à jour via NTP."
+msgstr ""
 
 #: fr/ntp.md:28
 msgid "Les trois autres timestamps sont décris ci-dessous"
-msgstr "Les trois autres timestamps sont décris ci-dessous"
+msgstr ""
 
 #: fr/ntp.md:30
 msgid ""
 "![Schéma représentant les différents timestamp](/static/img/ntp/"
 "schema_timestamps.webp)"
 msgstr ""
-"![Schéma représentant les différents timestamp](/static/img/ntp/"
-"schema_timestamps.webp)"
 
 #: fr/ntp.md:32
 msgid ""
 "Le `destination timestamp` n'est logiquement pas inclut dans les headers, il "
 "est dans ce schéma à titre informatif."
 msgstr ""
-"Le `destination timestamp` n'est logiquement pas inclut dans les headers, il "
-"est dans ce schéma à titre informatif."
 
 #: fr/ntp.md:34
 msgid ""
@@ -173,9 +129,6 @@ msgid ""
 "peut avoir une précision de l'ordre de quelques nanosecondes en soustrayant "
 "le temps de transfert !"
 msgstr ""
-"Ça fait beaucoup de paramètres 😅 Mais grâce à toutes ces informations on "
-"peut avoir une précision de l'ordre de quelques nanosecondes en soustrayant "
-"le temps de transfert !"
 
 #: fr/ntp.md:36
 msgid ""
@@ -184,11 +137,7 @@ msgid ""
 "moyens de signature cryptographique, NTP implémente aussi une solution de ce "
 "type que nous étudierons très prochainement :)."
 msgstr ""
-"Un dernier problème se pose, comment assurer le fait que le serveur NTP ne "
-"se fasse pas usurper ? Nous avons déjà étudié dans d'autres articles des "
-"moyens de signature cryptographique, NTP implémente aussi une solution de ce "
-"type que nous étudierons très prochainement :)."
 
 #: fr/ntp.md:38
 msgid "Merci d'avoir lu cet article, j'espère qu'il vous a plu 😄."
-msgstr "Merci d'avoir lu cet article, j'espère qu'il vous a plu 😄."
+msgstr ""

@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Language-Team: English\n"
-"PO-Revision-Date: 2022-06-15 16:18+0200\n"
-"Language: en_EN\n"
+"Language-Team: none\n"
+"PO-Revision-Date: 2022-06-15 13:37+0000\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2022-06-15 13:37+0000\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: Eban <contact@eban.eu.org>\n"
+"Last-Translator: Automatically generated\n"
 
 #: fr/ipv4-header.md:0
 msgid ""
@@ -23,23 +23,12 @@ msgid ""
 "Author: Ownesis\n"
 "Category: Réseau/Routage & IP"
 msgstr ""
-"lang: fr\n"
-"Date: 2021/09/18\n"
-"Keywords: ip, ipv4, linux, réseau\n"
-"Slug: ipv4-header\n"
-"Summary: Dans cet article, nous allons voir à quoi ressemble l’en-tête "
-"(header) de l’IPv4, avec son contenu et ce que fait tout ce beau monde.\n"
-"Title: Comprendre l’entête IPv4\n"
-"Author: Ownesis\n"
-"Category: Réseau/Routage & IP"
 
 #: fr/ipv4-header.md:2
 msgid ""
 "Dans cet article, nous allons voir à quoi ressemble l’en-tête (header) de "
 "l’IPv4, avec son contenu et ce que fait tout ce beau monde."
 msgstr ""
-"Dans cet article, nous allons voir à quoi ressemble l’en-tête (header) de "
-"l’IPv4, avec son contenu et ce que fait tout ce beau monde."
 
 #: fr/ipv4-header.md:4
 msgid ""
@@ -48,35 +37,28 @@ msgid ""
 "ceci ne sera pas très utile pour cet article, c’est toujours bien de savoir "
 "de quoi on parle."
 msgstr ""
-"Je vous invite d'abord à aller voir [cet](https://mikadmin.fr/blog/structure-"
-"de-ladresse-ipv4/) article concernant le format d’une adresse IPv4. Même si "
-"ceci ne sera pas très utile pour cet article, c’est toujours bien de savoir "
-"de quoi on parle."
 
 #: fr/ipv4-header.md:6
 msgid "![Schema du header IPv4](/static/img/ipv4-header/Header_IP_schema.webp)"
 msgstr ""
-"![Schema du header IPv4](/static/img/ipv4-header/Header_IP_schema.webp)"
 
 #: fr/ipv4-header.md:8
 msgid "Voyons donc plus en détail les différents champs de ce header."
-msgstr "Voyons donc plus en détail les différents champs de ce header."
+msgstr ""
 
 #: fr/ipv4-header.md:10
 msgid "**Version** `(4 bits)`"
-msgstr "**Version** `(4 bits)`"
+msgstr ""
 
 #: fr/ipv4-header.md:11
 msgid ""
 "Ce champ correspond (comme son nom l’indique) à la version du protocol IP, "
 "`4` pour `ipv4`."
 msgstr ""
-"Ce champ correspond (comme son nom l’indique) à la version du protocol IP, "
-"`4` pour `ipv4`."
 
 #: fr/ipv4-header.md:13
 msgid "**IHL** `(4 bits)`"
-msgstr "**IHL** `(4 bits)`"
+msgstr ""
 
 #: fr/ipv4-header.md:14
 msgid ""
@@ -92,17 +74,6 @@ msgid ""
 "Pour mieux comprendre j'ai fait un petit calcul, ce n'est pas forcément très "
 "règlementaire mais à ma grande surprise ça marche et ça reste cohérent."
 msgstr ""
-"`Internet Header Lenght` aussi appelé `IHL`, correspond au nombre de champs "
-"présents dans le header IP en les combinants par groupe de `32 bits (4 "
-"octets)`.\n"
-"De base la taille du header IP est de `20 octets`, on fixe donc le champ "
-"`IHL` à `5`.\n"
-"Mais la taille peut varier en fonction des `options` ajoutées au header, "
-"mais sachez que, étant donné que le champ fait `4 bits`, la valeur maximum "
-"de l’`IHL` sera de `15`, donc la taille maximum d’un header IP sera de `60 "
-"octets`.\n"
-"Pour mieux comprendre j'ai fait un petit calcul, ce n'est pas forcément très "
-"règlementaire mais à ma grande surprise ça marche et ça reste cohérent."
 
 #: fr/ipv4-header.md:16
 msgid ""
@@ -110,21 +81,16 @@ msgid ""
 "\n"
 "(20 / 4) = 5"
 msgstr ""
-"(IP_Header_Length / 4) = IHL\n"
-"\n"
-"(20 / 4) = 5"
 
 #: fr/ipv4-header.md:17
 msgid ""
 "`20` : Taille de l'entête IP (en octets).\n"
 "`4` : 32 bits = 4 octets"
 msgstr ""
-"`20` : Taille de l'entête IP (en octets).\n"
-"`4` : 32 bits = 4 octets"
 
 #: fr/ipv4-header.md:19
 msgid "**Type of Service** `(8 bits)`"
-msgstr "**Type of Service** `(8 bits)`"
+msgstr ""
 
 #: fr/ipv4-header.md:20
 msgid ""
@@ -137,63 +103,50 @@ msgid ""
 "sachez qu'aujourd'hui ce champ on ne l'utilise plus.\n"
 "Les **4** choix “historique”:"
 msgstr ""
-"(Type de Service) aussi appelé `TOS`, ce champ correspond au …*suspense*… "
-"type de service.\n"
-"Je vais vous présenter 4 choix possibles, mais il y'en a bien plus, je vous "
-"laisse lire [cet](https://www.frameip.com/entete-ip/#33-8211-service) "
-"article de [frameip.com](https://www.frameip.com) ou la page 12 de la [RFC]"
-"(https://tools.ietf.org/html/rfc791#section-3.1) pour plus de détails, mais "
-"sachez qu'aujourd'hui ce champ on ne l'utilise plus.\n"
-"Les **4** choix “historique”:"
 
 #: fr/ipv4-header.md:24
 msgid "**Minimize delay**"
-msgstr "**Minimize delay**"
+msgstr ""
 
 #: fr/ipv4-header.md:26
 msgid ""
 "(Délai minimum) C’est pour les applications qui envoient des petits paquets "
 "et qui ont besoin d’une réponse rapide, fissa."
 msgstr ""
-"(Délai minimum) C’est pour les applications qui envoient des petits paquets "
-"et qui ont besoin d’une réponse rapide, fissa."
 
 #: fr/ipv4-header.md:27
 msgid "Sa valeur hexadécimale est: `0x10`."
-msgstr "Sa valeur hexadécimale est: `0x10`."
+msgstr ""
 
 #: fr/ipv4-header.md:30
 msgid "**Maximize throughput**"
-msgstr "**Maximize throughput**"
+msgstr ""
 
 #: fr/ipv4-header.md:32
 msgid ""
 "(Maximiser le débit) C’est tout l’inverse du premier, c’est utilisé par les "
 "applications qui envoient beaucoup de paquet."
 msgstr ""
-"(Maximiser le débit) C’est tout l’inverse du premier, c’est utilisé par les "
-"applications qui envoient beaucoup de paquet."
 
 #: fr/ipv4-header.md:33
 msgid "Sa valeur hexadécimale est: `0x08`."
-msgstr "Sa valeur hexadécimale est: `0x08`."
+msgstr ""
 
 #: fr/ipv4-header.md:36
 msgid "**Maximize reliability**"
-msgstr "**Maximize reliability**"
+msgstr ""
 
 #: fr/ipv4-header.md:38
 msgid "(Maximisez la fiablité) C’est pour préférer la qualité de la connexion."
 msgstr ""
-"(Maximisez la fiablité) C’est pour préférer la qualité de la connexion."
 
 #: fr/ipv4-header.md:39
 msgid "Sa valeur hexadécimale est: `0x04`"
-msgstr "Sa valeur hexadécimale est: `0x04`"
+msgstr ""
 
 #: fr/ipv4-header.md:42
 msgid "**Minimize monatary cost**"
-msgstr "**Minimize monatary cost**"
+msgstr ""
 
 #: fr/ipv4-header.md:44
 msgid ""
@@ -202,10 +155,6 @@ msgid ""
 "époque mais si avant il fallait en plus de payer sa connexion internet de "
 "56k, payer le trajet de son paquet ip… sacré époque."
 msgstr ""
-"(Minimisez le cout) Alors, pour celui la, apparemment, il permet de prendre "
-"le chemin qui occasionnera le moins de cout monétaire. J’ai pas connu cette "
-"époque mais si avant il fallait en plus de payer sa connexion internet de "
-"56k, payer le trajet de son paquet ip… sacré époque."
 
 #: fr/ipv4-header.md:45
 msgid ""
@@ -213,13 +162,10 @@ msgid ""
 "FAI ou… j’en sais rien. Si un barbu du réseau lit cet article et connait la "
 "réponse, je veux bien savoir :).*"
 msgstr ""
-"*En réalité je ne sais pas si ça parle pour le client ou pour le routeur du "
-"FAI ou… j’en sais rien. Si un barbu du réseau lit cet article et connait la "
-"réponse, je veux bien savoir :).*"
 
 #: fr/ipv4-header.md:49
 msgid "**Total Length** `(8 bits)`"
-msgstr "**Total Length** `(8 bits)`"
+msgstr ""
 
 #: fr/ipv4-header.md:50
 msgid ""
@@ -230,12 +176,6 @@ msgid ""
 "HEAD à mikadmin.fr\n"
 "Header HTTP (ce qui correspond à `Taille_TCP_Data`):"
 msgstr ""
-"(Taille total), ce champ correspond à la taille total du paquet.\n"
-"Si on contact un serveur HTTP, le champ `Total Length` sera "
-"`Taille_IP_Header + Taille_TCP_Header + Taille_TCP_Data`.\n"
-"Pour faire un exemple concret, on va envoyer une requête avec la méthode "
-"HEAD à mikadmin.fr\n"
-"Header HTTP (ce qui correspond à `Taille_TCP_Data`):"
 
 #: fr/ipv4-header.md:52
 msgid ""
@@ -243,9 +183,6 @@ msgid ""
 "Host: mikadmin.fr\\r\\n\n"
 "\\r\\n"
 msgstr ""
-"HEAD / HTTP/1.1\\r\\n\n"
-"Host: mikadmin.fr\\r\\n\n"
-"\\r\\n"
 
 #: fr/ipv4-header.md:53
 msgid ""
@@ -256,16 +193,10 @@ msgid ""
 "Maintenant avec toutes ces infos, on peut déterminer la taille totale du "
 "paquet `20 + 20 + 40` = `80`"
 msgstr ""
-"(Il y a 40 caractères, donc la taille de `Taille_TCP_Data` (qui, je le "
-"rappelle, est l’header HTTP) fait `40 octets`)\n"
-"Un header TCP fait de base `20 octets` (mais peut varier selon les options "
-"qu’on lui donne, c'est exactement la même chose avec IP).\n"
-"Maintenant avec toutes ces infos, on peut déterminer la taille totale du "
-"paquet `20 + 20 + 40` = `80`"
 
 #: fr/ipv4-header.md:55
 msgid "**Identification** `(16 bits)`"
-msgstr "**Identification** `(16 bits)`"
+msgstr ""
 
 #: fr/ipv4-header.md:56
 msgid ""
@@ -276,36 +207,26 @@ msgid ""
 "Pour plus d'informations je vous invite à lire cette [RFC](https://www."
 "frameip.com/rfc-815-ip-datagram-reassembly-algorithms/)."
 msgstr ""
-"Aussi appelé `ID`, ce champ correspond à l’identification du paquet.\n"
-"Quand on fragmente un paquet, on met par exemple le champ `ID` à `1` et tous "
-"les fragments du même paquet devront avoir le même `ID`, donc `1` pour cet "
-"exemple.\n"
-"Pour plus d'informations je vous invite à lire cette [RFC](https://www."
-"frameip.com/rfc-815-ip-datagram-reassembly-algorithms/)."
 
 #: fr/ipv4-header.md:58
 msgid "**Flags** `(3 bits)`"
-msgstr "**Flags** `(3 bits)`"
+msgstr ""
 
 #: fr/ipv4-header.md:59
 msgid ""
 "(Drapeaux) Ce champ est utilisé pour la fragmentation.\n"
 "Voici les 3 bits possibles:"
 msgstr ""
-"(Drapeaux) Ce champ est utilisé pour la fragmentation.\n"
-"Voici les 3 bits possibles:"
 
 #: fr/ipv4-header.md:63
 msgid "**Reservé**, ce bit est réservé, donc on le met à `0`."
-msgstr "**Reservé**, ce bit est réservé, donc on le met à `0`."
+msgstr ""
 
 #: fr/ipv4-header.md:66
 msgid ""
 "**Don't Fragment** (Ne pas fragmenter) aussi appelé `DF`, si ce bit est à "
 "`1` le paquet ne sera **pas** fragmenté. Si il est à `0` il le sera."
 msgstr ""
-"**Don't Fragment** (Ne pas fragmenter) aussi appelé `DF`, si ce bit est à "
-"`1` le paquet ne sera **pas** fragmenté. Si il est à `0` il le sera."
 
 #: fr/ipv4-header.md:69
 msgid ""
@@ -313,13 +234,10 @@ msgid ""
 "`1` cela veut dire que ce n'est **pas** le dernier fragment, et que d'autres "
 "vont arriver. Si il est à `0` cela veut dire que c'est le dernier fragment."
 msgstr ""
-"**More Fragments** (Plusieurs fragments) aussi appelé `MF`, si ce bit est à "
-"`1` cela veut dire que ce n'est **pas** le dernier fragment, et que d'autres "
-"vont arriver. Si il est à `0` cela veut dire que c'est le dernier fragment."
 
 #: fr/ipv4-header.md:73
 msgid "**Fragment offset** `(13 bits)`"
-msgstr "**Fragment offset** `(13 bits)`"
+msgstr ""
 
 #: fr/ipv4-header.md:74
 msgid ""
@@ -328,14 +246,10 @@ msgid ""
 "Le premier paquet aura la valeur `0` pour le champ fragment offset et le "
 "dernier paquet aura la même valeur que `Total Length`."
 msgstr ""
-"(Position du fragment) ce champ permet d’indiquer la position de ce fragment "
-"par rapport au premier paquet.\n"
-"Le premier paquet aura la valeur `0` pour le champ fragment offset et le "
-"dernier paquet aura la même valeur que `Total Length`."
 
 #: fr/ipv4-header.md:76
 msgid "**Time To Leave** `(8 bits)`"
-msgstr "**Time To Leave** `(8 bits)`"
+msgstr ""
 
 #: fr/ipv4-header.md:77
 msgid ""
@@ -348,18 +262,10 @@ msgid ""
 "pose des problèmes de latence.\n"
 "De base on met la valeur `255` qui est le maximum."
 msgstr ""
-"(Durée de vie) aussi appelé `TTL`, correspond à la durée de vie du paquet, "
-"en fait, ceci correspond aux nombres de ‘sauts’ que le paquet pourra "
-"effectuer.\n"
-"Pour faire simple, à chaque fois que le paquet rencontre un équipement "
-"réseau (routeur, switch de niveau 3, etc.) le `TTL` est décrémenté de `1`.\n"
-"Ça sert à éviter que le paquet se balade indéfiniment sur le réseau et qu’il "
-"pose des problèmes de latence.\n"
-"De base on met la valeur `255` qui est le maximum."
 
 #: fr/ipv4-header.md:79
 msgid "**Protocol** `(8 bits)`"
-msgstr "**Protocol** `(8 bits)`"
+msgstr ""
 
 #: fr/ipv4-header.md:80
 msgid ""
@@ -369,11 +275,6 @@ msgid ""
 "le fichier header C `/usr/include/netinet/in.h`\n"
 "**/etc/protocols**"
 msgstr ""
-"Ce champ correspond au protocole de transport ou autres protocoles qui "
-"suivra le header IP qu’on va utiliser (ex: TCP, UDP, ICMP) on peut trouver "
-"les numéros correspondant au protocole dans le fichier `/etc/protocols` ou "
-"le fichier header C `/usr/include/netinet/in.h`\n"
-"**/etc/protocols**"
 
 #: fr/ipv4-header.md:82
 msgid ""
@@ -381,13 +282,10 @@ msgid ""
 "tcp 6   TCP # transmission control protocol\n"
 "udp 17  UDP # user datagram protocol"
 msgstr ""
-"icmp1   ICMP# internet control message protocol\n"
-"tcp 6   TCP # transmission control protocol\n"
-"udp 17  UDP # user datagram protocol"
 
 #: fr/ipv4-header.md:83
 msgid "**/usr/include/netinet/in.h**"
-msgstr "**/usr/include/netinet/in.h**"
+msgstr ""
 
 #: fr/ipv4-header.md:85
 msgid ""
@@ -395,13 +293,10 @@ msgid ""
 "IPPROTO_TCP = 6,  /* Transmission Control Protocol*/\n"
 "IPPROTO_UDP = 17, /* User Datagram Protocol   */"
 msgstr ""
-"IPPROTO_ICMP = 1, /* Internet Control Message Protocol*/\n"
-"IPPROTO_TCP = 6,  /* Transmission Control Protocol*/\n"
-"IPPROTO_UDP = 17, /* User Datagram Protocol   */"
 
 #: fr/ipv4-header.md:86
 msgid "**Header checksum** `(16 bits)`"
-msgstr "**Header checksum** `(16 bits)`"
+msgstr ""
 
 #: fr/ipv4-header.md:87
 msgid ""
@@ -410,10 +305,6 @@ msgid ""
 "Voici le code en **C** trouvé dans la [RFC](https://tools.ietf.org/html/"
 "rfc1071#section-4.1) pour calculer le checksum."
 msgstr ""
-"(Somme de contrôle du header) Permet de vérifier la validité du paquet pour "
-"éviter toutes modifications extérieures. Ce champ a pour contenu un hash.\n"
-"Voici le code en **C** trouvé dans la [RFC](https://tools.ietf.org/html/"
-"rfc1071#section-4.1) pour calculer le checksum."
 
 #: fr/ipv4-header.md:89
 msgid ""
@@ -435,43 +326,24 @@ msgid ""
 "sum = (sum & 0xffff) + (sum >> 16);\n"
 "checksum = ~sum;"
 msgstr ""
-"/* Compute Internet Checksum for \"count\" bytes\n"
-"* beginning at location \"addr\".\n"
-"*/\n"
-"register long sum = 0;\n"
-"\n"
-"while( count > 1 )  {\n"
-"/*  This is the inner loop */\n"
-"sum += * (unsigned short) addr++;\n"
-"count -= 2;\n"
-"}\n"
-"/*  Add left-over byte, if any */\n"
-"if( count > 0 )\n"
-"sum += * (unsigned char *) addr;\n"
-"/*  Fold 32-bit sum to 16 bits */\n"
-"while (sum>>16)\n"
-"sum = (sum & 0xffff) + (sum >> 16);\n"
-"checksum = ~sum;"
 
 #: fr/ipv4-header.md:90
 msgid "Source Address `(32 bits)`"
-msgstr "Source Address `(32 bits)`"
+msgstr ""
 
 #: fr/ipv4-header.md:91
 msgid "(Adresse IP source) c’est l'adresse IP de l'émetteur du paquet."
-msgstr "(Adresse IP source) c’est l'adresse IP de l'émetteur du paquet."
+msgstr ""
 
 #: fr/ipv4-header.md:93
 msgid "Destination Address `(32 bits)`"
-msgstr "Destination Address `(32 bits)`"
+msgstr ""
 
 #: fr/ipv4-header.md:94
 msgid ""
 "(Adresse IP de destination) c’est l’adresse distante, celle qu’on veut "
 "contacter."
 msgstr ""
-"(Adresse IP de destination) c’est l’adresse distante, celle qu’on veut "
-"contacter."
 
 #: fr/ipv4-header.md:97
 msgid ""
@@ -479,26 +351,20 @@ msgid ""
 "la forme 192.168.1.2 mais en décimal : 3232235778.\n"
 "Calcul:"
 msgstr ""
-"Attention dans le header IP, les adresses ip ne sont pas représentées sous "
-"la forme 192.168.1.2 mais en décimal : 3232235778.\n"
-"Calcul:"
 
 #: fr/ipv4-header.md:100
 msgid "192.168.1.2 = (192 * 256^3) + (168 * 256^2) + (1 * 256^1) + (1 * 256^0)"
 msgstr ""
-"192.168.1.2 = (192 * 256^3) + (168 * 256^2) + (1 * 256^1) + (1 * 256^0)"
 
 #: fr/ipv4-header.md:101
 msgid ""
 "En C il y a les fonctions présentes dans la librairie `arpa/inet.h` pour "
 "faire ce genre de calcul et plus encore."
 msgstr ""
-"En C il y a les fonctions présentes dans la librairie `arpa/inet.h` pour "
-"faire ce genre de calcul et plus encore."
 
 #: fr/ipv4-header.md:103
 msgid "**Options** `(8 bits)`"
-msgstr "**Options** `(8 bits)`"
+msgstr ""
 
 #: fr/ipv4-header.md:104
 msgid ""
@@ -514,21 +380,10 @@ msgid ""
 "les plus courageux, lire la [RFC](https://tools.ietf.org/html/"
 "rfc791#section-3.1)."
 msgstr ""
-"Ce champ de taille variable n’est pas obligatoire, elle permet de spécifier "
-"des options pour *pimper* notre paquet.\n"
-"C’est utilisé pour le débogage ou la supervision du réseau. Je ne vais pas "
-"rentrer dans les détails car c’est pour des besoins très spécifiques et "
-"j’imagine que ce n'est plus du tout utilisé de nos jours.\n"
-"Si on ajoute des `options`, il faudra donc modifier la valeur du champ "
-"`IHL`.\n"
-"Pour les curieux, je vous laisse lire l’[article](https://www.frameip.com/"
-"entete-ip/#313-8211-options) de [frameip.com](https://frameip.com/) ou, pour "
-"les plus courageux, lire la [RFC](https://tools.ietf.org/html/"
-"rfc791#section-3.1)."
 
 #: fr/ipv4-header.md:106
 msgid "**Padding** `(8 bits)`"
-msgstr "**Padding** `(8 bits)`"
+msgstr ""
 
 #: fr/ipv4-header.md:107
 msgid ""
@@ -538,11 +393,6 @@ msgid ""
 "Pour les curieux voici comment la structure du header IP est définit en C "
 "dans le noyau linux, trouvable ici `/usr/include/netinet/ip.h`."
 msgstr ""
-"(Bourrage) ce champ permet de combler le champ `options` pour obtenir une "
-"taille de l’en-tête IP multiple de `32 bits`\n"
-"Les `8 bits` sont mis à `0`.\n"
-"Pour les curieux voici comment la structure du header IP est définit en C "
-"dans le noyau linux, trouvable ici `/usr/include/netinet/ip.h`."
 
 #: fr/ipv4-header.md:109
 msgid ""
@@ -569,25 +419,3 @@ msgid ""
 "/*The options start here. */\n"
 "  };"
 msgstr ""
-"struct iphdr\n"
-"  {\n"
-"#if __BYTE_ORDER == __LITTLE_ENDIAN\n"
-"unsigned int ihl:4;\n"
-"unsigned int version:4;\n"
-"#elif __BYTE_ORDER == __BIG_ENDIAN\n"
-"unsigned int version:4;\n"
-"unsigned int ihl:4;\n"
-"#else\n"
-"# error    \"Please fix <bits/endian.h>\"\n"
-"#endif\n"
-"uint8_t tos;\n"
-"uint16_t tot_len;\n"
-"uint16_t id;\n"
-"uint16_t frag_off;\n"
-"uint8_t ttl;\n"
-"uint8_t protocol;\n"
-"uint16_t check;\n"
-"uint32_t saddr;\n"
-"uint32_t daddr;\n"
-"/*The options start here. */\n"
-"  };"

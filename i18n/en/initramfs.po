@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Language-Team: English\n"
-"PO-Revision-Date: 2022-06-15 16:18+0200\n"
-"Language: en_EN\n"
+"Language-Team: none\n"
+"PO-Revision-Date: 2022-06-15 13:37+0000\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2022-06-15 13:37+0000\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: Eban <contact@eban.eu.org>\n"
+"Last-Translator: Automatically generated\n"
 
 #: fr/initramfs.md:0
 msgid ""
@@ -23,19 +23,10 @@ msgid ""
 "Lang: fr\n"
 "Category: Sysadmin/Linux"
 msgstr ""
-"Title: À quoi sert initramfs ?\n"
-"Keywords: Linux, init, initramfs, boot\n"
-"Date: 2022-02-16\n"
-"Slug: initramfs\n"
-"Author: Ownesis\n"
-"Summary: Dans cet article, on va voir ce qu'est initramfs et à quoi il "
-"sert.\n"
-"Lang: fr\n"
-"Category: Sysadmin/Linux"
 
 #: fr/initramfs.md:2
 msgid "Pour la faire courte"
-msgstr "Pour la faire courte"
+msgstr ""
 
 #: fr/initramfs.md:3
 msgid ""
@@ -44,14 +35,10 @@ msgid ""
 "l'initialisation du [noyau (kernel)](https://fr.wikipedia.org/wiki/"
 "Noyau_de_syst%C3%A8me_d%27exploitation)."
 msgstr ""
-"Initramfs est un [système de fichier](https://ilearned.eu/fat.html) monté "
-"dans la [RAM](https://en.wikipedia.org/wiki/Random-access_memory) lors de "
-"l'initialisation du [noyau (kernel)](https://fr.wikipedia.org/wiki/"
-"Noyau_de_syst%C3%A8me_d%27exploitation)."
 
 #: fr/initramfs.md:5
 msgid "Un peu plus de détails"
-msgstr "Un peu plus de détails"
+msgstr ""
 
 #: fr/initramfs.md:6
 msgid ""
@@ -59,13 +46,10 @@ msgid ""
 "wiki/Cpio), c'est en quelque sorte l'ancêtre de [tar](https://doc.ubuntu-fr."
 "org/tar)."
 msgstr ""
-"Initramfs est présenté sous forme d'archive [cpio](https://fr.wikipedia.org/"
-"wiki/Cpio), c'est en quelque sorte l'ancêtre de [tar](https://doc.ubuntu-fr."
-"org/tar)."
 
 #: fr/initramfs.md:9
 msgid "Pourquoi ne pas utiliser tar ?? 🧐"
-msgstr "Pourquoi ne pas utiliser tar ?? 🧐"
+msgstr ""
 
 #: fr/initramfs.md:12
 msgid ""
@@ -73,9 +57,6 @@ msgid ""
 "Linux et qu'il prend en charge des fichiers de périphériques, contrairement "
 "à `tar`."
 msgstr ""
-"Tout simplement parce que le code était plus facile à mettre en œuvre dans "
-"Linux et qu'il prend en charge des fichiers de périphériques, contrairement "
-"à `tar`."
 
 #: fr/initramfs.md:14
 msgid ""
@@ -87,17 +68,10 @@ msgid ""
 "wiki/Linux_kernel) qui est sous le nom \"`vmlinuz`\" dans `/boot/` (pour de "
 "l'UEFI) ou à la racine `/` pour du BIOS."
 msgstr ""
-"L'archive contient les fichiers, scripts, bibliothèques, fichiers de "
-"configuration, et d'autres qui peut ou pourrait être utile au noyau pour "
-"monter le vrai système de fichier racine `root`.\n"
-"Cette dernière est ensuite compressée avec [gzip](https://fr.wikipedia.org/"
-"wiki/Gzip) et est stockée au côté du noyau [Linux](https://en.wikipedia.org/"
-"wiki/Linux_kernel) qui est sous le nom \"`vmlinuz`\" dans `/boot/` (pour de "
-"l'UEFI) ou à la racine `/` pour du BIOS."
 
 #: fr/initramfs.md:17
 msgid "vmlinuz ? 🤨"
-msgstr "vmlinuz ? 🤨"
+msgstr ""
 
 #: fr/initramfs.md:20
 msgid ""
@@ -111,27 +85,16 @@ msgid ""
 "peu ce que je vous explique ici, mais le plus intéressant étant \"l'histoire"
 "\" du nom \"vmlinuz\"."
 msgstr ""
-"Oui, c'est le nom du binaire du noyau Linux, vmlinuz est compressé en [Bzip]"
-"(http://www.bzip.org/) (pour ma part).\n"
-"En réalité, vmlinuz cache un vmlinux qui est lui le binaire du noyau, (le "
-"**z** à la place du **x** de Linu**x** c'est tout simplement pour préciser "
-"qu'il est compressé (**z**ip)\n"
-"Je vous laisse lire [cet article](https://www.lojiciels.com/quest-ce-que-"
-"vmlinuz-sous-linux/#Qursquoest-ce_que_vmlinuz_et_Initramfs) qui explique un "
-"peu ce que je vous explique ici, mais le plus intéressant étant \"l'histoire"
-"\" du nom \"vmlinuz\"."
 
 #: fr/initramfs.md:22
 msgid "À quoi ressemble le contenu d'un initramfs"
-msgstr "À quoi ressemble le contenu d'un initramfs"
+msgstr ""
 
 #: fr/initramfs.md:23
 msgid ""
 "Voyons ça étape par étape (si jamais l'envie vous prend de regarder votre "
 "initramfs (si vous en avez un))."
 msgstr ""
-"Voyons ça étape par étape (si jamais l'envie vous prend de regarder votre "
-"initramfs (si vous en avez un))."
 
 #: fr/initramfs.md:25
 msgid ""
@@ -140,18 +103,14 @@ msgid ""
 "système de fichier connu de Linux et dans lequel sera extrait le contenu de "
 "notre initramfs*)"
 msgstr ""
-"D'abord on copie notre initramfs dans un dossier, dans`/tmp` pour jouer "
-"l'immersion à fond 🤓 (*/tmp étant NORMALEMENT monté en `tmpfs`, comme le "
-"système de fichier connu de Linux et dans lequel sera extrait le contenu de "
-"notre initramfs*)"
 
 #: fr/initramfs.md:27
 msgid "Si vous exécutez la commande `file` sur votre initramfs, vous verrez :"
-msgstr "Si vous exécutez la commande `file` sur votre initramfs, vous verrez :"
+msgstr ""
 
 #: fr/initramfs.md:29
 msgid "initramfs-linux.img: Zstandard compressed data"
-msgstr "initramfs-linux.img: Zstandard compressed data"
+msgstr ""
 
 #: fr/initramfs.md:30
 msgid ""
@@ -159,9 +118,6 @@ msgid ""
 "`zstdcat` pour afficher le contenu décompressé et envoyer la sortie (stdout) "
 "vers l'entrée (stdin) de `cpio` qui permet de désarchiver un fichier `cpio`."
 msgstr ""
-"Il faut donc le décompresser, avec l'outil `zstd` ou, comme moi, utiliser "
-"`zstdcat` pour afficher le contenu décompressé et envoyer la sortie (stdout) "
-"vers l'entrée (stdin) de `cpio` qui permet de désarchiver un fichier `cpio`."
 
 #: fr/initramfs.md:33
 msgid ""
@@ -169,13 +125,10 @@ msgid ""
 "dit fichier, exécutez donc la commande si dessous avec `sudo` ou `doas`, ou "
 "alors donnez-vous les droits de lecture (avec `chmod`)."
 msgstr ""
-"Si vous n'êtes pas root, vous n'avez certainement pas le droit de lire le "
-"dit fichier, exécutez donc la commande si dessous avec `sudo` ou `doas`, ou "
-"alors donnez-vous les droits de lecture (avec `chmod`)."
 
 #: fr/initramfs.md:36
 msgid "`zstdcat initramfs-linux.img | cpio -i`"
-msgstr "`zstdcat initramfs-linux.img | cpio -i`"
+msgstr ""
 
 #: fr/initramfs.md:38
 msgid ""
@@ -184,10 +137,6 @@ msgid ""
 "wiki/Microcode) ajouté (rien de méchant).\n"
 "Effectuez ces commandes:"
 msgstr ""
-"Si la commande `file` vous retourne: `is ASCII cpio archive (SVR4 with no "
-"CRC)`, c'est que votre initramfs a un [microcode](https://en.wikipedia.org/"
-"wiki/Microcode) ajouté (rien de méchant).\n"
-"Effectuez ces commandes:"
 
 #: fr/initramfs.md:40
 msgid ""
@@ -195,9 +144,6 @@ msgid ""
 "Cette commande va vous retourner la taille du microcode, pour pouvoir "
 "ensuite le passer avec la commande `dd`."
 msgstr ""
-"`cpio -t < initramfs.img >/dev/null`\n"
-"Cette commande va vous retourner la taille du microcode, pour pouvoir "
-"ensuite le passer avec la commande `dd`."
 
 #: fr/initramfs.md:42
 msgid ""
@@ -205,25 +151,18 @@ msgid ""
 "*(remplacer `<OFFSET>` par la taille du block retourné par la commande "
 "précédente)*."
 msgstr ""
-"`dd if=initramfs.img of=initramfs_no_microcode.img bs=512 skip=<OFFSET>` "
-"*(remplacer `<OFFSET>` par la taille du block retourné par la commande "
-"précédente)*."
 
 #: fr/initramfs.md:44
 msgid ""
 "Puis effectuez:\n"
 "`zcat initramfs_no_microcode.img | cpio -i`"
 msgstr ""
-"Puis effectuez:\n"
-"`zcat initramfs_no_microcode.img | cpio -i`"
 
 #: fr/initramfs.md:46
 msgid ""
 "Si vous listez le contenu de votre dossier vous verrez quelque chose de "
 "familier, une hiérarchie à la Unix  avec les répertoires de base :"
 msgstr ""
-"Si vous listez le contenu de votre dossier vous verrez quelque chose de "
-"familier, une hiérarchie à la Unix  avec les répertoires de base :"
 
 #: fr/initramfs.md:48
 msgid ""
@@ -249,27 +188,6 @@ msgid ""
 "drwxr-xr-x 2 ownesis ownesis      60 14 févr. 11:32 var\n"
 "-rw-r--r-- 1 ownesis ownesis       2 14 févr. 11:32 VERSION"
 msgstr ""
-"ilearned:/tmp ➜  ls -l\n"
-"total 8708\n"
-"lrwxrwxrwx 1 ownesis ownesis       7 14 févr. 11:32 bin -> usr/bin\n"
-"-rw-r--r-- 1 ownesis ownesis    2510 14 févr. 11:32 buildconfig\n"
-"-rw-r--r-- 1 ownesis ownesis      64 14 févr. 11:32 config\n"
-"drwxr-xr-x 2 ownesis ownesis      40 14 févr. 11:32 dev\n"
-"drwxr-xr-x 3 ownesis ownesis     160 14 févr. 11:32 etc\n"
-"drwxr-xr-x 2 ownesis ownesis      60 14 févr. 11:32 hooks\n"
-"-rwxr-xr-x 1 ownesis ownesis    2093 14 févr. 11:32 init\n"
-"-rw-r--r-- 1 ownesis ownesis   13140 14 févr. 11:32 init_functions\n"
-"lrwxrwxrwx 1 ownesis ownesis       7 14 févr. 11:32 lib -> usr/lib\n"
-"lrwxrwxrwx 1 ownesis ownesis       7 14 févr. 11:32 lib64 -> usr/lib\n"
-"drwxr-xr-x 2 ownesis ownesis      40 14 févr. 11:32 new_root\n"
-"drwxr-xr-x 2 ownesis ownesis      40 14 févr. 11:32 proc\n"
-"drwxr-xr-x 2 ownesis ownesis      40 14 févr. 11:32 run\n"
-"lrwxrwxrwx 1 ownesis ownesis       7 14 févr. 11:32 sbin -> usr/bin\n"
-"drwxr-xr-x 2 ownesis ownesis      40 14 févr. 11:32 sys\n"
-"drwxr-xr-x 2 ownesis ownesis      40 14 févr. 11:32 tmp\n"
-"drwxr-xr-x 5 ownesis ownesis     140 14 févr. 11:32 usr\n"
-"drwxr-xr-x 2 ownesis ownesis      60 14 févr. 11:32 var\n"
-"-rw-r--r-- 1 ownesis ownesis       2 14 févr. 11:32 VERSION"
 
 #: fr/initramfs.md:49
 msgid ""
@@ -277,49 +195,44 @@ msgid ""
 "exemple dans `bin` qui pointe vers (`usr/bin`), vous verrez des outils "
 "comme :"
 msgstr ""
-"Je vous laisse vous balader dans les différents répertoires disponible. Par "
-"exemple dans `bin` qui pointe vers (`usr/bin`), vous verrez des outils "
-"comme :"
 
 #: fr/initramfs.md:53
 msgid "`bzip`"
-msgstr "`bzip`"
+msgstr ""
 
 #: fr/initramfs.md:56
 msgid "`mount`"
-msgstr "`mount`"
+msgstr ""
 
 #: fr/initramfs.md:59
 msgid "`fsck.ext4`"
-msgstr "`fsck.ext4`"
+msgstr ""
 
 #: fr/initramfs.md:62
 msgid "`tftp` qui a un article dédié [ici](https://ilearned.eu/tftp.html) 😜"
-msgstr "`tftp` qui a un article dédié [ici](https://ilearned.eu/tftp.html) 😜"
+msgstr ""
 
 #: fr/initramfs.md:65
 msgid "`lsmod`"
-msgstr "`lsmod`"
+msgstr ""
 
 #: fr/initramfs.md:68
 msgid "`rmmod`"
-msgstr "`rmmod`"
+msgstr ""
 
 #: fr/initramfs.md:72
 msgid "Et beaucoup d'autres encore..."
-msgstr "Et beaucoup d'autres encore..."
+msgstr ""
 
 #: fr/initramfs.md:75
 msgid ""
 "la plus part des outils présent dans initramfs sont disponible via un seul "
 "et même binaire qui est [busybox](https://www.busybox.net/)"
 msgstr ""
-"la plus part des outils présent dans initramfs sont disponible via un seul "
-"et même binaire qui est [busybox](https://www.busybox.net/)"
 
 #: fr/initramfs.md:78
 msgid "Processus de démarrage"
-msgstr "Processus de démarrage"
+msgstr ""
 
 #: fr/initramfs.md:79
 msgid ""
@@ -327,17 +240,12 @@ msgid ""
 "wikipedia.org/wiki/Chargeur_d%27amor%C3%A7age), [GRUB](https://www.gnu.org/"
 "software/grub/) par exemple."
 msgstr ""
-"On commence à partir du [chargeur d'hamorcage (bootloader)](https://fr."
-"wikipedia.org/wiki/Chargeur_d%27amor%C3%A7age), [GRUB](https://www.gnu.org/"
-"software/grub/) par exemple."
 
 #: fr/initramfs.md:83
 msgid ""
 "GRUB charge Linux et l'image initramfs dans la mémoire puis démarre le noyau "
 "(Linux)."
 msgstr ""
-"GRUB charge Linux et l'image initramfs dans la mémoire puis démarre le noyau "
-"(Linux)."
 
 #: fr/initramfs.md:86
 msgid ""
@@ -345,15 +253,11 @@ msgid ""
 "de fichier [tmpfs](https://doc.ubuntu-fr.org/tmpfs) et y extrait et monte "
 "l'initramfs."
 msgstr ""
-"Linux vérifie la présence d'un initramfs, s'il en trouve il crée un système "
-"de fichier [tmpfs](https://doc.ubuntu-fr.org/tmpfs) et y extrait et monte "
-"l'initramfs."
 
 #: fr/initramfs.md:89
 msgid ""
 "Dans ce même système de fichier (tmpfs), le noyau exécute le script init."
 msgstr ""
-"Dans ce même système de fichier (tmpfs), le noyau exécute le script init."
 
 #: fr/initramfs.md:92
 msgid ""
@@ -362,18 +266,12 @@ msgid ""
 "et autres utilitaires présent dans l'initramfs (au besoin) et monte aussi "
 "les systèmes de fichiers comme `/var` et `/usr`."
 msgstr ""
-"Le script init monte le système de fichier racine `root`, en chargeant des "
-"modules du noyau utile pour le montage grace au différents scripts/programme "
-"et autres utilitaires présent dans l'initramfs (au besoin) et monte aussi "
-"les systèmes de fichiers comme `/var` et `/usr`."
 
 #: fr/initramfs.md:95
 msgid ""
 "Une fois la racine monté, le script init commute la racine de tmpfs vers le "
 "système de fichier précédemment monté."
 msgstr ""
-"Une fois la racine monté, le script init commute la racine de tmpfs vers le "
-"système de fichier précédemment monté."
 
 #: fr/initramfs.md:98
 msgid ""
@@ -381,13 +279,10 @@ msgid ""
 "pour continuer le processus de démarrage (en lançant des services/démons "
 "pour lancer le système)."
 msgstr ""
-"Une fois la racine changée, le script init exécute le binaire `/sbin/init` "
-"pour continuer le processus de démarrage (en lançant des services/démons "
-"pour lancer le système)."
 
 #: fr/initramfs.md:102
 msgid "Utilité d'un initramfs"
-msgstr "Utilité d'un initramfs"
+msgstr ""
 
 #: fr/initramfs.md:103
 msgid ""
@@ -402,16 +297,6 @@ msgid ""
 "Généralement, ce sont les modules Linux qui pousse l'utilisation d'un "
 "initramfs."
 msgstr ""
-"Un initramfs n'est pas obligatoire, si on installe une [distribution]"
-"(https://fr.wikipedia.org/wiki/Distribution_Linux) Linux qui permet de "
-"compiler sa propre version du noyau ainsi que sa configuration, une image "
-"initramfs n'est pas nécessaire, car le système est connu d'avance.\n"
-"Dans d'autres distributions, il y'a beaucoup d'inconnues pour le noyau, "
-"comme le type de système de fichiers par exemple, ce qui demande de charger "
-"certains modules dans le noyau ou d'avoir besoin de certains scripts/"
-"programmes.\n"
-"Généralement, ce sont les modules Linux qui pousse l'utilisation d'un "
-"initramfs."
 
 #: fr/initramfs.md:105
 msgid ""
@@ -424,18 +309,10 @@ msgid ""
 "Network_File_System) (par exemple) depuis la machine distante qui partage "
 "les dossiers utilisateurs."
 msgstr ""
-"Mais par exemple, imaginez une infrastructure ou tous les dossiers `/home` "
-"sont sur une autre machine, Linux est normalement incapable à lui tout seul "
-"de pouvoir se connecter à une machine distante sur le réseau de "
-"l'entreprise, pour ce faire, il utilise initramfs, qui possède toute une "
-"panoplie d'outils comme le paquet `iproute`, `dhcp`, `mount`, etc qui va "
-"permettre de monter un [nfs](https://fr.wikipedia.org/wiki/"
-"Network_File_System) (par exemple) depuis la machine distante qui partage "
-"les dossiers utilisateurs."
 
 #: fr/initramfs.md:107
 msgid "Conclusion"
-msgstr "Conclusion"
+msgstr ""
 
 #: fr/initramfs.md:108
 msgid ""
@@ -443,30 +320,25 @@ msgid ""
 "hiérarchie de système Linux avec des outils utiles pour le montage du "
 "système de fichier racine de votre machine, mais il n'est pas obligatoire."
 msgstr ""
-"L'initramfs est un \"mini\" système de fichier compressé contenant toute une "
-"hiérarchie de système Linux avec des outils utiles pour le montage du "
-"système de fichier racine de votre machine, mais il n'est pas obligatoire."
 
 #: fr/initramfs.md:110
 msgid "bibliographie:"
-msgstr "bibliographie:"
+msgstr ""
 
 #: fr/initramfs.md:114
 msgid "[wiki.gentoo.org](https://wiki.gentoo.org/wiki/Initramfs/Guide/fr)"
-msgstr "[wiki.gentoo.org](https://wiki.gentoo.org/wiki/Initramfs/Guide/fr)"
+msgstr ""
 
 #: fr/initramfs.md:117
 msgid ""
 "[fr.linuxfromscratch.org](https://www.fr.linuxfromscratch.org/view/blfs-svn/"
 "postlfs/initramfs.html)"
 msgstr ""
-"[fr.linuxfromscratch.org](https://www.fr.linuxfromscratch.org/view/blfs-svn/"
-"postlfs/initramfs.html)"
 
 #: fr/initramfs.md:120
 msgid "[wiki.debian.org](https://wiki.debian.org/initramfs)"
-msgstr "[wiki.debian.org](https://wiki.debian.org/initramfs)"
+msgstr ""
 
 #: fr/initramfs.md:123
 msgid "[wiki.archlinux.org](https://wiki.archlinux.org/title/Microcode)"
-msgstr "[wiki.archlinux.org](https://wiki.archlinux.org/title/Microcode)"
+msgstr ""

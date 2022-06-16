@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Language-Team: English\n"
-"PO-Revision-Date: 2022-06-15 16:18+0200\n"
-"Language: en_EN\n"
+"Language-Team: none\n"
+"PO-Revision-Date: 2022-06-15 13:37+0000\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2022-06-15 13:37+0000\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: Eban <contact@eban.eu.org>\n"
+"Last-Translator: Automatically generated\n"
 
 #: fr/wannacry.md:0
 msgid ""
@@ -26,18 +26,6 @@ msgid ""
 "Category: Cybersécurité/Red Team\n"
 "Author: Eban"
 msgstr ""
-"lang: fr\n"
-"Title: WannaCry, le virus le plus dévastateur jamais créé 👾\n"
-"Keywords: [wannacry, virus, malware, hacking, eban, ransomware]\n"
-"Summary: En mai 2017, un virus informatique du nom de WannaCry fait son "
-"apparition, il a infecté quelques 300 000 ordinateurs dans plus de 150 "
-"pays ! Trois ans plus tard, revenons ensemble sur le ransomware le plus "
-"dévastateur jamais créé.\n"
-"Image: https://images.unsplash.com/flagged/photo-1560854350-13c0b47a3180?"
-"ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&w=1026&q=80\n"
-"Date: 2020-08-12\n"
-"Category: Cybersécurité/Red Team\n"
-"Author: Eban"
 
 #: fr/wannacry.md:2
 msgid ""
@@ -46,14 +34,10 @@ msgid ""
 "plus tard, revenons ensemble sur le ransomware le plus dévastateur jamais "
 "créé."
 msgstr ""
-"En mai 2017, un virus informatique du nom de WannaCry fait son apparition, "
-"il a infecté quelques 300 000 ordinateurs dans plus de 150 pays ! Trois ans "
-"plus tard, revenons ensemble sur le ransomware le plus dévastateur jamais "
-"créé."
 
 #: fr/wannacry.md:4
 msgid "La genèse du projet"
-msgstr "La genèse du projet"
+msgstr ""
 
 #: fr/wannacry.md:5
 msgid ""
@@ -67,15 +51,6 @@ msgid ""
 "Cette vulnérabilité a été utilisée par le malware WannaCry afin de se "
 "propager."
 msgstr ""
-"Le 13 août 2016, un groupe de hackers dénommé **The Shadow Brokers** met en "
-"libre téléchargement sur Tumblr, GitHub et Pastebin de nombreux programmes "
-"d'espionnage et de piratage informatique de la NSA dont la faille de "
-"sécurité EternalBlue, cette dernière permettant une RCE (remote code "
-"execution) sur un machine distante à partir d'un partage SMBv1 (plus d'infos "
-"[ici](https://docs.microsoft.com/fr-fr/security-updates/"
-"SecurityBulletins/2017/ms17-010)).\n"
-"Cette vulnérabilité a été utilisée par le malware WannaCry afin de se "
-"propager."
 
 #: fr/wannacry.md:7
 msgid ""
@@ -88,18 +63,10 @@ msgid ""
 "(https://yewtu.be/watch?v=Mp3TH5PI6rc) aurait donc été créé dans un but "
 "lucratif."
 msgstr ""
-"Ce virus aujourd'hui attribué a la Corée du Nord et plus particulièrement au "
-"groupe Lazarus par de nombreux acteurs tel que le conseiller à la sécurité "
-"intérieure des USA [Tom Bossert](https://www.washingtonpost.com/world/"
-"national-security/us-set-to-declare-north-korea-carried-out-massive-wannacry-"
-"cyber-attack/2017/12/18/509deb1c-e446-11e7-a65d-1ac0fd7f097e_story.html) ou "
-"le chercheur en cybersécurité Matthieu Suiche interrogé par [Envoyé Spécial]"
-"(https://yewtu.be/watch?v=Mp3TH5PI6rc) aurait donc été créé dans un but "
-"lucratif."
 
 #: fr/wannacry.md:9
 msgid "Fonctionnement du Ransomware"
-msgstr "Fonctionnement du Ransomware"
+msgstr ""
 
 #: fr/wannacry.md:10
 msgid ""
@@ -118,44 +85,30 @@ msgid ""
 "machine et essaie de se connecter aux serveurs C2 ([Command and Control]"
 "(https://www.wikiwand.com/en/Command_and_control)) suivants:"
 msgstr ""
-"Comme vu plus haut, WannaCry se propage tout seul (c'est un virus auto-"
-"répliquant ou vers) grâce à la faille de sécurité EternalBlue. Une fois "
-"executé sur la machine, le logiciel se met à chiffrer tout les fichiers "
-"personnels de l'ordinateur avec la méthode de chiffrement AES-128 (Une paire "
-"de clés RSA est générée au lancement du programme, la clé privée était "
-"utilisée pour chiffrer les fichiers).\n"
-"Après l'infection, une somme équivalente à 300€ (voir 600€ en fonction des "
-"cas) en Bitcoin est demandée pour déchiffrer les fichiers. Il n'existe "
-"aucune preuve du fait que les personnes derrière WannaCry sont en capacité "
-"de déchiffrer les fichiers.\n"
-"En effet, il est impossible pour les pirates de relier une transaction à un "
-"ordinateur spécifique. Une fois lancé, le logiciel installe aussi Tor sur la "
-"machine et essaie de se connecter aux serveurs C2 ([Command and Control]"
-"(https://www.wikiwand.com/en/Command_and_control)) suivants:"
 
 #: fr/wannacry.md:14
 msgid "gx7ekbenv2riucmf.onion"
-msgstr "gx7ekbenv2riucmf.onion"
+msgstr ""
 
 #: fr/wannacry.md:17
 msgid "57g7spgrzlojinas.onion"
-msgstr "57g7spgrzlojinas.onion"
+msgstr ""
 
 #: fr/wannacry.md:20
 msgid "xxlvbrloxvriy2c5.onion"
-msgstr "xxlvbrloxvriy2c5.onion"
+msgstr ""
 
 #: fr/wannacry.md:23
 msgid "76jdd2ir2embyv47.onion"
-msgstr "76jdd2ir2embyv47.onion"
+msgstr ""
 
 #: fr/wannacry.md:26
 msgid "cwwnhwhlz52maqm7.onion"
-msgstr "cwwnhwhlz52maqm7.onion"
+msgstr ""
 
 #: fr/wannacry.md:30
 msgid "Un Antidote ?"
-msgstr "Un Antidote ?"
+msgstr ""
 
 #: fr/wannacry.md:31
 msgid ""
@@ -169,19 +122,10 @@ msgid ""
 "claire, WanaKiwi va donc aller chercher dans la RAM des traces de la clé "
 "privée utilisée pour chiffrer les données."
 msgstr ""
-"Un groupe de trois experts en sécurité informatique français ont créé "
-"logiciel nommé [Wanakiwi](https://github.com/gentilkiwi/wanakiwi).\n"
-"Cet outil permet de déchiffrer les fichiers qui l'ont été par WannaCry.\n"
-"WannaCry utilise [**CryptoAPI**](https://fr.wikipedia.org/wiki/"
-"Cryptographic_Application_Programming_Interface) (les fonctions "
-"cryptographiques de Windows) pour générer les clés de chiffrement, cependant "
-"ces fonctions inscrivent dans la RAM de l'ordinateur la clé privée en "
-"claire, WanaKiwi va donc aller chercher dans la RAM des traces de la clé "
-"privée utilisée pour chiffrer les données."
 
 #: fr/wannacry.md:33
 msgid "Comment se prémunir de ce type d'attaques dans le futur ?"
-msgstr "Comment se prémunir de ce type d'attaques dans le futur ?"
+msgstr ""
 
 #: fr/wannacry.md:34
 msgid ""
@@ -197,57 +141,40 @@ msgid ""
 "docs.microsoft.com/fr-fr/windows/security/threat-protection/microsoft-"
 "defender-atp/evaluate-controlled-folder-access))."
 msgstr ""
-"On ne le dira jamais assez, mais n'ouvrez jamais de pièces jointes venant "
-"d'un destinataire inconnu.\n"
-"Mettez à jour régulièrement votre OS, Microsoft propose une fonction très "
-"intéressante dans leur suite de sécurité Windows Defender nommée "
-"**Dispositif d'accès contrôlé aux dossiers**.\n"
-"Cet outil permet de contrôler l'accès aux fichiers systèmes de Windows et "
-"aux données personnelles des utilisateurs par des programmes, il fonctionne "
-"avec un système de withelist, chaque programme doit donc être autorisé "
-"manuellement pour pouvoir modifier ces fichiers (plus d'infos [ici](https://"
-"docs.microsoft.com/fr-fr/windows/security/threat-protection/microsoft-"
-"defender-atp/evaluate-controlled-folder-access))."
 
 #: fr/wannacry.md:36
 msgid ""
 "Merci d'avoir lu cet article, j'espère qu'il vous aura plu.\n"
 "Je suis preneur de vos retours :)"
 msgstr ""
-"Merci d'avoir lu cet article, j'espère qu'il vous aura plu.\n"
-"Je suis preneur de vos retours :)"
 
 #: fr/wannacry.md:38
 msgid "Remerciements"
-msgstr "Remerciements"
+msgstr ""
 
 #: fr/wannacry.md:39
 msgid ""
 "Merci à xeway, 0xThxmxs, Shcanovishka, Sycorax, look, Ramle et Lancelot de "
 "m'avoir aidé pour la relecture."
 msgstr ""
-"Merci à xeway, 0xThxmxs, Shcanovishka, Sycorax, look, Ramle et Lancelot de "
-"m'avoir aidé pour la relecture."
 
 #: fr/wannacry.md:41
 msgid "Sources :"
-msgstr "Sources :"
+msgstr ""
 
 #: fr/wannacry.md:45
 msgid "https://fr.wikipedia.org/wiki/WannaCry"
-msgstr "https://fr.wikipedia.org/wiki/WannaCry"
+msgstr ""
 
 #: fr/wannacry.md:48
 msgid "https://fr.wikipedia.org/wiki/The_Shadow_Brokers"
-msgstr "https://fr.wikipedia.org/wiki/The_Shadow_Brokers"
+msgstr ""
 
 #: fr/wannacry.md:51
 msgid ""
 "https://docs.microsoft.com/fr-fr/security-updates/SecurityBulletins/2017/"
 "ms17-010"
 msgstr ""
-"https://docs.microsoft.com/fr-fr/security-updates/SecurityBulletins/2017/"
-"ms17-010"
 
 #: fr/wannacry.md:54
 msgid ""
@@ -255,28 +182,22 @@ msgid ""
 "north-korea-carried-out-massive-wannacry-cyber-attack/2017/12/18/509deb1c-"
 "e446-11e7-a65d-1ac0fd7f097e_story.html"
 msgstr ""
-"https://www.washingtonpost.com/world/national-security/us-set-to-declare-"
-"north-korea-carried-out-massive-wannacry-cyber-attack/2017/12/18/509deb1c-"
-"e446-11e7-a65d-1ac0fd7f097e_story.html"
 
 #: fr/wannacry.md:57
 msgid "https://yewtu.be/watch?v=Mp3TH5PI6rc"
-msgstr "https://yewtu.be/watch?v=Mp3TH5PI6rc"
+msgstr ""
 
 #: fr/wannacry.md:60
 msgid "https://www.secureworks.com/research/wcry-ransomware-analysis"
-msgstr "https://www.secureworks.com/research/wcry-ransomware-analysis"
+msgstr ""
 
 #: fr/wannacry.md:63
 msgid ""
 "https://fr.wikipedia.org/wiki/Cryptographic_Application_Programming_Interface"
 msgstr ""
-"https://fr.wikipedia.org/wiki/Cryptographic_Application_Programming_Interface"
 
 #: fr/wannacry.md:66
 msgid ""
 "https://docs.microsoft.com/fr-fr/windows/security/threat-protection/"
 "microsoft-defender-atp/evaluate-controlled-folder-access"
 msgstr ""
-"https://docs.microsoft.com/fr-fr/windows/security/threat-protection/"
-"microsoft-defender-atp/evaluate-controlled-folder-access"

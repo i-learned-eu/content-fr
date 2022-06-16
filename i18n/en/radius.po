@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Language-Team: English\n"
-"PO-Revision-Date: 2022-06-15 16:18+0200\n"
-"Language: en_EN\n"
+"Language-Team: none\n"
+"PO-Revision-Date: 2022-06-15 13:37+0000\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2022-06-15 13:37+0000\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: Eban <contact@eban.eu.org>\n"
+"Last-Translator: Automatically generated\n"
 
 #: fr/radius.md:0
 msgid ""
@@ -25,17 +25,6 @@ msgid ""
 "Title: Fonctionnement de RADIUS\n"
 "Category: Réseau"
 msgstr ""
-"lang: fr\n"
-"Author: Ramle\n"
-"Date: 2021/05/20\n"
-"Keywords: 802.1x, networking, RADIUS, réseau, sécurité, udp\n"
-"Slug: RADIUS\n"
-"Summary: Une question se pose parfois, comment gérer facilement de "
-"l'authentification et des autorisations d'utilisateur sur un réseau avec "
-"plusieurs machines sans répliquer la liste d'utilisateur avec les propriétés "
-"unique à chacun sur chaque machine.\n"
-"Title: Fonctionnement de RADIUS\n"
-"Category: Réseau"
 
 #: fr/radius.md:2
 msgid ""
@@ -44,18 +33,12 @@ msgid ""
 "sans répliquer la liste d'utilisateur avec les propriétés unique à chacun "
 "sur chaque machine."
 msgstr ""
-"Une question se pose parfois, comment gérer facilement de l'authentification "
-"et des autorisations d'utilisateur sur un réseau avec plusieurs machines "
-"sans répliquer la liste d'utilisateur avec les propriétés unique à chacun "
-"sur chaque machine."
 
 #: fr/radius.md:4
 msgid ""
 "Une solution pour ce genre de cas est RADIUS, c'est un protocole qui permet "
 "d'authentifier et de donner une liste de propriété pour un utilisateur."
 msgstr ""
-"Une solution pour ce genre de cas est RADIUS, c'est un protocole qui permet "
-"d'authentifier et de donner une liste de propriété pour un utilisateur."
 
 #: fr/radius.md:6
 msgid ""
@@ -65,19 +48,12 @@ msgid ""
 "%C3%A9seau) va demander l'utilisateur et le mot de passe au client, il va "
 "ensuite se connecter avec le serveur RADIUS pour valider l'authentification."
 msgstr ""
-"Un cas d'usage est par exemple un stockage réseau (aussi appelé [NAS]"
-"(https://fr.wikipedia.org/wiki/Serveur_de_stockage_en_r%C3%A9seau)). Le "
-"serveur [NAS](https://fr.wikipedia.org/wiki/Serveur_de_stockage_en_r"
-"%C3%A9seau) va demander l'utilisateur et le mot de passe au client, il va "
-"ensuite se connecter avec le serveur RADIUS pour valider l'authentification."
 
 #: fr/radius.md:8
 msgid ""
 "![Demande d'accès depuis le client](/static/img/radius/client_nas_radius."
 "webp)"
 msgstr ""
-"![Demande d'accès depuis le client](/static/img/radius/client_nas_radius."
-"webp)"
 
 #: fr/radius.md:10
 msgid ""
@@ -94,18 +70,6 @@ msgid ""
 "Fonction_OU_exclusif) est un moyen de chiffrer sur base d'une clé unique, on "
 "parle donc de chiffrement symétrique."
 msgstr ""
-"À chaque requête le [NAS](https://fr.wikipedia.org/wiki/"
-"Serveur_de_stockage_en_r%C3%A9seau) transmet les identifiants que le client "
-"lui a envoyé afin de savoir s'il peut accéder à la ressource demandée. Le "
-"client RADIUS (ici le [NAS](https://fr.wikipedia.org/wiki/"
-"Serveur_de_stockage_en_r%C3%A9seau)) doit s'authentifier auprès du serveur "
-"RADIUS, pour se faire il utilise un secret qui est partagé entre le serveur "
-"RADIUS et le [NAS](https://fr.wikipedia.org/wiki/Serveur_de_stockage_en_r"
-"%C3%A9seau). Ce secret permet aussi de chiffrer les identifiants de "
-"l'utilisateur via un \"[xor](https://fr.wikipedia.org/wiki/"
-"Fonction_OU_exclusif)\", un [xor](https://fr.wikipedia.org/wiki/"
-"Fonction_OU_exclusif) est un moyen de chiffrer sur base d'une clé unique, on "
-"parle donc de chiffrement symétrique."
 
 #: fr/radius.md:12
 msgid ""
@@ -115,11 +79,6 @@ msgid ""
 "être capable de gérer la retransmission dans le cas ou aucune réponse ne lui "
 "est accordée."
 msgstr ""
-"La communication entre le serveur RADIUS et son client se base sur [UDP]"
-"(https://ilearned.eu/udp.html) (il peut aussi passer par [TCP](https://"
-"ilearned.eu/tcp.html), mais nous n'en parlerons pas), le client doit donc "
-"être capable de gérer la retransmission dans le cas ou aucune réponse ne lui "
-"est accordée."
 
 #: fr/radius.md:14
 msgid ""
@@ -130,28 +89,20 @@ msgid ""
 "client RADIUS n'est pas connu du serveur il ne recevra pas de réponse. Si le "
 "client est connu alors, le serveur peut répondre de 3 manières"
 msgstr ""
-"La phase d'authentification du client se base sur un paquet contenant "
-"l'utilisateur et le mot de passe. Ce paquet est nommé `Access Challenge`, il "
-"contient par exemple l'attribut `User-Name = ramle` et `User-Passsword = "
-"phrase-de-passe`. Le client reçoit ensuite une réponse du serveur, si le "
-"client RADIUS n'est pas connu du serveur il ne recevra pas de réponse. Si le "
-"client est connu alors, le serveur peut répondre de 3 manières"
 
 #: fr/radius.md:18
 msgid "`Access-Accept` en cas d'identifiant valide"
-msgstr "`Access-Accept` en cas d'identifiant valide"
+msgstr ""
 
 #: fr/radius.md:21
 msgid "`Access-Reject` en cas d'identifiant invalide"
-msgstr "`Access-Reject` en cas d'identifiant invalide"
+msgstr ""
 
 #: fr/radius.md:24
 msgid ""
 "`Acces-Challenge` si l'authentification requiert plus de paramètre, par "
 "exemple un code PIN ou un carte d'accès."
 msgstr ""
-"`Acces-Challenge` si l'authentification requiert plus de paramètre, par "
-"exemple un code PIN ou un carte d'accès."
 
 #: fr/radius.md:28
 msgid ""
@@ -160,18 +111,14 @@ msgid ""
 "doit être assigné à l'appareil, à la VLAN dans le quel il doit se trouver et "
 "bien d'autre paramètre."
 msgstr ""
-"La réponse du serveur inclut aussi des informations supplémentaire appelé "
-"`attribut`, ce champs peut contenir des informations sur l'adresse IP qui "
-"doit être assigné à l'appareil, à la VLAN dans le quel il doit se trouver et "
-"bien d'autre paramètre."
 
 #: fr/radius.md:30
 msgid "Le paquet RADIUS se forme en plusieurs partie :"
-msgstr "Le paquet RADIUS se forme en plusieurs partie :"
+msgstr ""
 
 #: fr/radius.md:34
 msgid "**Code** : Il définit le type de paquet"
-msgstr "**Code** : Il définit le type de paquet"
+msgstr ""
 
 #: fr/radius.md:37
 msgid ""
@@ -179,23 +126,19 @@ msgid ""
 "duplication, ou de savoir à quelle demande correspond la réponse car la "
 "réponse garde le même identifiant que la demande."
 msgstr ""
-"**Identifier** : Il identifie le paquet, ce mécanisme permet de détecter une "
-"duplication, ou de savoir à quelle demande correspond la réponse car la "
-"réponse garde le même identifiant que la demande."
 
 #: fr/radius.md:40
 msgid "**Authenticator :** Il authentifie la demande du client ou du serveur"
-msgstr "**Authenticator :** Il authentifie la demande du client ou du serveur"
+msgstr ""
 
 #: fr/radius.md:43
 msgid ""
 "**Attributes** : il permet de donner les attributs spécifiques au client"
 msgstr ""
-"**Attributes** : il permet de donner les attributs spécifiques au client"
 
 #: fr/radius.md:47
 msgid "![Paquet RADIUS](/static/img/radius/paquet_radius.webp)"
-msgstr "![Paquet RADIUS](/static/img/radius/paquet_radius.webp)"
+msgstr ""
 
 #: fr/radius.md:49
 msgid ""
@@ -207,13 +150,6 @@ msgid ""
 "alors hashé en MD5 puis transformé via un [xor](https://fr.wikipedia.org/"
 "wiki/Fonction_OU_exclusif)."
 msgstr ""
-"La partie `Authenticator` du paquet dans la requête `Access Challenge` est "
-"intéressante à étudier, cette partie ne contient que 16bits et nécessite un "
-"haut taux de confidentialité car il contient le mot de passe utilisateur. On "
-"utilise [xor](https://fr.wikipedia.org/wiki/Fonction_OU_exclusif) et le "
-"secret évoqué plus haut, dans le cas ou le password est trop long, il est "
-"alors hashé en MD5 puis transformé via un [xor](https://fr.wikipedia.org/"
-"wiki/Fonction_OU_exclusif)."
 
 #: fr/radius.md:51
 msgid ""
@@ -222,19 +158,13 @@ msgid ""
 "canal peut être sécurisé de plusieurs manières, soit un tunnel chiffré entre "
 "les 2, ou bien en sécurisant le canal avec le protocole TLS."
 msgstr ""
-"RADIUS gère aussi l'itinérance, le serveur RADIUS du réseau local fera donc "
-"un proxy pour renvoyer la requête au serveur qui gère l'utilisateur. Le "
-"canal peut être sécurisé de plusieurs manières, soit un tunnel chiffré entre "
-"les 2, ou bien en sécurisant le canal avec le protocole TLS."
 
 #: fr/radius.md:53
 msgid "![Riaming Raadius](/static/img/radius/roaming_radius.webp)"
-msgstr "![Riaming Raadius](/static/img/radius/roaming_radius.webp)"
+msgstr ""
 
 #: fr/radius.md:55
 msgid ""
 "J'espère que cette article vous aura plus :), on se retrouve demain pour "
 "parler de **802.1x**, un protocole utilisant RADIUS."
 msgstr ""
-"J'espère que cette article vous aura plus :), on se retrouve demain pour "
-"parler de **802.1x**, un protocole utilisant RADIUS."

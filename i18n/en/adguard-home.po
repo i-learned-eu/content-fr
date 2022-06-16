@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Language-Team: English\n"
-"PO-Revision-Date: 2022-06-15 16:17+0200\n"
-"Language: en_EN\n"
+"Language-Team: none\n"
+"PO-Revision-Date: 2022-06-15 13:37+0000\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2022-06-15 13:37+0000\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: Eban <contact@eban.eu.org>\n"
+"Last-Translator: Automatically generated\n"
 
 #: fr/adguard-home.md:0
 msgid ""
@@ -25,17 +25,6 @@ msgid ""
 "Author: Eban\n"
 "Category: Sysadmin"
 msgstr ""
-"lang: fr\n"
-"Title: AdGuard Home, La sécurité et la vie privée dans votre maison 🛡️\n"
-"Keywords: [AdGuard, privacy, adblock, network wide adblock, eban]\n"
-"Summary: Dans ce nouvel article, nous allons traiter du logiciel open-source "
-"AdGuard Home qui est un bloqueur de publicités et de trackers qui intègre "
-"des fonctions supplémentaires telles que le DOH qui permet de chiffrer les "
-"requêtes DNS de votre réseau Wi-Fi !\n"
-"Slug: adguard-home-la-securite-et-la-vie-privee-dans-votre-maison\n"
-"Date: 06-15-2020\n"
-"Author: Eban\n"
-"Category: Sysadmin"
 
 #: fr/adguard-home.md:2
 msgid ""
@@ -44,14 +33,10 @@ msgid ""
 "fonctions supplémentaires tel que le DOH qui permet de chiffrer les requêtes "
 "DNS de votre réseau Wi-Fi !"
 msgstr ""
-"Dans ce nouvel article, nous allons traiter du logiciel open-source AdGuard "
-"Home qui est un bloqueur de publicités et de trackers qui intègre des "
-"fonctions supplémentaires tel que le DOH qui permet de chiffrer les requêtes "
-"DNS de votre réseau Wi-Fi !"
 
 #: fr/adguard-home.md:4
 msgid "A quoi bon ?"
-msgstr "A quoi bon ?"
+msgstr ""
 
 #: fr/adguard-home.md:5
 msgid ""
@@ -64,38 +49,28 @@ msgid ""
 "familiale, votre état de santé, etc. C'est pourquoi il est très important de "
 "se protéger de ces trackers."
 msgstr ""
-"Il est vrai que l'on pourrait se demander à quoi pourrait servir un tel "
-"outil. Laissez moi vous expliquer : quand vous possédez un appareil connecté "
-"à Internet (téléphone, tablette, ordinateur, etc.), des trackers "
-"enregistrent votre activité afin de revendre ces données à des annonceurs "
-"leur permettant ainsi de faire de la publicité ciblée. Ces données peuvent "
-"révéler beaucoup sur vous, tel que votre localisation, votre situation "
-"familiale, votre état de santé, etc. C'est pourquoi il est très important de "
-"se protéger de ces trackers."
 
 #: fr/adguard-home.md:7
 msgid "Prérequis"
-msgstr "Prérequis"
+msgstr ""
 
 #: fr/adguard-home.md:8
 msgid "Pour ce tutoriel, vous aurez besoin :"
-msgstr "Pour ce tutoriel, vous aurez besoin :"
+msgstr ""
 
 #: fr/adguard-home.md:10
 msgid ""
 "• D'un Raspberry Pi disposant d'un module WiFi  \n"
 "• D'un câble RJ45 (Ethernet)"
 msgstr ""
-"• D'un Raspberry Pi disposant d'un module WiFi  \n"
-"• D'un câble RJ45 (Ethernet)"
 
 #: fr/adguard-home.md:12
 msgid "Et c'est tout !"
-msgstr "Et c'est tout !"
+msgstr ""
 
 #: fr/adguard-home.md:14
 msgid "Tutoriel"
-msgstr "Tutoriel"
+msgstr ""
 
 #: fr/adguard-home.md:15
 msgid ""
@@ -105,31 +80,22 @@ msgid ""
 "l'activation de la compatibilité avec le DOH (DNS over HTTPS qui permet de "
 "chiffrer vos requetes DNS)."
 msgstr ""
-"Dans ce tutoriel nous allons donc voir l'installation de RaspAP qui permet "
-"de faire un point d'accès wifi à partir d'un cable Ethernet branché au "
-"Raspberry Pi puis nous verrons l'installation de AdGuard Home ainsi que "
-"l'activation de la compatibilité avec le DOH (DNS over HTTPS qui permet de "
-"chiffrer vos requetes DNS)."
 
 #: fr/adguard-home.md:17
 msgid "**1) Installation de RaspAP**"
-msgstr "**1) Installation de RaspAP**"
+msgstr ""
 
 #: fr/adguard-home.md:19
 msgid ""
 "Pour débuter l'installation de RaspAP, effectuez la commande suivante sur "
 "votre Raspberry Pi"
 msgstr ""
-"Pour débuter l'installation de RaspAP, effectuez la commande suivante sur "
-"votre Raspberry Pi"
 
 #: fr/adguard-home.md:22
 msgid ""
 "sudo apt update && sudo apt upgrade -y && wget -q https://git.io/voEUQ -O /"
 "tmp/raspap && bash /tmp/raspap"
 msgstr ""
-"sudo apt update && sudo apt upgrade -y && wget -q https://git.io/voEUQ -O /"
-"tmp/raspap && bash /tmp/raspap"
 
 #: fr/adguard-home.md:25
 msgid ""
@@ -139,15 +105,10 @@ msgid ""
 "vous sera proposé d'installer le bloqueur de publicités, nous n'utiliserons "
 "pas celui intégré à RaspAP car il est moins performant que AdGuard Home."
 msgstr ""
-"L'installateur va s'ouvrir, il vous demande d'abord dans quel répertoire "
-"vous souhaitez installer RaspAP à moins que vous ne souhaitez le changer, "
-"laissez le répertoire de base, répondre oui à tout (y) sauf au moment où il "
-"vous sera proposé d'installer le bloqueur de publicités, nous n'utiliserons "
-"pas celui intégré à RaspAP car il est moins performant que AdGuard Home."
 
 #: fr/adguard-home.md:27
 msgid "![Première Image](https://i.postimg.cc/gkfgjY3z/raspap-02.webp)"
-msgstr "![Première Image](https://i.postimg.cc/gkfgjY3z/raspap-02.webp)"
+msgstr ""
 
 #: fr/adguard-home.md:29
 msgid ""
@@ -161,27 +122,16 @@ msgid ""
 "connexion, etc. Nous avons donc finit d'installer RaspAP, aucune "
 "configuration de ce dernier n'est nécessaire pour l'instant."
 msgstr ""
-"À la dernière étape, l'installateur vous demandera si vous souhaitez "
-"redémarrer le Raspberry Pi, répondez oui.  \n"
-"Une fois votre Raspberry Pi redémarré, vous pourrez vous rendre sur "
-"l'interface web de votre Raspberry Pi, à noter que les identifiants de "
-"connexi sont \"admin\"/\"secret\". Pour y accéder, tapez juste l'adresse IP "
-"locale de votre Raspberry Pi dans votre navigateur, et depuis cette "
-"interface, vous pourrez change le SSID (nom du réseau), les informations de "
-"connexion, etc. Nous avons donc finit d'installer RaspAP, aucune "
-"configuration de ce dernier n'est nécessaire pour l'instant."
 
 #: fr/adguard-home.md:31
 msgid "**2) Installation de AdGuard Home**"
-msgstr "**2) Installation de AdGuard Home**"
+msgstr ""
 
 #: fr/adguard-home.md:33
 msgid ""
 "Pour commencer l'installation de AdGuard Home, entrez la commande suivante "
 "sur votre Raspberry Pi"
 msgstr ""
-"Pour commencer l'installation de AdGuard Home, entrez la commande suivante "
-"sur votre Raspberry Pi"
 
 #: fr/adguard-home.md:36
 msgid ""
@@ -190,20 +140,15 @@ msgid ""
 "tar.gz) && tar -xf AdGuardHome_linux_arm.tar.gz && cd AdGuardHome && sudo ./"
 "AdGuardHome -s install"
 msgstr ""
-"wget [https://static.adguard.com/adguardhome/release/AdGuardHome_linux_arm."
-"tar.gz](https://static.adguard.com/adguardhome/release/AdGuardHome_linux_arm."
-"tar.gz) && tar -xf AdGuardHome_linux_arm.tar.gz && cd AdGuardHome && sudo ./"
-"AdGuardHome -s install"
 
 #: fr/adguard-home.md:39
 msgid ""
 "Rendez-vous ensuite sur l'interface d'installation qui se situe à l'adresse."
 msgstr ""
-"Rendez-vous ensuite sur l'interface d'installation qui se situe à l'adresse."
 
 #: fr/adguard-home.md:41
 msgid "`http://IPLOCALEDEMONRASPBERRYPI:3000`"
-msgstr "`http://IPLOCALEDEMONRASPBERRYPI:3000`"
+msgstr ""
 
 #: fr/adguard-home.md:43
 msgid ""
@@ -213,31 +158,22 @@ msgid ""
 "127.0.0.1 à la place de \"Toutes les interfaces\" et mettez 5300 dans la "
 "case port."
 msgstr ""
-"Après avoir cliqué sur \"C'est parti\", dans la partie \"Interface web "
-"administrateur\", laissez \"Toutes les interfaces\" et changez le port pour, "
-"disons par exemple, 1234\\. Dans la partie \"Serveur DNS\", choisissez "
-"127.0.0.1 à la place de \"Toutes les interfaces\" et mettez 5300 dans la "
-"case port."
 
 #: fr/adguard-home.md:45
 msgid "![Seconde Image](https://i.postimg.cc/cCDkJw06/ad-guard.webp)"
-msgstr "![Seconde Image](https://i.postimg.cc/cCDkJw06/ad-guard.webp)"
+msgstr ""
 
 #: fr/adguard-home.md:47
 msgid ""
 "Cliquez sur le bouton Suivant puis renseignez vos informations de connexion "
 "à l'interface d'administration"
 msgstr ""
-"Cliquez sur le bouton Suivant puis renseignez vos informations de connexion "
-"à l'interface d'administration"
 
 #: fr/adguard-home.md:49
 msgid ""
 "![Troisième Image](https://i.postimg.cc/bYDjGw4W/Screenshot-2020-05-09-Setup-"
 "Ad-Guard-Home.webp)"
 msgstr ""
-"![Troisième Image](https://i.postimg.cc/bYDjGw4W/Screenshot-2020-05-09-Setup-"
-"Ad-Guard-Home.webp)"
 
 #: fr/adguard-home.md:51
 msgid ""
@@ -245,29 +181,22 @@ msgid ""
 "entrez vos identifiants de connexions puis allez dans la section Filtres "
 "puis Listes de blocage DNS. Cochez toutes les cases et ajoutez la liste :"
 msgstr ""
-"Une fois cela fait, cliquez sur Suivant puis \"ouvrir le Tableau de bord\", "
-"entrez vos identifiants de connexions puis allez dans la section Filtres "
-"puis Listes de blocage DNS. Cochez toutes les cases et ajoutez la liste :"
 
 #: fr/adguard-home.md:53
 msgid ""
 "`\"https://raw.githubusercontent.com/hl2guide/Filterlist-for-AdGuard/master/"
 "filter_blocklist.txt\"`"
 msgstr ""
-"`\"https://raw.githubusercontent.com/hl2guide/Filterlist-for-AdGuard/master/"
-"filter_blocklist.txt\"`"
 
 #: fr/adguard-home.md:55
 msgid "en cliquant sur la bouton Ajouter liste de blocage."
-msgstr "en cliquant sur la bouton Ajouter liste de blocage."
+msgstr ""
 
 #: fr/adguard-home.md:57
 msgid ""
 "![Quatrième Image](https://i.postimg.cc/fR6dNyns/Screenshot-2020-05-09-Ad-"
 "Guard-Home.webp)"
 msgstr ""
-"![Quatrième Image](https://i.postimg.cc/fR6dNyns/Screenshot-2020-05-09-Ad-"
-"Guard-Home.webp)"
 
 #: fr/adguard-home.md:59
 msgid ""
@@ -278,20 +207,12 @@ msgid ""
 "\"127.0.0.1#5300\" dans la case Add upstream DNS server, puis cliquez sur le "
 "bouton +"
 msgstr ""
-"Pour finaliser l'installation, rendez-vous sur l'interface d'administration "
-"de RaspAP, les identifiants de connexion sont par défaut \"admin\"/\"secret"
-"\". Puis dans la section DHCP server, cliquez sur Advanced, puis cochez la "
-"case \" Only ever query DNS servers configured below\". Renseignez ensuite "
-"\"127.0.0.1#5300\" dans la case Add upstream DNS server, puis cliquez sur le "
-"bouton +"
 
 #: fr/adguard-home.md:61
 msgid ""
 "![Cinquième Image](https://i.postimg.cc/8Pdk5C6D/Screenshot-2020-05-09-Rasp-"
 "AP-Wi-Fi-Configuration-Portal.webp)"
 msgstr ""
-"![Cinquième Image](https://i.postimg.cc/8Pdk5C6D/Screenshot-2020-05-09-Rasp-"
-"AP-Wi-Fi-Configuration-Portal.webp)"
 
 #: fr/adguard-home.md:63
 msgid ""
@@ -299,13 +220,10 @@ msgid ""
 "hotspot dans la section \"Hotspot\". Et voilà ! L'installation de RaspAP et "
 "de AdGuard Home est terminée !"
 msgstr ""
-"Pour finir, redémarrez le Point D'accès en cliquant sur le bouton Restart "
-"hotspot dans la section \"Hotspot\". Et voilà ! L'installation de RaspAP et "
-"de AdGuard Home est terminée !"
 
 #: fr/adguard-home.md:65
 msgid "**3) Bonus : Mise en place du DOH ainsi que d'un VPN**"
-msgstr "**3) Bonus : Mise en place du DOH ainsi que d'un VPN**"
+msgstr ""
 
 #: fr/adguard-home.md:67
 msgid ""
@@ -313,29 +231,24 @@ msgid ""
 "AdGuard Home puis dans paramètres, paramètres DNS, renseignez le DOH de "
 "votre choix, dans mon cas, j'ai choisi"
 msgstr ""
-"Pour mettre en place le DOH, allez sur l'interface d'administration de "
-"AdGuard Home puis dans paramètres, paramètres DNS, renseignez le DOH de "
-"votre choix, dans mon cas, j'ai choisi"
 
 #: fr/adguard-home.md:69
 msgid "`https://doh.powerdns.org/`"
-msgstr "`https://doh.powerdns.org/`"
+msgstr ""
 
 #: fr/adguard-home.md:71
 msgid ""
 "![Sixième Image](https://i.postimg.cc/gJ5jvBzW/Screenshot-2020-05-09-Ad-"
 "Guard-Home-1.webp)"
 msgstr ""
-"![Sixième Image](https://i.postimg.cc/gJ5jvBzW/Screenshot-2020-05-09-Ad-"
-"Guard-Home-1.webp)"
 
 #: fr/adguard-home.md:73
 msgid "Vos requêtes DNS sont maintenant chiffrées !"
-msgstr "Vos requêtes DNS sont maintenant chiffrées !"
+msgstr ""
 
 #: fr/adguard-home.md:75
 msgid "Conclusion"
-msgstr "Conclusion"
+msgstr ""
 
 #: fr/adguard-home.md:76
 msgid ""
@@ -346,13 +259,7 @@ msgid ""
 "leur tour ? Si vous avez des questions, n'hésitez pas à me contacter sur "
 "twitter @eban_non ou par mail ebandev@protonmail.com."
 msgstr ""
-"Et voilà ! C'est terminé, vous pouvez maintenant naviguer sur internet sans "
-"publicités ni trackeurs ! Veillez à bien modifier le mot de passe ainsi que "
-"le SSID de votre réseau wifi ! Vous n'avez plus qu'à connecter tout les "
-"appareils de votre maison au nouveau réseau Wi-Fi et ils seront protégés à "
-"leur tour ? Si vous avez des questions, n'hésitez pas à me contacter sur "
-"twitter @eban_non ou par mail ebandev@protonmail.com."
 
 #: fr/adguard-home.md:78
 msgid "Merci à Azgar de m'avoir aidé pour la relecture"
-msgstr "Merci à Azgar de m'avoir aidé pour la relecture"
+msgstr ""
