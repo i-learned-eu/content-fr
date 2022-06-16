@@ -23,7 +23,7 @@ prettier:
         - apt install gettext sed
         - npm install -g prettier gettext-markdown
         - prettier . -w
-        - bash updateTranslation
+        - bash updateTranslation.sh
         - git config --global user.email "contact@ilearned.eu"
         - git config --global user.name "Gitlab CI"
         - git add .
