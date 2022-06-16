@@ -14,10 +14,10 @@ updateTranslation:
     stage: updateTranslation
     allow_failure: true
     script:
+        - apt update
+        - apt install git gettext sed coreutils npm -y
         - rm -rf ./..?* ./.[!.]* ./*
         - git clone https://gitlab.ilearned.eu/i-learned/blog/content-fr .
-        - apt update
-        - apt install gettext sed coreutils npm -y
         - npm install -g gettext-markdown
         - /usr/local/bin/gettext-md
         - PATH=$PATH:$(npm bin) bash ./updateTranslation.sh
