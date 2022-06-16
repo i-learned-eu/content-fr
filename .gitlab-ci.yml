@@ -27,8 +27,7 @@ updateTranslation:
         - git pull
         - git push https://CI_CD:$CI_GIT_USER_PASSWD@gitlab.ilearned.eu/i-learned/blog/content-fr.git
     rules:
-        - if: $CI_COMMIT_BRANCH == "master"
-        - if: $CI_COMMIT_AUTHOR != "Gitlab CI <contact@ilearned.eu>"
+        - if: $CI_COMMIT_BRANCH == "master" && $CI_COMMIT_AUTHOR != "Gitlab CI <contact@ilearned.eu>"
 
 test-job:
     stage: test
@@ -57,8 +56,7 @@ prod-deploy-job:
         - sh build.sh
         - rsync -az --delete -e "ssh -i ~/.ssh/id_ed25519" output/ deploy@vm01.eban.eu.org:/var/www/ilearned-blog
     rules:
-        - if: $CI_COMMIT_BRANCH == "master"
-        - if: $CI_COMMIT_AUTHOR != "Gitlab CI <contact@ilearned.eu>"
+        - if: $CI_COMMIT_BRANCH == "master" && $CI_COMMIT_AUTHOR != "Gitlab CI <contact@ilearned.eu>"
 
 test-deploy-job:
     image: hub.ilearned.eu/i-learned/ci-cd/pelican-builder-dev
