@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2022-06-15 13:37+0000\n"
-"PO-Revision-Date: 2022-06-16 12:23+0000\n"
-"Last-Translator: Eban Rami <account+gitil@eban.eu.org>\n"
+"PO-Revision-Date: 2022-06-16 15:04+0000\n"
+"Last-Translator: llaq <contact@lelibreauquotidien.fr>\n"
 "Language-Team: English <https://trad.ilearned.eu/projects/"
 "i-learned-blog-articles/802_1x/en/>\n"
 "Language: en\n"
@@ -55,6 +55,8 @@ msgid ""
 "![Schéma simple fonctionnement EAP avec intermédiaire Authenticator](/static/"
 "img/802_1x/Frame_50.webp)"
 msgstr ""
+"![Simple schematic of EAP operation with Authenticator intermediate](/static/"
+"img/802_1x/Frame_50.webp)"
 
 #: fr/802_1x.md:6
 msgid ""
@@ -63,16 +65,22 @@ msgid ""
 "et l'authentication server, la majorité du temps un serveur [RADIUS](https://"
 "ilearned.eu/RADIUS.html)."
 msgstr ""
+"The authenticator (a wifi access point in our example but the same thing can "
+"be set up in Ethernet) is an intermediary between the user and the "
+"authentication server, mostly a [RADIUS] server (https://ilearned.eu/RADIUS."
+"html)."
 
 #: fr/802_1x.md:8
 msgid "![Schéma d'un requête EAP](/static/img/802_1x/Frame_53(1).webp)"
-msgstr ""
+msgstr "EAP request schema](/static/img/802_1x/Frame_53(1).webp)"
 
 #: fr/802_1x.md:10
 msgid ""
 "Identity request correspond à la demande du username au client par "
 "l'authenticator"
 msgstr ""
+"Identity request is the request of the username to the client by the "
+"authenticator"
 
 #: fr/802_1x.md:12
 msgid ""
@@ -80,25 +88,32 @@ msgid ""
 "pour permettre à l'Authentication Server de savoir quelle challenge "
 "demander, il existe plusieurs types de challenge en voici quelques-uns"
 msgstr ""
+"Identity response is the username, this information is requested to allow "
+"the Authentication Server to know what challenge to ask for, there are "
+"several types of challenge, here are some"
 
 #: fr/802_1x.md:16
 msgid ""
 "`MD5` (simple mot de passe hashé avec MD5, cette méthode est controversée "
 "car MD5 n'est pas considéré comme sécurisé)."
 msgstr ""
+"`MD5` (simple password hashed with MD5, this method is controversial because "
+"MD5 is not considered secure)."
 
 #: fr/802_1x.md:19
 msgid "`SIM` (authentification basée sur la carte SIM)."
-msgstr ""
+msgstr "SIM' (SIM card based authentication)."
 
 #: fr/802_1x.md:22
 msgid ""
 "`NFC` (authentification basée sur le protocole NFC, c'est par exemple "
 "utilisé sur les badges d'entreprise.)"
 msgstr ""
+"NFC (authentication based on the NFC protocol, used for example on company "
+"badges)"
 
 #: fr/802_1x.md:26
 msgid ""
 "Le ou les challenges sont ensuite envoyés tour à tour dans des paquets "
 "`Challenge Request`."
-msgstr ""
+msgstr "The challenge(s) are then sent in turn in `Challenge Request` packets."
