@@ -1,6 +1,9 @@
 lastCommit=$(git rev-parse origin/master)
 lastCommitAuthor=$(git log -1 | grep Author)
 
+echo ${lastCommitAuthor}
+echo ${lastCommitAuthor} | grep "contact@ilearned.eu"
+
 if echo ${lastCommitAuthor} | grep -q "contact@ilearned.eu"; then
   for i in $(ls -1 -p fr/ | grep -v / | sed -e 's/\..*$//')
   do
