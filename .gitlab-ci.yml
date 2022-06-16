@@ -19,8 +19,10 @@ prettier:
     stage: lint
     allow_failure: true
     script:
-        - npm install -g prettier
+        - apk add gettext sed
+        - npm install -g prettier gettext-markdown
         - prettier . -w
+        - bash updateTranslation
         - git config --global user.email "contact@ilearned.eu"
         - git config --global user.name "Gitlab CI"
         - git add .
