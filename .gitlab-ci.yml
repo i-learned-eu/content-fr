@@ -32,8 +32,8 @@ test-job:
         - git clone https://gitlab.ilearned.eu/i-learned/blog/theme .
         - rm -rf content/*
         - git clone https://gitlab.ilearned.eu/i-learned/blog/content-fr.git -b $CI_COMMIT_REF_NAME content/
-        - pelican -o /tmp --fatal warnings
-        - sh build.sh
+        - LC_ALL="en_US.UTF-8" LC_CTYPE="en_US.UTF-8" pelican -o /tmp --fatal warnings
+        - LC_ALL="en_US.UTF-8" LC_CTYPE="en_US.UTF-8" sh build.sh
     rules:
         - if: $CI_COMMIT_AUTHOR != "Gitlab CI <contact@ilearned.eu>"
 
@@ -49,7 +49,7 @@ prod-deploy-job:
         - echo "$SSH_EBANVM01_PRIVATE_KEY" > ~/.ssh/id_ed25519
         - chmod 600 ~/.ssh/id_ed25519
         - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
-        - sh build.sh
+        - LC_ALL="en_US.UTF-8" LC_CTYPE="en_US.UTF-8" sh build.sh
         - rsync -az --delete -e "ssh -i ~/.ssh/id_ed25519" output/ deploy@vm01.eban.eu.org:/var/www/ilearned-blog
     rules:
         - if: $CI_COMMIT_BRANCH == "master" && $CI_COMMIT_AUTHOR != "Gitlab CI <contact@ilearned.eu>"
@@ -61,7 +61,7 @@ test-deploy-job:
         - git clone https://gitlab.ilearned.eu/i-learned/blog/theme .
         - rm -rf content/*
         - git clone https://gitlab.ilearned.eu/i-learned/blog/content-fr.git -b $CI_COMMIT_REF_NAME content/
-        - sh build.sh
+        - LC_ALL="en_US.UTF-8" LC_CTYPE="en_US.UTF-8" sh build.sh
         - netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --dir output
     only:
         - merge_requests
