@@ -2,14 +2,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2022-06-15 13:37+0000\n"
-"PO-Revision-Date: 2022-06-15 13:37+0000\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2022-06-17 09:12+0000\n"
+"Last-Translator: Test User <account@eban.eu.org>\n"
+"Language-Team: English <https://trad.ilearned.eu/projects/"
+"i-learned-blog-articles/activedirectory/en/>\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.13\n"
 
 #: fr/ActiveDirectory.md:0
 msgid ""
@@ -26,7 +28,7 @@ msgid ""
 "fonctionne.\n"
 "Title: C'est quoi un Active Directory\n"
 "Category: Sysadmin/Windows"
-msgstr ""
+msgstr "jhkjhkjhk"
 
 #: fr/ActiveDirectory.md:2
 msgid "C'est quoi un Active Directory"
@@ -43,7 +45,7 @@ msgstr ""
 
 #: fr/ActiveDirectory.md:5
 msgid "Composants"
-msgstr ""
+msgstr "Components"
 
 #: fr/ActiveDirectory.md:6
 msgid "Un active Directory est composé de trois services principaux :"
