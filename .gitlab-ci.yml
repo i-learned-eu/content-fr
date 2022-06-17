@@ -1,5 +1,5 @@
 default:
-    image: hub.ilearned.eu/i-learned/ci-cd/pelican-builder
+    image: hub.ilearned.eu/i-learned/ci-cd/blog-builder
     tags:
         - AMD64
 
@@ -10,7 +10,6 @@ stages:
     - prod-deploy
 
 updateTranslation:
-    image: node:latest
     stage: updateTranslation
     allow_failure: true
     script:
@@ -59,7 +58,6 @@ prod-deploy-job:
         - if: $CI_COMMIT_BRANCH == "master" && $CI_COMMIT_AUTHOR != "Gitlab CI <contact@ilearned.eu>"
 
 test-deploy-job:
-    image: hub.ilearned.eu/i-learned/ci-cd/pelican-builder-dev
     stage: test-deploy
     script:
         - rm -rf ./..?* ./.[!.]* ./*
