@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2022-06-15 13:37+0000\n"
 "PO-Revision-Date: 2022-06-17 09:12+0000\n"
-"Last-Translator: Test User <account@eban.eu.org>\n"
+"Last-Translator: Eban Rami <account+gitil@eban.eu.org>\n"
 "Language-Team: English <https://trad.ilearned.eu/projects/"
 "i-learned-blog-articles/activedirectory/en/>\n"
 "Language: en\n"
@@ -57,11 +57,11 @@ msgstr ""
 
 #: fr/ActiveDirectory.md:13
 msgid "Un serveur Kerberos."
-msgstr ""
+msgstr "A Kerberos server."
 
 #: fr/ActiveDirectory.md:16
 msgid "Un serveur LDAP."
-msgstr ""
+msgstr "A LDAP server."
 
 #: fr/ActiveDirectory.md:20
 msgid ""
