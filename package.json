@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "gettext-markdown": "^0.2.7"
+  }
+}
