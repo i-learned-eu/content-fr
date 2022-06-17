@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2022-06-15 13:37+0000\n"
-"PO-Revision-Date: 2022-06-17 09:12+0000\n"
+"PO-Revision-Date: 2022-06-17 12:11+0000\n"
 "Last-Translator: Eban Rami <account+gitil@eban.eu.org>\n"
 "Language-Team: English <https://trad.ilearned.eu/projects/"
 "i-learned-blog-articles/802_1x/en/>\n"
@@ -111,7 +111,7 @@ msgstr ""
 
 #: fr/802_1x.md:19
 msgid "`SIM` (authentification basée sur la carte SIM)."
-msgstr "SIM' (SIM card based authentication)."
+msgstr "`SIM` (SIM card based authentication)."
 
 #: fr/802_1x.md:22
 msgid ""
