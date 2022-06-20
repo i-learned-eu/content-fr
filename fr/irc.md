@@ -2,7 +2,7 @@ lang: fr
 Title: Le protocole IRC
 Keywords: irc, chat
 Date: 2021-05-05
-Author: Ramle
+Author: Elmar
 Summary: Bonjour, hier nous avions vu le protocole TCP, aujourd'hui nous allons en reparler en l'appliquant concrètement. :)
 Slug: irc
 Category: Réseau

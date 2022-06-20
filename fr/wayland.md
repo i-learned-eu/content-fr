@@ -1,5 +1,5 @@
 lang: fr
-Author: Ramle
+Author: Elmar
 Date: 2021/12/21
 Slug: wayland
 Title: Comment fonctionne Wayland ?

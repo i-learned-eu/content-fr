@@ -1,5 +1,5 @@
 lang: fr
-Author: Ramle
+Author: Elmar
 Date: 2021/10/17
 Keywords: Android, sécurité, Verified boot, secure boot
 slug: verified_boot
