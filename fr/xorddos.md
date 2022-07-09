@@ -141,6 +141,8 @@ Via l'article de trendmicro, on apprend par ailleurs qu'il est potentiellement m
 
 Pour résumer, d’après nos analyses, ce malware relativement peu sophistiqué serait utilisé pour former un réseau de botnet. Un botnet est un réseau de machines répondant un ordre d’un serveur central (C2), utilisées pour faire des attaques DDoS — Distributed Denial of Service. Nous avons par ailleurs réussi à identifier certaines victimes présumées présentes dans ce réseau de botnet. Il s'avère que ce logiciel malveillant est déjà relativement connu et nommé XorDDos. Celui-ci est d'ailleurs détecté par de nombreux antivirus, incluant le logiciel libre [ClamAV](https://www.clamav.net/). Si vous souhaitez vous protéger de menaces similaires, il peut être intéressant de vous renseigner sur l'utilisation de logiciels antivirus sur vos serveurs !
 
+Le sample analysé tout au long de cet article est disponible [ici](https://bazaar.abuse.ch/sample/8642022960d919321ccfcfb0a0cd631db0e5dac3e75014fc0c4cc6ff413c72c5/).
+
 \*Les adresses et pseudonymes ont été modifiés
 
 - [1] [Examining a Possible Member of the Winnti Group](https://www.trendmicro.com/en_us/research/17/d/pigs-malware-examining-possible-member-winnti-group.html)
