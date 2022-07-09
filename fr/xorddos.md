@@ -132,7 +132,7 @@ Comme cité plus haut, nous avons réussi à lier le botnet à un individu répo
 C'est l'image de cochon que nous avons pu voir tout à l'heure qui nous a permise de remonter jusqu'à lui. La recherche d'image inversée de Baidu, nous a permit de remonter à un article de TrendMicro à propos de cet individu. La recherche inversé nous a aussi permit de retrouver certains de ses réseaux sociaux. Nous avons d'abord pu trouver son blog (`zhu[.]vn`), qui contenait des liens vers son compte twitter (`hack520_est`), nous avons aussi pu retrouver le Github (`Kwan9`) lui aussi grâce à l'image de cochon qui se trouve être la photo de profil. Par ailleurs, les deux cochons que vous pouvez retrouver ci-dessous répondent aux doux noms de LouLou (噜噜) et Mouchoutoutou (母豬嘟嘟).
 
 ![Loulou](/static/img/xorddos/loulou.webp)
-![Moutchoutoutou](/static/img/xorddos/moutchoutoutou/webp)
+![Moutchoutoutou](/static/img/xorddos/moutchoutoutou.webp)
 
 Son compte github montre un certain attrait pour les mineurs de cryptomonaie. À en croire ses commits il possèderait l'adresse mail `kwanleo@126.com`. On peut aussi via github savoir que son ordinateur est dans la timezone Asia/Shanghai, elle permet, avec diverses autres informations que nous avons, de faire penser qu'il se situerait à Hong Kong. Un autre élement qui tends à prouver sa présence sur Hong Kong est cette [photo](https://twitter.com/hack520_est/status/697290929107898368) sur son twitter qui nous montre le téléphérique de [Ngong Ping](https://en.wikipedia.org/wiki/Ngong_Ping). Un post sur son github nous permet aussi de voir qu'il utilise windows.
 
