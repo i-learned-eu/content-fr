@@ -105,7 +105,7 @@ Nous avons pu trouver trois dénominateurs communs pour les serveurs qui semblen
 
 ![Un graph montrant toutes les IPs reliées au mail admin@66.to](/static/img/xorddos/hack520-maltego.webp)
 
-*Disclaimer : L'attribution d'un malware à un acteur malveillant est un processus périlleux, l'analyse qui suit est donc à lire au conditionnel.*
+*Disclaimer : L'attribution d'un malware à un acteur malveillant est un processus périlleux, l'analyse qui suit est donc à lire en gardant en tête qu'il ne s'agit que de suppositions.*
 
 Sur le nom de domaine `66[.]to`, directement lié à l'adresse mail, on peut trouver, tout d'abord, ce site avec cette magnifique image de cochon, elle aura son importance plus tard. Le site nous renvois par ailleurs vers le sous-domaine `secure[.]66[.]to`.
 
