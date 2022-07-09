@@ -6,16 +6,13 @@ Slug: xorddos
 Summary: Par un heureux hasard, un fichier nommé `libudev.so`, apparemment malveillant, est apparu dans notre dossier Téléchargements, nous avons donc voulu en savoir plus. Entre reverse engineering, analyse réseau et OSINT, c’est cette quête d’information qui nous mènera à découvrir un mystérieux pirate, vouant une adoration à ses cochons, que nous allons relater dans cet article.
 Title:  Un malware, un cochon et un APT chinois
 
-
-# Un malware, un cochon et un APT chinois
-
 Par un heureux hasard, un fichier nommé `libudev.so`, apparemment malveillant, est apparu dans notre dossier Téléchargements, nous avons donc voulu en savoir plus. Entre reverse engineering, analyse réseau et OSINT, c’est cette quête d’information qui nous mènera à découvrir un mystérieux pirate, vouant une adoration à ses cochons, que nous allons relater dans cet article.
 
 *L’image ci-dessous est une cartographie des informations récoltées dans cette enquête, elle a été faite sur [Maltego](https://www.maltego.com/), vous pourrez la retrouver dans sa version complète en fin de cet article.*
 
 ![Graphique maltego des informations trouvées](/static/img/xorddos/maltego-global-view.webp)
 
-# Premières analyses
+# 👀 Premières analyses
 
 Notre premier réflexe à la vue de ce supposé malware est de le [scanner](https://www.virustotal.com/gui/file/8642022960d919321ccfcfb0a0cd631db0e5dac3e75014fc0c4cc6ff413c72c5/detection) dans un logiciel antivirus. Le résultat est sans appel, de nombreux éditeurs d'antivirus détectent ce malware et le nomment, "XorDDoS".
 
@@ -23,7 +20,7 @@ Notre premier réflexe à la vue de ce supposé malware est de le [scanner](http
 
 Après plusieurs recherches on peut observer que ce malware est en fait une version d'un logiciel malveillant très connu découvert en 2014 par le groupe de recherche `MalwareMustDie`. Ce malware a même fait l'objet d'[un article de Microsoft](https://www.microsoft.com/security/blog/2022/05/19/rise-in-xorddos-a-deeper-look-at-the-stealthy-ddos-malware-targeting-linux-devices/), néanmoins, le virus analysé par la société éditrice de Windows n'est pas la même version que celle que nous analysons dans cet article.
 
-Par ailleurs, le binaire a été compilé de manière statique, c'est-à-dire en incluant toutes les librairies dont il dépend, par GCC 4.1.2 sur une machine Red Hat. La structure des fichiers sources du binaire est :
+On peut aussi remarquer que le binaire a été compilé de manière statique, c'est-à-dire en incluant toutes les librairies dont il dépend, par GCC 4.1.2 sur une machine Red Hat. La structure des fichiers sources du binaire est :
 ```
 - autorun.c
 - crc32.c
@@ -44,7 +41,7 @@ Par ailleurs, le binaire a été compilé de manière statique, c'est-à-dire en
 
 Avec cette seule information, on peut déjà observer certains fichiers intéressants, comme `encrypt.c` ou `hid.c` .
 
-# L'infection
+# 🦠 L'infection
 
 Le principal vecteur d'infection utilisé par ce malware est le [bruteforce](https://fr.wikipedia.org/wiki/Attaque_par_force_brute) de serveur SSH, d'où l'importance d'utiliser des clés cryptographiques (comme [ED25519](https://www.unixtutorial.org/how-to-generate-ed25519-ssh-key/)) ou à minima un mot de passe fort.
 
@@ -84,7 +81,7 @@ On voit que ce simple script shell lance un binaire dans `/usr/bin`, c'est en fa
 
 Ces deux moyens d'assurer la persistance du malware sont gérés par les fonctions `InstallSys` et `add_service`.
 
-# Communication avec le C2
+# 🗨️ Communication avec le C2
 
 Une fois que le malware est installé avec succès, il va commencer la communication avec le C2 – C2, pour Command&Control, c'est le nom du/des serveur-s qui donnent des ordres aux machines infectées. Toute la communication avec l'extérieur se fait via une fonction nommée `exec_packet`. Cette fonction permet notamment au binaire de se mettre à jour, mais aussi de télécharger d'autres binaires et de les lancer. Via cette fonction, le malware est aussi capable d'envoyer un hash md5 de son processus et de recevoir l'ordre de tuer certains processus. Lors de la première communication avec le C2, on a pu déterminer que plusieurs informations concernant la machine sont envoyées, dont notamment des statistiques sur la RAM, le CPU ou encore la vitesse de la connexion.
 
@@ -97,7 +94,7 @@ Aussi, on peut remarquer qu'une grande partie des communications sont chiffrées
 
 C'est l'utilisation intensive de XOR qui donne d'ailleurs à ce malware son nom, XorDDoS.
 
-# Exploration de l'infrastructure du botnet
+# 🌐 Exploration de l'infrastructure du botnet
 
 En explorant les trames réseaux et à la lecture du code décompilé, nous avons rapidement pu identifier 4 domaines liés au malware. Deux d'entre eux contiennent la liste des potentielles C2. Un autre domaine semble lié une liste de victimes, le 4ᵉ domaine est lui inutilisé.
 
@@ -125,7 +122,7 @@ L'hébergeur en question est, selon les informations que nous avons pu trouver¹
 En analysant les requêtes DNS faites par le binaire, nous avons pu remarquer le domaine `a1.evil`\*, ces requêtes renvoyant une liste d'IPs ne semblant n'avoir aucun lien entre elles. De plus, les IPs liées à ce nom de domaine changent de temps en temps, il semblerait que ces IPs sont seraient celles des machines compromises par le virus.
 
 
-# Découverte de notre amateur de cochon
+# 🐷 Découverte de notre amateur de cochon
 
 Comme cité plus haut, nous avons réussi à lier le botnet à un individu répondant au pseudo hack520.
 
@@ -140,7 +137,7 @@ Nous avons trouvé certains de ses autres réseaux sociaux, mais il ne nous semb
 
 Via l'article de trendmicro, on apprend par ailleurs qu'il est potentiellement membre de Winnti Group, un collectif proche d'[APT](https://fr.wikipedia.org/wiki/Advanced_Persistent_Threat) chinois (41 et 17).
 
-# Conlusion
+# 📑 Conlusion
 
 Pour résumer, d’après nos analyses, ce malware relativement peu sophistiqué serait utilisé pour former un réseau de botnet. Un botnet est un réseau de machines répondant un ordre d’un serveur central (C2), utilisées pour faire des attaques DDoS — Distributed Denial of Service. Nous avons par ailleurs réussi à identifier certaines victimes présumées présentes dans ce réseau de botnet. Il s'avère que ce logiciel malveillant est déjà relativement connu et nommé XorDDos. Celui-ci est d'ailleurs détecté par de nombreux antivirus, incluant le logiciel libre [ClamAV](https://www.clamav.net/). Si vous souhaitez vous protéger de menaces similaires, il peut être intéressant de vous renseigner sur l'utilisation de logiciels antivirus sur vos serveurs !
 
