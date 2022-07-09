@@ -8,9 +8,13 @@ Title:  Un malware, un cochon et un APT chinois
 
 Par un heureux hasard, un fichier nommé `libudev.so`, apparemment malveillant, est apparu dans notre dossier Téléchargements, nous avons donc voulu en savoir plus. Entre reverse engineering, analyse réseau et OSINT, c’est cette quête d’information qui nous mènera à découvrir un mystérieux pirate, vouant une adoration à ses cochons, que nous allons relater dans cet article.
 
+ 
+
 Le sample analysé tout au long de cet article est disponible [ici](https://bazaar.abuse.ch/sample/8642022960d919321ccfcfb0a0cd631db0e5dac3e75014fc0c4cc6ff413c72c5/).
 
 *Disclaimer : I Learned ne saurait en aucun cas être responsable de tout dommage engendré par la manipulation du fichier présent ci-dessus, nous rappellons en outre que la distribution de malware à des fins malveillantes est illégale. En outre, l'attribution d'un malware à un acteur malveillant est un processus périlleux, l'analyse qui suit est donc à lire en gardant en tête qu'il ne s'agit que de suppositions.*
+
+ 
 
 L’image ci-dessous est une cartographie des informations récoltées dans cette enquête, elle a été faite sur [Maltego](https://www.maltego.com/), nous l'utiliserons tout au long de cet article !
 
