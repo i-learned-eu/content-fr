@@ -8,6 +8,8 @@ Title:  Un malware, un cochon et un APT chinois
 
 Par un heureux hasard, un fichier nommé `libudev.so`, apparemment malveillant, est apparu dans notre dossier Téléchargements, nous avons donc voulu en savoir plus. Entre reverse engineering, analyse réseau et OSINT, c’est cette quête d’information qui nous mènera à découvrir un mystérieux pirate, vouant une adoration à ses cochons, que nous allons relater dans cet article.
 
+Le sample analysé tout au long de cet article est disponible [ici](https://bazaar.abuse.ch/sample/8642022960d919321ccfcfb0a0cd631db0e5dac3e75014fc0c4cc6ff413c72c5/).
+
 *L’image ci-dessous est une cartographie des informations récoltées dans cette enquête, elle a été faite sur [Maltego](https://www.maltego.com/), vous pourrez la retrouver dans sa version complète en fin de cet article.*
 
 ![Graphique maltego des informations trouvées](/static/img/xorddos/maltego-global-view.webp)
@@ -140,8 +142,6 @@ Via l'article de trendmicro, on apprend par ailleurs qu'il est potentiellement m
 # 📑 Conlusion
 
 Pour résumer, d’après nos analyses, ce malware relativement peu sophistiqué serait utilisé pour former un réseau de botnet. Un botnet est un réseau de machines répondant un ordre d’un serveur central (C2), utilisées pour faire des attaques DDoS — Distributed Denial of Service. Nous avons par ailleurs réussi à identifier certaines victimes présumées présentes dans ce réseau de botnet. Il s'avère que ce logiciel malveillant est déjà relativement connu et nommé XorDDos. Celui-ci est d'ailleurs détecté par de nombreux antivirus, incluant le logiciel libre [ClamAV](https://www.clamav.net/). Si vous souhaitez vous protéger de menaces similaires, il peut être intéressant de vous renseigner sur l'utilisation de logiciels antivirus sur vos serveurs !
-
-Le sample analysé tout au long de cet article est disponible [ici](https://bazaar.abuse.ch/sample/8642022960d919321ccfcfb0a0cd631db0e5dac3e75014fc0c4cc6ff413c72c5/).
 
 \*Les adresses et pseudonymes ont été modifiés
 
