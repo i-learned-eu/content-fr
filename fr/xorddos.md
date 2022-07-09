@@ -14,7 +14,7 @@ Par un heureux hasard, un fichier nommé `libudev.so`, apparemment malveillant, 
 
 # 👀 Premières analyses
 
-Notre premier réflexe à la vue de ce supposé malware est de le [scanner](https://www.virustotal.com/gui/file/8642022960d919321ccfcfb0a0cd631db0e5dac3e75014fc0c4cc6ff413c72c5/detection) dans un logiciel antivirus. Le résultat est sans appel, de nombreux éditeurs d'antivirus détectent ce malware et le nomment, "XorDDoS".
+Notre premier réflexe à la vue de ce supposé malware est de le [scanner dans un logiciel antivirus (VirusTotal)](https://www.virustotal.com/gui/file/8642022960d919321ccfcfb0a0cd631db0e5dac3e75014fc0c4cc6ff413c72c5/detection). Le résultat est sans appel, de nombreux éditeurs d'antivirus détectent ce malware et le nomment, "XorDDoS".
 
 ![Le malware est détecté par une grande majorité de logiciels antivirus.](/static/img/xorddos/virustotal.webp)
 
