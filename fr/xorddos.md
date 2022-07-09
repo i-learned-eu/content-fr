@@ -10,7 +10,9 @@ Par un heureux hasard, un fichier nommé `libudev.so`, apparemment malveillant, 
 
 Le sample analysé tout au long de cet article est disponible [ici](https://bazaar.abuse.ch/sample/8642022960d919321ccfcfb0a0cd631db0e5dac3e75014fc0c4cc6ff413c72c5/).
 
-*L’image ci-dessous est une cartographie des informations récoltées dans cette enquête, elle a été faite sur [Maltego](https://www.maltego.com/), vous pourrez la retrouver dans sa version complète en fin de cet article.*
+*Disclaimer : I Learned ne saurait en aucun cas être responsable de tout dommage engendré par la manipulation du fichier présent ci-dessus, nous rappellons en outre que la distribution de malware à des fins malveillantes est illégale. En outre, l'attribution d'un malware à un acteur malveillant est un processus périlleux, l'analyse qui suit est donc à lire en gardant en tête qu'il ne s'agit que de suppositions.*
+
+L’image ci-dessous est une cartographie des informations récoltées dans cette enquête, elle a été faite sur [Maltego](https://www.maltego.com/), nous l'utiliserons tout au long de cet article !
 
 ![Graphique maltego des informations trouvées](/static/img/xorddos/maltego-global-view.webp)
 
@@ -106,8 +108,6 @@ Nous avons pu trouver trois dénominateurs communs pour les serveurs qui semblen
 - Ces deux organisations sont liées par un mail commun dans leur whois, `admin@66[.]to`.
 
 ![Un graph montrant toutes les IPs reliées au mail admin@66.to](/static/img/xorddos/hack520-maltego.webp)
-
-*Disclaimer : L'attribution d'un malware à un acteur malveillant est un processus périlleux, l'analyse qui suit est donc à lire en gardant en tête qu'il ne s'agit que de suppositions.*
 
 Sur le nom de domaine `66[.]to`, directement lié à l'adresse mail, on peut trouver, tout d'abord, ce site avec cette magnifique image de cochon, elle aura son importance plus tard. Le site nous renvois par ailleurs vers le sous-domaine `secure[.]66[.]to`.
 
