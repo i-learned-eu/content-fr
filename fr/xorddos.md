@@ -106,7 +106,7 @@ Nous avons pu trouver trois dénominateurs communs pour les serveurs qui semblen
 - Les IPs de ces serveurs appartiennent à l'hébergeur OVH, sous 2 organisations différentes.
 - Ces deux organisations sont liées par un mail commun dans leur whois, `admin@66[.]to`.
 
-![Un graph montrant toutes les IPs reliées au mail admin@66.to](/static/img/xorddos/hack5120-maltego.webp)
+![Un graph montrant toutes les IPs reliées au mail admin@66.to](/static/img/xorddos/hack520-maltego.webp)
 
 *Disclaimer : L'attribution d'un malware à un acteur malveillant est un processus périlleux, l'analyse qui suit est donc à lire au conditionnel.*
 
