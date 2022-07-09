@@ -21,9 +21,9 @@ Notre premier réflexe à la vue de ce supposé malware est de le [scanner](http
 
 ![Le malware est détecté par une grande majorité de logiciels antivirus.](/static/img/xorddos/virustotal.webp)
 
-Après plusieurs recherches on peut observer que ce malware est en fait une version d'un logiciel malveillant très connu découvert en 2014 par le groupe de recherche `MalwareMustDie`. Ce malware a même fait l'objet d'[un article de Microsoft](https://www.microsoft.com/security/blog/2022/05/19/rise-in-xorddos-a-deeper-look-at-the-stealthy-ddos-malware-targeting-linux-devices/), néanmoins, la virus analysé par la société éditrice de Windows n'est pas la même version que celle que nous analysons dans cet article.
+Après plusieurs recherches on peut observer que ce malware est en fait une version d'un logiciel malveillant très connu découvert en 2014 par le groupe de recherche `MalwareMustDie`. Ce malware a même fait l'objet d'[un article de Microsoft](https://www.microsoft.com/security/blog/2022/05/19/rise-in-xorddos-a-deeper-look-at-the-stealthy-ddos-malware-targeting-linux-devices/), néanmoins, le virus analysé par la société éditrice de Windows n'est pas la même version que celle que nous analysons dans cet article.
 
-Par ailleurs, le binaire a été compilé de manière statique, c'est à dire en incluant toutes les librairies dont il dépend, par GCC 4.1.2 sur une machine Red Hat. La structure des fichiers sources du binaire est :
+Par ailleurs, le binaire a été compilé de manière statique, c'est-à-dire en incluant toutes les librairies dont il dépend, par GCC 4.1.2 sur une machine Red Hat. La structure des fichiers sources du binaire est :
 ```
 - autorun.c
 - crc32.c
@@ -42,13 +42,13 @@ Par ailleurs, le binaire a été compilé de manière statique, c'est à dire en
 - dns.c
 ```
 
-Avec cette seule information on peut déjà observer certains fichiers intéressants, comme `encrypt.c` ou `hid.c` .
+Avec cette seule information, on peut déjà observer certains fichiers intéressants, comme `encrypt.c` ou `hid.c` .
 
 # L'infection
 
 Le principal vecteur d'infection utilisé par ce malware est le [bruteforce](https://fr.wikipedia.org/wiki/Attaque_par_force_brute) de serveur SSH, d'où l'importance d'utiliser des clés cryptographiques (comme [ED25519](https://www.unixtutorial.org/how-to-generate-ed25519-ssh-key/)) ou à minima un mot de passe fort.
 
-Lors de la première infection, le malware va faire en sorte d'assurer sa persistence, pour ce faire, il va en premier lieu créer le fichier `/etc/cron.hourly/gcc.sh`, celui-ci contient un script qui va simplement démarrer toutes les interfaces réseau, se copier dans un autre endroit et se lancer. Le fait que ce script soit présent dans le dossier `/etc/cron.hourly` a son importance, les scripts présent dans ce dossier sont lancé automatiquement par le système toutes les heures.
+Lors de la première infection, le malware va faire en sorte d'assurer sa persistance, pour ce faire, il va en premier lieu créer le fichier `/etc/cron.hourly/gcc.sh`, celui-ci contient un script qui va simplement démarrer toutes les interfaces réseau, se copier dans un autre endroit et se lancer. Le fait que ce script soit présent dans le dossier `/etc/cron.hourly` à son importance, les scripts présents dans ce dossier sont lancé automatiquement par le système toutes les heures.
 
 ```sh
 #!/bin/sh
@@ -82,13 +82,13 @@ esac
 
 On voit que ce simple script shell lance un binaire dans `/usr/bin`, c'est en fait le même binaire que celui de notre malware initial (`libudev.so`) mais qui est simplement copié avec un nom aléatoire, sûrement pour échapper à certains systèmes de protection.
 
-Ces deux moyens d'assurer la persistence du malware sont gérés par les fonction `InstallSys` et `add_service`.
+Ces deux moyens d'assurer la persistance du malware sont gérés par les fonctions `InstallSys` et `add_service`.
 
 # Communication avec le C2
 
-Une fois que le malware est installé avec succès, il va commencer la communication avec le C2 – C2, pour Command&Control, c'est le nom du/des serveur-s qui donnent des ordres aux machines infectées. Toute la communication avec l'extérieur se fait via une fonction nommée `exec_packet`. Cette fonction permet nottament au binaire de se mettre à jour, mais aussi de télécharger d'autres binaires et de les lancer. Via cet fonction, le malware est aussi capable d'envoyer un hash md5 de son processus et de recevoir l'ordre de tuer certains processus. Lors de la première communication avec le C2, on a pu déterminer que plusieurs informations concernant la machine sont envoyées, dont notamment des statistiques sur la RAM, le CPU ou encore la vitesse de la connexion.
+Une fois que le malware est installé avec succès, il va commencer la communication avec le C2 – C2, pour Command&Control, c'est le nom du/des serveur-s qui donnent des ordres aux machines infectées. Toute la communication avec l'extérieur se fait via une fonction nommée `exec_packet`. Cette fonction permet notamment au binaire de se mettre à jour, mais aussi de télécharger d'autres binaires et de les lancer. Via cette fonction, le malware est aussi capable d'envoyer un hash md5 de son processus et de recevoir l'ordre de tuer certains processus. Lors de la première communication avec le C2, on a pu déterminer que plusieurs informations concernant la machine sont envoyées, dont notamment des statistiques sur la RAM, le CPU ou encore la vitesse de la connexion.
 
-Enfin, cette fonction permet aussi de créer un grand nombre de threads dans lesquels est exécutée une fonction qui envoie des packets TCP SYN, DNS ou TCP ACK, au vu du comportement de cette fonction on peut supputer que ce serait elle qui serait en charge de lancer un DDoS vers une cible, les packets [SYN](https://www.cloudflare.com/learning/ddos/syn-flood-ddos-attack/), [ACK](https://www.cloudflare.com/learning/ddos/what-is-an-ack-flood/) et [DNS](https://www.cloudflare.com/learning/ddos/dns-amplification-ddos-attack/) étant notamment très utilisés pour mener ce genre d'actions malveillantes.
+Enfin, cette fonction permet aussi de créer un grand nombre de threads dans lesquels est exécutée une fonction qui envoie des paquets TCP SYN, DNS ou TCP ACK, au vu du comportement de cette fonction, on peut supputer que ce serait elle qui serait en charge de lancer un DDoS vers une cible, les paquets [SYN](https://www.cloudflare.com/learning/ddos/syn-flood-ddos-attack/), [ACK](https://www.cloudflare.com/learning/ddos/what-is-an-ack-flood/) et [DNS](https://www.cloudflare.com/learning/ddos/dns-amplification-ddos-attack/) étant notamment très utilisés pour mener ce genre d'actions malveillantes.
 
 ![Un schéma résumant le paragraphe précédent](/static/img/xorddos/malware-function-schema.webp)
 
@@ -97,11 +97,11 @@ Aussi, on peut remarquer qu'une grande partie des communications sont chiffrées
 
 C'est l'utilisation intensive de XOR qui donne d'ailleurs à ce malware son nom, XorDDoS.
 
-# Exploration de l'infrastucture du botnet
+# Exploration de l'infrastructure du botnet
 
 En explorant les trames réseaux et à la lecture du code décompilé, nous avons rapidement pu identifier 4 domaines liés au malware. Deux d'entre eux contiennent la liste des potentielles C2. Un autre domaine semble lié une liste de victimes, le 4ᵉ domaine est lui inutilisé.
 
-Nous avons pu trouver trois dénominateurs communs pour les seveurs qui semblent être les C2
+Nous avons pu trouver trois dénominateurs communs pour les serveurs qui semblent être les C2
 - Ce sont des machines sous Windows Server 2012
 - Les IPs de ces serveurs appartiennent à l'hébergeur OVH, sous 2 organisations différentes.
 - Ces deux organisations sont liées par un mail commun dans leur whois, `admin@66[.]to`.
@@ -112,7 +112,7 @@ Nous avons pu trouver trois dénominateurs communs pour les seveurs qui semblent
 
 Sur le nom de domaine `66[.]to`, directement lié à l'adresse mail, on peut trouver, tout d'abord, ce site avec cette magnifique image de cochon, elle aura son importance plus tard. Le site nous renvois par ailleurs vers le sous-domaine `secure[.]66[.]to`.
 
-![Une capture d'écran du site de 66.to, présentant un text décrivant un site d'hébergement et une photo de cochons](/static/img/xorddos/66-to-capture.webp)
+![Une capture d'écran du site de 66.to, présentant un texte décrivant un site d'hébergement et une photo de cochons](/static/img/xorddos/66-to-capture.webp)
 
 En se rendant sur `secure[.]66[.]to` on se retrouve sur le site d'un hébergeur un peu suspect.
 
@@ -122,21 +122,21 @@ En se rendant sur `secure[.]66[.]to` on se retrouve sur le site d'un hébergeur 
 
 L'hébergeur en question est, selon les informations que nous avons pu trouver¹, lié à un pirate répondant au pseudo de Hack520 (nous y reviendrons).
 
-En analysant les requêtes DNS faites par le binaire nous avons pu remarquer le domaine `a1.evil`\*, ces requêtes renvoyant une liste d'IPs ne semblant n'avoir aucun lien entre elles. De plus, les IPs liées à ce nom de domaine changent de temps en temps, il semblerait que ces IPs sont seraient celles des machines compromises par le virus.
+En analysant les requêtes DNS faites par le binaire, nous avons pu remarquer le domaine `a1.evil`\*, ces requêtes renvoyant une liste d'IPs ne semblant n'avoir aucun lien entre elles. De plus, les IPs liées à ce nom de domaine changent de temps en temps, il semblerait que ces IPs sont seraient celles des machines compromises par le virus.
 
 
 # Découverte de notre amateur de cochon
 
 Comme cité plus haut, nous avons réussi à lier le botnet à un individu répondant au pseudo hack520.
 
-C'est l'image de cochon que nous avons pu voir tout à l'heure qui nous a permise de remonter jusqu'à lui. La recherche d'image inversée de Baidu, nous a permit de remonter à un article de TrendMicro à propos de cet individu. La recherche inversé nous a aussi permit de retrouver certains de ses réseaux sociaux. Nous avons d'abord pu trouver son blog (`zhu[.]vn`), qui contenait des liens vers son compte twitter (`hack520_est`), nous avons aussi pu retrouver le Github (`Kwan9`) lui aussi grâce à l'image de cochon qui se trouve être la photo de profil. Par ailleurs, les deux cochons que vous pouvez retrouver ci-dessous répondent aux doux noms de LouLou (噜噜) et Mouchoutoutou (母豬嘟嘟).
+C'est l'image de cochon que nous avons pu voir tout à l'heure qui nous a permise de remonter jusqu'à lui. La recherche d'image inversée de Baidu, nous a permise de remonter à un article de TrendMicro à propos de cet individu. La recherche inversée nous a aussi permise de retrouver certains de ses réseaux sociaux. Nous avons d'abord pu trouver son blog (`zhu[.]vn`), qui contenait des liens vers son compte twitter (`hack520_est`), nous avons aussi pu retrouver le Github (`Kwan9`) lui aussi grâce à l'image de cochon qui se trouve être la photo de profil. Par ailleurs, les deux cochons que vous pouvez retrouver ci-dessous répondent aux doux noms de LouLou (噜噜) et Mouchoutoutou (母豬嘟嘟).
 
 ![Loulou](/static/img/xorddos/loulou.webp)
 ![Moutchoutoutou](/static/img/xorddos/moutchoutoutou.webp)
 
-Son compte github montre un certain attrait pour les mineurs de cryptomonaie. À en croire ses commits il possèderait l'adresse mail `kwanleo@126.com`. On peut aussi via github savoir que son ordinateur est dans la timezone Asia/Shanghai, elle permet, avec diverses autres informations que nous avons, de faire penser qu'il se situerait à Hong Kong. Un autre élement qui tends à prouver sa présence sur Hong Kong est cette [photo](https://twitter.com/hack520_est/status/697290929107898368) sur son twitter qui nous montre le téléphérique de [Ngong Ping](https://en.wikipedia.org/wiki/Ngong_Ping). Un post sur son github nous permet aussi de voir qu'il utilise windows.
+Son compte github montre un certain attrait pour les mineurs de cryptomonnaie. À en croire ses commits, il possèderait l'adresse mail `kwanleo@126.com`. On peut aussi via github savoir que son ordinateur est dans la timezone Asia/Shanghai, elle permet, avec diverses autres informations que nous avons, de faire penser qu'il se situerait à Hong Kong. Un autre élément qui tend à prouver sa présence sur Hong Kong est cette [photo](https://twitter.com/hack520_est/status/697290929107898368) sur son twitter qui nous montre le téléphérique de [Ngong Ping](https://en.wikipedia.org/wiki/Ngong_Ping). Un post sur son github nous permet aussi de voir qu'il utilise windows.
 
-Nous avons trouver certains de ses autres réseaux sociaux, mais il ne nous semblait rien apporter, c'est pourquoi nous les avons pas mis ici.
+Nous avons trouvé certains de ses autres réseaux sociaux, mais il ne nous semblait rien apporter, c'est pourquoi nous ne les avons pas mis ici.
 
 Via l'article de trendmicro, on apprend par ailleurs qu'il est potentiellement membre de Winnti Group, un collectif proche d'[APT](https://fr.wikipedia.org/wiki/Advanced_Persistent_Threat) chinois (41 et 17).
 
