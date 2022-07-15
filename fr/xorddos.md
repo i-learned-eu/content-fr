@@ -47,7 +47,7 @@ On peut aussi remarquer que le binaire a été compilé de manière statique, c'
 - dns.c
 ```
 
-Avec cette seule information, on peut déjà observer certains fichiers intéressants, comme `encrypt.c` ou `hid.c` .
+Avec cette seule information, on peut déjà observer certains fichiers intéressants, comme `encrypt.c` ou `hide.c` .
 
 # 🦠 L'infection
 
