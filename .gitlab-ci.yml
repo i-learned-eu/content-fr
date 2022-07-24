@@ -24,6 +24,7 @@ updateTranslation:
 test-job:
     stage: test
     script:
+        - rm -rf ./..?* ./.[!.]* ./*
         - git clone https://gitlab.ilearned.eu/i-learned/blog/theme .
         - rm -rf content/*
         - git clone https://gitlab.ilearned.eu/i-learned/blog/content-fr.git -b $CI_COMMIT_REF_NAME content/
