@@ -27,7 +27,7 @@ test-job:
         - rm -rf ./..?* ./.[!.]* ./*
         - git clone https://gitlab.ilearned.eu/i-learned/blog/theme .
         - git clone https://gitlab.ilearned.eu/i-learned/blog/content-fr.git -b $CI_COMMIT_REF_NAME content/
-        - make --file=content/Makefile build
+        - make build
     artifacts:
         paths:
             - output/
