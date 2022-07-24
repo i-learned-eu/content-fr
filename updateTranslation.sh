@@ -1,4 +1,4 @@
-for i in $(ls -1 -p fr/ | grep -v / | sed -e 's/\..*$//')
+for i in $(find fr/* -maxdepth 1 -type f -exec basename {} \; | sed -e 's/\..*$//')
 do
   node /usr/local/lib/node_modules/gettext-markdown/bin/gettext-md.js -o i18n/__name__.pot --pot fr/$i.md
   if test -f i18n/en/$i.po; then
@@ -8,4 +8,3 @@ do
     sed -i 's/Language: fr/Language: en/' i18n/en/$i.po
   fi
 done
-
