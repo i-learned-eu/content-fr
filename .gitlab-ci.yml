@@ -60,6 +60,7 @@ test-deploy-job:
         - rm -rf content/*
         - git clone https://gitlab.ilearned.eu/i-learned/blog/content-fr.git -b $CI_COMMIT_REF_NAME content/
         - sh build.sh
+        - echo $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN | sha256sum -
         - netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --dir output
     only:
         - merge_requests
