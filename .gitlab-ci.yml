@@ -13,6 +13,8 @@ updateTranslation:
     stage: updateTranslation
     allow_failure: true
     script:
+        - rm -rf ./..?* ./.[!.]* ./*
+        - git clone https://gitlab.ilearned.eu/i-learned/blog/content-fr .
         - bash ./updateTranslation.sh
         - git add .
         - git commit -m "[🧹 Lint] Updated translations"
