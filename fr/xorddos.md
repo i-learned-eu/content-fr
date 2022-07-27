@@ -5,6 +5,7 @@ Keywords: malware, sécurité
 Slug: xorddos
 Summary: Par un heureux hasard, un fichier nommé `libudev.so`, apparemment malveillant, est apparu dans notre dossier Téléchargements, nous avons donc voulu en savoir plus. Entre reverse engineering, analyse réseau et OSINT, c’est cette quête d’information qui nous mènera à découvrir un mystérieux pirate, vouant une adoration à ses cochons, que nous allons relater dans cet article.
 Title:  Un malware, un cochon et un APT chinois
+Category: Cybersécurité
 
 Par un heureux hasard, un fichier nommé `libudev.so`, apparemment malveillant, est apparu dans notre dossier Téléchargements, nous avons donc voulu en savoir plus. Entre reverse engineering, analyse réseau et OSINT, c’est cette quête d’information qui nous mènera à découvrir un mystérieux pirate, vouant une adoration à ses cochons, que nous allons relater dans cet article.
 
