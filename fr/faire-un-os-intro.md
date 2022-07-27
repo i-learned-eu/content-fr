@@ -1,6 +1,6 @@
 lang: fr
 Author: Lolo
-Date: 2022-07-15
+Date: 2022-07-27
 Keywords: OS, C, introduction, C++ 
 Slug: faire-un-os-intro
 Summary: Tout est dans le titre: une introduction sur comment faire un OS, ou plutôt comprendre comment fonctionne un OS
