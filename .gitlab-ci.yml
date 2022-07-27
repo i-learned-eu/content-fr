@@ -31,9 +31,9 @@ test-job:
         - git clone https://gitlab.ilearned.eu/i-learned/blog/theme .
         - |-
             if [[ $CI_MERGE_REQUEST_ID != "" ]]; then
-                export CONTENT_REPO = $CI_MERGE_REQUEST_SOURCE_PROJECT_URL
+                export CONTENT_REPO=$CI_MERGE_REQUEST_SOURCE_PROJECT_URL
             else
-                export CONTENT_REPO = $CI_REPOSITORY_URL
+                export CONTENT_REPO=$CI_REPOSITORY_URL
             fi
         - git clone $CONTENT_REPO -b $CI_COMMIT_REF_NAME content/
         - make build
