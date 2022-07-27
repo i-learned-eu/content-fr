@@ -4,7 +4,8 @@ Date: 2022-07-27
 Keywords: OS, C, introduction, C++ 
 Slug: faire-un-os-intro
 Summary: Tout est dans le titre: une introduction sur comment faire un OS, ou plutôt comprendre comment fonctionne un OS
-Title:  Faire un OS: Introduction
+Title:  Faire un OS - Introduction
+Category: Sysadmin
 
 Si vous lisez cet article, c’est que vous utilisez un système d’exploitation. Que ça soit sur un ordinateur, un téléphone ou encore certains systèmes embarqués vous en utilisez tous les jours. Et dans cet article, mon objectif va être de vous expliquer dans les grandes lignes comment un système d’exploitation (OS) fonctionne. C'est aussi une introduction pour un potentiel article qui sera quant à lui beaucoup plus technique. 
 
