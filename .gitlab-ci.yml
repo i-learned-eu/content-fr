@@ -28,7 +28,7 @@ test-job:
     script:
         - rm -rf ./..?* ./.[!.]* ./*
         - git clone https://gitlab.ilearned.eu/i-learned/blog/theme .
-        - git clone https://gitlab.ilearned.eu/i-learned/blog/content-fr.git -b $CI_COMMIT_REF_NAME content/
+        - git clone $CI_REPOSITORY_URL -b $CI_COMMIT_REF_NAME content/
         - make build
     artifacts:
         paths:
