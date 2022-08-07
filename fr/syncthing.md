@@ -1,11 +1,10 @@
+lang: fr
 Author: Eban
-Catégorie: Sysadmin
-Date: 2022/08/07
+Date: 2022-08-07
 Keywords: sync, synchronisation
 Slug: syncthing
 Summary: Qui a déjà utilisé différents ordinateurs en même temps sait la complexité que représente de gérer la synchronisation entre ceux-ci, nous traiterons dans cet article d’un logiciel, Syncthing, qui permet de régler ce soucis de façon assez magique 🪄.
 Title: Syncthing, la synchronisation de fichiers dopée aux stéroïdes
-lang: fr
 
 Qui a déjà utilisé différents ordinateurs en même temps sait la complexité que représente de gérer la synchronisation entre ceux-ci, nous traiterons dans cet article d’un logiciel, Syncthing, qui permet de régler ce soucis de façon assez magique 🪄.
 
