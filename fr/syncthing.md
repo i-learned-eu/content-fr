@@ -26,9 +26,9 @@ Cet autre modèle, ce sont les réseaux maillés, ou mesh, plutôt que de s’ap
 
 ![Une schéma montrant un exemple d'architecture mesh](/static/img/syncthing/mesh.webp)
 
-On peut voir sur ce schéma que même si l’ordinateur principal n’est pas en capacité d’accéder à certains appareils directement (par ce que ceux-ci n’ont pas accès à internet par exemple) cela ne pose aucun problème car, chacun d’entre eux étant interconnecté, les modifications finissent par être propagées partout.
+On peut voir sur ce schéma que même si l’ordinateur principal n’est pas en capacité d’accéder à certains appareils directement (parce que ceux-ci n’ont pas accès à internet par exemple) cela ne pose aucun problème car, chacun d’entre eux étant interconnecté, les modifications finissent par être propagées partout.
 
-On a aussi un autre avantage de taille, si j’ai deux appareils sont sur le même réseau local, ils n’auront pas à passer par Internet, ce qui permet d’accélérer grandement la vitesse de mise à jour entre les appareils.
+On a aussi un autre avantage de taille, si deux appareils sont sur le même réseau local, ils n’auront pas à passer par Internet, ce qui permet d’accélérer grandement la vitesse de mise à jour entre les appareils.
 
 C’est ce modèle qu’utilise Syncthing que nous allons traiter ici.
 
