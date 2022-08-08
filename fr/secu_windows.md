@@ -3,7 +3,7 @@ Author: Lancelot
 Date: 2021/07/01
 Keywords: Windows, sécurité
 Slug: secu_windows
-Summary: "Accès refusé". S’il y a bien une erreur frustrante, c'est sûrement celle-ci. Sur Windows nous y sommes pourtant souvent confrontés, surtout dans une perspective attaquante. Dans cet article, je tâcherais de vous présenter, dans les grandes lignes, le modèle de sécurité qu’utilise Windows.
+Summary: Accès refusé, s’il y a bien une erreur frustrante, c'est sûrement celle-ci. Sur Windows nous y sommes pourtant souvent confrontés, surtout dans une perspective attaquante. Dans cet article, je tâcherais de vous présenter, dans les grandes lignes, le modèle de sécurité qu’utilise Windows.
 Title: Modèle de sécurité Windows
 Category: Cybersécurité/Blue Team
 
