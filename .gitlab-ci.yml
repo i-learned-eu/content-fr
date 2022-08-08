@@ -23,12 +23,19 @@ updateTranslation:
     rules:
         - if: $CI_COMMIT_BRANCH == "master" && $CI_COMMIT_AUTHOR != "Gitlab CI <contact@ilearned.eu>"
 
+
 test-job:
     stage: test
     script:
         - rm -rf ./..?* ./.[!.]* ./*
         - git clone https://gitlab.ilearned.eu/i-learned/blog/theme .
-        - git clone https://gitlab.ilearned.eu/i-learned/blog/content-fr.git -b $CI_COMMIT_REF_NAME content/
+        - |-
+            if [[ $CI_MERGE_REQUEST_ID != "" ]]; then
+                export CONTENT_REPO=$CI_MERGE_REQUEST_SOURCE_PROJECT_URL
+            else
+                export CONTENT_REPO=$CI_REPOSITORY_URL
+            fi
+        - git clone $CONTENT_REPO -b $CI_COMMIT_REF_NAME content/
         - make build
     artifacts:
         paths:
