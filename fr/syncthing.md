@@ -3,10 +3,10 @@ Author: Eban
 Date: 2022-08-07
 Keywords: sync, synchronisation
 Slug: syncthing
-Summary: Qui a déjà utilisé différents ordinateurs en même temps sait la complexité que représente de gérer la synchronisation entre ceux-ci, nous traiterons dans cet article d'un logiciel, Syncthing, qui permet de régler ce soucis de façon assez magique 🪄.
+Summary: Qui a déjà utilisé différents ordinateurs sait la complexité que représente la synchronisation de fichiers entre de ceux-ci. Cet article traite justement de la question, via un logiciel, Syncthing, qui permet de régler ce souci de façon assez magique 🪄.
 Title: Syncthing, la synchronisation de fichiers dopée aux stéroïdes
 
-Qui a déjà utilisé différents ordinateurs en même temps sait la complexité que représente de gérer la synchronisation entre ceux-ci, nous traiterons dans cet article d'un logiciel, Syncthing, qui permet de régler ce soucis de façon assez magique 🪄.
+Qui a déjà utilisé différents ordinateurs sait la complexité que représente la synchronisation de fichiers entre de ceux-ci. Cet article traite justement de la question, via un logiciel, Syncthing, qui permet de régler ce souci de façon assez magique 🪄.
 
 # 🧱 Architecture des systèmes de synchronisation
 
