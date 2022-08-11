@@ -34,10 +34,10 @@ C'est ce modèle qu'utilise Syncthing, le logiciel dont nous allons traiter ici.
 
 # 📦 Syncthing
 
-Syncthing est un [logiciel libre](https://github.com/syncthing/syncthing) créé en 2013, il est activement supporté, compte quelque 80 000 utilisateurs, et a depuis sa création, permit de transférer [34 Pib](https://data.syncthing.net/) (4 785 000 Go) ! Il s'appuie sur un protocole appelé BEP ([Block Exchange Protocol](https://docs.syncthing.net/specs/bep-v1.html)) que je vais tâcher de vous décrire ici.
+Syncthing est un [logiciel libre](https://github.com/syncthing/syncthing) créé en 2013, il est activement supporté, compte quelque 80 000 utilisateurs, et a depuis sa création, permit de transférer [4,785 Po](https://data.syncthing.net/) (4 785 000 Go) ! Il s'appuie sur un protocole appelé BEP ([Block Exchange Protocol](https://docs.syncthing.net/specs/bep-v1.html)) que je vais tâcher de vous décrire ici.
 
 BEP est un protocole qui s'appuie sur une 
-structure de données assez simple, chaque appareil (device) a une liste de dossiers (folder). Ces dossiers sont découpés en plus petits blocs entre 128 KiB et 16 MiB, Syncthing stocke le hash de chacun de ces blocs, et échange cette liste de hash avec les autres appareils afin de savoir si la version d'un dossier stocké est à jour.
+structure de données assez simple, chaque appareil (device) a une liste de dossiers (folder). Ces dossiers sont découpés en plus petits blocs entre 16 Ko et 2 Mo, Syncthing stocke le hash de chacun de ces blocs, et échange cette liste de hash avec les autres appareils afin de savoir si la version d'un dossier stocké est à jour.
 
 ![Un exemple de dossier découpé en blocs](/static/img/syncthing/folder.webp)
 
