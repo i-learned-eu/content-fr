@@ -1,6 +1,6 @@
 lang: fr
 Author: Eban
-Date: 2022-08-07
+Date: 2022-08-18
 Keywords: sync, synchronisation
 Slug: syncthing
 Summary: Qui a déjà utilisé différents ordinateurs sait la complexité que représente la synchronisation de fichiers entre de ceux-ci. Cet article traite justement de la question, via un logiciel, Syncthing, qui permet de régler ce souci de façon assez magique 🪄.
