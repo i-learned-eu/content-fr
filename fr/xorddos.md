@@ -52,7 +52,7 @@ Avec cette seule information, on peut déjà observer certains fichiers intéres
 
 # 🦠 L'infection
 
-Le principal vecteur d'infection utilisé par ce malware est le [bruteforce](https://fr.wikipedia.org/wiki/Attaque_par_force_brute) de serveur SSH, d'où l'importance d'utiliser des clés cryptographiques (comme [ED25519](https://www.unixtutorial.org/how-to-generate-ed25519-ssh-key/)) ou à minima un mot de passe fort.
+Le principal vecteur d'infection utilisé par ce malware est le [bruteforce](https://fr.wikipedia.org/wiki/Attaque_par_force_brute) de serveur SSH, d'où l'importance d'utiliser de privilégié des clés cryptographiques, avec des algorithmes modernes (comme [ED25519](https://www.unixtutorial.org/how-to-generate-ed25519-ssh-key/)), au lieu du traditionnel mot de passe.
 
 Lors de la première infection, le malware va faire en sorte d'assurer sa persistance, pour ce faire, il va en premier lieu créer le fichier `/etc/cron.hourly/gcc.sh`, celui-ci contient un script qui va simplement démarrer toutes les interfaces réseau, se copier dans un autre endroit et se lancer. Le fait que ce script soit présent dans le dossier `/etc/cron.hourly` à son importance, les scripts présents dans ce dossier sont lancé automatiquement par le système toutes les heures.
 
