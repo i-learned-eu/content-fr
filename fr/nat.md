@@ -2,7 +2,7 @@ lang: fr
 Title: NAT/PAT
 Description: Au début d'internet, chaque machine avait sa propre IPv4 (comme aujourd'hui en IPv6), Internet qui de base était un projet au public limité à commencé à grandir et le nombre totale d'IPv4 commençait à montrer ses limites. Plusieurs solutions ont été pensées, l'une d'entre elles est le NAT.
 slug: nat
-Author: Elmar
+Author: Ada
 Date: 2021-12-02
 Keywords: réseau, nat, pat
 Category: Réseau/Routage & IP

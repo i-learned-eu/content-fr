@@ -2,7 +2,7 @@ lang: fr
 title: Décentraliser, une priorité
 Keywords: self host, oss, décentralisation
 Date: 2021-05-10
-author: Elmar
+author: Ada
 summary: Hello, aujourd'hui on parle de décentralisation :)
 Slug: decentralisation
 Category: Pensées du libre

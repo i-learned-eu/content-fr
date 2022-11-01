@@ -47,7 +47,7 @@ Imaginons, nous sommes lundi et je compte sauvegarder mon dossier personnel qui 
     - password.txt.gpg
     - fat.md
     - socks.md
-    - 13_reasons_why_i_hate_ramle.txt
+    - 13_reasons_why_i_hate_ada.txt
     - tftp.md
     - ipv4.md
 ```
@@ -71,7 +71,7 @@ Et là, c'est le drame ! Dans `/home/ownesis` j'ai des fichiers qu'il n'y a pas 
 /media/usb/backup_mecredi:
     - password.txt.gpg
     - socks.md
-    - 13_reasons_why_i_hate_ramle.txt
+    - 13_reasons_why_i_hate_ada.txt
     - tftp.md
     - ipv4.md
     - backup.md
@@ -133,7 +133,7 @@ Si on reprend exactement les mêmes scénarios de la sauvegarde de lundi, mardi 
     - password.txt.gpg                  (inode 1)
     - fat.md                            (inode 2)
     - socks.md                          (inode 3)
-    - 13_reasons_why_i_hate_ramle.txt   (inode 4)
+    - 13_reasons_why_i_hate_ada.txt   (inode 4)
     - tftp.md                           (inode 5)
     - ipv4.md                           (inode 6)
 
@@ -141,7 +141,7 @@ Si on reprend exactement les mêmes scénarios de la sauvegarde de lundi, mardi 
 /media/usb/backup_mardi:
     - password.txt.gpg                  (inode 1)
     - socks.md                          (inode 3)
-    - 13_reasons_why_i_hate_ramle.txt   (inode 4)
+    - 13_reasons_why_i_hate_ada.txt   (inode 4)
     - tftp.md                           (inode 5)
     - ipv4.md                           (inode 6)
     - fat.md                            (inode 7) <- ici le fichier a été modifié, donc nouvel inode.
@@ -150,7 +150,7 @@ Si on reprend exactement les mêmes scénarios de la sauvegarde de lundi, mardi 
 /media/usb/backup_mercredi:
     - password.txt.gpg                  (inode 1)
     - socks.md                          (inode 3)
-    - 13_reasons_why_i_hate_ramle.txt   (inode 4)
+    - 13_reasons_why_i_hate_ada.txt   (inode 4)
     - tftp.md                           (inode 5)
     - ipv4.md                           (inode 6)
     - fat.md                            (inode 7)

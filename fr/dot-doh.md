@@ -2,7 +2,7 @@ lang: fr
 title: Fonctionnement du DNS over TLS et du DNS over HTTPS
 Keywords: DoT, DNS, DoH, sécurité, TLS, HTTPS, DNS over HTTPS, DNS over TLS, vie privée, privacy
 Date: 2021-04-30
-author: Elmar
+author: Ada
 summary: Dans l'article d'aujourd'hui nous allons voir le fonctionnement de DNS Over TLS et de DNS over HTTPS.
 Slug: dot-doh
 Category: Réseau/DNS

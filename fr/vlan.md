@@ -2,7 +2,7 @@ lang: fr
 Title: Usage des VLAN
 Keywords: VLAN, network, réseau
 Date: 2021-05-02
-author: Elmar
+author: Ada
 summary: Aujourd'hui, on va parler du principe des VLAN et de l'utilité de celle-ci.
 slug: vlan
 Category: Réseau/Routage & IP

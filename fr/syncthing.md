@@ -5,6 +5,7 @@ Keywords: sync, synchronisation
 Slug: syncthing
 Summary: Qui a déjà utilisé différents ordinateurs sait la complexité que représente la synchronisation de fichiers entre de ceux-ci. Cet article traite justement de la question, via un logiciel, Syncthing, qui permet de régler ce souci de façon assez magique 🪄.
 Title: Syncthing, la synchronisation de fichiers dopée aux stéroïdes
+Category: Sysadmin
 
 Qui a déjà utilisé différents ordinateurs sait la complexité que représente la synchronisation de fichiers entre de ceux-ci. Cet article traite justement de la question, via un logiciel, Syncthing, qui permet de régler ce souci de façon assez magique 🪄.
 

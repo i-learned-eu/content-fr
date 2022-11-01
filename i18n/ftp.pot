@@ -14,7 +14,7 @@ msgstr ""
 #: fr/ftp.md:0
 msgid ""
 "lang: fr\n"
-"Author: Elmar\n"
+"Author: Ada\n"
 "Date: 2021/12/23\n"
 "Keywords: réseau\n"
 "Slug: ftp\n"

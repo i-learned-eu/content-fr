@@ -2,7 +2,7 @@ lang: fr
 Title: Fonctionnement de DNSSEC
 Keywords: DNSSEC, DNS, sécurité, DS, NSEC, RSSIG, KSK, ZSK
 Date: 2021-04-29
-author: Elmar
+author: Ada
 summary: Aujourd'hui, on va parler du fonctionnement de DNSSEC et voir les différents risques encourus que ce mécanisme résout ou non.
 slug: dnssec
 Category: Réseau/DNS

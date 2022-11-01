@@ -2,7 +2,7 @@ lang: fr
 Title: Le protocole IRC
 Keywords: irc, chat
 Date: 2021-05-05
-Author: Elmar
+Author: Ada
 Summary: Bonjour, hier nous avions vu le protocole TCP, aujourd'hui nous allons en reparler en l'appliquant concrètement. :)
 Slug: irc
 Category: Réseau
@@ -33,43 +33,43 @@ Connected to irc.lab.rameul.eu.
 Escape character is '^]'.
 :irc.lab.rameul.eu NOTICE Auth :*** Looking up your hostname...
 :irc.lab.rameul.eu NOTICE Auth :*** Could not resolve your hostname: Domain name not found; using your IP address (172.17.0.1) instead.
-USER ramle * * :
-NICK ramle
+USER ada * * :
+NICK ada
 :irc.lab.rameul.eu NOTICE Auth :Welcome to rml-lab!
-:irc.lab.rameul.eu 001 ramle :Welcome to the rml-lab IRC Network ramle!ramle@172.17.0.1
-:irc.lab.rameul.eu 002 ramle :Your host is irc.lab.rameul.eu, running version InspIRCd-2.0
-:irc.lab.rameul.eu 003 ramle :This server was created on Debian
-:irc.lab.rameul.eu 004 ramle irc.lab.rameul.eu InspIRCd-2.0 iosw biklmnopstv bklov
-:irc.lab.rameul.eu 005 ramle AWAYLEN=200 CASEMAPPING=rfc1459 CHANMODES=b,k,l,imnpst CHANNELLEN=64 CHANTYPES=# CHARSET=ascii ELIST=MU FNC KICKLEN=255 MAP MAXBANS=60 MAXCHANNELS=20 MAXPARA=32 :are supported by this server
-:irc.lab.rameul.eu 005 ramle MAXTARGETS=20 MODES=20 NETWORK=rml-lab NICKLEN=32 PREFIX=(ov)@+ STATUSMSG=@+ TOPICLEN=307 VBANLIST WALLCHOPS WALLVOICES :are supported by this server
-:irc.lab.rameul.eu 042 ramle 476AAAAAK :your unique ID
-:irc.lab.rameul.eu 375 ramle :irc.lab.rameul.eu message of the day
-:irc.lab.rameul.eu 372 ramle :-
-:irc.lab.rameul.eu 372 ramle :-  _ __ _ __ ___ | |      _ __   ___| |_
-:irc.lab.rameul.eu 372 ramle :- | '__| '_ ` _ \| |_____| '_ \ / _ \ __|
-:irc.lab.rameul.eu 372 ramle :- | |  | | | | | | |_____| | | |  __/ |_
-:irc.lab.rameul.eu 372 ramle :- |_|  |_| |_| |_|_|     |_| |_|\___|\__|
-:irc.lab.rameul.eu 372 ramle :-
-:irc.lab.rameul.eu 372 ramle :- Description : Lab
-:irc.lab.rameul.eu 372 ramle :- NetAdmin : ramle
-:irc.lab.rameul.eu 372 ramle :-
-:irc.lab.rameul.eu 376 ramle :End of message of the day.
-:irc.lab.rameul.eu 251 ramle :There are 1 users and 0 invisible on 1 servers
-:irc.lab.rameul.eu 254 ramle 0 :channels formed
-:irc.lab.rameul.eu 255 ramle :I have 1 clients and 0 servers
-:irc.lab.rameul.eu 265 ramle :Current Local Users: 1  Max: 2
-:irc.lab.rameul.eu 266 ramle :Current Global Users: 1  Max: 2
+:irc.lab.rameul.eu 001 ada :Welcome to the rml-lab IRC Network ada!ada@172.17.0.1
+:irc.lab.rameul.eu 002 ada :Your host is irc.lab.rameul.eu, running version InspIRCd-2.0
+:irc.lab.rameul.eu 003 ada :This server was created on Debian
+:irc.lab.rameul.eu 004 ada irc.lab.rameul.eu InspIRCd-2.0 iosw biklmnopstv bklov
+:irc.lab.rameul.eu 005 ada AWAYLEN=200 CASEMAPPING=rfc1459 CHANMODES=b,k,l,imnpst CHANNELLEN=64 CHANTYPES=# CHARSET=ascii ELIST=MU FNC KICKLEN=255 MAP MAXBANS=60 MAXCHANNELS=20 MAXPARA=32 :are supported by this server
+:irc.lab.rameul.eu 005 ada MAXTARGETS=20 MODES=20 NETWORK=rml-lab NICKLEN=32 PREFIX=(ov)@+ STATUSMSG=@+ TOPICLEN=307 VBANLIST WALLCHOPS WALLVOICES :are supported by this server
+:irc.lab.rameul.eu 042 ada 476AAAAAK :your unique ID
+:irc.lab.rameul.eu 375 ada :irc.lab.rameul.eu message of the day
+:irc.lab.rameul.eu 372 ada :-
+:irc.lab.rameul.eu 372 ada :-  _ __ _ __ ___ | |      _ __   ___| |_
+:irc.lab.rameul.eu 372 ada :- | '__| '_ ` _ \| |_____| '_ \ / _ \ __|
+:irc.lab.rameul.eu 372 ada :- | |  | | | | | | |_____| | | |  __/ |_
+:irc.lab.rameul.eu 372 ada :- |_|  |_| |_| |_|_|     |_| |_|\___|\__|
+:irc.lab.rameul.eu 372 ada :-
+:irc.lab.rameul.eu 372 ada :- Description : Lab
+:irc.lab.rameul.eu 372 ada :- NetAdmin : ada
+:irc.lab.rameul.eu 372 ada :-
+:irc.lab.rameul.eu 376 ada :End of message of the day.
+:irc.lab.rameul.eu 251 ada :There are 1 users and 0 invisible on 1 servers
+:irc.lab.rameul.eu 254 ada 0 :channels formed
+:irc.lab.rameul.eu 255 ada :I have 1 clients and 0 servers
+:irc.lab.rameul.eu 265 ada :Current Local Users: 1  Max: 2
+:irc.lab.rameul.eu 266 ada :Current Global Users: 1  Max: 2
 JOIN #article
-:ramle!ramle@172.17.0.1 JOIN :#article
-:irc.lab.rameul.eu 353 ramle = #article :ramle @ramle2
-:irc.lab.rameul.eu 366 ramle #article :End of /NAMES list.
+:ada!ada@172.17.0.1 JOIN :#article
+:irc.lab.rameul.eu 353 ada = #article :ada @ada2
+:irc.lab.rameul.eu 366 ada #article :End of /NAMES list.
 PRIVMSG #article o/
-:ramle2!ramle2@172.17.0.1 PRIVMSG #article :o/
+:ada2!ada2@172.17.0.1 PRIVMSG #article :o/
 ```
 
 ~~Pour ceux qui souhaiteraient tester par eux même avec telnet, le serveur IRC ne sera up qu'à partir de 21h30 ;).~~ Il est en ligne.
 
-On peut voir dans ce court exemple plusieurs choses, déjà la simplicité du protocole, en seulement 3 commande on rejoint un canal. Un autre fait qui peut être noté, c'est la commande envoyée pour définir le nom d'utilisateur :  `USER ramle * * :`, il n'y a en effet pas de description, c'est une option facultative. Un autre point important est le symbole "@" devant l'utilisateur "ramle2", ce caractère signifie qu'il est "op" c'est à dire avec les permissions complète sur le canal, il peut donc expulser un membre, le bannir ou modifier des paramètres sur le canal, il ne peut par contre pas supprimer de messages vu que le serveur ne stocke rien, il ne sert que de relai entre les utilisateurs.
+On peut voir dans ce court exemple plusieurs choses, déjà la simplicité du protocole, en seulement 3 commande on rejoint un canal. Un autre fait qui peut être noté, c'est la commande envoyée pour définir le nom d'utilisateur :  `USER ada * * :`, il n'y a en effet pas de description, c'est une option facultative. Un autre point important est le symbole "@" devant l'utilisateur "ada2", ce caractère signifie qu'il est "op" c'est à dire avec les permissions complète sur le canal, il peut donc expulser un membre, le bannir ou modifier des paramètres sur le canal, il ne peut par contre pas supprimer de messages vu que le serveur ne stocke rien, il ne sert que de relai entre les utilisateurs.
 
 ![IRC%2021507d67dcf84cbba48c88b9daad068c/Frame_30.webp](/static/img/irc/Frame_30.webp)
 

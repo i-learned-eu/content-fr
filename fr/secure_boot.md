@@ -1,5 +1,5 @@
 lang: fr
-Author: Elmar
+Author: Ada
 Date: 2021/07/07
 Keywords: sécurité
 Slug: secure_boot
@@ -48,23 +48,23 @@ Variable PK, length 823
 PK: List 0, type X509
     Signature 0, size 795, owner 5b2a4205-8ee1-404d-a357-45629f968019
         Subject:
-            CN=Ramle PK
+            CN=Ada PK
         Issuer:
-            CN=Ramle PK
+            CN=Ada PK
 Variable KEK, length 825
 KEK: List 0, type X509
     Signature 0, size 797, owner 5b2a4205-8ee1-404d-a357-45629f968019
         Subject:
-            CN=Ramle KEK
+            CN=Ada KEK
         Issuer:
-            CN=Ramle KEK
+            CN=Ada KEK
 Variable db, length 823
 db: List 0, type X509
     Signature 0, size 795, owner 5b2a4205-8ee1-404d-a357-45629f968019
         Subject:
-            CN=Ramle DB
+            CN=Ada DB
         Issuer:
-            CN=Ramle DB
+            CN=Ada DB
 Variable dbx has no entries
 Variable MokList has no entries
 ```

@@ -1,5 +1,5 @@
 lang: fr
-Author: Elmar
+Author: Ada
 Date: 2021/07/20
 Keywords: sécurité
 Slug: mac
@@ -20,7 +20,7 @@ On peut visualiser les permissions via la commande `ls -l <dossier>` :
 ```jsx
 % ls -l
 total 0
--rwxr-xr-x 1 ramle ramle 0 Jul 19 17:05 executable
+-rwxr-xr-x 1 ada ada 0 Jul 19 17:05 executable
 -rw------- 1 root  root  0 Jul 19 17:05 root_only
 ```
 

@@ -3,7 +3,7 @@ Title: Le soucis du DNS de son opérateur
 Summary: Beaucoup de monde utilise le DNS par défaut de son opérateur, mais ce choix pose certains problème, c'est ce que l'on abordera aujourd'hui
 slug: dns-fai
 Date: 2021-05-03
-author: Elmar
+author: Ada
 keywords: DNS, network, réseau, sécurité, fai
 Category: Pensées du libre
 

@@ -4,7 +4,7 @@ summary: De nos jours le web est très utilisé, un protocol est derrière ce su
 slug: http
 Keywords: HTTPS, HTTP, web, internet
 Date: 2021-05-08
-author: Elmar
+author: Ada
 Category: Réseau/HTTP & TLS
 
 Le web est l'usage le plus connu d'internet, un protocole assez vieux (mais pas aussi vieux qu'internet) se cache derrière ce succès : HTTP.
@@ -28,10 +28,10 @@ On peut regarder plus en profondeur HTTP en regardant les transmissions réseaux
 La partie data, celle qui contient la page en elle même n'est pas directement visible ici, je vous laisse regarder le dump réseau sur wireshark, il est disponible [ici](/static/misc/http.pcap).
 
 
-Un autre aspect intéressant d'HTTP sont les en-têtes (headers) qui donnent des informations au client à propos du serveur, et inversement. Côté client par exemple, on a l'en-tête "Host" qui donne le nom de domaine demandé par le client, cela permet de distribuer un contenu différent en fonction de celui-ci. Le serveur peut lui donner le type de contenu via "Content-Type". Il y a beaucoup d'autres en-têtes possibles, si vous voulez regarder celle d'une URL la commande `curl` le permet via l'option `-I`, pour [https://ramle.be](https://ramle.be) par exemple :
+Un autre aspect intéressant d'HTTP sont les en-têtes (headers) qui donnent des informations au client à propos du serveur, et inversement. Côté client par exemple, on a l'en-tête "Host" qui donne le nom de domaine demandé par le client, cela permet de distribuer un contenu différent en fonction de celui-ci. Le serveur peut lui donner le type de contenu via "Content-Type". Il y a beaucoup d'autres en-têtes possibles, si vous voulez regarder celle d'une URL la commande `curl` le permet via l'option `-I`, pour [https://ada.be](https://ada.be) par exemple :
 
 ```bash
-% curl -I https://ramle.be
+% curl -I https://ada.be
 HTTP/2 200
 server: nginx
 date: Sat, 08 May 2021 14:40:55 GMT
@@ -40,7 +40,7 @@ content-length: 1992
 last-modified: Fri, 23 Apr 2021 18:18:34 GMT
 vary: Accept-Encoding
 etag: "60830f7a-7c8"
-content-security-policy: default-src 'none'; style-src cdn.ramle.be; img-src cdn.ramle.be
+content-security-policy: default-src 'none'; style-src cdn.ada.be; img-src cdn.ada.be
 x-frame-options: SAMEORIGIN
 x-xss-protection: 1; mode=block
 x-content-type-options: nosniff

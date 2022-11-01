@@ -14,7 +14,7 @@ msgstr ""
 #: fr/http3.md:0
 msgid ""
 "lang: fr\n"
-"Author: Elmar\n"
+"Author: Ada\n"
 "Date: 2021-05-18\n"
 "Keywords: HTTP, http3, QUIC\n"
 "Slug: http3\n"

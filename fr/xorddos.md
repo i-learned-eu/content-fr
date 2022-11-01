@@ -1,5 +1,5 @@
 lang: fr
-Authors: Ownesis, Eban, Elmar
+Authors: Ownesis, Eban, Ada
 Date: 2022-07-09
 Keywords: malware, sécurité
 Slug: xorddos
